@@ -1,22 +1,19 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Homepage from './pages/HomePage';
-function App() {
-    const [users, setUsers] = useState([]); // Menyimpan data pengguna
+import React from 'react';
+import Navbar from './pages/Navbar';
+import Home from './pages/Home';
+import Footer from './pages/Footer';
+import Materi from './pages/Materi';
 
-    // Fungsi untuk menambah pengguna
-    const addUser = (user) => {
-        setUsers([...users, user]);
-    };
+import './App.css';
 
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Homepage />} />
-                
-            </Routes>
-        </BrowserRouter>
-    );
-}
+const App = () => {
+  return (
+    <div className="app">
+      <Navbar />
+      <Home />
+      <Footer />
+    </div>
+  );
+};
 
 export default App;
