@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Materi.css';
+import '../css/Materi.css';
 
 const Materi = () => {
   const [biologies, setBiologies] = useState([]);
