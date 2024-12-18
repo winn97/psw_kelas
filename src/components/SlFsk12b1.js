@@ -1,60 +1,144 @@
 import React, { useState } from "react";
-import "./QuestionPage.css";
+import "./LatihanSoalbab.css";
 
-const LatihanSoalStatistika = () => {
+const LatihanSoalArusSearah = () => {
   const [currentQuestion, setCurrentQuestion] = useState(1);
   const [selectedOption, setSelectedOption] = useState(null);
-  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const questions = [
     {
-      question: "Rata-rata dari data berikut: 5, 7, 8, 10, 12 adalah?",
-      options: ["7", "8", "9", "10"],
-      correctOption: "8",
-      explanation: "Rata-rata dihitung dengan Σx/n = (5+7+8+10+12)/5 = 42/5 = 8.",
+      question: "Apa satuan dari arus listrik?",
+      options: ["Volt", "Ohm", "Ampere", "Watt"],
+      correctOption: "Ampere",
+      explanation: "Satuan arus listrik adalah Ampere (A).",
     },
     {
-      question: "Modus dari data berikut: 2, 3, 4, 3, 5, 3, 6 adalah?",
-      options: ["2", "3", "4", "6"],
-      correctOption: "3",
-      explanation:
-        "Modus adalah data yang paling sering muncul. Pada data ini, angka 3 muncul sebanyak 3 kali, lebih banyak dari yang lain.",
+      question: "Hukum Ohm menyatakan hubungan antara?",
+      options: ["Arus, Tegangan, dan Resistansi", "Daya dan Energi", "Medan Listrik dan Magnet", "Hambatan dan Kapasitansi"],
+      correctOption: "Arus, Tegangan, dan Resistansi",
+      explanation: "Hukum Ohm menyatakan bahwa V = I x R, yaitu hubungan antara tegangan (V), arus (I), dan resistansi (R).",
     },
     {
-      question: "Median dari data berikut: 12, 14, 15, 16, 20 adalah?",
-      options: ["14", "15", "16", "20"],
-      correctOption: "15",
-      explanation:
-        "Median adalah nilai tengah setelah data diurutkan. Data yang diurutkan: 12, 14, 15, 16, 20. Nilai tengahnya adalah 15.",
+      question: "Apa rumus daya listrik dalam rangkaian arus searah?",
+      options: ["P = V/I", "P = I^2 x R", "P = V^2 x R", "P = V x I"],
+      correctOption: "P = V x I",
+      explanation: "Daya listrik dalam arus searah dihitung menggunakan rumus P = V x I.",
     },
     {
-      question: "Variansi dari data berikut: 2, 4, 6 adalah?",
-      options: ["2.67", "4", "6", "8"],
-      correctOption: "2.67",
-      explanation:
-        "Rata-rata = 4. Variansi = [(2-4)² + (4-4)² + (6-4)²] / 3 = (4 + 0 + 4) / 3 = 2.67.",
+      question: "Resistor memiliki hambatan 10 Ohm dan arus 2 A mengalir melaluinya. Berapakah tegangan pada resistor?",
+      options: ["5 V", "10 V", "20 V", "40 V"],
+      correctOption: "20 V",
+      explanation: "Menurut Hukum Ohm, V = I x R. Jadi, V = 2 x 10 = 20 V.",
     },
     {
-      question: "Kuartil ketiga dari data: 10, 15, 20, 25, 30, 35 adalah?",
-      options: ["25", "27.5", "30", "32.5"],
-      correctOption: "30",
-      explanation:
-        "Kuartil ketiga (Q3) berada di posisi 3/4(n+1). Data diurutkan: 10, 15, 20, 25, 30, 35. Q3 = data ke-5, yaitu 30.",
+      question: "Apa fungsi dari baterai dalam rangkaian arus searah?",
+      options: ["Mengalirkan arus AC", "Mengubah energi listrik ke energi kimia", "Menyediakan sumber tegangan tetap", "Menyimpan energi potensial listrik"],
+      correctOption: "Menyediakan sumber tegangan tetap",
+      explanation: "Baterai menyediakan sumber tegangan tetap untuk menggerakkan arus searah.",
     },
-    // Tambahkan soal lainnya sesuai kebutuhan
+    {
+      question: "Apakah simbol untuk resistansi dalam rangkaian listrik?",
+      options: ["R", "V", "I", "P"],
+      correctOption: "R",
+      explanation: "Resistansi dilambangkan dengan huruf 'R'.",
+    },
+    {
+      question: "Jika daya sebuah alat adalah 60 W dan tegangan 12 V, berapakah arus yang mengalir?",
+      options: ["2 A", "5 A", "6 A", "7 A"],
+      correctOption: "5 A",
+      explanation: "Arus dihitung menggunakan P = V x I. Jadi, I = P/V = 60/12 = 5 A.",
+    },
+    {
+      question: "Apa yang terjadi dengan arus ketika resistansi bertambah, jika tegangan tetap konstan?",
+      options: ["Arus meningkat", "Arus berkurang", "Arus tetap", "Tidak ada perubahan"],
+      correctOption: "Arus berkurang",
+      explanation: "Menurut Hukum Ohm, I = V/R. Jika R bertambah, I akan berkurang.",
+    },
+    {
+      question: "Apa nama alat yang digunakan untuk mengukur arus?",
+      options: ["Voltmeter", "Ohmmeter", "Ammeter", "Galvanometer"],
+      correctOption: "Ammeter",
+      explanation: "Ammeter adalah alat yang digunakan untuk mengukur arus listrik.",
+    },
+    {
+      question: "Tegangan 24 V diterapkan pada rangkaian dengan resistansi 6 Ohm. Berapakah arus yang mengalir?",
+      options: ["2 A", "4 A", "6 A", "8 A"],
+      correctOption: "4 A",
+      explanation: "Menggunakan Hukum Ohm, I = V/R. Jadi, I = 24/6 = 4 A.",
+    },
+    {
+      question: "Rangkaian arus searah yang memiliki lebih dari satu jalur disebut?",
+      options: ["Rangkaian Seri", "Rangkaian Paralel", "Rangkaian Campuran", "Rangkaian Terbuka"],
+      correctOption: "Rangkaian Paralel",
+      explanation: "Rangkaian paralel memiliki lebih dari satu jalur untuk aliran arus.",
+    },
+    {
+      question: "Apakah yang dimaksud dengan rangkaian tertutup?",
+      options: ["Rangkaian tanpa arus", "Rangkaian dengan jalur lengkap untuk arus", "Rangkaian dengan hambatan besar", "Rangkaian dengan baterai mati"],
+      correctOption: "Rangkaian dengan jalur lengkap untuk arus",
+      explanation: "Rangkaian tertutup adalah rangkaian yang memungkinkan arus listrik mengalir melalui jalur yang lengkap.",
+    },
+    {
+      question: "Jika hambatan total dalam rangkaian seri adalah 30 Ohm dan tegangan adalah 60 V, berapakah arus yang mengalir?",
+      options: ["1 A", "2 A", "3 A", "4 A"],
+      correctOption: "2 A",
+      explanation: "Menggunakan Hukum Ohm, I = V/R. Jadi, I = 60/30 = 2 A.",
+    },
+    {
+      question: "Apa satuan untuk daya listrik?",
+      options: ["Joule", "Watt", "Ohm", "Ampere"],
+      correctOption: "Watt",
+      explanation: "Satuan daya listrik adalah Watt (W).",
+    },
+    {
+      question: "Dua resistor masing-masing 4 Ohm dan 6 Ohm dihubungkan secara seri. Berapakah hambatan totalnya?",
+      options: ["10 Ohm", "2.4 Ohm", "24 Ohm", "12 Ohm"],
+      correctOption: "10 Ohm",
+      explanation: "Pada rangkaian seri, hambatan total adalah penjumlahan resistansi. Jadi, Rtotal = 4 + 6 = 10 Ohm.",
+    },
+    {
+      question: "Apakah fungsi sekering dalam rangkaian listrik?",
+      options: ["Menghemat daya", "Membatasi arus berlebih", "Meningkatkan tegangan", "Menyimpan energi"],
+      correctOption: "Membatasi arus berlebih",
+      explanation: "Sekering melindungi rangkaian dari kerusakan dengan memutus arus jika melebihi batas tertentu.",
+    },
+    {
+      question: "Jika tegangan pada resistor adalah 50 V dan arus yang mengalir adalah 5 A, berapakah hambatannya?",
+      options: ["5 Ohm", "10 Ohm", "15 Ohm", "25 Ohm"],
+      correctOption: "10 Ohm",
+      explanation: "Menggunakan Hukum Ohm, R = V/I. Jadi, R = 50/5 = 10 Ohm.",
+    },
+    {
+      question: "Resistor 12 Ohm dan 8 Ohm dihubungkan paralel. Berapakah hambatan totalnya?",
+      options: ["4.8 Ohm", "6 Ohm", "10 Ohm", "20 Ohm"],
+      correctOption: "4.8 Ohm",
+      explanation: "Pada rangkaian paralel, 1/Rtotal = 1/R1 + 1/R2. Jadi, Rtotal = 1/(1/12 + 1/8) = 4.8 Ohm.",
+    },
+    {
+      question: "Apa hubungan antara daya, tegangan, dan arus?",
+      options: ["P = V/I", "P = V x I", "P = I^2/V", "P = V^2 x I"],
+      correctOption: "P = V x I",
+      explanation: "Rumus daya listrik adalah P = V x I.",
+    },
+    {
+      question: "Energi listrik dihitung dengan?",
+      options: ["W = V x I x t", "W = V/I", "W = V x t", "W = I x t"],
+      correctOption: "W = V x I x t",
+      explanation: "Energi listrik dihitung menggunakan W = V x I x t.",
+    },
   ];
 
   const handleNextQuestion = () => {
     if (currentQuestion < questions.length) {
       setCurrentQuestion(currentQuestion + 1);
-      resetSelection();
+      setSelectedOption(null);
     }
   };
 
   const handlePreviousQuestion = () => {
     if (currentQuestion > 1) {
       setCurrentQuestion(currentQuestion - 1);
-      resetSelection();
+      setSelectedOption(null);
     }
   };
 
@@ -62,112 +146,56 @@ const LatihanSoalStatistika = () => {
     setSelectedOption(option);
   };
 
-  const resetSelection = () => {
-    setSelectedOption(null);
-  };
-
-  const handleDropdownChange = (e) => {
-    const selectedNumber = parseInt(e.target.value);
-    setCurrentQuestion(selectedNumber);
-    resetSelection();
-  };
-
-  const handleConfirmationResponse = (response) => {
-    if (response === "yes") {
-      setSelectedOption(true); // Tampilkan pembahasan
-    }
-    setShowConfirmation(false); // Hilangkan pesan
-  };
-
   return (
     <div className="question-page">
       <div className="question-container">
         <button
-          className="oval-button previous-button"
+          className="oval-button"
           onClick={handlePreviousQuestion}
           disabled={currentQuestion === 1}
         >
-          &larr; Soal Sebelumnya
+          &larr; Sebelumnya
         </button>
+
         <div className="question-box">
           <h2>Soal {currentQuestion}</h2>
           <p>{questions[currentQuestion - 1].question}</p>
         </div>
+
         <button
-          className="oval-button next-button"
+          className="oval-button"
           onClick={handleNextQuestion}
           disabled={currentQuestion === questions.length}
         >
-          Soal Berikutnya &rarr;
+          Berikutnya &rarr;
         </button>
       </div>
 
-      <div className="interactive-section">
-        <div className="dropdown-container">
-          <label htmlFor="question-dropdown">Pilih Soal:</label>
-          <select
-            id="question-dropdown"
-            value={currentQuestion}
-            onChange={handleDropdownChange}
+      <div className="options-container">
+        {questions[currentQuestion - 1].options.map((option, index) => (
+          <button
+            key={index}
+            className={`option-button ${
+              selectedOption === option
+                ? option === questions[currentQuestion - 1].correctOption
+                  ? "correct"
+                  : "incorrect"
+                : ""
+            }`}
+            onClick={() => handleOptionSelect(option)}
           >
-            {questions.map((_, index) => (
-              <option key={index} value={index + 1}>
-                Soal {index + 1}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div className="options-container">
-          {questions[currentQuestion - 1].options.map((option, index) => (
-            <button
-              key={index}
-              className={`option-button ${
-                selectedOption === option
-                  ? option === questions[currentQuestion - 1].correctOption
-                    ? "correct"
-                    : "incorrect"
-                  : ""
-              }`}
-              onClick={() => handleOptionSelect(option)}
-            >
-              {option}
-            </button>
-          ))}
-        </div>
-
-        {selectedOption && (
-          <div className="explanation-container">
-            <p className="explanation-text">
-              {questions[currentQuestion - 1].explanation}
-            </p>
-          </div>
-        )}
+            {option}
+          </button>
+        ))}
       </div>
 
-      {showConfirmation && (
-        <div className="confirmation-popup">
-          <div className="popup-content">
-            <p>Yakin mau melihat pembahasan sekarang?</p>
-            <div className="popup-buttons">
-              <button
-                className="popup-button no-button"
-                onClick={() => handleConfirmationResponse("no")}
-              >
-                Tidak
-              </button>
-              <button
-                className="popup-button yes-button"
-                onClick={() => handleConfirmationResponse("yes")}
-              >
-                Iya
-              </button>
-            </div>
-          </div>
+      {selectedOption && (
+        <div className="explanation-container">
+          <p>{questions[currentQuestion - 1].explanation}</p>
         </div>
       )}
     </div>
   );
 };
 
-export default LatihanSoalStatistika;
+export default LatihanSoalArusSearah;
