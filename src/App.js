@@ -40,6 +40,11 @@ import Bgl11b5 from './components/Bgl11b5';
 import Bgl11b6 from './components/Bgl11b6';
 import Bgl11b7 from './components/Bgl11b7';
 import Bgl11b8 from './components/Bgl11b8';
+import Eko10b1 from './components/Eko10b1';
+import Eko10b2 from './components/Eko10b2';
+import Eko10b3 from './components/Eko10b3';
+import Eko10b4 from './components/Eko10b4';
+import Eko10b5 from './components/Eko10b5';
 function App() {
   return (
     <BrowserRouter>
@@ -79,7 +84,7 @@ function App() {
         <Route path="/Fsk12b6" element={<Fisika12b6 />} />
         <Route path="/Fsk12b7" element={<Fisika12b7 />} />
         <Route path="/Fsk12b8" element={<Fisika12b8 />} />
-         {/* Rute untuk Materi fisika 12 */}
+         {/* Rute untuk Materi Biologi 11 */}
          <Route path="/Bgl12b1" element={<Bgl11b1 />} />
          <Route path="/Bgl12b2" element={<Bgl11b2 />} />
          <Route path="/Bgl12b3" element={<Bgl11b3 />} />
@@ -88,6 +93,12 @@ function App() {
          <Route path="/Bgl12b6" element={<Bgl11b6 />} />
          <Route path="/Bgl12b7" element={<Bgl11b7 />} />
          <Route path="/Bgl12b8" element={<Bgl11b8 />} />
+          {/* Rute untuk Materi Ekonomi 10 */}
+          <Route path="/Eko10b1" element={<Eko10b1 />} />
+          <Route path="/Eko10b2" element={<Eko10b2 />} />
+          <Route path="/Eko10b3" element={<Eko10b3 />} />
+          <Route path="/Eko10b4" element={<Eko10b4 />} />
+          <Route path="/Eko10b5" element={<Eko10b />} />
       </Routes>
       <Footer />
     </BrowserRouter>
