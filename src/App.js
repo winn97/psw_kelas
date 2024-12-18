@@ -1,26 +1,26 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Homepage from './pages/HomePage';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Login from './components/Login';
+import Register from './components/Register';
+import Dashboard from './components/Dashboard';
 
-// Mengimpor Bootstrap CSS dan JS
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-function App() {
-    const [users, setUsers] = useState([]); // Menyimpan data pengguna
-
-    // Fungsi untuk menambah pengguna
-    const addUser = (user) => {
-        setUsers([...users, user]);
-    };
-
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Homepage addUser={addUser} users={users} />} />
-            </Routes>
-        </BrowserRouter>
-    );
-}
+const App = () => {
+  return (
+    <Router>
+      <Navbar />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<h1>Selamat Datang di Website Fisika Kelas 12</h1>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          
+        </Routes>
+      </div>
+    </Router>
+  );
+};
 
 export default App;
