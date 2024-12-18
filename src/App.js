@@ -24,6 +24,14 @@ import BahasaInggrisKelas12 from './pages/MateriBing12';
 import EkonomiKelas10 from './pages/MateriEkonomi10';
 import EkonomiKelas11 from './pages/MateriEkonomi11';
 import EkonomiKelas12 from './pages/MateriEkonomi12';
+import Fisika12b1 from './components/Fsk12b1';
+import Fisika12b2 from './components/Fsk12b2';
+import Fisika12b3 from './components/Fsk12b3';
+import Fisika12b4 from './components/Fsk12b4';
+import Fisika12b5 from './components/Fsk12b5';
+import Fisika12b6 from './components/Fsk12b6';
+import Fisika12b7 from './components/Fsk12b7';
+import Fisika12b8 from './components/Fsk12b8';
 
 function App() {
   return (
@@ -55,6 +63,15 @@ function App() {
         <Route path="/ekonomi/kelas-10" element={<EkonomiKelas10 />} />
         <Route path="/ekonomi/kelas-11" element={<EkonomiKelas11 />} />
         <Route path="/ekonomi/kelas-12" element={<EkonomiKelas12 />} />
+        {/* Rute untuk Materi fisika 12 */}
+        <Route path="/Fsk12b1" element={<Fisika12b1 />} />
+        <Route path="/Fsk12b2" element={<Fisika12b2 />} />
+        <Route path="/Fsk12b3" element={<Fisika12b3 />} />
+        <Route path="/Fsk12b4" element={<Fisika12b4 />} />
+        <Route path="/Fsk12b5" element={<Fisika12b5 />} />
+        <Route path="/Fsk12b6" element={<Fisika12b6 />} />
+        <Route path="/Fsk12b7" element={<Fisika12b7 />} />
+        <Route path="/Fsk12b8" element={<Fisika12b8 />} />
       </Routes>
       <Footer />
     </BrowserRouter>
