@@ -98,7 +98,7 @@ function App() {
           <Route path="/Eko10b2" element={<Eko10b2 />} />
           <Route path="/Eko10b3" element={<Eko10b3 />} />
           <Route path="/Eko10b4" element={<Eko10b4 />} />
-          <Route path="/Eko10b5" element={<Eko10b />} />
+          <Route path="/Eko10b5" element={<Eko10b5 />} />
       </Routes>
       <Footer />
     </BrowserRouter>
