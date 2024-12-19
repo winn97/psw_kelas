@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Form, Button, Card } from "react-bootstrap";
-import './Eko10.css';
+import '../css/Eko10.css';
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa"; 
 import Eko10b1 from "./Eko10b1";
 
