@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Form, Button, Card } from "react-bootstrap";
+import AOS from 'aos';
+import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
 import '../css/Eko10.css';
 
 function Eko10b1() {
@@ -66,6 +68,7 @@ function Eko10b1() {
         </p>
         <img
             src="https://th.bing.com/th/id/OIP.1WFu8g-DJ5zdOsL0_fB4NgAAAA?w=288&h=167&c=7&r=0&o=5&dpr=2&pid=1.7"
+            alt="Grafik ilustrasi tentang kebijakan moneter"
             className="img-fluid rounded my-1"
           />
       </section>

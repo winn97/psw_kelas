@@ -1,7 +1,10 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Form, Button, Card } from "react-bootstrap";
-import '../css/Eko10.css';
+import { useNavigate } from "react-router-dom";
+import AOS from "aos";
+import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
+import "../css/Eko10.css";
 
 function Eko10b2() {
   
@@ -81,6 +84,7 @@ function Eko10b2() {
         </p>
         <img
         src="https://i.pinimg.com/736x/6d/92/eb/6d92ebe76139187508a1644847796ad0.jpg"
+        alt="Diagram yang menjelaskan tujuan kebijakan moneter"
         className="img-fluid rounded my-1"
         />
       </section>
