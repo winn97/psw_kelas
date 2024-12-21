@@ -1,6 +1,6 @@
 import React from "react";
-// import KalUsaha from "../components/KalUsaha";
-// import Video from "../components/Video";
+import KalUsaha from "../components/KalUsaha";
+import Video from "../components/Video";
 import "../css/Fsk10b3.css";
 
 const Bab3 = () => {
