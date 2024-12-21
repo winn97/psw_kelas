@@ -1,5 +1,5 @@
 import React, {useState, useRef} from "react";
-import "../MateriPastTense/PastTense.css";
+import "../css/Bing12SPT.css";
 
 const SimplePast = () => {
   const answer1Ref = useRef();

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "./SimpleFuture.css";
+import "../css/Bing12SF.css";
 
 const FuturePerfect = () => {
   const answer1Ref = useRef();
