@@ -32,7 +32,7 @@ const Bab1 = () => {
         Momen gaya atau torsi (τ) merupakan besaran vektor yang mengakibatkan 
         benda berotasi atau berputar.
         </p>
-        <img src="modul1.jpg" alt="contoh" className="section-image"></img>
+        <img src="../Image/modul1.jpg" alt="contoh" className="section-image"></img>
 
         <p>
         Berdasarkan Gambar di atas, orang memberikan gaya kepada kunci sehingga 
@@ -48,7 +48,7 @@ const Bab1 = () => {
             Untuk memahami komnsep Momen Gaya /Torsi (τ), Perhatikan beberapa 
             kejadian berikut ! 
         </p>
-        <img src="modul1.1.png" alt="contoh" className="section-image"></img>
+        <img src="../Image/modul1.1.png" alt="contoh" className="section-image"></img>
         <p>
             Gambar di atas, Untuk memutar baut, 
             kedudukan tangan seperti gambar (c) lebih mudah dilakukan daripada 
@@ -103,11 +103,11 @@ I
                 penjumlahan momen inersia setiap partikel, yaitu sebagai berikut. 
         </p>
 
-        <img src="modul1.2.png" alt="rumus" className="section-image" />
+        <img src="../Image/modul1.2.png" alt="rumus" className="section-image" />
 
         <p>Atau secara pengintegralan dapat ditulis dengan persamaan:</p>
 
-        <img src="modul1.3.png" alt="rumus" className="section-image" />
+        <img src="../Image/modul1.3.png" alt="rumus" className="section-image" />
 
         <p>
             Berdasarkan konsep momen inersia I yang telah dipaparkan di atas, 
@@ -116,7 +116,7 @@ I
             tabel berikut: 
         </p>
 
-        <img src="modul1.4.png" alt="tabel" className="section-image"></img>
+        <img src="../Image/modul1.4.png" alt="tabel" className="section-image"></img>
 
         <strong>Menentukan Momen Inersia Benda Tegar dengan prinsip Teorema Sumbu Sejajar</strong>
         
@@ -129,7 +129,7 @@ I
             Batang silinder yang bergerak pada ujung batang maka dapat digunakan 
             dengan prinsip Teorema Sumbu Sejajar dengan persamaan sebagai berikut : 
         </p>
-        <img src="modul1.5.png" alt="tabel" className="section-image"></img>
+        <img src="../Image/modul1.5.png" alt="tabel" className="section-image"></img>
 
         <p>Dimana :</p> 
         <p>Is = Momen Inersia titik pusat rotasi 
@@ -141,15 +141,15 @@ I
             rotasi (m)</p>
         <p>sehingga untuk mendapatkan momen inersia batang silinder yang bergerak pada 
            ujung batang dapat diperoleh :</p>
-        <img src="modul1.6.png" alt="rumus" className="section-image"></img>
+        <img src="../Image/modul1.6.png" alt="rumus" className="section-image"></img>
         <strong>3.Hubungan antara Momen Gaya (τ), Momen Inersia (I) dan Percepatan 
         Sudut (α)</strong>
         <p>Untuk mendapatkan hubungan antara Momen Gaya (τ), Momen Inersia (I) dan 
            Percepatan Sudut (α), maka kita dapat menganlogikan dengan menerapkan 
            hukum Newton II translasi, yaitu :</p>
-        <img src="modul1.7.png" alt="rumus" className="section-image"></img>
+        <img src="../Image/modul1.7.png" alt="rumus" className="section-image"></img>
         <p>Diperoleh</p>
-        <img src="modul1.8.png" alt="rumus" className="section-image"></img>
+        <img src="../Image/modul1.8.png" alt="rumus" className="section-image"></img>
         <p> disebut  Hukum Newton II Gerak rotasi </p>
         <p>Dimana:</p>
         <p>τ =  Momen Gaya (N.m) </p>
@@ -162,26 +162,26 @@ I
             dari konsep energi kinetik translasi yaitu :
         </p>
 
-        <img src="modul1.9.png" alt="rumus" className="section-image"></img>
+        <img src="../Image/modul1.9.png" alt="rumus" className="section-image"></img>
         <p>Dimana:</p>
         <p>Ekrot =  Energi Kinetik Rotasi (Joule) </p>
         <p>I     =  Momen Inersia benda (kg.m2)  </p>
         <p>ῳ     =  Kecepatan Sudut benda (rad/s)  </p>
         <p><strong>Gerak Menggelinding  </strong></p>
-        <img src="modul1.10.png" alt="contoh" className="section-image"></img>
+        <img src="../Image/modul1.10.png" alt="contoh" className="section-image"></img>
             <p>
                 Pada gambar di atas, suatu benda bergerak menggelinding, maka benda tersebut 
                 melakukan gerak translasi (memiliki v) sekaligus gerak rotasi memiliki (ῳ). Oleh 
                 karena itu, energi kinetik yang dimiliki benda juga terdiri atas energi kinetik 
                 translasi dan rotasi, sehingga diperoleh : 
             </p>
-                <img src="modul1.11.png" alt="rumus" className="section-image"></img>
+                <img src="../Image/modul1.11.png" alt="rumus" className="section-image"></img>
 
                 <p><strong>Momentum Sudut (L)</strong></p>
                 <p>
                     Momentum sudut (L) didefinisikan sebagai perkalian silang antara vektor 
                     momentum linear benda p dan vektor posisi r.  </p>
-                <img src="modul1.12.png" alt="rumus" className="section-image"></img>
+                <img src="../Image/modul1.12.png" alt="rumus" className="section-image"></img>
                 <p>Momentum sudut L persamaannya dapat ditulis :</p>
                 <p>L =𝐼.𝜔 </p>
                 <p>Dimana:</p>

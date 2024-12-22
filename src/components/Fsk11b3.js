@@ -29,7 +29,7 @@ const Bab3 = () => {
                 <p>Tekanan didefinisikan sebagai gaya yang bekerja tegak lurus pada suatu bidang 
                    dibagi dengan luas bidang itu. Dan secara matematis dirumuskan sebagai berikut: </p>
                    
-                   <img src="modul3.png"alt="rumus" className="section-image"></img>
+                   <img src="../Image/modul3.png"alt="rumus" className="section-image"></img>
 
                  <p>Keterangan: </p>
                  <p>P = tekanan ( Pascal= N/m2) </p>
@@ -41,10 +41,10 @@ const Bab3 = () => {
                     besar tekanan yang dikerjakan zat cair pada dasar wadah. Dengan kata lain pada 
                     posisi yang semakin dalam dari permukaan, maka tekanan hidrostatis yang 
                     dirasakan semakin besar. </p>
-                    <img src="modul3.1.png" alt="contoh" className="section-image"></img>
+                    <img src="../Image/modul3.1.png" alt="contoh" className="section-image"></img>
                  <p>Dan tekanan hidrostatis tersebut dirumuskan sebagai berikut:</p>
                  
-                 <img src="modul3.2.png" alt="rumus" className="section-image"></img>
+                 <img src="../Image/modul3.2.png" alt="rumus" className="section-image"></img>
 
                  <p>Keterangan: </p>
                  <p> Ph = tekanan hidrostatis ( Pa) </p>
@@ -56,7 +56,7 @@ const Bab3 = () => {
                  <p>“semua titik yang terletak pada kedalaman yang sama maka tekanan 
                  hidrostatikanya sama.” </p>
 
-                 <img src="modul3.3.png" alt="contoh" className="section-image"></img>
+                 <img src="../Image/modul3.3.png" alt="contoh" className="section-image"></img>
                  
                  <p>Jadi semua titik yang terletak pada bidang datar didalam satu jenis zat cair 
                     memiliki tekanan yang sama, ini dikenal dengan hukum pokok hidrostatika dan 
@@ -70,14 +70,14 @@ const Bab3 = () => {
                     ruang tertutup diteruskan sama besar ke segala arah,  
                     Sebagai contoh sederhana aplikasi dari hukum Pascal adalah dongkrak hidrolik. </p>
 
-                    <img src="modul3.4.png" alt="contoh" className="section-image"></img>
+                    <img src="../Image/modul3.4.png" alt="contoh" className="section-image"></img>
 
                  <p>Perhatikan gambar mekanisme hidrolik diatas. Karena cairan tidak dapat 
                     ditambahkan ataupun keluar dari sistem tertutup, maka volume cairan yang 
                     terdorong di sebelah kiri akan mendorong piston (silinder pejal) di sebelah kanan 
                     ke arah atas.</p>
                 <p>Dengan menggunakan prinsip Pascal, berlaku hubungan, secara matematis: </p>
-                <img src="modul3.5.png" alt="rumus" className="section-image"></img>
+                <img src="../Image/modul3.5.png" alt="rumus" className="section-image"></img>
 
                  <p>Keterangan: </p>
                  <p>P1  = tekanan pada penampang 1 (Pa) </p>
@@ -97,14 +97,14 @@ const Bab3 = () => {
                     besarnya sama dengan berat fluida yang dipindahkannya". 
                     Gaya apung ini merupakan selisih dari gaya berat benda di udara dengan gaya 
                     berat benda di dalam fluida </p>
-                    <img src="modul3.6.png" alt="rumus" className="section-image"></img>
+                    <img src="../Image/modul3.6.png" alt="rumus" className="section-image"></img>
 
                  <p>FA =  gaya ke atas = gaya apung (N) </p>
                  <p>Wu = gaya berat benda di udara (N) </p>
                  <p>Wf = gaya berat benda di fluida (N) </p>
 
                  <p>secara matematis</p>
-                 <img src="modul3.7.png" alt="rumus" className="section-image"></img>
+                 <img src="../Image/modul3.7.png" alt="rumus" className="section-image"></img>
 
                  <p>Keterangan: </p>
                  <p>FA =  gaya ke atas = gaya apung (N) </p>
@@ -114,7 +114,7 @@ const Bab3 = () => {
 
                  <p><strong>Mengapung </strong></p>
 
-                 <img src="modul3.8.png" alt="contoh" className="section-image"></img>
+                 <img src="../Image/modul3.8.png" alt="contoh" className="section-image"></img>
                  
                  <p>Jika benda dicelupkan ke dalam fluida, benda muncul sebagian ke permukaan 
                     air, karena berat benda lebih kecil dari gaya apung (Fa &lt; W). Ini adalah konsep 
@@ -124,7 +124,7 @@ const Bab3 = () => {
                     mengapung. Dari konsep tersebut, dapat dirumuskan hubungan antara massa 
                     jenis benda dengan massa jenis fluida:</p>
                 
-                    <img src="modul3.9.png" alt="rumus" className="section-image"></img>
+                    <img src="../Image/modul3.9.png" alt="rumus" className="section-image"></img>
 
                  <p>ρb   = massa jenis benda ( kgm-3) </p>
                  <p>Vbf = Volume benda yang tercelup (m3) </p>
@@ -132,12 +132,12 @@ const Bab3 = () => {
                  <p>ρf     =  massa jenis fluida ( kgm-3) </p>
 
                  <p><strong>Melayang</strong></p>
-                 <img src="modul3.10.png" alt="contoh" className="section-image"></img>
+                 <img src="../Image/modul3.10.png" alt="contoh" className="section-image"></img>
                  <p>Jika benda dicelupkan seluruhnya kedalam fluida (air), maka gaya apung (Fa) 
                  sama dengan berat benda  W (Fa = W).</p>
 
                  <p><strong>Tenggelam</strong></p>
-                 <img src="modul3.11.png" alt="contoh" className="section-image"></img>
+                 <img src="../Image/modul3.11.png" alt="contoh" className="section-image"></img>
 
                  <p> Jika benda dicelupkan seluruhnya kedalam fluida (air), maka gaya apung ( F 
                      a) lebih kecil dari berat benda W (Fa &lt; W). Sehingga benda bergerak kebawah 

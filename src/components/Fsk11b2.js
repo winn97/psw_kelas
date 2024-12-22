@@ -30,7 +30,7 @@ const Bab2 = () => {
                 <p>Jadi,	 elastisitas	 bahan	 merupakan	 akibat	 adanya	 gaya-gaya	 antarmolekul	
                    yang	merakit	bahan	tersebut.</p>
                    
-        <img src="modul2.png" alt="contoh" className="section-image"></img>
+        <img src="../Image/modul2.png" alt="contoh" className="section-image"></img>
 
         <p>Gambar 1.Karet	ditarik	disela-sela	dua	jari	tangan</p>
                 <p>Siapkan	sebuah	karet	dan	lakukan	seperti	gambar
@@ -45,12 +45,12 @@ const Bab2 = () => {
                    anda	lepaskan	peristiwa	ini	disebut	elastisitas	bahan.</p>
                 <p><strong>a. Tegangan	(Stress)</strong></p>
 
-                <img src="modul2.1.png" alt="contoh" className="section-image"></img>
+                <img src="../Image/modul2.1.png" alt="contoh" className="section-image"></img>
 
                 <p>Tegangan	menyatakan	perbandingan	antara	gaya	dengan	luasan	yang	
                 mendapat	gaya,	bila	dinyatakan	dalam	persamaan	ditulis	sebagai	:</p>
 
-                <img src="modul2.2.png" alt="rumus" className="section-image"></img>
+                <img src="../Image/modul2.2.png" alt="rumus" className="section-image"></img>
 
                 <p>Dengan :</p>
                  <p>σ	=	tegangan	(N/m2)</p>
@@ -69,7 +69,7 @@ const Bab2 = () => {
                     perubahan	 panjang	 terhadap	 panjang	 semula,	 untuk	 menghitung	 regangan	
                     dapat	dihitung	dengan	rumus	:</p>
 
-                <img src="modul2.3.png" alt="rumus" className="section-image"></img>
+                <img src="../Image/modul2.3.png" alt="rumus" className="section-image"></img>
 
                 <p>Dengan :</p>
                  <p>∆L	:	pertambahan	panjang	(m)</p>
@@ -98,7 +98,7 @@ const Bab2 = () => {
                    perhitungan,	untuk	menentukan	modulus	elastisitas	atau	kadang	disebut	juga	
                    modulus	Young,	digunakan	persamaan	berikut	:</p>
                 
-                   <img src="modul2.4.png" alt="rumus" className="section-image"></img>
+                   <img src="../Image/modul2.4.png" alt="rumus" className="section-image"></img>
 
                    <p>Dengan :</p>
                  <p>σ	= tegangan	(N/m2)</p>
@@ -107,7 +107,7 @@ const Bab2 = () => {
 
                  <p>Atau persamaan lain</p>
 
-                 <img src="modul2.5.png" alt="rumus" className="section-image"></img>
+                 <img src="../Image/modul2.5.png" alt="rumus" className="section-image"></img>
 
                  <p>∆L	:	pertambahan	panjang	(m)</p>
                  <p>Lo :	panjang	semula	(m)</p>
@@ -118,7 +118,7 @@ const Bab2 = () => {
                     gambaran	tentang	kualitas	bahan	dalam	hubungannya	dengan	deformasi	
                     (perubahan	bentuk,	dimensi	maupun	posisi) :</p>
                  
-                    <img src="modul2.6.png" alt="tabel" className="section-image"></img>
+                    <img src="../Image/modul2.6.png" alt="tabel" className="section-image"></img>
 
                     <p>Tabel 1. modulus elastisitas bahan</p>
                  <p>Dari	table	nampak	bahwa	nilai	terkecil	dari modulus	elastisitas	(modulus	
