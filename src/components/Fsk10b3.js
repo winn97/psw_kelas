@@ -1,8 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-
-=======
->>>>>>> 7b6b4a71d25ed928c547719a66db1126fcf9c1b8
 import "../css/Fsk10b3.css";
 
 const Bab3 = () => {
@@ -42,11 +38,6 @@ const Bab3 = () => {
           Fakta menarik lainnya terkait usaha dapat melibatkan konsep energi dan gaya dalam berbagai aktivitas sehari-hari, seperti pergerakan planet, mesin, dan lain sebagainya.
         </p>
       </section>
-
-<<<<<<< HEAD
-  
-=======
->>>>>>> 7b6b4a71d25ed928c547719a66db1126fcf9c1b8
       <div className="bottom-container">
         <h2>Yuk, uji pemahamanmu dengan latihan soal!</h2>
         <button 
@@ -59,10 +50,8 @@ const Bab3 = () => {
 
       <div className="navigation-container">
       </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> 7b6b4a71d25ed928c547719a66db1126fcf9c1b8
+
     </div>
   );
 };
