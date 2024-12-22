@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./LatihanSoalbab.css";
+import "../css/QuestionPage.css";
 
 const LatihanSoalArusBolakBalik = () => {
   const [currentQuestion, setCurrentQuestion] = useState(1);

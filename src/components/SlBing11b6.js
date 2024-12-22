@@ -1,194 +1,247 @@
 import React, { useState } from "react";
-import "./LatihanSoal1.css";
+import "../css/QuestionPage.css";
 
-const LatihanSoal = () => {
-  const [answers, setAnswers] = useState([]);
-  const [isAnswered, setIsAnswered] = useState(false);
-  const [isCorrect, setIsCorrect] = useState(false);
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [score, setScore] = useState(0);
-  const [isFinished, setIsFinished] = useState(false);
+const LatihanTenses = () => {
+const [currentQuestion, setCurrentQuestion] = useState(1);
+const [selectedOption, setSelectedOption] = useState(null);
+const [showExplanation, setShowExplanation] = useState(false);
+const [showConfirmation, setShowConfirmation] = useState(false);
 
-  const questions = [
-    {
-      question: "I _____ to the store yesterday.",
+const questions = [
+  {
+      question: "What is the function of coordinating conjunctions?",
       options: [
-        { label: "A. go", value: "A" },
-        { label: "B. went", value: "B", isCorrect: true },
-        { label: "C. will go", value: "C" },
-        { label: "D. am going", value: "D" },
+          'To connect a main clause with a dependent clause',
+          'To connect two clauses that are equal',
+          'To introduce a dependent clause',
+          'To modify nouns or verbs'
       ],
-      explanation:
-        "Jawaban yang benar adalah 'went', karena kalimat ini mengandung keterangan waktu 'yesterday', yang menunjukkan penggunaan past tense.",
-    },
-    {
-      question: "She _____ to school every day.",
+      correctOption: 'To connect two clauses that are equal',
+      explanation: "Coordinating conjunctions link two equal clauses or ideas, such as two independent clauses."
+  },
+  {
+      question: "Which of the following is a coordinating conjunction?",
+      options: ['Because', 'When', 'And', 'Although'],
+      correctOption: 'And',
+      explanation: "'And' is a coordinating conjunction used to join equal parts of a sentence."
+  },
+  {
+      question: "What is the function of subordinating conjunctions?",
       options: [
-        { label: "A. go", value: "A" },
-        { label: "B. went", value: "B" },
-        { label: "C. will go", value: "C" },
-        { label: "D. goes", value: "D", isCorrect: true },
+          'To connect a main clause with a dependent clause',
+          'To connect two equal clauses',
+          'To express contrast between ideas',
+          'To indicate a question'
       ],
-      explanation:
-        "Jawaban yang benar adalah 'goes', karena kalimat ini menggunakan simple present tense untuk kebiasaan sehari-hari.",
-    },
-    {
-      question: "They _____ studying when I called them.",
+      correctOption: 'To connect a main clause with a dependent clause',
+      explanation: "Subordinating conjunctions connect a dependent clause to a main clause, establishing a relationship like cause, time, or condition."
+  },
+  {
+      question: "Which sentence contains a coordinating conjunction?",
       options: [
-        { label: "A. are", value: "A" },
-        { label: "B. were", value: "B", isCorrect: true },
-        { label: "C. will be", value: "C" },
-        { label: "D. have been", value: "D" },
+          'I stayed home because it was raining.',
+          'I wanted to go outside, but it was raining.',
+          'Although it was sunny, I stayed inside.',
+          'If it rains, we will cancel the picnic.'
       ],
-      explanation:
-        "Jawaban yang benar adalah 'were', karena kalimat ini menggunakan past continuous tense yang menggambarkan aktivitas yang sedang berlangsung di masa lampau.",
-    },
-    {
-      question: "By the time you arrive, I _____ finished my homework.",
+      correctOption: 'I wanted to go outside, but it was raining.',
+      explanation: "'But' is a coordinating conjunction that contrasts two independent clauses."
+  },
+  {
+      question: "Which of the following is a subordinating conjunction?",
+      options: ['But', 'Or', 'Although', 'And'],
+      correctOption: 'Although',
+      explanation: "'Although' is a subordinating conjunction used to introduce a dependent clause expressing contrast."
+  },
+  {
+      question: "What does the subordinating conjunction 'because' indicate?",
       options: [
-        { label: "A. will have", value: "A", isCorrect: true },
-        { label: "B. will be", value: "B" },
-        { label: "C. had", value: "C" },
-        { label: "D. am", value: "D" },
+          'A cause or reason',
+          'A time relationship',
+          'A contrast',
+          'A choice between options'
       ],
-      explanation:
-        "Jawaban yang benar adalah 'will have', karena kalimat ini menggunakan future perfect tense untuk menggambarkan tindakan yang akan selesai sebelum waktu tertentu di masa depan.",
-    },
-    {
-      question: "I _____ my keys. Can you help me find them?",
+      correctOption: 'A cause or reason',
+      explanation: "'Because' shows a cause-and-effect relationship between two clauses."
+  },
+  {
+      question: "Identify the subordinating conjunction in this sentence: 'I will go to the park if it stops raining.'",
+      options: ['If', 'Go', 'Will', 'Stops'],
+      correctOption: 'If',
+      explanation: "'If' is a subordinating conjunction that introduces a condition for the action."
+  },
+  {
+      question: "Which sentence correctly uses a subordinating conjunction?",
       options: [
-        { label: "A. lost", value: "A" },
-        { label: "B. have lost", value: "B", isCorrect: true },
-        { label: "C. will lose", value: "C" },
-        { label: "D. am losing", value: "D" },
+          'I went to the store, and I bought milk.',
+          'She didn’t come to the party because she was sick.',
+          'We could go to the beach or stay home.',
+          'The sun was shining, but it was cold.'
       ],
-      explanation:
-        "Jawaban yang benar adalah 'have lost', karena kalimat ini menggunakan present perfect tense untuk menunjukkan kejadian yang baru saja terjadi dengan dampak pada saat ini.",
-    },
-  ];
+      correctOption: 'She didn’t come to the party because she was sick.',
+      explanation: "'Because' connects the main clause to the dependent clause, explaining the reason."
+  },
+  {
+      question: "What is the coordinating conjunction in this sentence: 'I want to go to the beach, but it is raining.'",
+      options: ['Want', 'To', 'But', 'Is'],
+      correctOption: 'But',
+      explanation: "'But' is a coordinating conjunction used to contrast two ideas."
+  },
+  {
+      question: "How do conjunctions improve sentence structure?",
+      options: [
+          'By making sentences shorter',
+          'By clarifying relationships between ideas',
+          'By adding more verbs to a sentence',
+          'By separating unrelated ideas'
+      ],
+      correctOption: 'By clarifying relationships between ideas',
+      explanation: "Conjunctions improve coherence by linking ideas and clarifying relationships between them."
+  },
+];
 
-  const currentQuestion = questions[currentQuestionIndex];
 
-  const handleAnswerClick = (option) => {
-    const updatedAnswers = [...answers];
-    updatedAnswers[currentQuestionIndex] = option.value;
-    setAnswers(updatedAnswers);
-
-    if (option.isCorrect) {
-      setScore((prevScore) => prevScore + 1);
-    }
-
-    setIsCorrect(option.isCorrect || false);
-    setIsAnswered(true);
-  };
-
-  const goToNextQuestion = () => {
-    if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
-      setIsAnswered(answers[currentQuestionIndex + 1] !== undefined);
-    }
-  };
-
-  const goToPreviousQuestion = () => {
-    if (currentQuestionIndex > 0) {
-      setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
-      setIsAnswered(answers[currentQuestionIndex - 1] !== undefined);
-    }
-  };
-
-  const handleFinishQuiz = () => {
-    setIsFinished(true);
-  };
-
-  const resetQuiz = () => {
-    setAnswers([]);
-    setIsAnswered(false);
-    setIsCorrect(false);
-    setCurrentQuestionIndex(0);
-    setScore(0);
-    setIsFinished(false);
-  };
-
-  if (isFinished) {
-    return (
-      <div className="latihan-soal1-container">
-        <div className="latihan-soal1-question-box">
-          <h1 className="latihan-soal1-title">Latihan Tenses</h1>
-          <h2>Quiz Selesai!</h2>
-          <p>
-            Skor Anda: {score}/{questions.length}
-          </p>
-          <button className="latihan-soal1-reset-button" onClick={resetQuiz}>
-            Ulangi Latihan
-          </button>
-        </div>
-      </div>
-    );
+const handleNextQuestion = () => {
+  if (currentQuestion < questions.length) {
+    setCurrentQuestion(currentQuestion + 1);
+    resetSelection();
   }
-
-  return (
-    <div className="latihan-soal1-container">
-      <div className="latihan-soal1-question-box">
-        <h1 className="latihan-soal1-title">Latihan Tenses</h1>
-        <div className="latihan-soal1-question">
-          <h2>
-            Soal Nomor {currentQuestionIndex + 1}/{questions.length}
-          </h2>
-          <p>{currentQuestion.question}</p>
-        </div>
-        <div className="latihan-soal1-answers">
-          {currentQuestion.options.map((option, index) => (
-            <button
-              key={index}
-              className={`latihan-soal1-answer-button ${
-                answers[currentQuestionIndex] === option.value
-                  ? "latihan-soal1-selected-answer"
-                  : ""
-              }`}
-              onClick={() => handleAnswerClick(option)}
-              disabled={answers[currentQuestionIndex] !== undefined}
-            >
-              {option.label}
-            </button>
-          ))}
-        </div>
-        {answers[currentQuestionIndex] !== undefined && (
-          <div className="latihan-soal1-explanation-box">
-            <h2>Jawaban Anda: {answers[currentQuestionIndex]}</h2>
-            <h3>
-              {isCorrect
-                ? "Jawaban Anda Benar!"
-                : `Jawaban Benar: ${
-                    currentQuestion.options.find((opt) => opt.isCorrect)?.value
-                  }`}
-            </h3>
-            <p>{currentQuestion.explanation}</p>
-          </div>
-        )}
-        <div className="latihan-soal1-navigation-buttons">
-          <button
-            className="latihan-soal1-nav-button prev"
-            onClick={goToPreviousQuestion}
-            disabled={currentQuestionIndex === 0}
-          >
-            ← Soal Sebelumnya
-          </button>
-          <button
-            className="latihan-soal1-nav-button next"
-            onClick={
-              currentQuestionIndex === questions.length - 1
-                ? handleFinishQuiz
-                : goToNextQuestion
-            }
-          >
-            {currentQuestionIndex === questions.length - 1
-              ? "Selesai"
-              : "Soal Selanjutnya →"}
-          </button>
-        </div>
-      </div>
-    </div>
-  );
 };
 
-export default LatihanSoal;
+const handlePreviousQuestion = () => {
+  if (currentQuestion > 1) {
+    setCurrentQuestion(currentQuestion - 1);
+    resetSelection();
+  }
+};
+
+const handleOptionSelect = (option) => {
+  setSelectedOption(option);
+};
+
+const resetSelection = () => {
+  setSelectedOption(null);
+  setShowExplanation(false);
+};
+
+const handleDropdownChange = (e) => {
+  const selectedNumber = parseInt(e.target.value);
+  setCurrentQuestion(selectedNumber);
+  resetSelection();
+};
+
+const handleExplanationClick = () => {
+  if (showExplanation) {
+    setShowExplanation(false); // Sembunyikan pembahasan tanpa pesan
+  } else if (!selectedOption) {
+    setShowConfirmation(true); // Tampilkan pesan jika opsi belum dipilih
+  } else {
+    setShowExplanation(true); // Langsung tampilkan pembahasan jika opsi sudah dipilih
+  }
+};
+
+const handleConfirmationResponse = (response) => {
+  if (response === "yes") {
+    setShowExplanation(true); // Tampilkan pembahasan
+  }
+  setShowConfirmation(false); // Hilangkan pesan
+};
+
+return (
+  <div className="question-page">
+    <div className="question-container">
+      <button
+        className="oval-button previous-button"
+        onClick={handlePreviousQuestion}
+        disabled={currentQuestion === 1}
+      >
+        &larr; Previous Questions
+      </button>
+      <div className="question-box">
+        <h2>Question {currentQuestion}</h2>
+        <p>{questions[currentQuestion - 1].question}</p>
+      </div>
+      <button
+        className="oval-button next-button"
+        onClick={handleNextQuestion}
+        disabled={currentQuestion === questions.length}
+      >
+        Next Question &rarr;
+      </button>
+    </div>
+
+    <div className="interactive-section">
+      <div className="dropdown-container">
+        <label htmlFor="question-dropdown">Select Question:</label>
+        <select
+          id="question-dropdown"
+          value={currentQuestion}
+          onChange={handleDropdownChange}
+        >
+          {questions.map((_, index) => (
+            <option key={index} value={index + 1}>
+              Question {index + 1}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div className="options-container">
+        {questions[currentQuestion - 1].options.map((option, index) => (
+          <button
+            key={index}
+            className={`option-button ${
+              selectedOption === option
+                ? option === questions[currentQuestion - 1].correctOption
+                  ? "correct"
+                  : "incorrect"
+                : ""
+            }`}
+            onClick={() => handleOptionSelect(option)}
+          >
+            {option}
+          </button>
+        ))}
+      </div>
+
+      <div className="explanation-container">
+        <button
+          className="explanation-toggle"
+          onClick={handleExplanationClick}
+        >
+          {showExplanation ? "Hide Explanation" : "View Explanation"}
+        </button>
+        {showExplanation && (
+          <p className="explanation-text">
+            {questions[currentQuestion - 1].explanation}
+          </p>
+        )}
+      </div>
+    </div>
+
+    {showConfirmation && (
+      <div className="confirmation-popup">
+        <div className="popup-content">
+          <p>Are you sure you want to view the explanation now?</p>
+          <div className="popup-buttons">
+            <button
+              className="popup-button no-button"
+              onClick={() => handleConfirmationResponse("no")}
+            >
+              No
+            </button>
+            <button
+              className="popup-button yes-button"
+              onClick={() => handleConfirmationResponse("yes")}
+            >
+              Yes
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
+  </div>
+);
+};
+
+export default LatihanTenses;

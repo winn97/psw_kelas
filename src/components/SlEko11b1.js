@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./LatihanSoal1.css";
+import "../css/QuestionPage.css";
 
 const LatihanSoal1 = () => {
   const [answers, setAnswers] = useState([]);

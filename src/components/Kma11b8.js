@@ -1,7 +1,7 @@
 // HASIL KALI KELARUTAN
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./bab8.css";
+import "../css/Kma11b7.css";
 
 const Bab7 = () => {
   const navigate = useNavigate();

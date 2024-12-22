@@ -1,6 +1,4 @@
 import React from "react";
-import KalUsaha from "../components/KalUsaha";
-import Video from "../components/Video";
 import "../css/Fsk10b3.css";
 
 const Bab3 = () => {
@@ -41,7 +39,6 @@ const Bab3 = () => {
         </p>
       </section>
 
-        <KalUsaha />
       <div className="bottom-container">
         <h2>Yuk, uji pemahamanmu dengan latihan soal!</h2>
         <button 
@@ -54,7 +51,6 @@ const Bab3 = () => {
 
       <div className="navigation-container">
       </div>
-      <Video />
     </div>
   );
 };
