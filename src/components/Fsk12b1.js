@@ -15,7 +15,7 @@ const Bab1 = () => {
           secara satu arah dari satu kutub ke kutub lainnya dalam rangkaian listrik. 
           Arus searah umumnya dihasilkan oleh sumber seperti baterai atau sel surya.
         </p>
-        <img src="diagram_arus_searah.png" alt="Diagram Arus Searah" className="section-image" />
+        <img src="../Image/diagram_arus_searah.png" alt="Diagram Arus Searah" className="section-image" />
       </section>
 
       <section>
@@ -43,7 +43,7 @@ const Bab1 = () => {
         </p>
         <p>Rumus Hambatan Total Rangkaian Seri:</p>
         <p className="formula">R<sub>total</sub> = R<sub>1</sub> + R<sub>2</sub> + R<sub>3</sub> + ...</p>
-        <img src="rangkaian_seri.png" alt="Rangkaian Seri" className="section-image" />
+        <img src="../Image/rangkaian_seri.png" alt="Rangkaian Seri" className="section-image" />
 
         <h3>b. Rangkaian Paralel</h3>
         <p>
@@ -54,7 +54,7 @@ const Bab1 = () => {
         <p className="formula">
           1 / R<sub>total</sub> = 1 / R<sub>1</sub> + 1 / R<sub>2</sub> + 1 / R<sub>3</sub> + ...
         </p>
-        <img src="rangkaian_paralel.png" alt="Rangkaian Paralel" className="section-image" />
+        <img src="../Image/rangkaian_paralel.png" alt="Rangkaian Paralel" className="section-image" />
       </section>
 
       <section>
@@ -87,7 +87,7 @@ const Bab1 = () => {
           <li><strong>P:</strong> Daya listrik (Watt)</li>
           <li><strong>t:</strong> Waktu (detik atau jam)</li>
         </ul>
-        <img src="diagram_energi.png" alt="Energi Listrik" className="section-image" />
+        <img src="../Image/diagram_energi.png" alt="Energi Listrik" className="section-image" />
       </section>
 
       <div className="bottom-container">

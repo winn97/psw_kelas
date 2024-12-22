@@ -13,7 +13,7 @@ const Bab6 = () => {
         <p>
           Fisika modern adalah cabang fisika yang berkembang pada awal abad ke-20 untuk menjelaskan fenomena yang tidak dapat dijelaskan oleh fisika klasik, seperti perilaku partikel subatomik dan kecepatan mendekati kecepatan cahaya.
         </p>
-        <img src="fisika_modern.png" alt="Fisika Modern" className="section-image" />
+        <img src="../Image/fisika_modern.png" alt="Fisika Modern" className="section-image" />
       </section>
 
       <section>
@@ -34,7 +34,7 @@ const Bab6 = () => {
           <li>m: Massa (kilogram)</li>
           <li>c: Kecepatan cahaya (3 x 10<sup>8</sup> m/s)</li>
         </ul>
-        <img src="realitivitas.png" alt="Teori Relativitas" className="section-image" />
+        <img src="../Image/realitivitas.png" alt="Teori Relativitas" className="section-image" />
       </section>
 
       <section>
@@ -50,7 +50,7 @@ const Bab6 = () => {
           <li>h: Konstanta Planck (6,63 x 10<sup>-34</sup> J.s)</li>
           <li>f: Frekuensi cahaya (Hz)</li>
         </ul>
-        <img src="fotolistrik.png" alt="Efek Fotolistrik" className="section-image" />
+        <img src="../Image/fotolistrik.png" alt="Efek Fotolistrik" className="section-image" />
       </section>
 
       <section>
@@ -59,7 +59,7 @@ const Bab6 = () => {
           Model atom modern menjelaskan struktur atom dengan teori kuantum. Elektron berada dalam orbital yang menggambarkan kemungkinan posisi elektron di sekitar inti atom.
         </p>
         <p><strong>Konsep:</strong> Model atom Bohr dan mekanika kuantum.</p>
-        <img src="model_atom.png" alt="Model Atom" className="section-image" />
+        <img src="../Image/model_atom.png" alt="Model Atom" className="section-image" />
       </section>
 
       <section>
@@ -75,7 +75,7 @@ const Bab6 = () => {
           <li>&Delta;p: Ketidakpastian momentum</li>
           <li>h: Konstanta Planck</li>
         </ul>
-        <img src="mekanika_kuantum.png" alt="Mekanika Kuantum" className="section-image" />
+        <img src="../Image/mekanika_kuantum.png" alt="Mekanika Kuantum" className="section-image" />
       </section>
 
       <div className="bottom-container">

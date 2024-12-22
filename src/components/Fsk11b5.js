@@ -35,32 +35,32 @@ const Bab5 = () => {
                    bermacam macam termometer mulai dari yang analog sampai yang digital, 
                    mulai dari yang menggunakan air raksa sampai yang menggunakan infra merah.
         </p>
-        <img src="modul5.1.png" alt="Termometer" className="section-image" />
+        <img src="../Image/modul5.1.png" alt="Termometer" className="section-image" />
 
         <h3>b. Skala Suhu </h3>
         <p>
         Terdapat 4 skala suhu  yang digunakan pada termometer dintaranya Celcius 
         (oC), Reamur (oR), Fahrenheit (oH)  dan Kelvin (K)
         </p>
-        <img src="modul5.2.png" alt="Skala Suhu" className="section-image" />
+        <img src="../Image/modul5.2.png" alt="Skala Suhu" className="section-image" />
 
         <p>
         Konversi antara 4 skala tersebut ditunjukkan oleh tabel berikut :
         </p>
-        <img src="modul5.3.png" alt="tabel" className="section-image" />
+        <img src="../Image/modul5.3.png" alt="tabel" className="section-image" />
         <p>
           Skala Celcius dan Fahrenheit banyak kita temukan di kehidupan sehari hari, 
           sedangkan skala suhu yang ditetapkan sebagai Satuan Internasional adalah Kelvin. 
           Berikut gambaran mengkonversi suhu pada 2 termometer yang berbeda secara 
           umum dituliskan:</p>
-          <img src="modul5.4.png" alt="tabel" className="section-image" />
+          <img src="../Image/modul5.4.png" alt="tabel" className="section-image" />
       </section>
 
       <section>
         <h2>2. Kalor </h2>
         
         <h3>a. Pengaruh Kalor pada zat </h3>     
-        <img src="modul5.5.png" alt="Kalor" className="section-image" />
+        <img src="../Image/modul5.5.png" alt="Kalor" className="section-image" />
         <p>
         Gambar diatas menunjukkan air yang sedang dipanaskan hingga mendidih. Saat 
         air dipanaskan ada proses transfer energi dari satu zat ke zat lainnya yang disertai 
@@ -77,7 +77,7 @@ const Bab5 = () => {
           besar kalor jenis suatu benda, semakin besar pula kemampuan benda 
           tersebut dalam menyerap kalor.</p>
         <p>Secara matematis </p>
-        <img src="modul5.6.png" alt="Kalor" className="section-image" />
+        <img src="../Image/modul5.6.png" alt="Kalor" className="section-image" />
 
         <p> dengan </p>
                 <p>c = kalor jenis suatu zat (J kg-1  oC-1)</p>
@@ -85,7 +85,7 @@ const Bab5 = () => {
                 <p>ΔT = perubahan suhu (oK)</p>
                 <p>Q= banyak kalor yang diterima atau dilepas (J)</p>
 
-        <img src="modul5.7.png" alt="Kalor" className="section-image" />
+        <img src="../Image/modul5.7.png" alt="Kalor" className="section-image" />
 
         <p>Kapasitas kalor suatu benda adalah jumlah kalor yang diperlukan atau 
                    dilepaskan jika suhu benda tersebut dinaikkan atau diturunkan 1 K atau 1oC.  
@@ -131,7 +131,7 @@ const Bab5 = () => {
                 <p>Ketika menggunakan persamaan ini, perlu diingat bahwa temperatur naik 
                    berarti zat menerima kalor, dan temperatur turun berarti zat melepaskan 
                    kalor, maka</p>
-        <img src="modul5.8.png" alt=" Black " className="section-image" />
+        <img src="../Image/modul5.8.png" alt=" Black " className="section-image" />
 
         <p>Keterangan: </p>
                 <p>m1 = massa benda 1 yang suhunya tinggi (kg) </p>

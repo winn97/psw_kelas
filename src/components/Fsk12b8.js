@@ -13,7 +13,7 @@ const Bab8 = () => {
         <p>
           Sumber energi adalah segala sesuatu yang dapat menghasilkan energi untuk memenuhi kebutuhan hidup manusia. Energi ini bisa berasal dari sumber alam maupun buatan yang dapat digunakan untuk berbagai keperluan, seperti listrik, transportasi, dan industri.
         </p>
-        <img src="sumber_energi.png" alt="Sumber Energi" className="section-image" />
+        <img src="../Image/sumber_energi.png" alt="Sumber Energi" className="section-image" />
       </section>
 
       <section>
@@ -30,7 +30,7 @@ const Bab8 = () => {
         <p>
           Energi biomassa diperoleh dari bahan organik, seperti kayu, limbah pertanian, dan sampah organik yang dapat dibakar atau diolah untuk menghasilkan energi.
         </p>
-        <img src="energi_terbarukan.png" alt="Sumber Energi Terbarukan" className="section-image" />
+        <img src="../Image/energi_terbarukan.png" alt="Sumber Energi Terbarukan" className="section-image" />
       </section>
 
       <section>
@@ -42,7 +42,7 @@ const Bab8 = () => {
         <p>
           Energi fosil berasal dari sisa-sisa makhluk hidup yang telah terkubur selama jutaan tahun dan kemudian berubah menjadi batu bara, minyak bumi, dan gas alam. Penggunaan energi ini menyebabkan polusi dan berkontribusi terhadap perubahan iklim.
         </p>
-        <img src="energi_tak_terbarukan.png" alt="Sumber Energi Tak Terbarukan" className="section-image" />
+        <img src="../Image/energi_tak_terbarukan.png" alt="Sumber Energi Tak Terbarukan" className="section-image" />
       </section>
 
       <section>
@@ -56,7 +56,7 @@ const Bab8 = () => {
           <li>Pembangkit Listrik Tenaga Air (PLTA): Menggunakan energi potensial air untuk memutar turbin yang menghasilkan listrik.</li>
           <li>Pembangkit Listrik Tenaga Angin (PLTA): Menggunakan turbin angin untuk menghasilkan listrik dari energi kinetik angin.</li>
         </ul>
-        <img src="tenaga_listrik.png" alt="Proses Pembangkitan Energi Listrik" className="section-image" />
+        <img src="../Image/tenaga_listrik.png" alt="Proses Pembangkitan Energi Listrik" className="section-image" />
       </section>
 
       <section>
@@ -71,7 +71,7 @@ const Bab8 = () => {
           <li>Energi yang Berguna: Energi yang dapat dimanfaatkan untuk keperluan tertentu</li>
           <li>Energi yang Dihabiskan: Energi total yang digunakan dalam proses</li>
         </ul>
-        <img src="efisiensi.png" alt="Efisiensi Energi" className="section-image" />
+        <img src="../Image/efisiensi.png" alt="Efisiensi Energi" className="section-image" />
       </section>
 
       <div className="bottom-container">

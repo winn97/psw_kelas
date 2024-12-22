@@ -1,194 +1,247 @@
 import React, { useState } from "react";
-import "./LatihanSoal1.css";
+import "../css/QuestionPage.css";
 
-const LatihanSoal = () => {
-  const [answers, setAnswers] = useState([]);
-  const [isAnswered, setIsAnswered] = useState(false);
-  const [isCorrect, setIsCorrect] = useState(false);
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [score, setScore] = useState(0);
-  const [isFinished, setIsFinished] = useState(false);
+const LatihanModals = () => {
+const [currentQuestion, setCurrentQuestion] = useState(1);
+const [selectedOption, setSelectedOption] = useState(null);
+const [showExplanation, setShowExplanation] = useState(false);
+const [showConfirmation, setShowConfirmation] = useState(false);
 
-  const questions = [
-    {
-      question: "Which modal verb is used to express ability?",
-      options: [
-        { label: "A. Can", value: "A", isCorrect: true },
-        { label: "B. Must", value: "B" },
-        { label: "C. Should", value: "C" },
-        { label: "D. Might", value: "D" },
-      ],
-      explanation:
-        "The modal verb 'can' is used to express ability, for example: 'I can swim.'",
-    },
-    {
-      question: "Which modal verb is used to express permission?",
-      options: [
-        { label: "A. Could", value: "A" },
-        { label: "B. May", value: "B", isCorrect: true },
-        { label: "C. Will", value: "C" },
-        { label: "D. Shall", value: "D" },
-      ],
-      explanation:
-        "'May' is used to ask for or give permission, for example: 'May I leave early today?'",
-    },
-    {
-      question: "Which modal verb expresses a strong obligation or necessity?",
-      options: [
-        { label: "A. Can", value: "A" },
-        { label: "B. Should", value: "B" },
-        { label: "C. Must", value: "C", isCorrect: true },
-        { label: "D. Could", value: "D" },
-      ],
-      explanation:
-        "'Must' is used to express a strong obligation, for example: 'You must wear a helmet when riding a bike.'",
-    },
-    {
-      question: "Which modal verb is used to express possibility?",
-      options: [
-        { label: "A. Must", value: "A" },
-        { label: "B. Might", value: "B", isCorrect: true },
-        { label: "C. Can", value: "C" },
-        { label: "D. Should", value: "D" },
-      ],
-      explanation:
-        "'Might' is used to express a possibility, for example: 'It might rain tomorrow.'",
-    },
-    {
-      question: "Which modal verb is used to offer help?",
-      options: [
-        { label: "A. Can", value: "A", isCorrect: true },
-        { label: "B. Will", value: "B" },
-        { label: "C. Must", value: "C" },
-        { label: "D. Might", value: "D" },
-      ],
-      explanation:
-        "'Can' is often used to offer help, for example: 'Can I help you with that?'",
-    },
-  ];
-
-  const currentQuestion = questions[currentQuestionIndex];
-
-  const handleAnswerClick = (option) => {
-    const updatedAnswers = [...answers];
-    updatedAnswers[currentQuestionIndex] = option.value;
-    setAnswers(updatedAnswers);
-
-    if (option.isCorrect) {
-      setScore((prevScore) => prevScore + 1);
-    }
-
-    setIsCorrect(option.isCorrect || false);
-    setIsAnswered(true);
-  };
-
-  const goToNextQuestion = () => {
-    if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
-      setIsAnswered(answers[currentQuestionIndex + 1] !== undefined);
-    }
-  };
-
-  const goToPreviousQuestion = () => {
-    if (currentQuestionIndex > 0) {
-      setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
-      setIsAnswered(answers[currentQuestionIndex - 1] !== undefined);
-    }
-  };
-
-  const handleFinishQuiz = () => {
-    setIsFinished(true);
-  };
-
-  const resetQuiz = () => {
-    setAnswers([]);
-    setIsAnswered(false);
-    setIsCorrect(false);
-    setCurrentQuestionIndex(0);
-    setScore(0);
-    setIsFinished(false);
-  };
-
-  if (isFinished) {
-    return (
-      <div className="latihan-soal1-container">
-        <div className="latihan-soal1-question-box">
-          <h1 className="latihan-soal1-title">Modals in English</h1>
-          <h2>Quiz Completed!</h2>
-          <p>
-            Your Score: {score}/{questions.length}
-          </p>
-          <button className="latihan-soal1-reset-button" onClick={resetQuiz}>
-            Retake Quiz
-          </button>
-        </div>
-      </div>
-    );
+const questions = [
+  {
+    question: "Which modal verb is used to express ability or permission?",
+    options: ["May", "Can", "Must", "Should"],
+    correctOption: "Can",
+    explanation: "'Can' is used to express both ability (e.g., 'I can swim') and permission (e.g., 'You can go now')."
+  },
+  {
+    question: "What is the formula for using 'must'?",
+    options: [
+      "Subject + must + Verb 1",
+      "Subject + must + Verb 2",
+      "Subject + must + to + Verb 1",
+      "Subject + must + be + Verb-ing"
+    ],
+    correctOption: "Subject + must + Verb 1",
+    explanation: "The correct formula for 'must' is: Subject + must + Verb 1 (base form). For example, 'You must study.'"
+  },
+  {
+    question: "Which sentence uses 'may' correctly?",
+    options: [
+      "She may swims well.",
+      "It may rain this evening.",
+      "May she to come in?",
+      "They may going to the park."
+    ],
+    correctOption: "It may rain this evening.",
+    explanation: "'May' is followed by the base form of the verb, as in 'It may rain this evening.'"
+  },
+  {
+    question: "What is the function of 'should'?",
+    options: [
+      "To express obligation",
+      "To express ability",
+      "To give advice or recommendation",
+      "To express a low possibility"
+    ],
+    correctOption: "To give advice or recommendation",
+    explanation: "'Should' is often used to give advice or make recommendations, e.g., 'You should exercise regularly.'"
+  },
+  {
+    question: "Identify the modal verb in this sentence: 'You must wear a helmet while riding a bike.'",
+    options: ["Must", "Wear", "Helmet", "Riding"],
+    correctOption: "Must",
+    explanation: "The modal verb in this sentence is 'must,' which expresses obligation."
+  },
+  {
+    question: "Which modal verb indicates a polite request?",
+    options: ["Can", "Could", "Should", "Will"],
+    correctOption: "Could",
+    explanation: "'Could' is often used to make polite requests, e.g., 'Could you pass the salt, please?'"
+  },
+  {
+    question: "Choose the sentence that uses 'will' correctly:",
+    options: [
+      "She will to call you tomorrow.",
+      "It will be a sunny day.",
+      "They will going to the museum.",
+      "He will plays the guitar."
+    ],
+    correctOption: "It will be a sunny day.",
+    explanation: "The sentence 'It will be a sunny day' uses 'will' correctly to make a future prediction."
+  },
+  {
+    question: "What does 'might' indicate?",
+    options: [
+      "A strong obligation",
+      "A low possibility",
+      "An ability in the past",
+      "A future prediction"
+    ],
+    correctOption: "A low possibility",
+    explanation: "'Might' expresses a low possibility, e.g., 'It might rain later.'"
+  },
+  {
+    question: "In which sentence does 'could' express past ability?",
+    options: [
+      "Could you help me, please?",
+      "He could play the piano when he was five.",
+      "Could you lend me your book?",
+      "She could come to the party later."
+    ],
+    correctOption: "He could play the piano when he was five.",
+    explanation: "'Could' expresses past ability in the sentence 'He could play the piano when he was five.'"
+  },
+  {
+    question: "Which modal verb is used to express a habit in the past?",
+    options: ["Could", "Would", "Might", "Should"],
+    correctOption: "Would",
+    explanation: "'Would' is used to express habitual actions in the past, e.g., 'He would always tell us stories.'"
   }
+];
 
-  return (
-    <div className="latihan-soal1-container">
-      <div className="latihan-soal1-question-box">
-        <h1 className="latihan-soal1-title">Modals in English</h1>
-        <div className="latihan-soal1-question">
-          <h2>
-            Question {currentQuestionIndex + 1}/{questions.length}
-          </h2>
-          <p>{currentQuestion.question}</p>
-        </div>
-        <div className="latihan-soal1-answers">
-          {currentQuestion.options.map((option, index) => (
-            <button
-              key={index}
-              className={`latihan-soal1-answer-button ${
-                answers[currentQuestionIndex] === option.value
-                  ? "latihan-soal1-selected-answer"
-                  : ""
-              }`}
-              onClick={() => handleAnswerClick(option)}
-              disabled={answers[currentQuestionIndex] !== undefined}
-            >
-              {option.label}
-            </button>
-          ))}
-        </div>
-        {answers[currentQuestionIndex] !== undefined && (
-          <div className="latihan-soal1-explanation-box">
-            <h2>Your Answer: {answers[currentQuestionIndex]}</h2>
-            <h3>
-              {isCorrect
-                ? "Your answer is correct!"
-                : `Correct Answer: ${
-                    currentQuestion.options.find((opt) => opt.isCorrect)?.value
-                  }`}
-            </h3>
-            <p>{currentQuestion.explanation}</p>
-          </div>
-        )}
-        <div className="latihan-soal1-navigation-buttons">
-          <button
-            className="latihan-soal1-nav-button prev"
-            onClick={goToPreviousQuestion}
-            disabled={currentQuestionIndex === 0}
-          >
-            ← Previous Question
-          </button>
-          <button
-            className="latihan-soal1-nav-button next"
-            onClick={
-              currentQuestionIndex === questions.length - 1
-                ? handleFinishQuiz
-                : goToNextQuestion
-            }
-          >
-            {currentQuestionIndex === questions.length - 1
-              ? "Finish"
-              : "Next Question →"}
-          </button>
-        </div>
-      </div>
-    </div>
-  );
+
+const handleNextQuestion = () => {
+  if (currentQuestion < questions.length) {
+    setCurrentQuestion(currentQuestion + 1);
+    resetSelection();
+  }
 };
 
-export default LatihanSoal;
+const handlePreviousQuestion = () => {
+  if (currentQuestion > 1) {
+    setCurrentQuestion(currentQuestion - 1);
+    resetSelection();
+  }
+};
+
+const handleOptionSelect = (option) => {
+  setSelectedOption(option);
+};
+
+const resetSelection = () => {
+  setSelectedOption(null);
+  setShowExplanation(false);
+};
+
+const handleDropdownChange = (e) => {
+  const selectedNumber = parseInt(e.target.value);
+  setCurrentQuestion(selectedNumber);
+  resetSelection();
+};
+
+const handleExplanationClick = () => {
+  if (showExplanation) {
+    setShowExplanation(false); // Sembunyikan pembahasan tanpa pesan
+  } else if (!selectedOption) {
+    setShowConfirmation(true); // Tampilkan pesan jika opsi belum dipilih
+  } else {
+    setShowExplanation(true); // Langsung tampilkan pembahasan jika opsi sudah dipilih
+  }
+};
+
+const handleConfirmationResponse = (response) => {
+  if (response === "yes") {
+    setShowExplanation(true); // Tampilkan pembahasan
+  }
+  setShowConfirmation(false); // Hilangkan pesan
+};
+
+return (
+  <div className="question-page">
+    <div className="question-container">
+      <button
+        className="oval-button previous-button"
+        onClick={handlePreviousQuestion}
+        disabled={currentQuestion === 1}
+      >
+        &larr; Previous Questions
+      </button>
+      <div className="question-box">
+        <h2>Question {currentQuestion}</h2>
+        <p>{questions[currentQuestion - 1].question}</p>
+      </div>
+      <button
+        className="oval-button next-button"
+        onClick={handleNextQuestion}
+        disabled={currentQuestion === questions.length}
+      >
+        Next Question &rarr;
+      </button>
+    </div>
+
+    <div className="interactive-section">
+      <div className="dropdown-container">
+        <label htmlFor="question-dropdown">Select Question:</label>
+        <select
+          id="question-dropdown"
+          value={currentQuestion}
+          onChange={handleDropdownChange}
+        >
+          {questions.map((_, index) => (
+            <option key={index} value={index + 1}>
+              Question {index + 1}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div className="options-container">
+        {questions[currentQuestion - 1].options.map((option, index) => (
+          <button
+            key={index}
+            className={`option-button ${
+              selectedOption === option
+                ? option === questions[currentQuestion - 1].correctOption
+                  ? "correct"
+                  : "incorrect"
+                : ""
+            }`}
+            onClick={() => handleOptionSelect(option)}
+          >
+            {option}
+          </button>
+        ))}
+      </div>
+
+      <div className="explanation-container">
+        <button
+          className="explanation-toggle"
+          onClick={handleExplanationClick}
+        >
+          {showExplanation ? "Hide Explanation" : "View Explanation"}
+        </button>
+        {showExplanation && (
+          <p className="explanation-text">
+            {questions[currentQuestion - 1].explanation}
+          </p>
+        )}
+      </div>
+    </div>
+
+    {showConfirmation && (
+      <div className="confirmation-popup">
+        <div className="popup-content">
+          <p>Are you sure you want to view the explanation now?</p>
+          <div className="popup-buttons">
+            <button
+              className="popup-button no-button"
+              onClick={() => handleConfirmationResponse("no")}
+            >
+              No
+            </button>
+            <button
+              className="popup-button yes-button"
+              onClick={() => handleConfirmationResponse("yes")}
+            >
+              Yes
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
+  </div>
+);
+};
+
+export default LatihanModals;

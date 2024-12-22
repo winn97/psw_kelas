@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./LatihanSoalbab.css";
+import "../css/QuestionPage.css";
 
 const LatihanSoalFisikaModern = () => {
   const [currentQuestion, setCurrentQuestion] = useState(1);

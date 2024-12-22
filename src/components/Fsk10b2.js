@@ -1,9 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import '../css/Fsk10b2.css';
-import Inersia from '../Image/inersia.jpg';
-import Percepatan from '../Image/percepatan.jpeg';
-import Aksi from '../Image/aksireaksi.jpg';
 
 const Bab2 = () => {
   const navigate = useNavigate();
@@ -31,7 +28,7 @@ const Bab2 = () => {
         <p>
         Berikut merupakan rumus dari hukum inersia yang dapat digunakan.
         </p>
-        <img src={Inersia} alt="Inersia" className="img-fluid mt-3 rounded shadow-lg" />
+        <img src="../Image/inersia.jpg" alt="Inersia" className="img-fluid mt-3 rounded shadow-lg" />
 
       </section>
 
@@ -46,7 +43,7 @@ const Bab2 = () => {
         <p>
           Berikut merupakan rumus dari hukum newton kedua (Percepatan).
         </p>
-        <img src={Percepatan} alt="Percepatan" className="img-fluid mt-3 rounded shadow-lg" />
+        <img src="../Image/percepatan.jpg" alt="Percepatan" className="img-fluid mt-3 rounded shadow-lg" />
       </section>
 
       <section>
@@ -60,7 +57,7 @@ const Bab2 = () => {
         <p>
          Berikut merupakan rumus dari hukum newton ketiga (Hukum Aksi Reaksi).
         </p>
-        <img src={Aksi} alt="Aksi" className="img-fluid mt-3 rounded shadow-lg" />
+        <img src="../Image/aksireaksi.jpg" alt="Aksi" className="img-fluid mt-3 rounded shadow-lg" />
       </section>
 
       <section>

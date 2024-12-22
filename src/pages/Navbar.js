@@ -20,7 +20,7 @@ const Navbar = () => {
                   <ul className="sub-dropdown-content">
                     {[10, 11, 12].map((kelas) => (
                       <li key={`${subject}-kelas-${kelas}`}>
-                        <Link to={`/${subject}/kelas-${kelas}`}>Kelas {kelas}</Link>
+                        <Link to={`materi/${subject}/kelas-${kelas}`}>Kelas {kelas}</Link>
                       </li>
                     ))}
                   </ul>
@@ -37,7 +37,7 @@ const Navbar = () => {
                   <ul className="sub-dropdown-content">
                     {[10, 11, 12].map((kelas) => (
                       <li key={`${subject}-kelas-${kelas}-kuis`}>
-                        <Link to={`/${subject}/kelas-${kelas}-kuis`}>Kelas {kelas}</Link>
+                        <Link to={`kuis/${subject}/kelas-${kelas}`}>Kelas {kelas}</Link>
                       </li>
                     ))}
                   </ul>
@@ -54,7 +54,7 @@ const Navbar = () => {
                   <ul className="sub-dropdown-content">
                     {[10, 11, 12].map((kelas) => (
                       <li key={`${subject}-kelas-${kelas}-latihan`}>
-                        <Link to={`/${subject}/kelas-${kelas}-latihan`}>Kelas {kelas}</Link>
+                        <Link to={`latihan/${subject}/kelas-${kelas}`}>Kelas {kelas}</Link>
                       </li>
                     ))}
                   </ul>

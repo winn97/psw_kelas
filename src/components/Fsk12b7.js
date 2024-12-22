@@ -14,7 +14,7 @@ const Bab7 = () => {
         <p>
           Teknologi digital merujuk pada penggunaan perangkat elektronik, sistem komputer, dan data dalam bentuk digital untuk memproses, menyimpan, dan mentransmisikan informasi. Teknologi ini telah merubah hampir setiap aspek kehidupan manusia, dari komunikasi hingga hiburan.
         </p>
-        <img src="teknologi.png" alt="Teknologi Digital" className="section-image" />
+        <img src="../Image/teknologi.png" alt="Teknologi Digital" className="section-image" />
       </section>
 
       <section>
@@ -27,7 +27,7 @@ const Bab7 = () => {
         <p>
           Sistem operasi adalah perangkat lunak yang mengelola perangkat keras komputer dan menyediakan platform untuk aplikasi lainnya, seperti Windows, macOS, dan Linux.
         </p>
-        <img src="komputer.png" alt="Komputer dan Sistem Operasi" className="section-image" />
+        <img src="../Image/komputer.png" alt="Komputer dan Sistem Operasi" className="section-image" />
       </section>
 
       <section>
@@ -43,7 +43,7 @@ const Bab7 = () => {
           <li>Bandwidth: Kapasitas maksimum jalur komunikasi</li>
           <li>Waktu: Durasi pemindahan data</li>
         </ul>
-        <img src="internet.png" alt="Internet dan Jaringan" className="section-image" />
+        <img src="../Image/internet.png" alt="Internet dan Jaringan" className="section-image" />
       </section>
 
       <section>
@@ -52,7 +52,7 @@ const Bab7 = () => {
           Cloud computing adalah model layanan komputasi yang menyediakan sumber daya komputer (seperti penyimpanan dan pemrosesan data) melalui internet, memungkinkan pengguna mengakses dan menggunakan perangkat lunak dan data tanpa harus mengelola infrastruktur fisik.
         </p>
         <p><strong>Konsep:</strong> Layanan berbasis cloud seperti penyimpanan data, komputasi awan, dan SaaS (Software as a Service).</p>
-        <img src="computing.png" alt="Cloud Computing" className="section-image" />
+        <img src="../Image/computing.png" alt="Cloud Computing" className="section-image" />
       </section>
 
       <section>
@@ -68,7 +68,7 @@ const Bab7 = () => {
           <li>Autentikasi: Proses verifikasi identitas pengguna</li>
           <li>Keamanan Jaringan: Perlindungan jaringan komputer dari ancaman eksternal</li>
         </ul>
-        <img src="keamanan.png" alt="Keamanan Digital" className="section-image" />
+        <img src="../Image/keamanan.png" alt="Keamanan Digital" className="section-image" />
       </section>
 
       <div className="bottom-container">

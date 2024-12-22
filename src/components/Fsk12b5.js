@@ -13,7 +13,7 @@ const Bab5 = () => {
         <p>
           Induksi elektromagnetik adalah fenomena munculnya gaya gerak listrik (ggl) induksi pada sebuah konduktor ketika terjadi perubahan fluks magnetik yang melaluinya. Fenomena ini ditemukan oleh Michael Faraday pada tahun 1831.
         </p>
-        <img src="ilustrasi.png" alt="Ilustrasi Induksi Elektromagnetik" className="section-image" />
+        <img src="../Image/ilustrasi.png" alt="Ilustrasi Induksi Elektromagnetik" className="section-image" />
       </section>
 
       <section>
@@ -30,7 +30,7 @@ const Bab5 = () => {
           <li>&#916;&Phi;: Perubahan fluks magnetik (Weber)</li>
           <li>&#916;t: Waktu perubahan (detik)</li>
         </ul>
-        <img src="hukum_faraday.png" alt="Hukum Faraday" className="section-image" />
+        <img src="../Image/hukum_faraday.png" alt="Hukum Faraday" className="section-image" />
       </section>
 
       <section>
@@ -53,7 +53,7 @@ const Bab5 = () => {
           <li><strong>Transformator:</strong> Mengubah tegangan listrik menjadi lebih tinggi atau lebih rendah.</li>
           <li><strong>Kompor Induksi:</strong> Menggunakan medan magnet untuk memanaskan benda logam.</li>
         </ul>
-        <img src="aplikasi.png" alt="Aplikasi Induksi Elektromagnetik" className="section-image" />
+        <img src="../Image/aplikasi.png" alt="Aplikasi Induksi Elektromagnetik" className="section-image" />
       </section>
 
       <section>

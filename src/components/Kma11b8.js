@@ -1,7 +1,7 @@
 // HASIL KALI KELARUTAN
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./bab8.css";
+import "../css/Kma11b7.css";
 
 const Bab7 = () => {
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ const Bab7 = () => {
         Kelarutan adalah kemampuan suatu zat untuk melarut dalam sejumlah pelarut atau bisa dikatakan jika kelarutan menyatakan banyaknya zat terlarut dalam tiap satu liter larutan pada suhu tertentu. Jika suatu zat padat secara terus menerus ditambahkan ke dalam zat pelarut, maka pada suatu saat kita akan mendapati zat tersebut tidak akan larut lagi. 
 Itu artinya, pada saat itu sudah mencapai konsentrasi maksimum. Larutan yang sudah mengandung konsentrasi maksimum itu, disebut sebagai larutan jenuh dan harga konsentrasi maksimum itu dinamakan kelarutan. 
         </p>
-        <img src="bab8.1.jpg" alt="Hormon dalam Reproduksi" className="section-image" />
+        <img src="../Image/bab8.1k.jpg" alt="Hormon dalam Reproduksi" className="section-image" />
       </section>
       
       <section>
@@ -47,7 +47,7 @@ CaCO3(aq) qe Ca2+(aq) + CO32-(aq)
         <p>
         Nilai Ksp dapat bervariasi tergantung pada sumber dan suhu. Konstanta hasil kali kelarutan akan berubah bila suhu diubah, dan tetap bila suhu tidak berubah
         </p>
-        <img src="bab8.2.jpg" alt="Hormon reproduksi" className="section-image" />
+        <img src="../Image/bab8.2k.jpg" alt="Hormon reproduksi" className="section-image" />
       </section>
 
       <section>
@@ -57,7 +57,7 @@ KONSTANTA HASIL KALI KELARUTAN</h3>
         dipengaruhi oleh nilai kelarutan zat </p>
         <p>Hubungan kelarutan dengan Ksp dalam
         berbagai jenis basa dan garam sukar larut:</p>
-        <img src="bab8.3.png" alt="Kehamilan" className="section-image" />
+        <img src="../Image/bab8.3k.png" alt="Kehamilan" className="section-image" />
     <h5>Contoh:</h5>
     <p>
 Tentukan kelarutan AgCl jika diketahui Ksp AgCl
@@ -177,7 +177,7 @@ s = 5 x 10-5
 <p> Ksp = [Mg2+][OH-]2</p>
 <p> 5 x 10-13 = s x (0,01)2
 s = 5 x 10-9 M (pada basa)</p>
-        <img src="bab8.4.jpg" alt="Kehamilan" className="section-image" />
+        <img src="../Image/bab8.4k.jpg" alt="Kehamilan" className="section-image" />
       </section>
 
       <section>

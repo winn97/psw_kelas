@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import './bab4.css';
+import '../css/Kma10b1.css';
 
 const Bab4 = () => {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ const Bab4 = () => {
           memprediksi perilaku unsur yang belum ditemukan, 
           serta mengembangkan pemahaman yang lebih baik tentang struktur atom. 
  </p>
-        <img src="Tabel Periodik 3.jpg" alt="Struktur Pembuluh Darah" className="section-image" />
+        <img src="../Image/Tabel Periodik 3.jpg" alt="Struktur Pembuluh Darah" className="section-image" />
 
         <h3> Pengelompokkan Unsur Tabel Periodik </h3>
         <p>
@@ -42,7 +42,7 @@ const Bab4 = () => {
           Sistem Triade ini didasarkan pada sifat fisik dan kimia suatu unsur.
           </li>
         </ul>
-        <img src="johann.png" alt="Komponen Darah" className="section-image" />
+        <img src="../Image/johann.png" alt="Komponen Darah" className="section-image" />
       </section>
 
       <section>
@@ -51,7 +51,7 @@ const Bab4 = () => {
         Tabel periodik memuat berbagai jenis unsur, mulai logam, semilogam, logam transisi, logam post transisi, hingga nonlogam. Lantas,
         mana saja pembagian unsur-unsur tersebut? Perhatikan gambar berikut
 </p>
-        <img src="Tabel Periodik 3.jpg" alt="Struktur Penyerapan Makanan" className="section-image" />
+        <img src="../Image/Tabel Periodik 3.jpg" alt="Struktur Penyerapan Makanan" className="section-image" />
       </section>
 
       <section>
@@ -167,7 +167,7 @@ const Bab4 = () => {
                 <h1>Periode 4</h1>
                 <p>Periode 4 terdiri dari unsur-unsur kalium (K) hingga krypton (Kr). Unsur-unsur dalam periode ini memiliki lapisan elektron K, L, M, dan N.</p>
           <h1> Berikut adalah beberapa contoh unsur dalam setiap periode: </h1>  
-        <img src="Tabel Periodik 3.jpg" alt="Kelainan Pertukaran Zat" className="section-image" />
+        <img src="../Image/Tabel Periodik 3.jpg" alt="Kelainan Pertukaran Zat" className="section-image" />
       </section>
       <div className="bottom-container">
         <h2>"Yuk, uji pemahamanmu dengan latihan soal! <br/>

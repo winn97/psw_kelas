@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./LatihanSoal1.css";
+import "../css/QuestionPage.css";
 
 const LatihanSoal2 = () => {
   const [answers, setAnswers] = useState([]);
@@ -173,8 +173,3 @@ const LatihanSoal2 = () => {
 };
 
 export default LatihanSoal2;
-
-
-
-
-S

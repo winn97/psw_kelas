@@ -41,7 +41,7 @@ const Materi = () => {
       <div className="biologi-biology-section">
         <div className="container">
           <div className="section-header">
-            <h2>Materi FISIKA</h2>
+            <h2>Materi Ekonomi 10</h2>
           </div>
           <div className="biology-grid">
             {biologies.map((biology) => (

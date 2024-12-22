@@ -1,7 +1,7 @@
 //KOLOID
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import './bab9.css';
+import '../css/Kma11b7.css';
 
 const Bab6 = () => {
   const navigate = useNavigate();
@@ -16,12 +16,12 @@ const Bab6 = () => {
  <p>Fase terdispersi adalah zat yang mengalami penyebaran secara merata dalam suatu zat lain, sedangkan medium pendispersi adalah zat yang menyebabkan terjadinya penyebaran secara merata.</p>
    <p>Nah, kamu perlu tahu ya, pengertian fase di sini berbeda dengan wujud. Kenapa? Karena ada zat yang wujudnya sama, tetapi fasenya berbeda. Contohnya, santan. Kalau kita lihat lebih jelas, pada santan terdapat butiran minyak dalam air. Butiran minyak tersebut mempunyai fase yang berbeda dengan air, walaupun keduanya berwujud cair.</p>
          <p>Butiran minyak dalam santan bertindak sebagai fase terdispersi, sedangkan air sebagai medium pendispersi. Oleh sebab itu, santan juga termasuk contoh sistem koloid yang lain karena punya fase terdispersi dan medium pendispersi, ya.</p>
-         <img src="bab9.jpg" alt="Struktur Penyerapan Makanan" className="section-image" />
+         <img src="../Image/bab9k.jpg" alt="Struktur Penyerapan Makanan" className="section-image" />
                 </section>
 
 <section>
   <h2>B. Perbedaan Koloid dengan Larutan dan Suspensi</h2>
-  <img src="bab9.0.png" alt="Struktur Penyerapan Makanan" className="section-image" />
+  <img src="../Image/bab9.0k.png" alt="Struktur Penyerapan Makanan" className="section-image" />
 </section>
 
       <section>
@@ -37,7 +37,7 @@ const Bab6 = () => {
   <h2>D. Jenis-Jenis Koloid</h2>
         <p>
         Pada koloid, fase terdispersi dan medium pendispersi bisa berwujud padat, cair, dan gas. Oleh karena itu, berdasarkan perbedaan antara fase terdispersi dan medium pendispersinya, sistem koloid dibagi menjadi 8 jenis, di antaranya bisa lihat di tabel berikut:</p>
-<img src="bab9.1.jpg" alt="Struktur Penyerapan Makanan" className="section-image" />
+<img src="../Image/bab9.1k.jpg" alt="Struktur Penyerapan Makanan" className="section-image" />
             <h4>1. Sol Padat</h4>
             <p>Sol padat memiliki <strong>fase terdispersi padat dalam medium pendispersi yang padat juga.</strong> Sol padat ini terbentuk karena pengaruh tekanan dan suhu, sehingga menghasilkan padatan yang kokoh dan keras. </p>
            <p><strong>Contoh sol padat </strong>adalah batuan ruby (batuan permata). Batuan ruby ini merupakan padatan kromium (Cr) yang tersebar dalam padatan aluminium oksida. Sehingga, dari sini bisa kelihatan ya, kalau padatan kromium (Cr) itu sebagai fase terdispersi dan padatan aluminium oksida (AI2O3) sebagai medium pendispersi.</p>

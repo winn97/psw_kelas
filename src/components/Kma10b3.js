@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import './bab3.css';
+import '../css/Kma10b3.css';
 
 const Bab3 = () => {
   const navigate = useNavigate();
@@ -35,7 +35,7 @@ const Bab3 = () => {
         R = tetapan gas = 0,082 L atm/mol K
         T = 0 °C = 273 K
         </p>
-        <img src="rumus3.png" alt="Auksin" className="section-image" />
+        <img src="../Image/rumus3.png" alt="Auksin" className="section-image" />
 
         <h3>b. Stoikiometri Reaksi</h3>
         <p>
@@ -68,7 +68,7 @@ const Bab3 = () => {
           merupakan besaran tetapan Avogadro. Jadi, 1 mol zat apa pun memiliki jumlah partikel yang sama 
           yaitu sebanyak 6,02 x 10<sup>23</sup> partikel.
         </p>
-        <img src="Rumus-Stoikiometri-Kimia.png" alt="Fototropisme" className="section-image" />
+        <img src="../Image/Rumus-Stoikiometri-Kimia.png" alt="Fototropisme" className="section-image" />
 
         <h3>Rasio Stoikiometri</h3>
         <p>

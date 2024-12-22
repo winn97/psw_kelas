@@ -39,19 +39,19 @@ const Bab6 = () => {
                 <p>Hukum Boyle-Gay Lussac berlaku untuk gas ideal di dalam ruang tertutup, 
                    persamaannya dapat dituliskan sebagai berikut  :  </p>
 
-        <img src="modul6.png" alt="Gas" className="section-image" />
+        <img src="../Image/modul6.f.png" alt="Gas" className="section-image" />
 
-        <img src="modul6.1.png" alt="gas" className="section-image" />
+        <img src="../Image/modul6.1.png" alt="gas" className="section-image" />
         <p>Maka : </p>
         <p>Persamaan PV = nRT dapat dinyatakan sebagai berikut, </p>
 
-          <img src="modul6.2.png" alt="gas ideal" className="section-image" />
+          <img src="../Image/modul6.2.png" alt="gas ideal" className="section-image" />
 
-          <img src="modul6.3.png" alt="gas ideal" className="section-image" />
+          <img src="../Image/modul6.3.png" alt="gas ideal" className="section-image" />
 
           <p>Dari persamaan PV = nRT , dengan mensubstitusikan n = m/M , persamaan keadaan  gas ideal menjadi :</p>
 
-          <img src="modul6.4.png" alt="gas ideal" className="section-image" />
+          <img src="../Image/modul6_4.png" alt="gas ideal" className="section-image" />
 
           <strong> Keterangan : </strong>                           
                 <p>m = massa total gas (kg) </p>                          
@@ -77,7 +77,7 @@ const Bab6 = () => {
                    bejana tempat gas berada secara elastis sempurna.  
                 </p>
 
-                <img src="modul6.5.png" alt="gas ideal" className="section-image" />
+                <img src="../Image/modul6_5.png" alt="gas ideal" className="section-image" />
 
                 <p>P = tekanan gas (Pa) </p>
                 <p>2 v = kuadrat kelajuan rata-rata molekul gas</p>

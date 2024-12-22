@@ -42,19 +42,19 @@ const Bab3 = () => {
                     <p>yaitu aliran fluida dalam pipa sejajar dengan dinding pipa tanpa adanya  
                        komponen radial. </p>
 
-                       <img src="modul4.png" alt="contoh" className="section-image"></img>
+                       <img src="../Image/modul4.png" alt="contoh" className="section-image"></img>
 
                     <p> b. Aliran turbulen </p>
                     <p> yaitu aliran fluida dalam pipa tidak beraturan/tidak sejajar dengan pipa. </p>
 
-                    <img src="modul4.1.png" alt="contoh" className="section-image"></img>
+                    <img src="../Image/modul4.1.png" alt="contoh" className="section-image"></img>
 
                     <strong> 2. Debit Fluida </strong>
                     <p>Pada fluida yang bergerak memiliki besaran yang dinamakan debit. Debit adalah laju 
                        aliran air. Besarnya debit menyatakan banyaknnya volume air yang mengalir setiap 
                        detik. </p>
 
-                       <img src="modul4.2.png"   alt="rumus" className="section-image"></img>
+                       <img src="../Image/modul4.2.png"   alt="rumus" className="section-image"></img>
 
                  <p>Keterangan: </p>
                  <p>Q  = Debit (m3/s)</p>
@@ -65,7 +65,7 @@ const Bab3 = () => {
 
                  <p>Amati gambar berikut !</p>
 
-                 <img src="modul4.3.png" alt="contoh" className="section-image"></img>
+                 <img src="../Image/modul4.3.png" alt="contoh" className="section-image"></img>
 
                 <p>Pada saat kita menyiram tanaman dengan menggunakan selang dan  jarak 
                    tanaman  jauh dari ujung selang maka yang kita lakukan adalah memencet ujung 
@@ -75,7 +75,7 @@ const Bab3 = () => {
                 <p>Azas Kontinuitas </p>
                 <p>fluida yang tak termampatkan dan mengalir dalam keadaan tunak, maka    
                    laju aliran volume di setiap waktu sama besar </p>
-                    <img src="modul4.4.png" alt="contoh" className="section-image"></img>
+                    <img src="../Image/modul4.4.png" alt="contoh" className="section-image"></img>
                 <p>Bila aliran  fluida melewati pipa yang berbeda penampangnya maka fluida akan 
                    mengalami desakan perubahan luas penampangnya yang dilewatinya. Asumsikan 
                    bahwa fluida tidak kompresibel, maka delam selang waktu yang sama jumlah fluida 
@@ -83,7 +83,7 @@ const Bab3 = () => {
                    melalui penampang. </p>
                 <p>Volume fluida pada penampang A1 sama dengan volume fluida penampang A2, maka 
                    debit fluida di penampang A1 sama dengan debit fluida di penampang A2 .</p>
-                   <img src="modul4.5.png" alt="rumus" className="section-image"></img>
+                   <img src="../Image/modul4.5.png" alt="rumus" className="section-image"></img>
                  <p>Jika </p>
                  <p> l1  = panjang pipa yang dilewati fluida saat penampangnya A1 </p>
                  <p> l2  = panjang pipa yang dilewati fluida saat penampangnya A2  </p>
@@ -95,19 +95,19 @@ const Bab3 = () => {
                  <p> 
                  Persamaan diatas dikenal dengan Persamaan Kontinuitas. </p>
                  
-                 <img src="modul4.6.png" alt="rumus" className="section-image"></img>
+                 <img src="../Image/modul4.6.png" alt="rumus" className="section-image"></img>
 
                 <strong>4. Azas  Bernaulli </strong>
                 <p>Perhatikan Gambar berikut! </p>
 
-                <img src="modul4.7.png" alt="contoh" className="section-image"></img>
+                <img src="../Image/modul4.7.png" alt="contoh" className="section-image"></img>
 
                 <p>Terlihat dalam gambar, seorang petugas pemedam kebakarn hutan sedang berusaha 
                    memadamkan api yang membakar lahan  dengan menggunakan selang yang sangat 
                    panjang serta berusaha menempatkan posisi selang sedemikian rupa sehingga dapat 
                    menjangkau titik api yang ingin dia padamkan </p>
 
-                   <img src="modul4.8.png" alt="contoh" className="section-image"></img>
+                   <img src="../Image/modul4.8.png" alt="contoh" className="section-image"></img>
 
                 <p>Kita ketahui bahwa kelajuan fluida paling besar terjadi pada pipa yang sempit, sesuai 
                    dengan azas kontinuitas yang telah kita pelajari sebelumnya. bagaimanakah dengan 
@@ -116,21 +116,21 @@ const Bab3 = () => {
                 <p>W1 - W2 + W3 = Ek2 – Ek1</p>
                 <p>dimana W3 adalah kerja yang dilakukan oleh gravitasi.</p>
 
-                <img src="modul4.9.png" alt="rumus" className="section-image"></img>
+                <img src="../Image/modul4.9.png" alt="rumus" className="section-image"></img>
                 <p>nilai W2 negatif, disebabkan gaya yang dialami fluida oleh P2 berlawanan arah 
                    terhadap laju fluida. </p>
-                   <img src="modul4.10.png" alt="rumus" className="section-image"></img>
-                   <img src="modul4.11.png" alt="rumus" className="section-image"></img>
+                   <img src="../Image/modul4.10.png" alt="rumus" className="section-image"></img>
+                   <img src="../Image/modul4.11.png" alt="rumus" className="section-image"></img>
                 <p>dengan asumsi bahwa volume fluida yang dipindahkan oleh W1 dan W2 adalah 
                    sama, maka  
                    Persamaan di atas selanjutnya dibagi oleh  
                    sehingga didapatkan persamaan</p>
                 
-                   <img src="modul4.12.png" alt="rumus" className="section-image"></img>
+                   <img src="../Image/modul4.12.png" alt="rumus" className="section-image"></img>
                 <p>Persamaan di atas dikenal dengan persamaan Bernoulli. Persamaan Bernoulli 
                    dapat dinyatakan juga dengan </p>
                 
-                   <img src="modul4.13.png" alt="rumus" className="section-image"></img>
+                   <img src="../Image/modul4.13.png" alt="rumus" className="section-image"></img>
 
                 <p>P adalah tekanan (Pascal) </p>
                 <p>ρ adalah massa jenis fluida (kg/m3) </p>
