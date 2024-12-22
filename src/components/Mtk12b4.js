@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import '../ccs/Mtk12b4.css';
+import '../css/Mtk12b4.css';
 
 const Bab4 = () => {
   const navigate = useNavigate();

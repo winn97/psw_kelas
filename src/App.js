@@ -161,15 +161,23 @@ import Mtk10b2 from './components/Mtk10b2';
 import Mtk10b3 from './components/Mtk10b3';
 import Mtk10b4 from './components/Mtk10b4';
 import Mtk10b5 from './components/Mtk10b5';
-import Mtk10b6 from './components/Mtk10b3';
-import Mtk10b7 from './components/Mtk10b4';
-import Mtk10b8 from './components/Mtk10b5';
+import Mtk10b6 from './components/Mtk10b6';
+import Mtk10b7 from './components/Mtk10b7';
+import Mtk10b8 from './components/Mtk10b8';
 import Mtk11b1 from './components/Mtk11b1';
 import Mtk11b2 from './components/Mtk11b2';
 import Mtk11b3 from './components/Mtk11b3';
 import Mtk11b4 from './components/Mtk11b4';
 import Mtk11b5 from './components/Mtk11b5';
 import Mtk11b6 from './components/Mtk11b6';
+import Mtk12b1 from './components/Mtk12b1';
+import Mtk12b2 from './components/Mtk12b2';
+import Mtk12b3 from './components/Mtk12b3';
+import Mtk12b4 from './components/Mtk12b4';
+import Mtk12b5 from './components/Mtk12b5';
+import Mtk12b6 from './components/Mtk12b6';
+import Mtk12b7 from './components/Mtk12b7';
+import Mtk12b8 from './components/Mtk12b8';
 
 import SlFisika10b1 from './components/SlFsk10b1';
 import SlFisika10b2 from './components/SlFsk10b2';
@@ -481,6 +489,15 @@ function App() {
         <Route path="/Mtk11b4" element={<Mtk11b4 />} />
         <Route path="/Mtk11b5" element={<Mtk11b5 />} />
         <Route path="/Mtk11b6" element={<Mtk11b6 />} />
+        {/* Rute untuk Materi Matematika 10 */}
+        <Route path="/Mtk12b1" element={<Mtk12b1 />} />
+        <Route path="/Mtk12b2" element={<Mtk12b2 />} />
+        <Route path="/Mtk12b3" element={<Mtk12b3 />} />
+        <Route path="/Mtk12b4" element={<Mtk12b4 />} />
+        <Route path="/Mtk12b5" element={<Mtk12b5 />} />
+        <Route path="/Mtk12b6" element={<Mtk12b6 />} />
+        <Route path="/Mtk12b7" element={<Mtk12b7 />} />
+        <Route path="/Mtk12b8" element={<Mtk12b8 />} />
 
         {/* Rute untuk Materi Inggris 11 */}
         <Route path="/SlBing11b1" element={<SlBing11b1 />} />
