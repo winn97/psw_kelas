@@ -24,6 +24,42 @@ import BahasaInggrisKelas12 from './pages/MateriBing12';
 import EkonomiKelas10 from './pages/MateriEkonomi10';
 import EkonomiKelas11 from './pages/MateriEkonomi11';
 import EkonomiKelas12 from './pages/MateriEkonomi12';
+import SlMatematikaKelas10 from './pages/LatihanMTK10';
+import SlMatematikaKelas11 from './pages/LatihanMTK11';
+import SlMatematikaKelas12 from './pages/LatihanMTK12';
+import SlBiologiKelas10 from './pages/LatihanBiologi10';
+import SlBiologiKelas11 from './pages/LatihanBiologi11';
+import SlBiologiKelas12 from './pages/LatihanBiologi12';
+import SlFisikaKelas10 from './pages/LatihanFisika10';
+import SlFisikaKelas11 from './pages/LatihanFisika11';
+import SlFisikaKelas12 from './pages/LatihanFisika12';
+import SlKimiaKelas10 from './pages/LatihanKimia10';
+import SlKimiaKelas11 from './pages/LatihanKimia11';
+import SlKimiaKelas12 from './pages/LatihanKimia12';
+import SlBahasaInggrisKelas10 from './pages/LatihanBing10';
+import SlBahasaInggrisKelas11 from './pages/LatihanBing11';
+import SlBahasaInggrisKelas12 from './pages/LatihanBing12';
+import SlEkonomiKelas10 from './pages/LatihanEkonomi10';
+import SlEkonomiKelas11 from './pages/LatihanEkonomi11';
+import SlEkonomiKelas12 from './pages/LatihanEkonomi12';
+import QzMatematikaKelas10 from './pages/kuisMTK10';
+import QzMatematikaKelas11 from './pages/kuisMTK11';
+import QzMatematikaKelas12 from './pages/kuisMTK12';
+import QzBiologiKelas10 from './pages/kuisBiologi10';
+import QzBiologiKelas11 from './pages/kuisBiologi11';
+import QzBiologiKelas12 from './pages/kuisBiologi12';
+import QzFisikaKelas10 from './pages/kuisFisika10';
+import QzFisikaKelas11 from './pages/kuisFisika11';
+import QzFisikaKelas12 from './pages/kuisFisika12';
+import QzKimiaKelas10 from './pages/kuisKimia10';
+import QzKimiaKelas11 from './pages/kuisKimia11';
+import QzKimiaKelas12 from './pages/kuisKimia12';
+import QzBahasaInggrisKelas10 from './pages/kuisBing10';
+import QzBahasaInggrisKelas11 from './pages/kuisBing11';
+import QzBahasaInggrisKelas12 from './pages/kuisBing12';
+import QzEkonomiKelas10 from './pages/kuisEkonomi10';
+import QzEkonomiKelas11 from './pages/kuisEkonomi11';
+import QzEkonomiKelas12 from './pages/kuisEkonomi12';
 
 // Import komponen tambahan
 import Fisika10b1 from './components/Fsk10b1';
@@ -251,30 +287,78 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* Rute untuk Matematika */}
-        <Route path="/matematika/kelas-10" element={<MatematikaKelas10 />} />
-        <Route path="/matematika/kelas-11" element={<MatematikaKelas11 />} />
-        <Route path="/matematika/kelas-12" element={<MatematikaKelas12 />} />
-        {/* Rute untuk Biologi */}
-        <Route path="/biologi/kelas-10" element={<BiologiKelas10 />} />
-        <Route path="/biologi/kelas-11" element={<BiologiKelas11 />} />
-        <Route path="/biologi/kelas-12" element={<BiologiKelas12 />} />
-        {/* Rute untuk Fisika */}
-        <Route path="/fisika/kelas-10" element={<FisikaKelas10 />} />
-        <Route path="/fisika/kelas-11" element={<FisikaKelas11 />} />
-        <Route path="/fisika/kelas-12" element={<FisikaKelas12 />} />
-        {/* Rute untuk Kimia */}
-        <Route path="/kimia/kelas-10" element={<KimiaKelas10 />} />
-        <Route path="/kimia/kelas-11" element={<KimiaKelas11 />} />
-        <Route path="/kimia/kelas-12" element={<KimiaKelas12 />} />
-        {/* Rute untuk Bahasa Inggris */}
-        <Route path="/bahasa-inggris/kelas-10" element={<BahasaInggrisKelas10 />} />
-        <Route path="/bahasa-inggris/kelas-11" element={<BahasaInggrisKelas11 />} />
-        <Route path="/bahasa-inggris/kelas-12" element={<BahasaInggrisKelas12 />} />
-        {/* Rute untuk Ekonomi */}
-        <Route path="/ekonomi/kelas-10" element={<EkonomiKelas10 />} />
-        <Route path="/ekonomi/kelas-11" element={<EkonomiKelas11 />} />
-        <Route path="/ekonomi/kelas-12" element={<EkonomiKelas12 />} />
+        {/* Rute untuk materi Matematika */}
+        <Route path="materi/matematika/kelas-10" element={<MatematikaKelas10 />} />
+        <Route path="materi/matematika/kelas-11" element={<MatematikaKelas11 />} />
+        <Route path="materi/matematika/kelas-12" element={<MatematikaKelas12 />} />
+        {/* Rute untuk materi Biologi */}
+        <Route path="materi/biologi/kelas-10" element={<BiologiKelas10 />} />
+        <Route path="materi/biologi/kelas-11" element={<BiologiKelas11 />} />
+        <Route path="materi/biologi/kelas-12" element={<BiologiKelas12 />} />
+        {/* Rute untuk materi Fisika */}
+        <Route path="materi/fisika/kelas-10" element={<FisikaKelas10 />} />
+        <Route path="materi/fisika/kelas-11" element={<FisikaKelas11 />} />
+        <Route path="materi/fisika/kelas-12" element={<FisikaKelas12 />} />
+        {/* Rute untuk materi Kimia */}
+        <Route path="materi/kimia/kelas-10" element={<KimiaKelas10 />} />
+        <Route path="materi/kimia/kelas-11" element={<KimiaKelas11 />} />
+        <Route path="materi/kimia/kelas-12" element={<KimiaKelas12 />} />
+        {/* Rute untuk materi Bahasa Inggris */}
+        <Route path="materi/bahasa-inggris/kelas-10" element={<BahasaInggrisKelas10 />} />
+        <Route path="materi/bahasa-inggris/kelas-11" element={<BahasaInggrisKelas11 />} />
+        <Route path="materi/bahasa-inggris/kelas-12" element={<BahasaInggrisKelas12 />} />
+        {/* Rute untuk materi Ekonomi */}
+        <Route path="materi/ekonomi/kelas-10" element={<EkonomiKelas10 />} />
+        <Route path="materi/ekonomi/kelas-11" element={<EkonomiKelas11 />} />
+        <Route path="materi/ekonomi/kelas-12" element={<EkonomiKelas12 />} />
+        {/* Rute untuk latihan Matematika */}
+        <Route path="latihan/matematika/kelas-10" element={<SlMatematikaKelas10 />} />
+        <Route path="latihan/matematika/kelas-11" element={<SlMatematikaKelas11 />} />
+        <Route path="latihan/matematika/kelas-12" element={<SlMatematikaKelas12 />} />
+        {/* Rute untuk latihan Biologi */}
+        <Route path="latihan/biologi/kelas-10" element={<SlBiologiKelas10 />} />
+        <Route path="latihan/biologi/kelas-11" element={<SlBiologiKelas11 />} />
+        <Route path="latihan/biologi/kelas-12" element={<SlBiologiKelas12 />} />
+        {/* Rute untuk latihan Fisika */}
+        <Route path="latihan/fisika/kelas-10" element={<SlFisikaKelas10 />} />
+        <Route path="latihan/fisika/kelas-11" element={<SlFisikaKelas11 />} />
+        <Route path="latihan/fisika/kelas-12" element={<SlFisikaKelas12 />} />
+        {/* Rute untuk latihan Kimia */}
+        <Route path="latihan/kimia/kelas-10" element={<SlKimiaKelas10 />} />
+        <Route path="latihan/kimia/kelas-11" element={<SlKimiaKelas11 />} />
+        <Route path="latihan/kimia/kelas-12" element={<SlKimiaKelas12 />} />
+        {/* Rute untuk latihan Bahasa Inggris */}
+        <Route path="latihan/bahasa-inggris/kelas-10" element={<SlBahasaInggrisKelas10 />} />
+        <Route path="latihan/bahasa-inggris/kelas-11" element={<SlBahasaInggrisKelas11 />} />
+        <Route path="latihan/bahasa-inggris/kelas-12" element={<SlBahasaInggrisKelas12 />} />
+        {/* Rute untuk latihan Ekonomi */}
+        <Route path="latihan/ekonomi/kelas-10" element={<SlEkonomiKelas10 />} />
+        <Route path="latihan/ekonomi/kelas-11" element={<SlEkonomiKelas11 />} />
+        <Route path="latihan/ekonomi/kelas-12" element={<SlEkonomiKelas12 />} />
+        {/* Rute untuk kuis Matematika */}
+        <Route path="kuis/matematika/kelas-10" element={<QzMatematikaKelas10 />} />
+        <Route path="kuis/matematika/kelas-11" element={<QzMatematikaKelas11 />} />
+        <Route path="kuis/matematika/kelas-12" element={<QzMatematikaKelas12 />} />
+        {/* Rute untuk kuis Biologi */}
+        <Route path="kuis/biologi/kelas-10" element={<QzBiologiKelas10 />} />
+        <Route path="kuis/biologi/kelas-11" element={<QzBiologiKelas11 />} />
+        <Route path="kuis/biologi/kelas-12" element={<QzBiologiKelas12 />} />
+        {/* Rute untuk kuis Fisika */}
+        <Route path="kuis/fisika/kelas-10" element={<QzFisikaKelas10 />} />
+        <Route path="kuis/fisika/kelas-11" element={<QzFisikaKelas11 />} />
+        <Route path="kuis/fisika/kelas-12" element={<QzFisikaKelas12 />} />
+        {/* Rute untuk kuis Kimia */}
+        <Route path="kuis/kimia/kelas-10" element={<QzKimiaKelas10 />} />
+        <Route path="kuis/kimia/kelas-11" element={<QzKimiaKelas11 />} />
+        <Route path="kuis/kimia/kelas-12" element={<QzKimiaKelas12 />} />
+        {/* Rute untuk kuis Bahasa Inggris */}
+        <Route path="kuis/bahasa-inggris/kelas-10" element={<QzBahasaInggrisKelas10 />} />
+        <Route path="kuis/bahasa-inggris/kelas-11" element={<QzBahasaInggrisKelas11 />} />
+        <Route path="kuis/bahasa-inggris/kelas-12" element={<QzBahasaInggrisKelas12 />} />
+        {/* Rute untuk kuis Ekonomi */}
+        <Route path="kuis/ekonomi/kelas-10" element={<QzEkonomiKelas10 />} />
+        <Route path="kuis/ekonomi/kelas-11" element={<QzEkonomiKelas11 />} />
+        <Route path="kuis/ekonomi/kelas-12" element={<QzEkonomiKelas12 />} />
         {/* Rute untuk Materi Fisika 10 */}
         <Route path="/Fsk10b1" element={<Fisika10b1 />} />
         <Route path="/Fsk10b2" element={<Fisika10b2 />} />
