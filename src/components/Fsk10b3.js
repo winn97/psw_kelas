@@ -38,7 +38,6 @@ const Bab3 = () => {
           Fakta menarik lainnya terkait usaha dapat melibatkan konsep energi dan gaya dalam berbagai aktivitas sehari-hari, seperti pergerakan planet, mesin, dan lain sebagainya.
         </p>
       </section>
-
       <div className="bottom-container">
         <h2>Yuk, uji pemahamanmu dengan latihan soal!</h2>
         <button 
@@ -51,6 +50,8 @@ const Bab3 = () => {
 
       <div className="navigation-container">
       </div>
+
+
     </div>
   );
 };

@@ -3,54 +3,54 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: white;
-  padding: 10px 20px;
+  background-color: white; /* Mengubah latar belakang menjadi putih */
+  color: #333; /* Warna teks default */
+  padding: 10px 20px; /* Mengurangi padding untuk tampilan yang lebih kompak */
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan yang lebih halus */
 }
 
 /* Navbar Title */
 .navbar-left h1 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.8rem; /* Ukuran font lebih besar untuk menonjol */
   font-weight: bold;
-  letter-spacing: 1px;
+  color: #4a90e2; /* Warna font judul yang menarik */
 }
 
 /* Navbar Menu */
 .nav-menu {
   list-style: none;
   display: flex;
-  gap: 50px; /* Menambahkan jarak antar elemen menu utama */
+  gap: 30px; /* Mengurangi jarak antar elemen menu utama */
   margin: 0;
   padding: 0;
 }
 
 .nav-menu a {
   text-decoration: none;
-  color: white;
+  color: #4a90e2; /* Warna tautan yang sesuai dengan tema */
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease; /* Tambahkan efek transisi */
 }
 
 .nav-menu a:hover {
-  color: #ffdf00;
+  color: #ffdf00; /* Warna hover tetap sama */
+  transform: scale(1.05); /* Efek zoom saat hover */
 }
 
 /* Dropdown Menu */
 .dropdown {
   position: relative;
-  margin-right: 20px; /* Menambahkan jarak antar dropdown */
 }
 
 .dropdown-content, .sub-dropdown-content {
   display: none;
   position: absolute;
-  background-color: white;
-  color: black;
+  background-color: white; /* Latar belakang dropdown tetap putih */
+  color: black; 
   border-radius: 5px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
@@ -60,28 +60,31 @@
 }
 
 .dropdown-content li, .sub-dropdown-content li {
-  padding: 8px 12px;
+  padding: 10px; /* Menambah padding untuk dropdown */
 }
 
 .sub-dropdown span:hover {
-  cursor: pointer;
-  color: #2575fc;
+   cursor: pointer;
 }
 
 /* Responsive Navbar */
 @media (max-width: 768px) {
-  .nav-menu {
-    flex-direction: column;
-    gap: 15px; /* Jarak antar elemen di versi mobile */
-  }
+   .nav-menu {
+     flex-direction: column;
+     gap:10px; /* Jarak antar elemen di versi mobile */
+     width:auto; 
+     text-align:center; 
+     padding-top :10px; 
+     background-color:white; 
+   }
 
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px; /* Mengurangi padding */
-  }
+   .navbar {
+     flex-direction: column; 
+     align-items:flex-start; 
+     padding-top :20px; 
+   }
 
-  .dropdown {
-    margin-right: 0; /* Menghapus jarak horizontal untuk dropdown */
-  }
+   .dropdown {
+     margin-right:-20px; 
+   }
 }
