@@ -28,7 +28,7 @@ const Bab6 = () => {
           <li>Garam terhidrolisis sebagian jika salah satu kation atau anion bereaksi.</li>
           <li>Garam terhidrolis sempurna jika kation dan anion bereaksi.</li>
         </ul>
-        <img src="/images/bab6.0.jpg" alt="Hidrolisis Garam NaCl" className="section-image" />
+        <img src="../Image/bab6.0k.jpg" alt="Hidrolisis Garam NaCl" className="section-image" />
       </section>
 
       <section>
@@ -38,7 +38,7 @@ const Bab6 = () => {
           maupun anionnya tidak bereaksi dengan air. Contoh hidrolisis garam natrium klorida (NaCl) yang terbentuk dari asam 
           kuat dan basa kuat yaitu asam klorida (HCl) dan natrium hidroksida (NaOH).
         </p>
-        <img src="/images/bab6.1.jpg" alt="Hidrolisis Garam NaCl" className="section-image" />
+        <img src="../Image/bab6.1k.jpg" alt="Hidrolisis Garam NaCl" className="section-image" />
         <p>
           Dari reaksi hidrolisis di atas, terlihat ion yang terbentuk saat garam NaCl dilarutkan dalam air adalah OH- dan 
           H+. Keduanya akan saling menetralkan dan tidak bereaksi dengan air. Dengan kata lain, garam NaCl hanya terionisasi 
@@ -53,7 +53,7 @@ const Bab6 = () => {
           yang terbentuk dari asam kuat dan basa lemah yaitu asam klorida (HCl) dan amonia (NH3). Amonia akan mengalami 
           ionisasi terurai menjadi ion NH4+ dan Cl-.
         </p>
-        <img src="/images/bab6.2.jpg" alt="Hidrolisis Garam NH4Cl" className="section-image" />
+        <img src="../Image/bab6.2k.jpg" alt="Hidrolisis Garam NH4Cl" className="section-image" />
         <p>
           Perlu diingat bahwa ion Cl- dari asam kuat HCl tidak akan terhidrolisis oleh air, maka hanya ion NH4+ yang akan 
           bereaksi dengan air dan meningkatkan konsentrasi ion hidronium. Hidrolisis garam amonium klorida akan menghasilkan 
@@ -67,7 +67,7 @@ const Bab6 = () => {
           Garam dari asam lemah dan basa kuat jika dihidrolisis akan menghasilkan larutan basa. Contoh hidrolisis garam natrium 
           flurida (NaF) yang terbentuk dari asam lemah flurida (HF) dan basa kuat natrium hidroksida (NaOH).
         </p>
-        <img src="/images/bab6.3.jpg" alt="Hidrolisis Garam NaF" className="section-image" />
+        <img src="../Image/bab6.3k.jpg" alt="Hidrolisis Garam NaF" className="section-image" />
         <p>
           Kation Na+ dari basa kuat natrium hidroksida tidak akan terhidrolisis. Anion F- adalah basa konjugasi HF yang akan 
           menerima proton dari air (terhidrolisis). Saat anion (F-) terhidrolisis dengan air, maka terbentuk ion OH- yang 
@@ -83,7 +83,7 @@ const Bab6 = () => {
           Jika Kb lebih besar dari Ka, maka larutan hidrolisis bersifat basa. Jika nilai Ka sama dengan Kb, maka larutan bersifat 
           netral.
         </p>
-        <img src="/images/bab6.4.jpg" alt="Hidrolisis Garam Asam Lemah dan Basa Lemah" className="section-image" />
+        <img src="../Image/bab6.4k.jpg" alt="Hidrolisis Garam Asam Lemah dan Basa Lemah" className="section-image" />
         <p>
           Contoh hidrolisis garam amonium asetat (CH3COONH4) yang terbentuk dari asam lemah dan basa lemah yaitu asam asetat 
           (CH3COOH) dan ammonium hidroksida (NH4OH). Kedua ion tersebut bisa terhidrolisis oleh air, sehingga derajat ionisasi 

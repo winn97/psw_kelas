@@ -23,7 +23,7 @@ const Bab4 = () => {
           penduduk yang pindah dari desa A ke desa B sama dengan jumlah penduduk 
           yang pindah dari desa B ke desa A. Dengan begitu, jumlah penduduk di kedua desa tersebut tidak berubah.  
         </p>
-        <img src="/images/bab4.0.jpg" alt="Animasi Kesetimbangan Kimia" className="section-image" />
+        <img src="../Image/bab4.0k.jpg" alt="Animasi Kesetimbangan Kimia" className="section-image" />
       </section>
 
       <section>
@@ -41,7 +41,7 @@ const Bab4 = () => {
           volume akan menyebabkan kesetimbangan bergeser ke arah yang jumlah molekulnya lebih besar 
           agar kesetimbangan bisa tercapai. 
         </p>
-        <img src="/images/bab4.1.jpg" alt="Pengaruh Volume terhadap Kesetimbangan" className="section-image" />
+        <img src="../Image/bab4.1k.jpg" alt="Pengaruh Volume terhadap Kesetimbangan" className="section-image" />
 
         <h3>b. Pengaruh tekanan terhadap kesetimbangan</h3>
         <p>
@@ -49,7 +49,7 @@ const Bab4 = () => {
           akan bergeser ke arah yang jumlah molekulnya lebih kecil. Sebaliknya, ketika tekanan diturunkan, 
           maka kesetimbangan akan bergeser ke arah yang jumlah molekulnya lebih besar. 
         </p>
-        <img src="/images/bab4.2.jpg" alt="Pengaruh Tekanan terhadap Kesetimbangan" className="section-image" />
+        <img src="../Image/bab4.2k.jpg" alt="Pengaruh Tekanan terhadap Kesetimbangan" className="section-image" />
 
         <h3>c. Pengaruh suhu terhadap kesetimbangan</h3>
         <p>
@@ -57,7 +57,7 @@ const Bab4 = () => {
           ke arah reaksi endoterm, yaitu reaksi kimia yang menyerap kalor (panas). Sebaliknya, penurunan 
           suhu akan menggeser kesetimbangan ke arah reaksi eksoterm, yaitu reaksi kimia yang menghasilkan kalor (panas). 
         </p>
-        <img src="/images/bab4.3.jpg" alt="Pengaruh Suhu terhadap Kesetimbangan" className="section-image" />
+        <img src="../Image/bab4.3k.jpg" alt="Pengaruh Suhu terhadap Kesetimbangan" className="section-image" />
       </section>
 
       <section>
@@ -75,7 +75,7 @@ const Bab4 = () => {
           Kesetimbangan antara gas dengan gas:<br />
           N<sub>2</sub> (g) + O<sub>2</sub> (g) ⇋ 2NO (g)
         </p>
-        <img src="/images/bab4.4.jpg" alt="Kesetimbangan Homogen" className="section-image" />
+        <img src="../Image/bab4.4k.jpg" alt="Kesetimbangan Homogen" className="section-image" />
 
         <h3>b. Kesetimbangan heterogen</h3>
         <p>
@@ -90,7 +90,7 @@ const Bab4 = () => {
           Kesetimbangan antara gas, zat padat, dan zat cair:<br />
           NaHCO<sub>3</sub> (s) ⇋ Na<sub>2</sub>CO<sub>3</sub> (s) + H<sub>2</sub>O (l) + CO<sub>2</sub> (g)
         </p>
-        <img src="/images/bab4.5.jpg" alt="Kesetimbangan Heterogen" className="section-image" />
+        <img src="../Image/bab4.5k.jpg" alt="Kesetimbangan Heterogen" className="section-image" />
       </section>
 
       <section>

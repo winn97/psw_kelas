@@ -18,10 +18,10 @@ const Bab1 = () => {
         <h3>a. Hidrokarbon Alifatik</h3>
         </p>
         <p>
-        <img src="bab1.1.jpg" alt="Hidro Alifatik" className="section-image" />
+        <img src="../Image/bab1.1k.jpg" alt="Hidro Alifatik" className="section-image" />
       <h3>b. Hidrokarbon Aromatik</h3>
       </p>
-      <img src="bab1.2.jpg" alt="Hidro Aromatik" className="section-image" />
+      <img src="../Image/bab1.2k.jpg" alt="Hidro Aromatik" className="section-image" />
       </section>
 
       <section>
@@ -34,7 +34,7 @@ const Bab1 = () => {
         <p>
           Membran sel adalah lapisan tipis yang membungkus seluruh bagian sel. Membran ini berfungsi sebagai penghalang yang mengatur keluar masuknya zat dari dan ke dalam sel. Membran sel terdiri dari lapisan fosfolipid yang memiliki sifat hidrofobik dan hidrofilik.
         </p>
-        <img src="bab1.3.webp" alt="Membran Sel" className="section-image" />
+        <img src="../Image/bab1.3k.webp" alt="Membran Sel" className="section-image" />
       </section>
 
       <section>
@@ -48,7 +48,7 @@ const Bab1 = () => {
         <li><strong>Minyak Tanah</strong> : Digunakan sebagai bahan bakar pesawat jet dan lampu penerangan.</li>
         <li><strong>Solar</strong> : Digunakan sebagai bahan bakar kendaraan diesel dan mesin industri.</li>
         <li><strong>Residu</strong> : Aspal dan lilin.</li>
-        <img src="bab1.4.jpg" alt="Pengolahan" className="section-image" />
+        <img src="../Image/bab1.4k.jpg" alt="Pengolahan" className="section-image" />
       </section>
 
       <section>
@@ -88,7 +88,7 @@ const Bab1 = () => {
             <strong>Hujan Asam:</strong> SO<sub>2</sub> dan NO<sub>x</sub> dapat bereaksi dengan air di atmosfer membentuk asam sulfat dan asam nitrat yang menyebabkan hujan asam.
           </li>
         </ul>
-        <img src="bab1.5.png" alt="Damapk" className="section-image" />
+        <img src="../Image/bab1.5k.png" alt="Damapk" className="section-image" />
       </section>
       <div className="bottom-container">
         <h2>"Yuk, uji pemahamanmu dengan latihan soal! <br/>

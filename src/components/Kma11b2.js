@@ -10,7 +10,7 @@ const Bab1 = () => {
 
       <section>
         <h2>1. Pengertian Termokimia</h2>
-        <img src="bab2.1.jpg" alt="Hidro Alifatik" className="section-image" />
+        <img src="../Image/bab2.1k.jpg" alt="Hidro Alifatik" className="section-image" />
         <p>
         Termokimia adalah cabang ilmu kimia yang mempelajari tentang perubahan kalor (panas) yang menyertai reaksi kimia dan perubahan fisika. Termokimia merupakan bagian dari termodinamika yang lebih luas, yang mempelajari tentang hubungan antara panas dan bentuk energi lainnya.
         </p>
@@ -44,11 +44,11 @@ const Bab1 = () => {
         <p>Alat yang digunakan disebut kalorimeter. Ada dua jenis kalorimeter yang umum digunakan:</p>
 
         <li><strong>Kalorimeter Bom</strong> : Digunakan untuk mengukur kalor reaksi pembakaran pada volume tetap. Kalorimeter ini terdiri dari wadah baja yang kuat (bom) yang berisi sampel dan oksigen berlebih. </li>
-        <img src="bab2.3.jpg" alt="Pengolahan" className="section-image" />
+        <img src="../Image/bab2.3k.jpg" alt="Pengolahan" className="section-image" />
 
         <li><strong>Kalorimeter Sederhana</strong> : Digunakan untuk mengukur kalor reaksi dalam larutan pada tekanan tetap. Kalorimeter ini biasanya terdiri dari dua gelas styrofoam yang dimasukkan satu sama lain untuk mengurangi perpindahan panas ke lingkungan.</li>
         
-        <img src="bab2.4.jpg" alt="Pengolahan" className="section-image" />
+        <img src="../Image/bab2.4k.jpg" alt="Pengolahan" className="section-image" />
       </section>
 
       <section>
@@ -85,7 +85,7 @@ const Bab1 = () => {
             <p> Prinsip termokimia digunakan dalam sistem pemanas dan pendingin ruangan..</p>
           </li>
         </ul>
-        <img src="bab2.5.jpg" alt="Damapk" className="section-image" />
+        <img src="../Image/bab2.5k.jpg" alt="Damapk" className="section-image" />
       </section>
       <div className="bottom-container">
         <h2>"Yuk, uji pemahamanmu dengan latihan soal! <br/>

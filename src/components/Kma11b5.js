@@ -24,7 +24,7 @@ const Bab5 = () => {
           Lalu, basa (alkali) berasal dari Arab, yang artinya abu. Basa banyak dijumpai dalam pembuatan sabun, 
           seperti yang kita ketahui di zaman dahulu banyak ibu rumah tangga yang menggunakan abu untuk mencuci piring.
         </p>
-        <img src="/images/bab5.0.jpg" alt="Animasi Kesetimbangan Kimia" className="section-image" />
+        <img src="../Image/bab5.0k.jpg" alt="Animasi Kesetimbangan Kimia" className="section-image" />
       </section>
 
       <section>
@@ -43,7 +43,7 @@ const Bab5 = () => {
           sisa asam. Lalu, ciri khas basa adalah apabila dalam pelarut air, zat akan mengion menjadi ion hidroksida 
           yang muatannya negatif dan ion bermuatan positif disebut sisa basa. 
         </p>
-        <img src="/images/bab5.1.jpg" alt="Pengaruh Volume terhadap Kesetimbangan" className="section-image" />
+        <img src="../Image/bab5.1k.jpg" alt="Pengaruh Volume terhadap Kesetimbangan" className="section-image" />
 
         <h3>b. Teori Bronsted Lowry</h3>
         <p>
@@ -55,14 +55,14 @@ const Bab5 = () => {
           sedangkan basa konjugasi adalah yang tersisa setelah asam memberikan proton dalam sebuah reaksi kimia. 
           Kedua hal tersebut disebut pasangan asam basa konjugasi.
         </p>
-        <img src="/images/bab5.2.jpg" alt="Pengaruh Tekanan terhadap Kesetimbangan" className="section-image" />
+        <img src="../Image/bab5.2k.jpg" alt="Pengaruh Tekanan terhadap Kesetimbangan" className="section-image" />
 
         <h3>c. Teori Asam Basa Lewis</h3>
         <p>
           Asam basa Lewis menjelaskan terkait struktur dan ikatannya. Asam menurut Lewis adalah zat yang punya 
           kecenderungan menerima pasangan elektron basa, sedangkan basa adalah zat yang memberikan pasangan elektron. 
         </p>
-        <img src="/images/bab5.3.jpg" alt="Pengaruh Suhu terhadap Kesetimbangan" className="section-image" />
+        <img src="../Image/bab5.3k.jpg" alt="Pengaruh Suhu terhadap Kesetimbangan" className="section-image" />
       </section>
 
       <section>
@@ -78,7 +78,7 @@ const Bab5 = () => {
           yang bila dilarutkan dalam air akan melepaskan ion OH– dengan mudah.
         </p>
 
-        <img src="/images/bab5.4.jpg" alt="Klasifikasi Asam Basa" className="section-image" />
+        <img src="../Image/bab5.4k.jpg" alt="Klasifikasi Asam Basa" className="section-image" />
 
         <h3>b. Asam Basa Lemah</h3>
         <p>
@@ -87,7 +87,7 @@ const Bab5 = () => {
           ion OH- dan mengalami disosiasi dalam larutan.
         </p>
 
-        <img src="/images/bab5.5.jpg" alt="Klasifikasi Asam Basa" className="section-image" />
+        <img src="../Image/bab5.5k.jpg" alt="Klasifikasi Asam Basa" className="section-image" />
       </section>
 
       <section>

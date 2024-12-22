@@ -10,7 +10,7 @@ const Bab1 = () => {
 
       <section>
         <h2>1. Pengertian Laju Reaksi</h2>
-        <img src="bab3.1.webp" alt="Hidro Alifatik" className="section-image" />
+        <img src="../Image/bab3.1k.webp" alt="Hidro Alifatik" className="section-image" />
         <p>
         Laju reaksi adalah perubahan konsentrasi reaktan atau produk per satuan waktu. Dengan kata lain, laju reaksi mengukur seberapa cepat suatu reaksi kimia berlangsung. Reaksi yang berlangsung cepat memiliki laju reaksi yang tinggi, sedangkan reaksi yang berlangsung lambat memiliki laju reaksi yang rendah.
         </p>
@@ -28,7 +28,7 @@ const Bab1 = () => {
         <li><strong>Suhu:</strong> Semakin tinggi suhu, semakin cepat laju reaksinya.</li>
         <li><strong>Katalis:</strong> Katalis adalah zat yang dapat mempercepat laju reaksi tanpa ikut bereaksi.</li>
         <li><strong>Tekanan</strong> Semakin tinggi tekanan, semakin cepat laju reaksinya.</li>
-        <img src="bab3.2.jpg" alt="Hidro Alifatik" className="section-image" />
+        <img src="../Image/bab3.2k.jpg" alt="Hidro Alifatik" className="section-image" />
       </section>
 
       <section>
@@ -57,7 +57,7 @@ const Bab1 = () => {
         <li><strong>Orientasi yang tepat:</strong> : Partikel harus bertumbukan dengan orientasi yang tepat agar dapat membentuk produk.</li>
         <li><strong>Energi yang cukup:</strong> : Partikel memiliki energi kinetik cukup untuk memutuskan ikatan lama dan membentuk ikatan.</li>
         
-        <img src="bab3.3.jpg" alt="Pengolahan" className="section-image" />
+        <img src="../Image/bab3.3k.jpg" alt="Pengolahan" className="section-image" />
       </section>
 
       <section>
@@ -70,11 +70,11 @@ const Bab1 = () => {
           <li>
             <strong>Korek Api:</strong>  Untuk menyalakan korek api, Anda perlu menggeseknya. Gesekan ini memberikan energi aktivasi yang cukup untuk memulai reaksi pembakaran.
           </li>
-        <img src="bab3.4.jpg" alt="Pengolahan" className="section-image" />
+        <img src="../Image/bab3.4k.jpg" alt="Pengolahan" className="section-image" />
           <li>
             <strong>Bola di Lembah:</strong> Bayangkan sebuah bola berada di dasar lembah. Untuk memindahkan bola ke lembah lain yang dipisahkan oleh bukit, Anda perlu memberikan energi untuk mendorong bola melewati puncak bukit.
           </li>
-        <img src="bab3.5.jpg" alt="Pengolahan" className="section-image" />
+        <img src="../Image/bab3.5k.jpg" alt="Pengolahan" className="section-image" />
         </ul>
       </section>
 
