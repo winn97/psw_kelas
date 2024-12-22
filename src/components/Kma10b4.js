@@ -17,7 +17,7 @@ const Bab4 = () => {
           kimia. Diduga, gas mulia memiliki keunikan dalam konfigurasi
           elektronnya yang dapat mencegah persenyawaan dengan unsur lain.
         </p>
-        <img src="ikatan kimia.jpg" alt="Struktur Pembuluh Darah" className="section-image" />
+        <img src="../Image/ikatan kimia.jpg" alt="Struktur Pembuluh Darah" className="section-image" />
         <ul>
           <li>Beberapa unsur tidak tersusun dari atom melainkan molekul.</li>
           <li>Atom-atom dari unsur yang sama dapat memiliki massa yang
@@ -102,7 +102,7 @@ const Bab4 = () => {
                   logam, menciptakan "lautan elektron."
           </li>
         </ul>
-        <img src="Ikatan kovalen.png" alt="Ikatan kovalen" className="section-image" />
+        <img src="../Image/Ikatan kovalen.png" alt="Ikatan kovalen" className="section-image" />
       </section>
       <div className="bottom-container">
         <h2>"Yuk, uji pemahamanmu dengan latihan soal! <br/>

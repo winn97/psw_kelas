@@ -16,7 +16,7 @@ const Bab5 = () => {
           
         </p>
         <p>Berikut adalah\ contoh konsep reaksi redoks.</p>
-        <img src="reaksi redoks.webp" alt="reaksi redoks" className="section-image" />
+        <img src="../Image/reaksi redoks.webp" alt="reaksi redoks" className="section-image" />
         </section>
       <section>
         <h2>2. Fungsi Reaksi Redoks</h2>

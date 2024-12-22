@@ -25,7 +25,7 @@ const Bab1 = () => {
           didukung oleh filsuf-filsuf lainnya. Akibatnya, gagasan mengenai atom tidak pernah lagi berkembang 
           selama berabad-abad lamanya.
         </p>
-        <img src="TeoriAtom.jpg" alt="Membran Sel" className="section-image" />
+        <img src="../Image/TeoriAtom_1.jpg" alt="Membran Sel" className="section-image" />
       </section>
 
       <section>
@@ -37,7 +37,7 @@ const Bab1 = () => {
         Atom merupakan bagian terkecil dari materi yang tidak dapat dibagi lagi. Hal ini 
         sesuai dengan gagasan yang sebelumnya telah dikemukakan oleh Democritus dan Leucippus.
         </p>
-        <img src="Atom1.png" alt="Membran Sel" className="section-image" />
+        <img src="../Image/Atom1.png" alt="Membran Sel" className="section-image" />
         <p>
         Dalton mengemukakan model atom pertama yang berbentuk seperti bola pejal. Dalton mengemukakan 
         bahwa atom berbentuk seperti bola pejal yang sangat kecil dan setiap unsur memiliki atom-atom yang 
