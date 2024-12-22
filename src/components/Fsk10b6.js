@@ -1,8 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import pascal from '../Image/pascalh.png';
-import archimedes from '../Image/rumus archimedes.png';
-import Stevin from '../Image/Stevin.png'
 import '../css/Fsk10b6.css';
 
 const Bab6 = () => {
@@ -48,21 +45,21 @@ const Bab6 = () => {
         Hukum Pascal menyatakan bahwa tekanan yang diberikan pada suatu fluida dalam ruang
         tertutup akan diteruskan secara merata ke segala arah.
         </p>
-        <img src={pascal} alt="Rumus Hukum Pascal" className="img-fluid mt-3 rounded shadow-lg" />
+        <img src="../Image/pascalh.png" alt="Rumus Hukum Pascal" className="img-fluid mt-3 rounded shadow-lg" />
 
         <h3>b. Hukum Archimedes</h3>
         <p>
         Hukum Archimedes menyatakan bahwa setiap benda yang tercelup dalam fluida akan mengalami gaya angkat
         yang besarnya sama dengan berat fluida yang dipindahkan.
         </p>
-        <img src={archimedes} alt="Rumus Hukum Archimedes" className="img-fluid mt-3 rounded shadow-lg" />
+        <img src="../Image/rumus archimedes.png" alt="Rumus Hukum Archimedes" className="img-fluid mt-3 rounded shadow-lg" />
 
         <h3>c.  Hukum Stevin </h3>
         <p>
         Hukum Stevin menjelaskan bahwa tekanan pada suatu titik dalam fluida yang diam bergantung pada
         kedalaman, massa jenis fluida, dan percepatan gravitasi.
         </p>
-        <img src={Stevin} alt="Rumus Hukum Stevin" className="img-fluid mt-3 rounded shadow-lg" />
+        <img src="../Image/Stevin.png" alt="Rumus Hukum Stevin" className="img-fluid mt-3 rounded shadow-lg" />
       </section>
       <section>
       <h2>4. Fluida Dinamis</h2>

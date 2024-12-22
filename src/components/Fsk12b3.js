@@ -25,13 +25,13 @@ const Bab3 = () => {
         <p>
           Magnet permanen menghasilkan medan magnetik tetap yang dihasilkan oleh susunan atom-atom magnetik di dalam material.
         </p>
-        <img src="medan_magnetik.png" alt="Magnet Permanen" className="section-image" />
+        <img src="../Image/medan_magnetik.png" alt="Magnet Permanen" className="section-image" />
 
         <h3>b. Arus Listrik</h3>
         <p>
           Arus listrik yang mengalir melalui kawat menghasilkan medan magnetik di sekitarnya. Fenomena ini dijelaskan oleh hukum Biot-Savart.
         </p>
-        <img src="arus_listrik.png" alt="Arus Listrik" className="section-image" />
+        <img src="../Image/arus_listrik.png" alt="Arus Listrik" className="section-image" />
       </section>
 
       <section>
@@ -44,13 +44,13 @@ const Bab3 = () => {
         <p>
           Hukum Biot-Savart menyatakan bahwa medan magnetik dihasilkan oleh elemen kecil arus listrik dan dapat dihitung berdasarkan jarak dan besar arus listrik tersebut.
         </p>
-        <img src="biot_savart.png" alt="Hukum Biot-Savart" className="section-image" />
+        <img src="../Image/biot_savart.png" alt="Hukum Biot-Savart" className="section-image" />
 
         <h3>b. Hukum Ampere</h3>
         <p>
           Hukum Ampere menjelaskan hubungan antara medan magnetik dan arus listrik total yang melewati sebuah loop tertutup.
         </p>
-        <img src="hukum_ampere.png" alt="Hukum Ampere" className="section-image" />
+        <img src="../Image/hukum_ampere.png" alt="Hukum Ampere" className="section-image" />
       </section>
 
       <section>
@@ -63,7 +63,7 @@ const Bab3 = () => {
         <p>
           Gaya Lorentz bekerja pada partikel bermuatan listrik yang bergerak dalam medan magnetik, dengan arah gaya yang dapat ditentukan menggunakan aturan tangan kanan.
         </p>
-        <img src="gaya_lorentz.png" alt="Gaya Lorentz" className="section-image" />
+        <img src="../Image/gaya_lorentz.png" alt="Gaya Lorentz" className="section-image" />
       </section>
 
       <section>
@@ -76,13 +76,13 @@ const Bab3 = () => {
         <p>
           Elektromagnet adalah magnet yang dihasilkan oleh aliran arus listrik melalui kawat melingkar, sering digunakan dalam perangkat seperti motor listrik dan generator.
         </p>
-        <img src="elektromagnetik.jpg" alt="Elektromagnet" className="section-image" />
+        <img src="../Image/elektromagnetik.jpg" alt="Elektromagnet" className="section-image" />
 
         <h3>b. Magnet Bumi</h3>
         <p>
           Medan magnetik Bumi melindungi kita dari radiasi matahari dan memandu navigasi melalui kompas.
         </p>
-        <img src="magnet_bumi.png" alt="Magnet Bumi" className="section-image" />
+        <img src="../Image/magnet_bumi.png" alt="Magnet Bumi" className="section-image" />
       </section>
 
       <div className="bottom-container">

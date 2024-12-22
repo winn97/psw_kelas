@@ -28,7 +28,7 @@ const Bab2 = () => {
           <li><strong>Fase:</strong> Posisi relatif gelombang pada waktu tertentu.</li>
           <li><strong>Bentuk Gelombang:</strong> Biasanya berupa gelombang sinusoidal.</li>
         </ul>
-        <img src="arus_bolak_balik.png" alt="Gelombang Arus Bolak-Balik" className="section-image" />
+        <img src="../Image/arus_bolak_balik.png" alt="Gelombang Arus Bolak-Balik" className="section-image" />
       </section>
 
       <section>
@@ -50,7 +50,7 @@ const Bab2 = () => {
           Impedansi induktor dihitung dengan rumus: <span className="formula">Z<sub>L</sub> = \( \omega L \)</span>, 
           di mana \( \omega \) adalah frekuensi sudut dan \( L \) adalah induktansi.
         </p>
-        <img src="induktor.png" alt="Induktor dalam AC" className="section-image" />
+        <img src="../Image/induktor.png" alt="Induktor dalam AC" className="section-image" />
 
         <h3>c. Kapasitor dalam Rangkaian AC</h3>
         <p>
@@ -58,7 +58,7 @@ const Bab2 = () => {
           Impedansi kapasitor dihitung dengan rumus: <span className="formula">Z<sub>C</sub> = 1 / (\( \omega C \))</span>, 
           di mana \( C \) adalah kapasitansi.
         </p>
-        <img src="kapasitor.png" alt="Kapasitor dalam AC" className="section-image" />
+        <img src="../Image/kapasitor.png" alt="Kapasitor dalam AC" className="section-image" />
       </section>
 
       <section>
@@ -73,14 +73,14 @@ const Bab2 = () => {
           Impedansi total dalam rangkaian seri dihitung sebagai jumlah vektor impedansi setiap komponen:
         </p>
         <p className="formula">Z<sub>total</sub> = Z<sub>R</sub> + Z<sub>L</sub> + Z<sub>C</sub></p>
-        <img src="rangkaian_seri.png" alt="Rangkaian Seri AC" className="section-image" />
+        <img src="../Image/rangkaian_seri.png" alt="Rangkaian Seri AC" className="section-image" />
 
         <h3>b. Rangkaian Paralel</h3>
         <p>
           Impedansi total dalam rangkaian paralel dihitung dengan rumus:
         </p>
         <p className="formula">1 / Z<sub>total</sub> = 1 / Z<sub>R</sub> + 1 / Z<sub>L</sub> + 1 / Z<sub>C</sub></p>
-        <img src="rangkaian_paralel.png" alt="Rangkaian Paralel AC" className="section-image" />
+        <img src="../Image/rangkaian_paralel.png" alt="Rangkaian Paralel AC" className="section-image" />
       </section>
 
       <section>
@@ -93,7 +93,7 @@ const Bab2 = () => {
           <li><strong>Daya Reaktif (Q):</strong> Daya yang tersimpan dalam komponen induktif atau kapasitif, dihitung dengan rumus: <span className="formula">Q = V * I * sin(\( \phi \))</span>.</li>
           <li><strong>Daya Semu (S):</strong> Kombinasi daya aktif dan reaktif, dihitung dengan rumus: <span className="formula">S = V * I</span>.</li>
         </ul>
-        <img src="power_ac.jpg" alt="Daya dalam Rangkaian AC" className="section-image" />
+        <img src="../Image/power_ac.jpg" alt="Daya dalam Rangkaian AC" className="section-image" />
       </section>
 
       <div className="bottom-container">

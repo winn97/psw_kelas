@@ -13,7 +13,7 @@ const Bab4 = () => {
         <p>
           Gelombang elektromagnetik adalah gelombang yang terdiri dari medan listrik dan medan magnet yang berosilasi secara tegak lurus satu sama lain dan terhadap arah perambatannya. Gelombang ini tidak memerlukan medium untuk merambat, sehingga dapat bergerak di ruang hampa.
         </p>
-        <img src="gelombang_elektromagnetik.png" alt="Ilustrasi Gelombang Elektromagnetik" className="section-image" />
+        <img src="../Image/gelombang_elektromagnetik.png" alt="Ilustrasi Gelombang Elektromagnetik" className="section-image" />
       </section>
 
       <section>
@@ -32,7 +32,7 @@ const Bab4 = () => {
           <li><em>λ</em>: Panjang gelombang (meter)</li>
           <li><em>f</em>: Frekuensi (Hz)</li>
         </ul>
-        <img src="gel_elektro.png" alt="Sifat Gelombang Elektromagnetik" className="section-image" />
+        <img src="../Image/gel_elektro.png" alt="Sifat Gelombang Elektromagnetik" className="section-image" />
       </section>
 
       <section>
@@ -40,7 +40,7 @@ const Bab4 = () => {
         <p>
           Gelombang elektromagnetik memiliki berbagai jenis berdasarkan panjang gelombang dan frekuensinya. Spektrum ini mencakup gelombang radio, gelombang mikro, inframerah, cahaya tampak, ultraviolet, sinar-X, dan sinar gamma.
         </p>
-        <img src="spektrum.png" alt="Spektrum Gelombang Elektromagnetik" className="section-image" />
+        <img src="../Image/spektrum.png" alt="Spektrum Gelombang Elektromagnetik" className="section-image" />
         <p>
           <strong>Rumus Panjang Gelombang:</strong>
         </p>
@@ -79,7 +79,7 @@ const Bab4 = () => {
           <li><em>h</em>: Konstanta Planck (6,626 × 10<sup>-34</sup> Js)</li>
           <li><em>f</em>: Frekuensi (Hz)</li>
         </ul>
-        <img src="aplikasi.png" alt="Aplikasi Gelombang Elektromagnetik" className="section-image" />
+        <img src="../Image/aplikasi.png" alt="Aplikasi Gelombang Elektromagnetik" className="section-image" />
       </section>
 
       <div className="bottom-container">
