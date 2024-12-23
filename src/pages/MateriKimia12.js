@@ -8,12 +8,12 @@ const Materi = () => {
 
   useEffect(() => {
     const mockBiologies = [
-      { id: 1, name: 'Arus Searah',image: 'https://i.pinimg.com/736x/7c/2c/67/7c2c67684955d720f682d16116ce0fcd.jpg', category: 'Bab 1', link: '/Kma12b1' },
-      { id: 2, name: 'Arus Bolak-Balik', image: 'https://i.pinimg.com/474x/0d/fd/2b/0dfd2b67c99789fbf28dcce47b7aa610.jpg', category: 'Bab 2', link: '/Kma12b2' },
-      { id: 3, name: 'Medan Magnetik', description: 'Medan Magnetik', image: 'https://i.pinimg.com/474x/98/27/1f/98271f317b127d0a6ebb53b892287da2.jpg', category: 'Bab 3', link: '/Kma12b3' },
-      { id: 4, name: 'Gelombang Elektromagnetik', image: 'https://i.pinimg.com/474x/38/74/aa/3874aa4fde49d4d3ed9b1659f1f358c8.jpg', category: 'Bab 4', link: '/Kma12b4' },
-      { id: 5, name: 'Induksi Elektromagnetik', image: 'https://i.pinimg.com/474x/a4/1b/78/a41b78e761c2b0bb8fddc935c640f18a.jpg', category: 'Bab 5', link: '/Kma12b5' },
-      { id: 6, name: 'Fisika Modern', image: 'https://i.pinimg.com/736x/89/ae/ea/89aeea116fa6a5979e5fd60dc9cb9344.jpg', category: 'Bab 6', link: '/Kma12b6' },
+      { id: 1, name: 'Sifat Koligatif Larutan',image: 'https://i.pinimg.com/474x/db/df/33/dbdf33b95d2f93f9dcef7f998e364be9.jpg', category: 'Bab 1', link: '/Kma12b1' },
+      { id: 2, name: ' Reaksi Redoks dan Elektrokimia', image: 'https://i.pinimg.com/736x/6f/b4/ff/6fb4ff274b6afc4d0140c6a4ab0990a9.jpg', category: 'Bab 2', link: '/Kma12b2' },
+      { id: 3, name: ' Kimia Unsur', image: 'https://i.pinimg.com/474x/a7/8f/95/a78f95d06a7b0c9d8289db16737ee31b.jpg', category: 'Bab 3', link: '/Kma12b3' },
+      { id: 4, name: ' Senyawa Karbon', image: 'https://i.pinimg.com/474x/d3/04/58/d3045889f86dc64a0e7d1212d9e6a3f6.jpg', category: 'Bab 4', link: '/Kma12b4' },
+      { id: 5, name: 'Benzena dan Turunannya', image: 'https://i.pinimg.com/474x/b0/d7/e3/b0d7e36b20644268f6ab333273918844.jpg', category: 'Bab 5', link: '/Kma12b5' },
+      { id: 6, name: ' Makromolekul', image: 'https://i.pinimg.com/474x/b4/ec/2e/b4ec2ec0f1039c9f7e23a11ab7030761.jpg', category: 'Bab 6', link: '/Kma12b6' },
     ];
 
     setBiologies(mockBiologies);
