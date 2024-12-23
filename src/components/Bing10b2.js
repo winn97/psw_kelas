@@ -1,13 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import '../css/Bing11b2.css';
+import '../css/Bing11b1.css';
 
-const SimplePresentTense = () => {
+const Bab2 = () => {
   const navigate = useNavigate();
 
   return (
     <div className="lesson-container">
-      <h1>Simple Present Tense</h1>
+      <h1>Chapter 2: Simple Present Tense</h1>
 
       <section>
         <h2>1. What is the Simple Present Tense?</h2>
@@ -122,28 +122,28 @@ const SimplePresentTense = () => {
         Let's start with some exercises!"</h2>
         <button 
           className="btn-practice"
-          onClick={() => window.location.href = "/simplepresentpractice"}
+          onClick={() => window.location.href = "/latihan/bahasa-inggris/kelas-10"}
         >
-          Start Practice Exercises
+          Start Practicing Now
         </button>
       </div>
 
       <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/recounttext")}
+          onClick={() => navigate("/Bing10b1")}
         >
-          Previous: Recount Text
+          Previous: Descriptive Text
         </button>
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/topics")}
+          onClick={() => navigate("/Bing10b3")}
         >
-          Back to Topics
+          Next Chapter: Informal Letters
         </button>
       </div>
     </div>
   );
 };
 
-export default SimplePresentTense;
+export default Bab2;

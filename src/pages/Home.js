@@ -29,8 +29,7 @@ function Home() {
             marginBottom: "1rem",
           }}
         >
-          <FaCalculator size={40} className="me-2 animated-icon" />R U A N G B E
-          L A J A R C E R M A T
+          <FaCalculator size={40} className="me-2 animated-icon" />R U A N G B E L A J A R<br />C E R M A T
         </h1>
         <p
           className="text-muted fs-4 animated-subtitle"

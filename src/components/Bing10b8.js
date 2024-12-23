@@ -1,87 +1,84 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import '../css/Bing11b8.css';
+import '../css/Bing11b1.css';
 
 const Bab8 = () => {
   const navigate = useNavigate();
   return (
     <div className="bab1-container">
-      <h1>Bab 8: Teks Laporan</h1>
+      <h1>Chapter 8: Report Text</h1>
 
       <section>
-        <h2>1. Pengertian Teks Laporan</h2>
+        <h2>1. Definition of Report Text</h2>
         <p>
-          Teks laporan adalah jenis tulisan informatif yang secara sistematis menggambarkan dan menjelaskan suatu topik, fenomena, atau subjek tertentu. Tujuan utamanya adalah untuk memberikan informasi faktual dan objektif untuk memberi informasi dan mendidik pembaca.
+          A report text is a type of informative writing that systematically describes and explains a specific topic, phenomenon, or subject. Its primary purpose is to provide factual, objective information to inform and educate readers.
         </p>
         <p>
-          Tujuan Utama:
+          Key Purposes:
         </p>
         <p>
-          Untuk memberikan informasi komprehensif tentang topik tertentu.
-          Untuk menggambarkan fenomena alam, sosial, atau ilmiah.
-          Untuk menyajikan informasi yang faktual dan obyektif.
-          Untuk menganalisis dan menjelaskan subjek yang kompleks.
+          To provide comprehensive information about a specific topic, to describe natural, social, or scientific phenomena, to present factual and objective information, and to analyze and explain complex subjects.
         </p>
       </section>
 
       <section>
-        <h2>2. Struktur Teks Laporan</h2>
-        <h3>a. Klasifikasi Umum</h3>
+        <h2>2. Structure of Report Text</h2>
+        <h3>a. General Classification</h3>
         <p>
-          Memperkenalkan topik atau subjek yang sedang dibahas dan memberikan gambaran luas tentang subjek tersebut.
+          Introduces the topic or subject being discussed and provides a broad overview of the subject.
         </p>
-        <h3>b. Deskripsi</h3>
+        <h3>b. Description</h3>
         <p>
-          Menawarkan informasi rinci tentang aspek spesifik dari topik dan memecah karakteristik, fungsi, atau perilaku
-        </p>
-      </section>
-
-      <section>
-        <h2>3. Karakteristik Teks Laporan</h2>
-        <h3>a. Kunci Utama</h3>
-        <p>
-          Presentasi dilakukan secara obyektif dan faktual, memiliki organisasi yang logis dan sistematis, berfokus pada informasi dan analisis, menggunakan kosakata teknis atau khusus.
-        </p>
-        <h3>b. Fitur Bahasa</h3>
-        <p>
-          Menggunakan bentuk present tense, menggunakan bahasa yang teknis dan tepat, memiliki nada formal, menggunakan gaya obyektif dan impersonal.
+          Offers detailed information about specific aspects of the topic and breaks down characteristics, functions, or behaviors.
         </p>
       </section>
 
       <section>
-        <h2>4. Contoh Teks Laporan</h2>
+        <h2>3. Characteristics of Report Text</h2>
+        <h3>a. Key Features</h3>
         <p>
-          Contoh umum: Makalah penelitian ilmiah, dokumentasi satwa liar dan alam, dan manual teknis.
+          Objective and factual presentation, logical and systematic organization, focus on information and analysis, and use of technical or specialized vocabulary.
         </p>
-        <h3>Contoh Teks Eksposisi</h3>
-        <p><strong>Judul:</strong> Ekosistem Lebah Madu.</p>
-        <p><strong>Klasifikasi Umum:</strong> Lebah madu merupakan penyerbuk penting dalam ekosistem global dan termasuk dalam famili Apidae.</p>
-        <p><strong>Deskripsi:</strong> Serangga ini hidup dalam struktur sosial yang kompleks dengan peran berbeda. Lebah pekerja mengumpulkan nektar, memelihara sarang, dan melindungi koloni. Ratu bertanggung jawab atas reproduksi, sedangkan drone kawin dengan ratu dari koloni lain.</p>
+        <h3>b. Language Features</h3>
+        <p>
+          Present tense, technical and precise language, formal tone, and objective and impersonal style.
+        </p>
+      </section>
+
+      <section>
+        <h2>4. Examples of Report Text</h2>
+        <p>
+          Common Types: Scientific research papers, wildlife and nature documentations, technical manuals, and environmental impact reports.
+        </p>
+        <h3>Sample Report Text</h3>
+        <p><strong>Title:</strong> The Honeybee Ecosystem</p>
+        <p><strong>General Classification:</strong> Honeybees are critical pollinators in global ecosystems, belonging to the Apidae family.</p>
+        <p><strong>Description:</strong> These insects live in complex social structures with distinct roles. Worker bees collect nectar, maintain the hive, and protect the colony. Queens are responsible for reproduction, while drones mate with queens from other colonies.</p>
       </section>
 
       <div className="bottom-container">
-        <h2>"Yuk, uji pemahamanmu dengan latihan soal! <br/>
-        Siap mulai?"</h2>
+        <h2>"Ready to test your skill about report text? <br/>
+        Let's start your practice!"</h2>
         <button 
           className="btn-latihan"
-          onClick={() => window.location.href = "/latihansoal1"}
+          onClick={() => window.location.href = "/latihan/bahasa-inggris/kelas-10"}
         >
-          Mulai Latihan Soal
+          Start Practicing Now
         </button>
       </div>
    {/* Navigasi Halaman */}
    <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/materi")}
+          onClick={() => navigate("/Bing10b7")}
         >
-          Kembali ke Halaman Sebelumnya
+          Previous: Exposition Text
         </button>
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab2")}
+          onClick={() => navigate("/#")}
         >
-          Lanjut ke Bab Selanjutnya
+          Home
         </button>
       </div>
     </div>

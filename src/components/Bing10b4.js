@@ -1,13 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import '../css/Bing11b4.css';
+import '../css/Bing11b1.css';
 
-const GreetingAndIntroduction = () => {
+const Bab4 = () => {
   const navigate = useNavigate();
 
   return (
     <div className="lesson-container">
-      <h1>Greeting and Introduction</h1>
+      <h1>Chapter 4: Greeting and Introduction</h1>
 
       <section>
         <h2>1. What are Greetings and Introductions?</h2>
@@ -109,28 +109,28 @@ const GreetingAndIntroduction = () => {
         Let's start with some exercises!"</h2>
         <button 
           className="btn-practice"
-          onClick={() => window.location.href = "/greetingpractice"}
+          onClick={() => window.location.href = "/latihan/bahasa-inggris/kelas-10"}
         >
-          Start Practice Exercises
+          Start Practicing Now
         </button>
       </div>
 
       <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/topics")}
+          onClick={() => navigate("/Bing10b3")}
         >
-          Back to Topics
+          Previous: Informal Letters
         </button>
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/informalletters")}
+          onClick={() => navigate("/Bing10b5")}
         >
-          Next: Informal Letters
+          Next: Narrative Text
         </button>
       </div>
     </div>
   );
 };
 
-export default GreetingAndIntroduction;
+export default Bab4;

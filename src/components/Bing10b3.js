@@ -1,13 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import '../css/Bing11b3.css';
+import '../css/Bing11b1.css';
 
-const InformalLetters = () => {
+const Bab3 = () => {
   const navigate = useNavigate();
 
   return (
     <div className="lesson-container">
-      <h1>Informal Letters</h1>
+      <h1>Chapter 3: Informal Letters</h1>
 
       <section>
         <h2>1. What are Informal Letters?</h2>
@@ -115,28 +115,28 @@ Alex`}
         Let's practice!"</h2>
         <button 
           className="btn-practice"
-          onClick={() => window.location.href = "/letterpractice"}
+          onClick={() => window.location.href = "/latihan/bahasa-inggris/kelas-10"}
         >
-          Start Writing Practice
+          Start Practicing Now
         </button>
       </div>
 
       <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/greetingandintroduction")}
+          onClick={() => navigate("/Bing10b2")}
         >
-          Previous: Greeting and Introduction
+          Previous: Simple Present Tense
         </button>
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/recounttext")}
+          onClick={() => navigate("/Bing10b4")}
         >
-          Next: Recount Text
+          Next: Greeting and Introduction
         </button>
       </div>
     </div>
   );
 };
 
-export default InformalLetters;
+export default Bab3;

@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import '../css/Bing11b1.css';
 
-const DescriptiveText = () => {
+const Bab1 = () => {
   const navigate = useNavigate();
 
   return (
@@ -162,28 +162,28 @@ const DescriptiveText = () => {
         Let's start the practice questions!"</h2>
         <button 
           className="btn-latihan"
-          onClick={() => window.location.href = "/descriptivepractice"}
+          onClick={() => window.location.href = "/latihan/bahasa-inggris/kelas-10"}
         >
-          Start Practice Questions
+          Start Practicing Now
         </button>
       </div>
 
       <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/topics")}
+          onClick={() => navigate("/#")}
         >
-          Back to Previous Page
+          Home
         </button>
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/narrativetext")}
+          onClick={() => navigate("/Bing10b2")}
         >
-          Next Chapter: Narrative Text
+          Next Chapter: Simple Present Tense
         </button>
       </div>
     </div>
   );
 };
 
-export default DescriptiveText;
+export default Bab1;

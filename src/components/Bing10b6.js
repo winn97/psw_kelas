@@ -1,105 +1,106 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import '../css/Bing11b4.css';
+import '../css/Bing11b1.css';
 
 const Bab6 = () => {
   const navigate = useNavigate();
   return (
     <div className="bab1-container">
-      <h1>Bab 6: Teks Prosedural</h1>
+      <h1>Chapter 6: Procedural Text</h1>
 
       <section>
-        <h2>1. Pengertian Teks Prosedural</h2>
+        <h2>1. Definition of Procedural Text</h2>
         <p>
-          Teks prosedur adalah jenis tulisan yang memberikan petunjuk langkah demi langkah secara jelas tentang cara melakukan sesuatu atau menyelesaikan tugas tertentu. Tujuan utamanya adalah untuk membimbing pembaca melalui suatu proses secara sistematis dan tepat.
+          Procedural text is a type of writing that provides clear, step-by-step instructions on how to do something or complete a specific task. Its primary purpose is to guide the reader through a process systematically and precisely.
         </p>
         <p>
-          Tujuan Utama:
+          Key Purposes:
         </p>
         <p>
-          Untuk memberikan instruksi yang jelas dan berurutan.
-          Untuk menjelaskan cara menyelesaikan tugas tertentu.
-          Untuk memastikan pembaca dapat mengikuti proses dengan sukses.
-          Untuk memecah tugas-tugas kompleks menjadi langkah-langkah yang dapat dikelola.
+        To provide clear, sequential instructions.
+        To explain how to complete a specific task.
+        To ensure the reader can successfully follow the process.
+        To break down complex tasks into manageable steps.
         </p>
       </section>
 
       <section>
-        <h2>2. Struktur Teks Prosedural</h2>
-        <h3>a. Sasaran/Tujuan</h3>
+        <h2>2. Structure of Procedural Text</h2>
+        <h3>a. Goal/Aim</h3>
         <p>
-          Menyatakan dengan jelas tujuan prosedur dan memberikan konteks tugas.
+          Clearly states the purpose of the procedure and provides context for the tasks.
         </p>
-        <h3>b. Alat dan Bahan</h3>
+        <h3>b. Materials/Ingredients</h3>
         <p>
-          Mencantumkan segala sesuatu yang diperlukan untuk menyelesaikan tugas dan membantu pembaca mempersiapkan diri terlebih dahulu.
+          Lists everything needed to complete the task and helps readers prepare in advance.
         </p>
-        <h3>c. Petunjuk Langkah demi Langkah</h3>
+        <h3>c. Step-by-Step Instructions</h3>
         <p>
-          Memberikan langkah-langkah yang jelas dan berurutan serta menggunakan kata kerja imperatif.
+          Provides clear, sequential steps, and uses imperative verbs.
         </p>
       </section>
 
       <section>
-        <h2>3. Karakteristik Teks Prosedural</h2>
-        <h3>a. Kunci Utama</h3>
+        <h2>3. Characteristics of Procedural Text</h2>
+        <h3>a. Key Features</h3>
         <p>
-          Menggunakan bahasa yang jelas dan lugas, memiliki urutan langkah yang logis, menggunakan instruksi yang tepat dan ringkas, berfokus pada panduan praktis.
+          Clear and direct language, logical sequence of steps, precise and concise instructions, and focus on practical guidance.
         </p>
-        <h3>b. Fitur Bahasa</h3>
+        <h3>b. Language Features</h3>
         <p>
-          Menggunakan Kata kerja imperatif(campurkan, tuangkan, panaskan), langkah-langkahnya bernomor atau berpoin, menggunakan kosakata teknis atau spesifik, menggunakan penanda waktu dan kata-kata berurutan.
+          Imperative verbs (e.g., mix, pour, heat), numbered or bulleted steps, technical or specific vocabulary, and time markers and sequence words.
         </p>
       </section>
 
       <section>
-        <h2>4. Contoh Teks Prosedural</h2>
+        <h2>4. Examples of Procedural Text</h2>
         <p>
-          Contoh umum: Resep, manual pengguna, dan protokol eksperimen.
+          Common Types: Recipes, DIY instructions, user manuals, and science experiment protocols.
         </p>
-        <h3>Contoh Teks Prosedur: Cara Membuat Pancake.</h3>
-        <p><strong>Tujuan:</strong> Membuat pancake buatan sendiri yang lezat.</p>
-        <p><strong>Bahan:</strong>
-          - 1 cangkir tepung.
-          - 2 sdm gula.
-          - 2 sdt baking powder.
-          - 1 butir telur.
-          - 3/4 cangkir susu.
-          - 2 sdm mentega cair.
+        <h3>Sample Procedural Text: How to Make Pancakes</h3>
+        <p><strong>Goal:</strong> Create delicious homemade pancakes</p>
+        <p><strong>Materials:</strong>
+          - 1 cup flour
+          - 2 tbsp sugar
+          - 2 tsp baking powder
+          - 1 egg
+          - 3/4 cup milk
+          - 2 tbsp melted butter
         </p>
-        <p><strong>Lngkah-langkah:</strong>
-          1. Campur bahan kering dalam mangkuk.
-          2. Kocok telur, susu, dan mentega cair di mangkuk lain.
-          3. Campurkan bahan basah dan kering.
-          4. Panaskan wajan dan tambahkan mentega.
-          5. Tuang adonan dan masak hingga terbentuk gelembung.
-          6. Balik dan masak sisi lainnya hingga berwarna keemasan.
+        <p><strong>Steps:</strong>
+          1. Mix dry ingredients in a bowl
+          2. Whisk egg, milk, and melted butter in another bowl
+          3. Combine wet and dry ingredients
+          4. Heat pan and add butter
+          5. Pour batter and cook until bubbles form
+          6. Flip and cook other side until golden
         </p>
       </section>
 
       <div className="bottom-container">
-        <h2>"Yuk, uji pemahamanmu dengan latihan soal! <br/>
-        Siap mulai?"</h2>
+        <h2>
+          "Ready to test your skill about procedural text?<br/>Let's start Practicing!"
+        </h2>
         <button 
           className="btn-latihan"
-          onClick={() => window.location.href = "/latihansoal1"}
+          onClick={() => window.location.href = "/latihan/bahasa-inggris/kelas-10"}
         >
-          Mulai Latihan Soal
+          Start Practicing Now
         </button>
       </div>
    {/* Navigasi Halaman */}
    <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/materi")}
+          onClick={() => navigate("/Bing10b5")}
         >
-          Kembali ke Halaman Sebelumnya
+          Previous: Narrative Text
         </button>
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab2")}
+          onClick={() => navigate("/Bing10b7")}
         >
-          Lanjut ke Bab Selanjutnya
+          Next Chapter: Exposition Text
         </button>
       </div>
     </div>
