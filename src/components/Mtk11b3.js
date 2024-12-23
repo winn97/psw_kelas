@@ -1,114 +1,84 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-// import './bab2.css';
 
-const Bab2 = () => {
+
+const Bab3 = () => {
   const navigate = useNavigate();
   return (
-    <div className="bab2-container">
-      <h1>Bab 2: Transformasi Geometri</h1>
+    <div className="bab3-container">
+      <h1>Bab 3: Induksi Matematika</h1>
 
       <section>
-        <h2>1. Pengertian Transformasi Geometri</h2>
+        <h2>1. Pengertian Induksi Matematika</h2>
         <p>
-          Transformasi geometri adalah perubahan posisi atau bentuk objek dalam bidang datar. Dalam matematika, transformasi digunakan untuk memanipulasi objek-objek geometris dengan cara tertentu, seperti memindahkan, merotasi, atau mengubah ukurannya. 
-          Ada beberapa jenis transformasi geometri yang digunakan untuk memetakan objek dari satu posisi ke posisi lain.
+          Induksi matematika adalah suatu metode pembuktian yang digunakan untuk membuktikan suatu pernyataan atau rumus yang berlaku untuk semua bilangan bulat positif. Proses induksi matematika dilakukan dalam dua langkah yaitu langkah dasar dan langkah induksi.
         </p>
       </section>
 
       <section>
-        <h2>2. Jenis-Jenis Transformasi Geometri</h2>
+        <h2>2. Langkah-Langkah Induksi Matematika</h2>
         <p>
-          Terdapat berbagai jenis transformasi geometri yang umum digunakan dalam matematika. Beberapa di antaranya adalah:
+          Pembuktian dengan induksi matematika terdiri dari dua langkah utama:
         </p>
 
-        <h3>a. Translasi (Pergeseran)</h3>
+        <h3>a. Langkah Dasar</h3>
         <p>
-          Translasi adalah transformasi yang memindahkan setiap titik objek sejauh jarak tertentu dalam arah tertentu tanpa mengubah bentuk atau ukuran objek. Semua titik objek bergerak dengan cara yang sama.
+          Langkah pertama adalah membuktikan pernyataan yang ingin dibuktikan untuk nilai terkecil, biasanya untuk n = 1. Ini adalah dasar dari induksi matematika.
         </p>
 
-        <h3>b. Rotasi</h3>
+        <h3>b. Langkah Induksi</h3>
         <p>
-          Rotasi adalah transformasi yang memutar objek pada titik pusat tertentu dengan sudut putaran tertentu. Semua titik objek bergerak dengan jarak yang sama dari titik pusat rotasi.
-        </p>
-
-        <h3>c. Refleksi (Pemantulan)</h3>
-        <p>
-          Refleksi adalah transformasi yang memantulkan objek terhadap suatu garis (garis refleksi). Setiap titik objek dipantulkan pada posisi yang sama dengan jarak yang sama terhadap garis refleksi.
-        </p>
-
-        <h3>d. Dilatasi (Perbesaran atau Pengecilan)</h3>
-        <p>
-          Dilatasi adalah transformasi yang mengubah ukuran objek, baik memperbesar maupun memperkecilnya, dengan mempertahankan bentuk objek tersebut. Perubahan ukuran ini bergantung pada faktor skala yang diberikan.
+          Langkah kedua adalah mengasumsikan bahwa pernyataan tersebut benar untuk n = k, dan kemudian membuktikan bahwa pernyataan tersebut juga benar untuk n = k + 1.
         </p>
       </section>
 
       <section>
-        <h2>3. Sifat-Sifat Transformasi Geometri</h2>
+        <h2>3. Contoh Pembuktian Induksi Matematika</h2>
         <p>
-          Setiap jenis transformasi memiliki sifat-sifat tertentu, seperti kesamaan bentuk dan ukuran, serta posisi relatif objek sebelum dan setelah transformasi. Beberapa sifat transformasi antara lain:
+          Misalnya, kita ingin membuktikan bahwa jumlah deret bilangan bulat pertama dapat dihitung dengan rumus:
+          <br />
+          <i>1 + 2 + 3 + ... + n = n(n + 1) / 2</i>
+        </p>
+        
+        <h3>a. Langkah Dasar</h3>
+        <p>
+          Untuk n = 1, pernyataan tersebut menjadi:
+          <br />
+          <i>1 = 1(1 + 1) / 2 = 1</i>
+          Yang jelas benar.
+        </p>
+
+        <h3>b. Langkah Induksi</h3>
+        <p>
+          Asumsikan pernyataan ini benar untuk n = k, yaitu:
+          <br />
+          <i>1 + 2 + 3 + ... + k = k(k + 1) / 2</i>
+          Selanjutnya, kita harus membuktikan bahwa:
+          <br />
+          <i>1 + 2 + 3 + ... + k + (k + 1) = (k + 1)(k + 2) / 2</i>
+        </p>
+      </section>
+
+      <section>
+        <h2>4. Contoh Soal Induksi Matematika</h2>
+        <p>
+          Berikut adalah soal latihan untuk menguji pemahaman Anda tentang induksi matematika. Cobalah untuk membuktikan rumus berikut dengan induksi matematika:
         </p>
         <ul>
           <li>
-            <strong>Kekekalan Jarak:</strong> Transformasi seperti translasi, rotasi, dan refleksi menjaga jarak antara titik-titik pada objek, sehingga objek tetap memiliki ukuran yang sama setelah transformasi.
+            <i>1 + 3 + 5 + ... + (2n - 1) = n²</i>
           </li>
           <li>
-            <strong>Kekekalan Sudut:</strong> Transformasi ini mempertahankan besar sudut antara garis atau sisi pada objek, seperti yang terjadi pada rotasi dan refleksi.
-          </li>
-          <li>
-            <strong>Kekekalan Pararelisme:</strong> Transformasi seperti translasi dan rotasi mempertahankan garis-garis yang sejajar tetap sejajar setelah transformasi.
+            <i>2 + 4 + 6 + ... + 2n = n(n + 1)</i>
           </li>
         </ul>
       </section>
 
       <section>
-        <h2>4. Matriks Transformasi</h2>
+        <h2>5. Pentingnya Induksi Matematika</h2>
         <p>
-          Matriks digunakan untuk menggambarkan dan memanipulasi transformasi geometri. Dalam transformasi, setiap jenis transformasi dapat diwakili oleh matriks tertentu. Matriks transformasi ini digunakan untuk menghitung posisi titik setelah transformasi dilakukan.
+          Induksi matematika sangat penting dalam pembuktian rumus atau pernyataan yang berlaku untuk semua bilangan bulat positif. Teknik ini banyak digunakan dalam berbagai topik matematika, seperti teori bilangan, aljabar, dan analisis.
         </p>
-
-        <h3>a. Matriks Translasi</h3>
-        <p>
-          Translasi dalam bidang dua dimensi dapat diwakili dengan matriks 3x3. Matriks translasi digunakan untuk memindahkan titik objek dengan menambahkan nilai translasi pada koordinat x dan y.
-        </p>
-
-        <h3>b. Matriks Rotasi</h3>
-        <p>
-          Rotasi dalam bidang dua dimensi dapat diwakili dengan matriks rotasi, yang bergantung pada sudut rotasi dan posisi titik pusat rotasi. Matriks ini digunakan untuk memutar objek pada titik pusat dengan sudut tertentu.
-        </p>
-      </section>
-
-      <section>
-        <h2>5. Aplikasi Transformasi Geometri</h2>
-        <p>
-          Transformasi geometri memiliki banyak aplikasi dalam berbagai bidang, seperti:
-        </p>
-        <ul>
-          <li>
-            <strong>Grafika Komputer:</strong> Transformasi digunakan untuk memanipulasi objek dalam komputer, seperti memutar, memperbesar, atau menggeser gambar.
-          </li>
-          <li>
-            <strong>Desain Arsitektur:</strong> Dalam arsitektur, transformasi digunakan untuk merancang bangunan dan struktur dengan berbagai rotasi dan refleksi.
-          </li>
-          <li>
-            <strong>Robotika:</strong> Dalam perencanaan gerak robot, transformasi digunakan untuk menghitung pergerakan dan posisi robot dalam ruang tiga dimensi.
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>6. Kelainan pada Transformasi Geometri</h2>
-        <p>
-          Beberapa kelainan yang dapat terjadi dalam transformasi geometri meliputi kesalahan dalam perhitungan sudut atau faktor skala, yang dapat mengubah hasil akhir dari transformasi.
-        </p>
-        <ul>
-          <li>
-            <strong>Kesalahan dalam Matriks Transformasi:</strong> Kesalahan dalam penggunaan matriks untuk transformasi dapat menyebabkan posisi objek yang tidak sesuai.
-          </li>
-          <li>
-            <strong>Perubahan Tidak Proporsional:</strong> Kesalahan dalam faktor skala pada dilatasi dapat menyebabkan perubahan ukuran objek yang tidak proporsional.
-          </li>
-        </ul>
       </section>
 
       <div className="bottom-container">
@@ -116,7 +86,7 @@ const Bab2 = () => {
         Siap mulai?"</h2>
         <button 
           className="btn-latihan"
-          onClick={() => window.location.href = "/latihansoal2"}
+          onClick={() => window.location.href = "/latihansoal3"}
         >
           Mulai Latihan Soal
         </button>
@@ -126,13 +96,13 @@ const Bab2 = () => {
       <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab1")}
+          onClick={() => navigate("/bab2")}
         >
           Kembali ke Bab Sebelumnya
         </button>
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab3")}
+          onClick={() => navigate("/bab4")}
         >
           Lanjut ke Bab Selanjutnya
         </button>
@@ -141,4 +111,4 @@ const Bab2 = () => {
   );
 };
 
-export default Bab2;
+export default Bab3;
