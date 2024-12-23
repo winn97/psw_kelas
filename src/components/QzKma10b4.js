@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import "./KuisIkatanKimiaKelas10.css";
-import Timer from "./Timer";
-import Question from "./Question";
+import "../css/TryOut.css";
 
 const KuisIkatanKimiaKelas10 = () => {
   const navigate = useNavigate();

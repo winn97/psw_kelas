@@ -83,6 +83,11 @@ import Fisika12b5 from './components/Fsk12b5';
 import Fisika12b6 from './components/Fsk12b6';
 import Fisika12b7 from './components/Fsk12b7';
 import Fisika12b8 from './components/Fsk12b8';
+// import Bgl10b1 from './components/Bgl10b1';
+// import Bgl10b2 from './components/Bgl10b2';
+// import Bgl10b3 from './components/Bgl10b3';
+// import Bgl10b4 from './components/Bgl10b4';
+// import Bgl10b5 from './components/Bgl10b5';
 import Bgl11b1 from './components/Bgl11b1';
 import Bgl11b2 from './components/Bgl11b2';
 import Bgl11b3 from './components/Bgl11b3';
@@ -91,6 +96,15 @@ import Bgl11b5 from './components/Bgl11b5';
 import Bgl11b6 from './components/Bgl11b6';
 import Bgl11b7 from './components/Bgl11b7';
 import Bgl11b8 from './components/Bgl11b8';
+import Bgl12b1 from './components/Bgl12b1';
+import Bgl12b2 from './components/Bgl12b2';
+import Bgl12b3 from './components/Bgl12b3';
+import Bgl12b4 from './components/Bgl12b4';
+import Bgl12b5 from './components/Bgl12b5';
+import Bgl12b6 from './components/Bgl12b6';
+import Bgl12b7 from './components/Bgl12b7';
+import Bgl12b8 from './components/Bgl12b8';
+import Bgl12b9 from './components/Bgl12b9';
 import Eko10b1 from './components/Eko10b1';
 import Eko10b2 from './components/Eko10b2';
 import Eko10b3 from './components/Eko10b3';
@@ -200,6 +214,11 @@ import SlFisika12b5 from './components/SlFsk12b5';
 import SlFisika12b6 from './components/SlFsk12b6';
 import SlFisika12b7 from './components/SlFsk12b7';
 import SlFisika12b8 from './components/SlFsk12b8';
+// import SlEko10b1 from './components/SlEko10b1';
+// import SlEko10b2 from './components/SlEko10b2';
+// import SlEko10b3 from './components/SlEko10b3';
+// import SlEko10b4 from './components/SlEko10b4';
+// import SlEko10b5 from './components/SlEko10b5';
 import SlBgl11b1 from './components/SlBgl11b1';
 import SlBgl11b2 from './components/SlBgl11b2';
 import SlBgl11b3 from './components/SlBgl11b3';
@@ -208,11 +227,15 @@ import SlBgl11b5 from './components/SlBgl11b5';
 import SlBgl11b6 from './components/SlBgl11b6';
 import SlBgl11b7 from './components/SlBgl11b7';
 import SlBgl11b8 from './components/SlBgl11b8';
-// import SlEko10b1 from './components/SlEko10b1';
-// import SlEko10b2 from './components/SlEko10b2';
-// import SlEko10b3 from './components/SlEko10b3';
-// import SlEko10b4 from './components/SlEko10b4';
-// import SlEko10b5 from './components/SlEko10b5';
+import SlBgl12b1 from './components/SlBgl12b1';
+import SlBgl12b2 from './components/SlBgl12b2';
+import SlBgl12b3 from './components/SlBgl12b3';
+import SlBgl12b4 from './components/SlBgl12b4';
+import SlBgl12b5 from './components/SlBgl12b5';
+import SlBgl12b6 from './components/SlBgl12b6';
+import SlBgl12b7 from './components/SlBgl12b7';
+import SlBgl12b8 from './components/SlBgl12b8';
+import SlBgl12b9 from './components/SlBgl12b9';
 import SlEko11b1 from './components/SlEko11b1';
 import SlEko11b2 from './components/SlEko11b2';
 import SlEko11b3 from './components/SlEko11b3';
@@ -265,28 +288,35 @@ import SlKma11b4 from './components/SlKma11b4';
 import SlKma11b5 from './components/SlKma11b5';
 import SlKma11b6 from './components/SlKma11b6';
 import SlKma11b7 from './components/SlKma11b7';
-// import SlKma11b8 from './components/SlKma11b8';
-// import SlKma11b9 from './components/SlKma11b9';
-// import SlKma12b1 from './components/SlKma12b1';
-// import SlKma12b2 from './components/SlKma12b2';
-// import SlKma12b3 from './components/SlKma12b3';
-// import SlKma12b4 from './components/SlKma12b4';
-// import SlKma12b5 from './components/SlKma12b5';
-// import SlKma12b6 from './components/SlKma12b6';
-import SlMtk10b1 from './components/Mtk10b1';
-import SlMtk10b2 from './components/Mtk10b2';
-import SlMtk10b3 from './components/Mtk10b3';
-import SlMtk10b4 from './components/Mtk10b4';
-import SlMtk10b5 from './components/Mtk10b5';
-import SlMtk10b6 from './components/Mtk10b3';
-import SlMtk10b7 from './components/Mtk10b4';
-import SlMtk10b8 from './components/Mtk10b5';
-import SlMtk11b1 from './components/Mtk11b1';
-import SlMtk11b2 from './components/Mtk11b2';
-import SlMtk11b3 from './components/Mtk11b3';
-import SlMtk11b4 from './components/Mtk11b4';
-import SlMtk11b5 from './components/Mtk11b5';
-import SlMtk11b6 from './components/Mtk11b6';
+import SlKma11b8 from './components/SlKma11b8';
+import SlKma11b9 from './components/SlKma11b9';
+import SlKma12b1 from './components/SlKma12b1';
+import SlKma12b2 from './components/SlKma12b2';
+import SlKma12b3 from './components/SlKma12b3';
+import SlKma12b4 from './components/SlKma12b4';
+import SlKma12b5 from './components/SlKma12b5';
+import SlMtk10b1 from './components/SlMTK10b1';
+import SlMtk10b2 from './components/SlMTK10b2';
+import SlMtk10b3 from './components/SlMTK10b3';
+import SlMtk10b4 from './components/SlMTK10b4';
+import SlMtk10b5 from './components/SlMTK10b5';
+import SlMtk10b6 from './components/SlMTK10b6';
+import SlMtk10b7 from './components/SlMTK10b7';
+import SlMtk10b8 from './components/SlMTK10b8';
+import SlMtk11b1 from './components/SlMTK11b1';
+import SlMtk11b2 from './components/SlMTK11b2';
+import SlMtk11b3 from './components/SlMTK11b3';
+import SlMtk11b4 from './components/SlMTK11b4';
+import SlMtk11b5 from './components/SlMTK11b5';
+import SlMtk11b6 from './components/SlMTK11b6';
+import SlMtk12b1 from './components/SlMTK12b1';
+import SlMtk12b2 from './components/SlMTK12b2';
+import SlMtk12b3 from './components/SlMTK12b3';
+import SlMtk12b4 from './components/SlMTK12b4';
+import SlMtk12b5 from './components/SlMTK12b5';
+import SlMtk12b6 from './components/SlMTK12b6';
+import SlMtk12b7 from './components/SlMTK12b7';
+import SlMtk12b8 from './components/SlMTK12b8';
 
 
 function App() {
@@ -391,6 +421,12 @@ function App() {
         <Route path="/Fsk12b6" element={<Fisika12b6 />} />
         <Route path="/Fsk12b7" element={<Fisika12b7 />} />
         <Route path="/Fsk12b8" element={<Fisika12b8 />} />
+        {/* Rute untuk Materi Biologi 10 */}
+        {/* <Route path="/Bgl10b1" element={<Bgl10b1 />} />
+        <Route path="/Bgl10b2" element={<Bgl10b2 />} />
+        <Route path="/Bgl10b3" element={<Bgl10b3 />} />
+        <Route path="/Bgl10b4" element={<Bgl10b4 />} />
+        <Route path="/Bgl10b5" element={<Bgl10b5 />} /> */}
         {/* Rute untuk Materi Biologi 11 */}
         <Route path="/Bgl11b1" element={<Bgl11b1 />} />
         <Route path="/Bgl11b2" element={<Bgl11b2 />} />
@@ -400,6 +436,16 @@ function App() {
         <Route path="/Bgl11b6" element={<Bgl11b6 />} />
         <Route path="/Bgl11b7" element={<Bgl11b7 />} />
         <Route path="/Bgl11b8" element={<Bgl11b8 />} />
+        {/* Rute untuk Materi Biologi 11 */}
+        <Route path="/Bgl12b1" element={<Bgl12b1 />} />
+        <Route path="/Bgl12b2" element={<Bgl12b2 />} />
+        <Route path="/Bgl12b3" element={<Bgl12b3 />} />
+        <Route path="/Bgl12b4" element={<Bgl12b4 />} />
+        <Route path="/Bgl12b5" element={<Bgl12b5 />} />
+        <Route path="/Bgl12b6" element={<Bgl12b6 />} />
+        <Route path="/Bgl12b7" element={<Bgl12b7 />} />
+        <Route path="/Bgl12b8" element={<Bgl12b8 />} />
+        <Route path="/Bgl12b9" element={<Bgl12b9 />} />
         {/* Rute untuk Materi Ekonomi 10 */}
         <Route path="/Eko10b1" element={<Eko10b1 />} />
         <Route path="/Eko10b2" element={<Eko10b2 />} />
@@ -509,6 +555,16 @@ function App() {
         <Route path="/SlBing11b7" element={<SlBing11b7 />} />
         <Route path="/SlBing11b8" element={<SlBing11b8 />} />
         {/* Rute untuk Materi Biologi 11 */}
+        <Route path="/SlBgl12b1" element={<SlBgl12b1 />} />
+        <Route path="/SlBgl12b2" element={<SlBgl12b2 />} />
+        <Route path="/SlBgl12b3" element={<SlBgl12b3 />} />
+        <Route path="/SlBgl12b4" element={<SlBgl12b4 />} />
+        <Route path="/SlBgl12b5" element={<SlBgl12b5 />} />
+        <Route path="/SlBgl12b6" element={<SlBgl12b6 />} />
+        <Route path="/SlBgl12b7" element={<SlBgl12b7 />} />
+        <Route path="/SlBgl12b8" element={<SlBgl12b8 />} />
+        <Route path="/SlBgl12b8" element={<SlBgl12b8 />} />
+        {/* Rute untuk Materi Biologi 11 */}
         <Route path="/SlBgl11b1" element={<SlBgl11b1 />} />
         <Route path="/SlBgl11b2" element={<SlBgl11b2 />} />
         <Route path="/SlBgl11b3" element={<SlBgl11b3 />} />
@@ -570,6 +626,12 @@ function App() {
         <Route path="/SlKma11b7" element={<SlKma11b7 />} />
         <Route path="/SlKma11b8" element={<SlBgl11b8 />} />
         <Route path="/SlKma11b9" element={<SlKma11b5 />} />
+        {/* Rute untuk Materi Kimia 12 */}
+        <Route path="/SlKma12b1" element={<SlKma12b1 />} />
+        <Route path="/SlKma12b2" element={<SlKma12b2 />} />
+        <Route path="/SlKma12b3" element={<SlKma12b3 />} />
+        <Route path="/SlKma12b4" element={<SlKma12b4 />} />
+        <Route path="/SlKma12b5" element={<SlKma12b5 />} />
         {/* Rute untuk Materi Matematika 10 */}
         <Route path="/SlMtk10b1" element={<SlMtk10b1 />} />
         <Route path="/SlMtk10b2" element={<SlMtk10b2 />} />
@@ -586,6 +648,15 @@ function App() {
         <Route path="/SlMtk11b4" element={<SlMtk11b4 />} />
         <Route path="/SlMtk11b5" element={<SlMtk11b5 />} />
         <Route path="/SlMtk11b6" element={<SlMtk11b6 />} />
+        {/* Rute untuk Materi Matematika 10 */}
+        <Route path="/SlMTK12b1" element={<SlMtk12b1 />} />
+        <Route path="/SlMTK12b2" element={<SlMtk12b2 />} />
+        <Route path="/SlMTK12b3" element={<SlMtk12b3 />} />
+        <Route path="/SlMTK12b4" element={<SlMtk12b4 />} />
+        <Route path="/SlMTK12b5" element={<SlMtk12b5 />} />
+        <Route path="/SlMTK12b6" element={<SlMtk12b6 />} />
+        <Route path="/SlMTK12b7" element={<SlMtk12b7 />} />
+        <Route path="/SlMTK12b8" element={<SlMtk12b8 />} />
       </Routes>
       <Footer />
     </BrowserRouter>

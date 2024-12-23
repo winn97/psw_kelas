@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Tryout_reaksiredoks.css";
-import Timer from "./Timer";
-import Question from "./Question";
+import "../css/TryOut.css";
 
 const kuis_reaksiredoks_kelas10 = () => {
   const navigate = useNavigate();
