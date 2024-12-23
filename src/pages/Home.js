@@ -20,16 +20,17 @@ function Home() {
       }}
     >
       {/* Header Section */}
-      <header className="mb-5" style={{ maxWidth: "800px" }}>
+      <header className="mb-5" style={{ maxWidth: "900px" }}>
         <h1
           className="text-primary fw-bold animated-title"
           style={{
             fontSize: "3rem",
-            lineHeight: "1.2",
-            marginBottom: "1rem",
+            lineHeight: "1.3",
+            marginBottom: "3rem",
           }}
         >
-          <FaCalculator size={40} className="me-2 animated-icon" />R U A N G B E L A J A R<br />C E R M A T
+          <FaCalculator size={40} className="me-2 animated-icon" />
+          RUANG BELAJAR CERMAT
         </h1>
         <p
           className="text-muted fs-4 animated-subtitle"
@@ -61,7 +62,7 @@ function Home() {
       </footer>
 
       {/* Feature Section */}
-      <section className="container text-center">
+      <section className="text-center">
         <div className="row g-4">
           <div className="col-lg-4 col-md-6">
             <div className="card border-0 shadow p-4 h-100 bg-white rounded">
