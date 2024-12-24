@@ -3,88 +3,157 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white; /* Mengubah latar belakang menjadi putih */
-  color: #333; /* Warna teks default */
-  padding: 10px 20px; /* Mengurangi padding untuk tampilan yang lebih kompak */
+  background: linear-gradient(90deg, #ffffff, hsla(166, 65%, 49%, 0.312)); /* Gradien putih ke hijau */
+  color: #ffffff;
+  padding: 15px 30px;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan yang lebih halus */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Navbar Title */
 .navbar-left h1 {
   margin: 0;
-  font-size: 1.8rem; /* Ukuran font lebih besar untuk menonjol */
+  font-size: 1.8rem;
   font-weight: bold;
-  color: #4a90e2; /* Warna font judul yang menarik */
+  color: #000a0b;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
 
 /* Navbar Menu */
 .nav-menu {
   list-style: none;
   display: flex;
-  gap: 30px; /* Mengurangi jarak antar elemen menu utama */
+  gap: 15px; 
   margin: 0;
-  padding: 0;
+  padding: 10px;
+  justify-content: flex-start;
 }
+
 
 .nav-menu a {
   text-decoration: none;
-  color: #4a90e2; /* Warna tautan yang sesuai dengan tema */
+  color: #ffffff;
+  font-size: 1rem;
   font-weight: 500;
-  transition: color 0.3s ease, transform 0.3s ease; /* Tambahkan efek transisi */
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding: 0 15px; /* Adjust padding to reduce space between items */
 }
 
+
 .nav-menu a:hover {
-  color: #ffdf00; /* Warna hover tetap sama */
-  transform: scale(1.05); /* Efek zoom saat hover */
+  color: #259186; /* Warna hover kuning cerah */
+  transform: scale(1.1); /* Efek zoom saat hover */
 }
 
 /* Dropdown Menu */
 .dropdown {
   position: relative;
+  margin-right:180px;
+  color: #ffffff;
+  display: flex; /* Aktifkan flexbox */
+  justify-content: center; /* Pusatkan secara horizontal */
+  align-items: center; /* Pusatkan secara vertikal */
+
 }
 
-.dropdown-content, .sub-dropdown-content {
+
+.dropdown > span::after {
+  content: " ▼"; /* Ikon dropdown */
+  font-size: 0.8rem;
+}
+
+.dropdown-content {
   display: none;
   position: absolute;
-  background-color: white; /* Latar belakang dropdown tetap putih */
-  color: black; 
+  top: 100%;
+  left: 0;
+  background: linear-gradient(90deg, #9d9db9, #2dc9a7); /* Gradien dropdown */
   border-radius: 5px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.dropdown:hover .dropdown-content, .sub-dropdown:hover .sub-dropdown-content {
+.dropdown-content li {
+  padding: 5px 15px;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+  color: #ffffff;
+}
+
+.dropdown-content li:hover {
+  background-color: #54d2c5; /* Warna hover biru cerah */
+}
+
+.dropdown:hover .dropdown-content {
   display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.dropdown-content li, .sub-dropdown-content li {
-  padding: 10px; /* Menambah padding untuk dropdown */
+/* Sub Dropdown Menu */
+.sub-dropdown {
+  position: relative;
 }
 
-.sub-dropdown span:hover {
-   cursor: pointer;
+.sub-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: linear-gradient(90deg, #1a1a3d, #36eed6);
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
+  z-index: 999;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+   color: #ffffff;
+}
+
+.sub-dropdown-content li {
+  padding: 10px 20px;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+  color: #ffffff;
+}
+
+.sub-dropdown-content li:hover {
+  background-color: #54d2c5;
+  color: #ffffff;
+}
+
+.sub-dropdown:hover .sub-dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Responsive Navbar */
 @media (max-width: 768px) {
-   .nav-menu {
-     flex-direction: column;
-     gap:10px; /* Jarak antar elemen di versi mobile */
-     width:auto; 
-     text-align:center; 
-     padding-top :10px; 
-     background-color:white; 
-   }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
 
-   .navbar {
-     flex-direction: column; 
-     align-items:flex-start; 
-     padding-top :20px; 
-   }
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-   .dropdown {
-     margin-right:-20px; 
-   }
+  .dropdown-content,
+  .sub-dropdown-content {
+    position: relative;
+    transform: none;
+    opacity: 1;
+    box-shadow: none;
+  }
 }
