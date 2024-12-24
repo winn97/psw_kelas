@@ -8,15 +8,15 @@ const Materi = () => {
 
   useEffect(() => {
     const mockBiologies = [
-      { id: 1, name: 'Arus Searah',image: 'https://i.pinimg.com/736x/7c/2c/67/7c2c67684955d720f682d16116ce0fcd.jpg', category: 'Bab 1', link: '/SlMTK12b1' },
-      { id: 2, name: 'Arus Bolak-Balik', image: 'https://i.pinimg.com/474x/0d/fd/2b/0dfd2b67c99789fbf28dcce47b7aa610.jpg', category: 'Bab 2', link: '/SlMTK12b2' },
-      { id: 3, name: 'Medan Magnetik', description: 'Medan Magnetik', image: 'https://i.pinimg.com/474x/98/27/1f/98271f317b127d0a6ebb53b892287da2.jpg', category: 'Bab 3', link: '/SlMTK12b3' },
-      { id: 4, name: 'Gelombang Elektromagnetik', image: 'https://i.pinimg.com/474x/38/74/aa/3874aa4fde49d4d3ed9b1659f1f358c8.jpg', category: 'Bab 4', link: '/SlMTK12b4' },
-      { id: 5, name: 'Induksi Elektromagnetik', image: 'https://i.pinimg.com/474x/a4/1b/78/a41b78e761c2b0bb8fddc935c640f18a.jpg', category: 'Bab 5', link: '/SlMTK12b5' },
-      { id: 6, name: 'Fisika Modern', image: 'https://i.pinimg.com/736x/89/ae/ea/89aeea116fa6a5979e5fd60dc9cb9344.jpg', category: 'Bab 6', link: '/SlMTK12b6' },
-      { id: 7, name: 'Teknologi Digital', image: 'https://i.pinimg.com/474x/13/74/70/137470180a1cdd04ab71177a98eafcaa.jpg', category: 'Bab 7', link: '/SlMTK12b7' },
-      { id: 8, name: 'Sumber Energi', image : 'https://i.pinimg.com/736x/1f/62/62/1f6262428ab8700cefc54a6fdf92aac2.jpg', category: 'Bab 8', link: '/SlMTK12b8' },
-    ];
+      { id: 1, name: 'Aturan Pencacahan',description: 'Aturan pencacahan menghitung banyaknya kemungkinan dalam suatu peristiwa.',image: 'https://cdn.pixabay.com/photo/2017/06/27/08/29/pay-2446670_640.jpg', category: 'Bab 1', link: '/SlMtk12b1' },
+      { id: 2, name: 'Distribusi Binomial', description: 'Distribusi binomial menghitung probabilitas peristiwa dengan dua hasil dalam percobaan tetap.',image: 'https://cdn.pixabay.com/photo/2015/11/03/09/05/calculator-1020044_640.jpg', category: 'Bab 2', link: '/SlMtk12b2' },
+      { id: 3, name: 'Kongruen dan Kesebangunan', description: 'Kongruen memiliki ukuran dan bentuk sama, kesebangunan memiliki bentuk sama tapi ukuran berbeda.', image: 'https://cdn.pixabay.com/photo/2018/01/29/14/08/counting-3116201_640.jpg', category: 'Bab 3', link: '/SlMtk12b3' },
+      { id: 4, name: 'Limit Trigonometri', description: 'Limit trigonometri menghitung nilai limit fungsi trigonometri saat variabel mendekati suatu titik.',image: 'https://cdn.pixabay.com/photo/2015/09/13/10/06/pay-937884_640.jpg', category: 'Bab 4', link: '/SlMtk12b4' },
+      { id: 5, name: 'Peluang', description: 'Peluang adalah ukuran kemungkinan terjadinya suatu peristiwa dalam suatu percobaan atau eksperimen.',image: 'https://cdn.pixabay.com/photo/2024/06/19/20/29/boy-8840728_640.jpg', category: 'Bab 5', link: '/SlMtk12b5' },
+      { id: 6, name: 'Geometri Bidang Datar & Bangun Ruang',description: 'Geometri bidang datar mempelajari objek dua dimensi, sementara geometri bangun ruang mempelajari objek tiga dimensi.', image: 'https://cdn.pixabay.com/photo/2017/11/01/16/48/cube-2908607_640.jpg', category: 'Bab 6', link: '/SlMtk12b6' },
+      { id: 7, name: 'Statistika', description: 'Statistika mempelajari pengumpulan, analisis, dan penyajian data.',image: 'https://cdn.pixabay.com/photo/2019/04/14/10/27/book-4126483_640.jpg', category: 'Bab 7', link: '/SlMtk12b7' },
+      { id: 8, name: 'Turunan', description: 'Turunan mengukur laju perubahan suatu fungsi terhadap variabelnya.',image : 'https://cdn.pixabay.com/photo/2015/11/05/08/20/geometry-1023843_640.jpg', category: 'Bab 8', link: '/SlMtk12b8' },
+        ];
 
     setBiologies(mockBiologies);
 

@@ -8,15 +8,12 @@ const Materi = () => {
 
   useEffect(() => {
     const mockBiologies = [
-      { id: 1, name: 'Arus Searah',image: 'https://i.pinimg.com/736x/7c/2c/67/7c2c67684955d720f682d16116ce0fcd.jpg', category: 'Bab 1', link: '/SlKma12b1' },
-      { id: 2, name: 'Arus Bolak-Balik', image: 'https://i.pinimg.com/474x/0d/fd/2b/0dfd2b67c99789fbf28dcce47b7aa610.jpg', category: 'Bab 2', link: '/SlKma12b2' },
-      { id: 3, name: 'Medan Magnetik', description: 'Medan Magnetik', image: 'https://i.pinimg.com/474x/98/27/1f/98271f317b127d0a6ebb53b892287da2.jpg', category: 'Bab 3', link: '/SlKma12b3' },
-      { id: 4, name: 'Gelombang Elektromagnetik', image: 'https://i.pinimg.com/474x/38/74/aa/3874aa4fde49d4d3ed9b1659f1f358c8.jpg', category: 'Bab 4', link: '/SlKma12b4' },
-      { id: 5, name: 'Induksi Elektromagnetik', image: 'https://i.pinimg.com/474x/a4/1b/78/a41b78e761c2b0bb8fddc935c640f18a.jpg', category: 'Bab 5', link: '/SlKma12b5' },
-      { id: 6, name: 'Fisika Modern', image: 'https://i.pinimg.com/736x/89/ae/ea/89aeea116fa6a5979e5fd60dc9cb9344.jpg', category: 'Bab 6', link: '/SlKma12b6' },
-      { id: 7, name: 'Teknologi Digital', image: 'https://i.pinimg.com/474x/13/74/70/137470180a1cdd04ab71177a98eafcaa.jpg', category: 'Bab 7', link: '/SlKma12b7' },
-      { id: 8, name: 'Sumber Energi', image : 'https://i.pinimg.com/736x/1f/62/62/1f6262428ab8700cefc54a6fdf92aac2.jpg', category: 'Bab 8', link: '/SlKma12b8' },
-    ];
+      { id: 1, name: 'Sifat Koligatif Larutan',description:'Sifat Koligatif Larutan: Bergantung jumlah, bukan jenis partikel',image: 'https://i.pinimg.com/474x/db/df/33/dbdf33b95d2f93f9dcef7f998e364be9.jpg', category: 'Bab 1', link: '/SlKma12b1' },
+      { id: 2, name: ' Reaksi Redoks dan Elektrokimia', description:'Reaksi Redoks dan Elektrokimia: Transfer elektron, listrik dari reaksi.',image: 'https://i.pinimg.com/736x/6f/b4/ff/6fb4ff274b6afc4d0140c6a4ab0990a9.jpg', category: 'Bab 2', link: '/SlKma12b2' },
+      { id: 3, name: ' Kimia Unsur',description:'Kimia Unsur: Sifat dan reaksi berbagai unsur.', image: 'https://i.pinimg.com/474x/a7/8f/95/a78f95d06a7b0c9d8289db16737ee31b.jpg', category: 'Bab 3', link: '/SlKma12b3' },
+      { id: 4, name: ' Senyawa Karbon', description:'Senyawa Karbon: Molekul berbasis rantai karbon-hidrogen.',image: 'https://i.pinimg.com/474x/d3/04/58/d3045889f86dc64a0e7d1212d9e6a3f6.jpg', category: 'Bab 4', link: '/SlKma12b4' },
+      { id: 5, name: 'Benzena dan Turunannya', description:'Benzena dan Turunannya: Senyawa aromatik, struktur cincin stabil.',image: 'https://i.pinimg.com/474x/b0/d7/e3/b0d7e36b20644268f6ab333273918844.jpg', category: 'Bab 5', link: '/SlKma12b5' },
+      { id: 6, name: ' Makromolekul',description:'Makromolekul: Molekul besar seperti protein, polimer.', image: 'https://i.pinimg.com/474x/b4/ec/2e/b4ec2ec0f1039c9f7e23a11ab7030761.jpg', category: 'Bab 6', link: '/SlKma12b6' }, ];
 
     setBiologies(mockBiologies);
 
