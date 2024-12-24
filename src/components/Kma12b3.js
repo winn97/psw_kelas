@@ -6,7 +6,7 @@ const Bab1 = () => {
   const navigate = useNavigate();
   return (
     <div className="bab1-container">
-      <h1>Bab 2: Kimia Unsur</h1>
+      <h1>Bab 3: Kimia Unsur</h1>
       <p>
         Kimia unsur adalah cabang kimia yang mempelajari sifat, keberadaan,
         reaksi, dan kegunaan unsur-unsur kimia dalam tabel periodik. Pembahasan
@@ -383,13 +383,13 @@ const Bab1 = () => {
    <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/materi")}
+          onClick={() => navigate("/")}
         >
           Kembali ke Halaman Sebelumnya
         </button>
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab2")}
+          onClick={() => navigate("/Kma12b4")}
         >
           Lanjut ke Bab Selanjutnya
         </button>

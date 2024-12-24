@@ -1,123 +1,127 @@
 import React, { useState } from "react";
 import "../css/QuestionPage.css";
 
-const LatihanSoalStatistika = () => {
+const SlKma12b3 = () => {
   const [currentQuestion, setCurrentQuestion] = useState(1);
   const [selectedOption, setSelectedOption] = useState(null);
   const [showConfirmation, setShowConfirmation] = useState(false);
 
-  const questions = [
+  const questions = 
+  [
     {
-      question: "Senyawa karbon yang termasuk dalam golongan hidrokarbon jenuh adalah..",
+      question: "Unsur yang termasuk dalam golongan halogen adalah..",
       options: [
-        { label: "A. Metana", value: "A", isCorrect: true },
-        { label: "B. Etilena", value: "B" },
-        { label: "C. Asetilena", value: "C" },
-        { label: "D. Benzena", value: "D" },
+        { label: "A. Klorin", value: "A", isCorrect: true },
+        { label: "B. Oksigen", value: "B" },
+        { label: "C. Sodium", value: "C" },
+        { label: "D. Kalsium", value: "D" },
+        { label: "E. Nitrogen", value: "E" }
       ],
-      explanation:
-        "Metana (CH₄) adalah contoh hidrokarbon jenuh, yang berarti hanya memiliki ikatan tunggal antara atom karbon.",
+      explanation: "Klorin merupakan unsur yang termasuk dalam golongan halogen (golongan VIIA) dalam tabel periodik."
     },
     {
-      question: "Senyawa karbon yang memiliki gugus fungsi alkohol adalah..",
+      question: "Unsur yang memiliki sifat non-logam dan mudah membentuk ikatan kovalen adalah..",
       options: [
-        { label: "A. Ethanol", value: "A", isCorrect: true },
-        { label: "B. Aseton", value: "B" },
-        { label: "C. Asam asetat", value: "C" },
-        { label: "D. Metanal", value: "D" },
+        { label: "A. Silikon", value: "A" },
+        { label: "B. Karbon", value: "B", isCorrect: true },
+        { label: "C. Natrium", value: "C" },
+        { label: "D. Kalsium", value: "D" },
+        { label: "E. Magnesium", value: "E" }
       ],
-      explanation:
-        "Ethanol (C₂H₅OH) memiliki gugus fungsi -OH, yang membuatnya termasuk dalam golongan alkohol.",
+      explanation: "Karbon adalah unsur non-logam yang mudah membentuk ikatan kovalen dengan unsur lainnya, seperti pada senyawa organik."
     },
     {
-      question: "Berikut ini yang merupakan senyawa karbon yang termasuk dalam golongan aldehida adalah..",
+      question: "Berikut ini yang merupakan unsur logam transisi adalah..",
       options: [
-        { label: "A. Etanal", value: "A", isCorrect: true },
-        { label: "B. Asam propionat", value: "B" },
-        { label: "C. Ethanol", value: "C" },
-        { label: "D. Glukosa", value: "D" },
+        { label: "A. Besi (Fe)", value: "A", isCorrect: true },
+        { label: "B. Natrium (Na)", value: "B" },
+        { label: "C. Klorin (Cl)", value: "C" },
+        { label: "D. Kalium (K)", value: "D" },
+        { label: "E. Helium (He)", value: "E" }
       ],
-      explanation:
-        "Etanal (atau asetaldehida) adalah senyawa karbon yang memiliki gugus fungsi -CHO, yang merupakan ciri khas aldehida.",
+      explanation: "Besi (Fe) adalah salah satu unsur logam transisi yang terletak di blok d tabel periodik."
     },
     {
-        question: "Senyawa karbon yang mengandung gugus fungsi karboksil (-COOH) adalah..",
-        options: [
-          { label: "A. Asam asetat", value: "A", isCorrect: true },
-          { label: "B. Metanol", value: "B" },
-          { label: "C. Etena", value: "C" },
-          { label: "D. Benzena", value: "D" },
-        ],
-        explanation:
-          "Asam asetat (CH₃COOH) memiliki gugus karboksil (-COOH), yang memberikan sifat asam pada senyawa tersebut.",
+      question: "Unsur dengan konfigurasi elektron [Kr] 5s² 4d¹⁰ 5p² adalah..",
+      options: [
+        { label: "A. Stronsium", value: "A" },
+        { label: "B. Zirkonium", value: "B" },
+        { label: "C. Selenium", value: "C" },
+        { label: "D. Germanium", value: "D", isCorrect: true },
+        { label: "E. Arsenik", value: "E" }
+      ],
+      explanation: "Germanium memiliki konfigurasi elektron [Kr] 5s² 4d¹⁰ 5p², yang menunjukkan bahwa ia berada di golongan IV."
     },
     {
-        question: "Senyawa karbon berikut yang merupakan isomer struktural dari butana adalah..",
-        options: [
-          { label: "A. Isobutana", value: "A", isCorrect: true },
-          { label: "B. Metana", value: "B" },
-          { label: "C. Etana", value: "C" },
-          { label: "D. Asetilen", value: "D" },
-        ],
-        explanation:
-          "Isobutana adalah isomer struktural dari butana, yang berarti memiliki rumus molekul yang sama tetapi struktur atom yang berbeda.",
+      question: "Unsur yang memiliki 7 elektron valensi dan termasuk golongan VIIA adalah..",
+      options: [
+        { label: "A. Fluorin", value: "A" },
+        { label: "B. Klorin", value: "B" },
+        { label: "C. Bromin", value: "C" },
+        { label: "D. Iodin", value: "D" },
+        { label: "E. Semua benar", value: "E", isCorrect: true }
+      ],
+      explanation: "Fluorin, klorin, bromin, dan iodin semuanya adalah unsur golongan VIIA (halogen) yang memiliki 7 elektron valensi."
     },
     {
-        question: "Manakah dari senyawa berikut yang memiliki ikatan rangkap tiga?",
-        options: [
-          { label: "A. Etana", value: "A" },
-          { label: "B. Etena", value: "B" },
-          { label: "C. Asetilena", value: "C", isCorrect: true },
-          { label: "D. Propana", value: "D" },
-        ],
-        explanation:
-          "Asetilena (C₂H₂) adalah senyawa hidrokarbon yang memiliki ikatan rangkap tiga antara atom karbonnya.",
+      question: "Senyawa manakah yang terbentuk dari unsur logam alkali dan halogen?",
+      options: [
+        { label: "A. NaCl", value: "A", isCorrect: true },
+        { label: "B. H₂O", value: "B" },
+        { label: "C. CO₂", value: "C" },
+        { label: "D. NH₃", value: "D" },
+        { label: "E. SO₂", value: "E" }
+      ],
+      explanation: "NaCl adalah senyawa yang terbentuk dari logam alkali (natrium) dan halogen (klorin)."
     },
     {
-        question: "Senyawa karbon berikut yang termasuk dalam golongan keton adalah..",
-        options: [
-          { label: "A. Aseton", value: "A", isCorrect: true },
-          { label: "B. Metanal", value: "B" },
-          { label: "C. Etanol", value: "C" },
-          { label: "D. Asam format", value: "D" },
-        ],
-        explanation:
-          "Aseton (CH₃COCH₃) adalah senyawa karbon dengan gugus fungsi keton, yang memiliki ikatan karbon ke oksigen melalui ikatan rangkap.",
+      question: "Senyawa manakah yang digunakan sebagai bahan baku pembuatan pupuk urea?",
+      options: [
+        { label: "A. NH₃", value: "A", isCorrect: true },
+        { label: "B. CO₂", value: "B" },
+        { label: "C. H₂O", value: "C" },
+        { label: "D. NaCl", value: "D" },
+        { label: "E. CaCO₃", value: "E" }
+      ],
+      explanation: "NH₃ (amonia) digunakan sebagai bahan baku utama dalam pembuatan pupuk urea."
     },
     {
-        question: "Manakah senyawa berikut yang merupakan senyawa aromatik?",
-        options: [
-          { label: "A. Benzena", value: "A", isCorrect: true },
-          { label: "B. Etena", value: "B" },
-          { label: "C. Propana", value: "C" },
-          { label: "D. Asetilena", value: "D" },
-        ],
-        explanation:
-          "Benzena (C₆H₆) adalah senyawa aromatik dengan struktur cincin yang mengandung ikatan rangkap terkonjugasi.",
+      question: "Apa nama proses pemisahan logam dari bijihnya melalui reaksi kimia?",
+      options: [
+        { label: "A. Ekstraksi", value: "A", isCorrect: true },
+        { label: "B. Reduksi", value: "B" },
+        { label: "C. Fusi", value: "C" },
+        { label: "D. Peleburan", value: "D" },
+        { label: "E. Pengendapan", value: "E" }
+      ],
+      explanation: "Ekstraksi adalah proses pemisahan logam dari bijihnya menggunakan reaksi kimia."
     },
     {
-        question: "Gugus fungsi amina terdapat pada senyawa berikut, kecuali..",
-        options: [
-          { label: "A. Metilamina", value: "A" },
-          { label: "B. Etanol", value: "B", isCorrect: true },
-          { label: "C. Dimetilamina", value: "C" },
-          { label: "D. Anilina", value: "D" },
-        ],
-        explanation:
-          "Etanol (C₂H₅OH) tidak memiliki gugus fungsi amina (-NH₂), melainkan gugus hidroksil (-OH).",
+      question: "Unsur yang digunakan dalam baterai lithium-ion adalah..",
+      options: [
+        { label: "A. Litium (Li)", value: "A", isCorrect: true },
+        { label: "B. Natrium (Na)", value: "B" },
+        { label: "C. Kalium (K)", value: "C" },
+        { label: "D. Kalsium (Ca)", value: "D" },
+        { label: "E. Magnesium (Mg)", value: "E" }
+      ],
+      explanation: "Litium adalah unsur yang digunakan dalam baterai lithium-ion karena sifatnya yang ringan dan reaktif."
     },
     {
-        question: "Senyawa karbon yang memiliki sifat optik aktif adalah..",
-        options: [
-          { label: "A. Glukosa", value: "A", isCorrect: true },
-          { label: "B. Etanol", value: "B" },
-          { label: "C. Asetilena", value: "C" },
-          { label: "D. Propana", value: "D" },
-        ],
-        explanation:
-          "Glukosa adalah senyawa karbon yang memiliki atom karbon asimetris, sehingga menunjukkan sifat optik aktif.",
+      question: "Unsur manakah yang digunakan dalam pengisian bola lampu neon?",
+      options: [
+        { label: "A. Neon (Ne)", value: "A", isCorrect: true },
+        { label: "B. Argon (Ar)", value: "B" },
+        { label: "C. Helium (He)", value: "C" },
+        { label: "D. Xenon (Xe)", value: "D" },
+        { label: "E. Oksigen (O₂)", value: "E" }
+      ],
+      explanation: "Neon adalah gas mulia yang digunakan dalam bola lampu neon untuk memberikan cahaya berwarna khas."
     }
-];
+  ]
+  
+ 
+
 
   const handleNextQuestion = () => {
     if (currentQuestion < questions.length) {
@@ -245,4 +249,4 @@ const LatihanSoalStatistika = () => {
   );
 };
 
-export default LatihanSoalStatistika;
+export default SlKma12b3;

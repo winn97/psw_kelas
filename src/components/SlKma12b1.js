@@ -1,115 +1,123 @@
 import React, { useState } from "react";
 import "../css/QuestionPage.css";
 
-const LatihanSoalStatistika = () => {
+const SlKma12b1 = () => {
   const [currentQuestion, setCurrentQuestion] = useState(1);
   const [selectedOption, setSelectedOption] = useState(null);
   const [showConfirmation, setShowConfirmation] = useState(false);
 
-  const questions = 
-  [
+  const questions = [
     {
-      question: "Mana yang mengalami oksidasi pada reaksi Zn + Cu²⁺ → Zn²⁺ + Cu?",
+      question: "Apa yang dimaksud dengan sifat koligatif larutan?",
       options: [
-        { label: "A. Zn", value: "A", isCorrect: true },
-        { label: "B. Cu", value: "B" },
-        { label: "C. Cu²⁺", value: "C" },
-        { label: "D. Zn²⁺", value: "D" }
+        "Sifat larutan yang hanya bergantung pada jenis zat terlarut",
+        "Sifat larutan yang hanya bergantung pada jumlah partikel zat terlarut",
+        "Sifat larutan yang bergantung pada volume larutan",
+        "Sifat larutan yang bergantung pada tekanan larutan"
       ],
-      explanation: "Zn mengalami oksidasi karena kehilangan elektron dan berubah menjadi Zn²⁺."
+      correctOption: "Sifat larutan yang hanya bergantung pada jumlah partikel zat terlarut",
+      explanation: "Sifat koligatif larutan adalah sifat larutan yang bergantung pada jumlah partikel zat terlarut, bukan jenisnya.",
     },
     {
-      question: "Pada elektrolisis air, gas apa yang dihasilkan di katoda?",
+      question: "Berikut ini yang termasuk sifat koligatif larutan adalah?",
       options: [
-        { label: "A. Oksigen", value: "A" },
-        { label: "B. Hidrogen", value: "B", isCorrect: true },
-        { label: "C. Nitrogen", value: "C" },
-        { label: "D. Karbon dioksida", value: "D" }
+        "Massa jenis",
+        "Tekanan osmotik",
+        "Warna larutan",
+        "Kelarutan"
       ],
-      explanation: "Gas hidrogen dihasilkan di katoda karena ion H⁺ mendapatkan elektron."
+      correctOption: "Tekanan osmotik",
+      explanation: "Tekanan osmotik merupakan salah satu sifat koligatif larutan selain penurunan tekanan uap, penurunan titik beku, dan kenaikan titik didih.",
     },
     {
-      question: "Bilangan oksidasi oksigen dalam H₂O adalah?",
+      question: "Penurunan tekanan uap jenuh larutan disebabkan oleh?",
       options: [
-        { label: "A. +1", value: "A" },
-        { label: "B. -2", value: "B", isCorrect: true },
-        { label: "C. 0", value: "C" },
-        { label: "D. -1", value: "D" }
+        "Penurunan suhu larutan",
+        "Adanya zat terlarut yang menghalangi pelarutan",
+        "Partikel zat terlarut yang menghalangi penguapan partikel pelarut",
+        "Peningkatan suhu larutan"
       ],
-      explanation: "Oksigen dalam senyawa biasanya memiliki bilangan oksidasi -2 kecuali dalam senyawa peroksida atau fluorida."
+      correctOption: "Partikel zat terlarut yang menghalangi penguapan partikel pelarut",
+      explanation: "Penurunan tekanan uap jenuh terjadi karena partikel zat terlarut menghalangi partikel pelarut untuk menguap.",
     },
     {
-      question: "Reaksi antara seng dan asam klorida menghasilkan gas hidrogen. Reaksi tersebut adalah contoh dari reaksi redoks. Manakah yang mengalami reduksi dalam reaksi tersebut?",
+      question: "Apa hubungan antara molalitas larutan dan penurunan titik beku?",
       options: [
-        { label: "A. Seng (Zn)", value: "A" },
-        { label: "B. Ion hidrogen (H⁺)", value: "B", isCorrect: true },
-        { label: "C. Klorida (Cl⁻)", value: "C" },
-        { label: "D. Gas hidrogen (H₂)", value: "D" }
+        "Semakin kecil molalitas, semakin besar penurunan titik beku",
+        "Semakin besar molalitas, semakin besar penurunan titik beku",
+        "Molalitas tidak memengaruhi titik beku",
+        "Molalitas hanya memengaruhi tekanan uap"
       ],
-      explanation: "Ion H⁺ menerima elektron dan berubah menjadi gas hidrogen (H₂), sehingga mengalami reduksi."
+      correctOption: "Semakin besar molalitas, semakin besar penurunan titik beku",
+      explanation: "Penurunan titik beku larutan sebanding dengan molalitas larutan, sesuai dengan rumus ∆Tf = Kf × m.",
     },
     {
-      question: "Bilangan oksidasi unsur klor (Cl) dalam NaCl adalah...",
+      question: "Rumus untuk menghitung tekanan osmotik adalah?",
       options: [
-        { label: "A. -1", value: "A", isCorrect: true },
-        { label: "B. 0", value: "B" },
-        { label: "C. +1", value: "C" },
-        { label: "D. +2", value: "D" }
+        "π = M × R × T",
+        "π = m × R × T",
+        "π = P × V × T",
+        "π = n × R × T"
       ],
-      explanation: "Dalam NaCl, klor (Cl) memiliki bilangan oksidasi -1, karena Cl menerima satu elektron dari Na."
+      correctOption: "π = M × R × T",
+      explanation: "Tekanan osmotik (π) dihitung menggunakan rumus π = M × R × T, di mana M adalah molaritas, R adalah konstanta gas, dan T adalah suhu dalam Kelvin.",
     },
     {
-      question: "Pada reaksi redoks, suatu zat yang mengalami pengurangan bilangan oksidasinya disebut...",
+      question: "Kenaikan titik didih larutan dipengaruhi oleh?",
       options: [
-        { label: "A. Oksidator", value: "A" },
-        { label: "B. Reduktor", value: "B", isCorrect: true },
-        { label: "C. Katalisator", value: "C" },
-        { label: "D. Elektrolit", value: "D" }
+        "Jumlah partikel zat terlarut",
+        "Jenis pelarut",
+        "Warna larutan",
+        "Kecepatan pengadukan"
       ],
-      explanation: "Reduktor adalah zat yang memberikan elektron pada zat lain, sehingga mengalami oksidasi dan menurunkan bilangan oksidasinya."
+      correctOption: "Jumlah partikel zat terlarut",
+      explanation: "Kenaikan titik didih larutan merupakan sifat koligatif yang dipengaruhi oleh jumlah partikel zat terlarut dalam larutan.",
     },
     {
-      question: "Reaksi redoks dapat digunakan dalam proses pemurnian logam. Proses ini terjadi karena...",
+      question: "Apa yang dimaksud dengan faktor van 't Hoff?",
       options: [
-        { label: "A. Perpindahan elektron antara logam dan elektrolit", value: "A", isCorrect: true },
-        { label: "B. Perubahan suhu yang sangat tinggi", value: "B" },
-        { label: "C. Pembentukan senyawa kompleks", value: "C" },
-        { label: "D. Reaksi endergonik", value: "D" }
+        "Rasio antara massa pelarut dan massa larutan",
+        "Jumlah partikel zat terlarut dalam larutan",
+        "Faktor yang menunjukkan jumlah partikel hasil ionisasi atau disosiasi zat terlarut",
+        "Faktor yang menunjukkan molaritas larutan"
       ],
-      explanation: "Pada pemurnian logam, terjadi perpindahan elektron melalui reaksi redoks antara logam dan elektrolit."
+      correctOption: "Faktor yang menunjukkan jumlah partikel hasil ionisasi atau disosiasi zat terlarut",
+      explanation: "Faktor van 't Hoff digunakan untuk menghitung jumlah partikel sebenarnya dalam larutan elektrolit.",
     },
     {
-      question: "Pada reaksi redoks antara magnesium dan oksigen, apakah yang terjadi pada magnesium?",
+      question: "Jika suatu larutan memiliki molaritas 0,5 M dan suhu 300 K, tekanan osmotiknya adalah? (Gunakan R = 0,0821 atm·L/mol·K)",
       options: [
-        { label: "A. Magnesium mengalami reduksi", value: "A" },
-        { label: "B. Magnesium mengalami oksidasi", value: "B", isCorrect: true },
-        { label: "C. Oksigen mengalami oksidasi", value: "C" },
-        { label: "D. Tidak ada perubahan", value: "D" }
+        "12,315 atm",
+        "10,215 atm",
+        "8,215 atm",
+        "15,315 atm"
       ],
-      explanation: "Magnesium kehilangan elektron dan membentuk ion Mg²⁺, sehingga mengalami oksidasi."
+      correctOption: "12,315 atm",
+      explanation: "Tekanan osmotik dihitung menggunakan rumus π = M × R × T = 0,5 × 0,0821 × 300 = 12,315 atm.",
     },
     {
-      question: "Pada sel galvanik, apakah yang terjadi pada anoda?",
+      question: "Penurunan tekanan uap larutan non-elektrolit ditentukan oleh?",
       options: [
-        { label: "A. Terjadi oksidasi", value: "A", isCorrect: true },
-        { label: "B. Terjadi reduksi", value: "B" },
-        { label: "C. Tidak terjadi reaksi", value: "C" },
-        { label: "D. Hanya terjadi perpindahan ion", value: "D" }
+        "Jenis pelarut",
+        "Fraksi mol zat terlarut",
+        "Suhu larutan",
+        "Jenis zat terlarut"
       ],
-      explanation: "Pada sel galvanik, anoda adalah elektroda tempat terjadinya reaksi oksidasi."
+      correctOption: "Fraksi mol zat terlarut",
+      explanation: "Penurunan tekanan uap larutan non-elektrolit sebanding dengan fraksi mol zat terlarut, sesuai dengan hukum Raoult.",
     },
     {
-      question: "Ion mana yang bergerak menuju katoda pada sel elektrolisis larutan NaCl?",
+      question: "Larutan NaCl 1 M memiliki sifat koligatif lebih tinggi dibandingkan larutan urea 1 M karena?",
       options: [
-        { label: "A. Na⁺", value: "A" },
-        { label: "B. Cl⁻", value: "B" },
-        { label: "C. H⁺", value: "C", isCorrect: true },
-        { label: "D. OH⁻", value: "D" }
+        "NaCl memiliki massa molar lebih kecil",
+        "NaCl mengalami disosiasi menjadi dua partikel",
+        "Urea memiliki massa jenis lebih tinggi",
+        "NaCl memiliki tekanan uap lebih rendah"
       ],
-      explanation: "Pada sel elektrolisis, ion H⁺ bergerak menuju katoda karena akan mengalami reduksi."
+      correctOption: "NaCl mengalami disosiasi menjadi dua partikel",
+      explanation: "NaCl sebagai elektrolit mengalami disosiasi menjadi ion Na+ dan Cl-, sehingga jumlah partikel dalam larutan lebih banyak dibandingkan urea.",
     }
-  ]
-
+  ];
 
   const handleNextQuestion = () => {
     if (currentQuestion < questions.length) {
@@ -127,6 +135,7 @@ const LatihanSoalStatistika = () => {
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
+    setShowConfirmation(true);
   };
 
   const resetSelection = () => {
@@ -141,9 +150,11 @@ const LatihanSoalStatistika = () => {
 
   const handleConfirmationResponse = (response) => {
     if (response === "yes") {
-      setSelectedOption(true); // Tampilkan pembahasan
+      setShowConfirmation(false);
+    } else {
+      resetSelection();
+      setShowConfirmation(false);
     }
-    setShowConfirmation(false); // Hilangkan pesan
   };
 
   return (
@@ -203,38 +214,38 @@ const LatihanSoalStatistika = () => {
           ))}
         </div>
 
-        {selectedOption && (
-          <div className="explanation-container">
-            <p className="explanation-text">
-              {questions[currentQuestion - 1].explanation}
-            </p>
+        {showConfirmation && (
+          <div className="confirmation-popup">
+            <div className="popup-content">
+              <p>Yakin mau melihat pembahasan sekarang?</p>
+              <div className="popup-buttons">
+                <button
+                  className="popup-button no-button"
+                  onClick={() => handleConfirmationResponse("no")}
+                >
+                  Tidak
+                </button>
+                <button
+                  className="popup-button yes-button"
+                  onClick={() => handleConfirmationResponse("yes")}
+                >
+                  Iya
+                </button>
+              </div>
+            </div>
           </div>
         )}
       </div>
 
-      {showConfirmation && (
-        <div className="confirmation-popup">
-          <div className="popup-content">
-            <p>Yakin mau melihat pembahasan sekarang?</p>
-            <div className="popup-buttons">
-              <button
-                className="popup-button no-button"
-                onClick={() => handleConfirmationResponse("no")}
-              >
-                Tidak
-              </button>
-              <button
-                className="popup-button yes-button"
-                onClick={() => handleConfirmationResponse("yes")}
-              >
-                Iya
-              </button>
-            </div>
-          </div>
+      {selectedOption && !showConfirmation && (
+        <div className="explanation-container">
+          <p className="explanation-text">
+            {questions[currentQuestion - 1].explanation}
+          </p>
         </div>
       )}
     </div>
   );
 };
 
-export default LatihanSoalStatistika;
+export default SlKma12b1;

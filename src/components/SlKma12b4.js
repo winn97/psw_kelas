@@ -1,44 +1,123 @@
 import React, { useState } from "react";
 import "../css/QuestionPage.css";
 
-const LatsolBab5 = () => {
+const SlKma12b4 = () => {
   const [currentQuestion, setCurrentQuestion] = useState(1);
   const [selectedOption, setSelectedOption] = useState(null);
   const [showConfirmation, setShowConfirmation] = useState(false);
 
   const questions = [
     {
-      question: "Apa rumus molekul benzena?",
-      options: ["C6H6", "C6H12", "C6H10", "C6H8"],
-      correctOption: "C6H6",
-      explanation: "Rumus molekul benzena adalah C6H6, yang menunjukkan bahwa benzena terdiri dari enam atom karbon dan enam atom hidrogen.",
+      question: "Senyawa karbon yang termasuk dalam golongan hidrokarbon jenuh adalah..",
+      options: [
+        { label: "A. Metana", value: "A", isCorrect: true },
+        { label: "B. Etilena", value: "B" },
+        { label: "C. Asetilena", value: "C" },
+        { label: "D. Benzena", value: "D" },
+      ],
+      explanation:
+        "Metana (CH₄) adalah contoh hidrokarbon jenuh, yang berarti hanya memiliki ikatan tunggal antara atom karbon.",
     },
     {
-      question: "Benzena termasuk dalam golongan senyawa apa?",
-      options: ["Alkohol", "Amina", "Aromatik", "Alkana"],
-      correctOption: "Aromatik",
-      explanation: "Benzena adalah senyawa aromatik karena memiliki struktur cincin yang stabil dan delokalisasi elektron.",
+      question: "Senyawa karbon yang memiliki gugus fungsi alkohol adalah..",
+      options: [
+        { label: "A. Ethanol", value: "A", isCorrect: true },
+        { label: "B. Aseton", value: "B" },
+        { label: "C. Asam asetat", value: "C" },
+        { label: "D. Metanal", value: "D" },
+      ],
+      explanation:
+        "Ethanol (C₂H₅OH) memiliki gugus fungsi -OH, yang membuatnya termasuk dalam golongan alkohol.",
     },
     {
-      question: "Apa yang dimaksud dengan substitusi elektrofilik pada benzena?",
-      options: ["Penggantian atom hidrogen dengan elektrofil", "Penambahan atom hidrogen", "Penghilangan atom karbon", "Pembentukan ikatan rangkap"],
-      correctOption: "Penggantian atom hidrogen dengan elektrofil",
-      explanation: "Substitusi elektrofilik adalah reaksi di mana atom hidrogen pada benzena digantikan oleh elektrofil.",
+      question: "Berikut ini yang merupakan senyawa karbon yang termasuk dalam golongan aldehida adalah..",
+      options: [
+        { label: "A. Etanal", value: "A", isCorrect: true },
+        { label: "B. Asam propionat", value: "B" },
+        { label: "C. Ethanol", value: "C" },
+        { label: "D. Glukosa", value: "D" },
+      ],
+      explanation:
+        "Etanal (atau asetaldehida) adalah senyawa karbon yang memiliki gugus fungsi -CHO, yang merupakan ciri khas aldehida.",
     },
     {
-      question: "Senyawa turunan benzena yang memiliki gugus -OH disebut?",
-      options: ["Fenol", "Aseton", "Benzaldehida", "Toluena"],
-      correctOption: "Fenol",
-      explanation: "Fenol adalah senyawa turunan benzena yang memiliki gugus hidroksil (-OH) yang terikat pada cincin benzena.",
+        question: "Senyawa karbon yang mengandung gugus fungsi karboksil (-COOH) adalah..",
+        options: [
+          { label: "A. Asam asetat", value: "A", isCorrect: true },
+          { label: "B. Metanol", value: "B" },
+          { label: "C. Etena", value: "C" },
+          { label: "D. Benzena", value: "D" },
+        ],
+        explanation:
+          "Asam asetat (CH₃COOH) memiliki gugus karboksil (-COOH), yang memberikan sifat asam pada senyawa tersebut.",
     },
     {
-      question: "Apa nama senyawa benzena yang memiliki satu gugus metil (-CH3) terikat?",
-      options: ["Toluena", "Benzaldehida", "Anilin", "Kresol"],
-      correctOption: "Toluena",
-      explanation: "Toluena adalah senyawa benzena yang memiliki satu gugus metil (-CH3) terikat pada cincin benzena.",
+        question: "Senyawa karbon berikut yang merupakan isomer struktural dari butana adalah..",
+        options: [
+          { label: "A. Isobutana", value: "A", isCorrect: true },
+          { label: "B. Metana", value: "B" },
+          { label: "C. Etana", value: "C" },
+          { label: "D. Asetilen", value: "D" },
+        ],
+        explanation:
+          "Isobutana adalah isomer struktural dari butana, yang berarti memiliki rumus molekul yang sama tetapi struktur atom yang berbeda.",
     },
-    // Tambahkan soal lainnya sesuai kebutuhan
-  ];
+    {
+        question: "Manakah dari senyawa berikut yang memiliki ikatan rangkap tiga?",
+        options: [
+          { label: "A. Etana", value: "A" },
+          { label: "B. Etena", value: "B" },
+          { label: "C. Asetilena", value: "C", isCorrect: true },
+          { label: "D. Propana", value: "D" },
+        ],
+        explanation:
+          "Asetilena (C₂H₂) adalah senyawa hidrokarbon yang memiliki ikatan rangkap tiga antara atom karbonnya.",
+    },
+    {
+        question: "Senyawa karbon berikut yang termasuk dalam golongan keton adalah..",
+        options: [
+          { label: "A. Aseton", value: "A", isCorrect: true },
+          { label: "B. Metanal", value: "B" },
+          { label: "C. Etanol", value: "C" },
+          { label: "D. Asam format", value: "D" },
+        ],
+        explanation:
+          "Aseton (CH₃COCH₃) adalah senyawa karbon dengan gugus fungsi keton, yang memiliki ikatan karbon ke oksigen melalui ikatan rangkap.",
+    },
+    {
+        question: "Manakah senyawa berikut yang merupakan senyawa aromatik?",
+        options: [
+          { label: "A. Benzena", value: "A", isCorrect: true },
+          { label: "B. Etena", value: "B" },
+          { label: "C. Propana", value: "C" },
+          { label: "D. Asetilena", value: "D" },
+        ],
+        explanation:
+          "Benzena (C₆H₆) adalah senyawa aromatik dengan struktur cincin yang mengandung ikatan rangkap terkonjugasi.",
+    },
+    {
+        question: "Gugus fungsi amina terdapat pada senyawa berikut, kecuali..",
+        options: [
+          { label: "A. Metilamina", value: "A" },
+          { label: "B. Etanol", value: "B", isCorrect: true },
+          { label: "C. Dimetilamina", value: "C" },
+          { label: "D. Anilina", value: "D" },
+        ],
+        explanation:
+          "Etanol (C₂H₅OH) tidak memiliki gugus fungsi amina (-NH₂), melainkan gugus hidroksil (-OH).",
+    },
+    {
+        question: "Senyawa karbon yang memiliki sifat optik aktif adalah..",
+        options: [
+          { label: "A. Glukosa", value: "A", isCorrect: true },
+          { label: "B. Etanol", value: "B" },
+          { label: "C. Asetilena", value: "C" },
+          { label: "D. Propana", value: "D" },
+        ],
+        explanation:
+          "Glukosa adalah senyawa karbon yang memiliki atom karbon asimetris, sehingga menunjukkan sifat optik aktif.",
+    }
+];
 
   const handleNextQuestion = () => {
     if (currentQuestion < questions.length) {
@@ -56,7 +135,6 @@ const LatsolBab5 = () => {
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
-    setShowConfirmation(true); // Show confirmation when an option is selected
   };
 
   const resetSelection = () => {
@@ -71,11 +149,9 @@ const LatsolBab5 = () => {
 
   const handleConfirmationResponse = (response) => {
     if (response === "yes") {
-      setShowConfirmation(false); // Hide confirmation
-    } else {
-      resetSelection(); // Reset selection if user chooses not to see explanation
-      setShowConfirmation(false); // Hide confirmation
+      setSelectedOption(true); // Tampilkan pembahasan
     }
+    setShowConfirmation(false); // Hilangkan pesan
   };
 
   return (
@@ -108,7 +184,7 @@ const LatsolBab5 = () => {
             id="question-dropdown"
             value={currentQuestion}
             onChange={handleDropdownChange}
- >
+          >
             {questions.map((_, index) => (
               <option key={index} value={index + 1}>
                 Soal {index + 1}
@@ -135,38 +211,38 @@ const LatsolBab5 = () => {
           ))}
         </div>
 
-        {showConfirmation && (
-          <div className="confirmation-popup">
-            <div className="popup-content">
-              <p>Yakin mau melihat pembahasan sekarang?</p>
-              <div className="popup-buttons">
-                <button
-                  className="popup-button no-button"
-                  onClick={() => handleConfirmationResponse("no")}
-                >
-                  Tidak
-                </button>
-                <button
-                  className="popup-button yes-button"
-                  onClick={() => handleConfirmationResponse("yes")}
-                >
-                  Iya
-                </button>
-              </div>
-            </div>
+        {selectedOption && (
+          <div className="explanation-container">
+            <p className="explanation-text">
+              {questions[currentQuestion - 1].explanation}
+            </p>
           </div>
         )}
       </div>
 
-      {selectedOption && !showConfirmation && (
-        <div className="explanation-container">
-          <p className="explanation-text">
-            {questions[currentQuestion - 1].explanation}
-          </p>
+      {showConfirmation && (
+        <div className="confirmation-popup">
+          <div className="popup-content">
+            <p>Yakin mau melihat pembahasan sekarang?</p>
+            <div className="popup-buttons">
+              <button
+                className="popup-button no-button"
+                onClick={() => handleConfirmationResponse("no")}
+              >
+                Tidak
+              </button>
+              <button
+                className="popup-button yes-button"
+                onClick={() => handleConfirmationResponse("yes")}
+              >
+                Iya
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>
   );
 };
 
-export default LatsolBab5;
+export default SlKma12b4;

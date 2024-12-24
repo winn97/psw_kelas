@@ -947,7 +947,7 @@ const Bab1 = () => {
         </section>
       
       
-      <div className="bottom-container">
+        <div className="bottom-container">
         <h2>"Yuk, uji pemahamanmu dengan latihan soal! <br/>
         Siap mulai?"</h2>
         <button 
@@ -957,17 +957,16 @@ const Bab1 = () => {
           Mulai Latihan Soal
         </button>
       </div>
-   {/* Navigasi Halaman */}
-   <div className="navigation-container">
+      <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/materi")}
+          onClick={() => navigate("/")}
         >
           Kembali ke Halaman Sebelumnya
         </button>
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab2")}
+          onClick={() => navigate("/Kma12b2")}
         >
           Lanjut ke Bab Selanjutnya
         </button>

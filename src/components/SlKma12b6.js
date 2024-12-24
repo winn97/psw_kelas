@@ -1,43 +1,57 @@
 import React, { useState } from "react";
 import "../css/QuestionPage.css";
 
-const SlKma12b5 = () => {
+const SlKma12b6 = () => {
   const [currentQuestion, setCurrentQuestion] = useState(1);
   const [selectedOption, setSelectedOption] = useState(null);
   const [showConfirmation, setShowConfirmation] = useState(false);
 
   const questions = [
     {
-      question: "Apa rumus molekul benzena?",
-      options: ["C6H6", "C6H12", "C6H10", "C6H8"],
-      correctOption: "C6H6",
-      explanation: "Rumus molekul benzena adalah C6H6, yang menunjukkan bahwa benzena terdiri dari enam atom karbon dan enam atom hidrogen.",
+      question: "Apa yang dimaksud dengan makromolekul?",
+      options: [
+        "Molekul kecil",
+        "Molekul besar yang terdiri dari banyak atom",
+        "Molekul yang tidak larut dalam air",
+        "Molekul yang hanya terdiri dari karbon"
+      ],
+      correctOption: "Molekul besar yang terdiri dari banyak atom",
+      explanation: "Makromolekul adalah molekul besar yang terdiri dari banyak atom, biasanya terdiri dari ribuan atom yang terikat bersama.",
     },
     {
-      question: "Benzena termasuk dalam golongan senyawa apa?",
-      options: ["Alkohol", "Amina", "Aromatik", "Alkana"],
-      correctOption: "Aromatik",
-      explanation: "Benzena adalah senyawa aromatik karena memiliki struktur cincin yang stabil dan delokalisasi elektron.",
+      question: "Karbohidrat terdiri dari unit dasar yang disebut?",
+      options: ["Asam amino", "Gula", "Nukleotida", "Asam lemak"],
+      correctOption: "Gula",
+      explanation: "Karbohidrat terdiri dari unit dasar yang disebut gula, yang dapat berupa monosakarida, disakarida, atau polisakarida.",
     },
     {
-      question: "Apa yang dimaksud dengan substitusi elektrofilik pada benzena?",
-      options: ["Penggantian atom hidrogen dengan elektrofil", "Penambahan atom hidrogen", "Penghilangan atom karbon", "Pembentukan ikatan rangkap"],
-      correctOption: "Penggantian atom hidrogen dengan elektrofil",
-      explanation: "Substitusi elektrofilik adalah reaksi di mana atom hidrogen pada benzena digantikan oleh elektrofil.",
+      question: "Apa fungsi utama protein dalam tubuh?",
+      options: [
+        "Sumber energi",
+        "Penyimpanan genetik",
+        "Katalisator dalam reaksi biokimia",
+        "Pengatur suhu"
+      ],
+      correctOption: "Katalisator dalam reaksi biokimia",
+      explanation: "Protein berfungsi sebagai katalisator dalam reaksi biokimia, membantu mempercepat reaksi tanpa terlibat secara permanen.",
     },
     {
-      question: "Senyawa turunan benzena yang memiliki gugus -OH disebut?",
-      options: ["Fenol", "Aseton", "Benzaldehida", "Toluena"],
-      correctOption: "Fenol",
-      explanation: "Fenol adalah senyawa turunan benzena yang memiliki gugus hidroksil (-OH) yang terikat pada cincin benzena.",
+      question: "Lipid yang memiliki satu ikatan rangkap disebut?",
+      options: ["Asam lemak jenuh", "Asam lemak tak jenuh", "Trigliserida", "Fosfolipid"],
+      correctOption: "Asam lemak tak jenuh",
+      explanation: "Asam lemak tak jenuh memiliki satu atau lebih ikatan rangkap dalam rantai karbonnya, yang membuatnya lebih cair pada suhu kamar.",
     },
     {
-      question: "Apa nama senyawa benzena yang memiliki satu gugus metil (-CH3) terikat?",
-      options: ["Toluena", "Benzaldehida", "Anilin", "Kresol"],
-      correctOption: "Toluena",
-      explanation: "Toluena adalah senyawa benzena yang memiliki satu gugus metil (-CH3) terikat pada cincin benzena.",
+      question: "Nukleotida terdiri dari tiga komponen utama, yaitu?",
+      options: [
+        "Gula, asam lemak, dan gliserol",
+        "Asam amino, gula, dan fosfat",
+        "Gula, basa nitrogen, dan fosfat",
+        "Asam lemak, gliserol, dan basa nitrogen"
+      ],
+      correctOption: "Gula, basa nitrogen, dan fosfat",
+      explanation: "Nukleotida terdiri dari tiga komponen utama: gula, basa nitrogen, dan kelompok fosfat, yang membentuk DNA dan RNA.",
     },
-    // Tambahkan soal lainnya sesuai kebutuhan
   ];
 
   const handleNextQuestion = () => {
@@ -56,7 +70,7 @@ const SlKma12b5 = () => {
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
-    setShowConfirmation(true); // Show confirmation when an option is selected
+    setShowConfirmation(true);
   };
 
   const resetSelection = () => {
@@ -71,10 +85,10 @@ const SlKma12b5 = () => {
 
   const handleConfirmationResponse = (response) => {
     if (response === "yes") {
-      setShowConfirmation(false); // Hide confirmation
+      setShowConfirmation(false);
     } else {
-      resetSelection(); // Reset selection if user chooses not to see explanation
-      setShowConfirmation(false); // Hide confirmation
+      resetSelection();
+      setShowConfirmation(false);
     }
   };
 
@@ -108,7 +122,7 @@ const SlKma12b5 = () => {
             id="question-dropdown"
             value={currentQuestion}
             onChange={handleDropdownChange}
- >
+          >
             {questions.map((_, index) => (
               <option key={index} value={index + 1}>
                 Soal {index + 1}
@@ -169,4 +183,4 @@ const SlKma12b5 = () => {
   );
 };
 
-export default SlKma12b5;
+export default SlKma12b6;

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../css/Materi.css';
 
-const Materi = () => {
+const Kimia12 = () => {
   const [biologies, setBiologies] = useState([]);
   const navigate = useNavigate();
 
@@ -70,4 +70,4 @@ const Materi = () => {
   );
 };
 
-export default Materi;
+export default Kimia12;

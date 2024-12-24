@@ -420,13 +420,13 @@ const Bab1 = () => {
    <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/materi")}
+          onClick={() => navigate("/")}
         >
           Kembali ke Halaman Sebelumnya
         </button>
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab2")}
+          onClick={() => navigate("/Kma12b5")}
         >
           Lanjut ke Bab Selanjutnya
         </button>
