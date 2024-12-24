@@ -20,37 +20,31 @@ function Home() {
       }}
     >
       {/* Header Section */}
-      <header className="mb-5" style={{ maxWidth: "900px" }}>
+      <header
+        className="mb-5 text-center"
+        style={{ maxWidth: "900px", margin: "0 auto" }}
+      >
         <h1
-          className="text-primary fw-bold animated-title"
-          style={{
-            fontSize: "3rem",
-            lineHeight: "1.3",
-            marginBottom: "3rem",
-          }}
+          className="text-primary fw-bold display-4 animated-title"
+          style={{ marginBottom: "1rem" }}
         >
-          <FaCalculator size={40} className="me-2 animated-icon" />
+          <FaCalculator size={50} className="me-2 animated-icon" />
           RUANG BELAJAR CERMAT
         </h1>
-        <p
-          className="text-muted fs-4 animated-subtitle"
-          style={{ marginBottom: "1.5rem" }}
-        >
+        <p className="text-muted fs-4 animated-subtitle mb-3">
           Kumpulan Materi dan Soal-Soal
         </p>
         <p
           className="text-dark fs-5 animated-description"
-          style={{
-            margin: "0 auto",
-            fontSize: "1.2rem",
-            lineHeight: "1.6",
-            color: "#555",
-          }}
+          style={{ lineHeight: "1.6" }}
         >
           Platform belajar materi SMA yang interaktif, seru, dan cerdas!
         </p>
+        <hr className="my-4" />
+        <p className="text-secondary fs-6">
+          Bergabunglah dengan kami untuk pengalaman belajar yang menyenangkan!
+        </p>
       </header>
-
       {/* Call to Action Button */}
       <footer className="mt-4 mb-5">
         <button
