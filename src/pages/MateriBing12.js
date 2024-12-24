@@ -8,18 +8,18 @@ const Materi = () => {
 
   useEffect(() => {
     const mockBiologies = [
-      { id: 1, name: 'Arus Searah',image: 'https://i.pinimg.com/736x/7c/2c/67/7c2c67684955d720f682d16116ce0fcd.jpg', category: 'Bab 1', link: '/Bing12b1' },
-      { id: 2, name: 'Arus Bolak-Balik', image: 'https://i.pinimg.com/474x/0d/fd/2b/0dfd2b67c99789fbf28dcce47b7aa610.jpg', category: 'Bab 2', link: '/Bing12b2' },
-      { id: 3, name: 'Medan Magnetik', description: 'Medan Magnetik', image: 'https://i.pinimg.com/474x/98/27/1f/98271f317b127d0a6ebb53b892287da2.jpg', category: 'Bab 3', link: '//Bing12b3' },
-      { id: 4, name: 'Gelombang Elektromagnetik', image: 'https://i.pinimg.com/474x/38/74/aa/3874aa4fde49d4d3ed9b1659f1f358c8.jpg', category: 'Bab 4', link: '/Bing12b4' },
-      { id: 5, name: 'Induksi Elektromagnetik', image: 'https://i.pinimg.com/474x/a4/1b/78/a41b78e761c2b0bb8fddc935c640f18a.jpg', category: 'Bab 5', link: '/Bing12b5' },
-      { id: 6, name: 'Fisika Modern', image: 'https://i.pinimg.com/736x/89/ae/ea/89aeea116fa6a5979e5fd60dc9cb9344.jpg', category: 'Bab 6', link: '/Bing12b6' },
-      { id: 7, name: 'Teknologi Digital', image: 'https://i.pinimg.com/474x/13/74/70/137470180a1cdd04ab71177a98eafcaa.jpg', category: 'Bab 7', link: '/Bing12b7' },
-      { id: 8, name: 'Sumber Energi', image : 'https://i.pinimg.com/736x/1f/62/62/1f6262428ab8700cefc54a6fdf92aac2.jpg', category: 'Bab 8', link: '/Bing12b8' },
-      { id: 5, name: 'Induksi Elektromagnetik', image: 'https://i.pinimg.com/474x/a4/1b/78/a41b78e761c2b0bb8fddc935c640f18a.jpg', category: 'Bab 5', link: '/Bing12b9' },
-      { id: 6, name: 'Fisika Modern', image: 'https://i.pinimg.com/736x/89/ae/ea/89aeea116fa6a5979e5fd60dc9cb9344.jpg', category: 'Bab 6', link: '/Bing12b10' },
-      { id: 7, name: 'Teknologi Digital', image: 'https://i.pinimg.com/474x/13/74/70/137470180a1cdd04ab71177a98eafcaa.jpg', category: 'Bab 7', link: '/Bing12b11' },
-      { id: 8, name: 'Sumber Energi', image : 'https://i.pinimg.com/736x/1f/62/62/1f6262428ab8700cefc54a6fdf92aac2.jpg', category: 'Bab 8', link: '/Bing12b12' },
+      { id: 1, name: 'Future Continuous Tense',description:'Aktivitas berlangsung di masa depan.',image: 'https://i.pinimg.com/236x/ea/e9/e1/eae9e1bbfad22a5aa5f8c76cdb46d025.jpg', category: 'Bab 1', link: '/Bing12b1' },
+      { id: 2, name: 'Future Perfect Tense', description:'Aktivitas selesai sebelum waktu tertentu.',image: 'https://i.pinimg.com/236x/2a/4f/43/2a4f433de2282c0f61ad310aaa58f65a.jpg', category: 'Bab 2', link: '/Bing12b2' },
+      { id: 3, name: 'Medan Magnetik', description: 'Medan Magnetik', image: 'https://i.pinimg.com/736x/ae/35/b2/ae35b287ff4d3c71abf2c2358f4d34dd.jpg', category: 'Bab 3', link: '//Bing12b3' },
+      { id: 4, name: 'Present Continuous Tense', description:'Aktivitas berlangsung saat ini.',image: 'https://i.pinimg.com/236x/27/12/17/2712173c09d4380cd4e77839c6733ef0.jpg', category: 'Bab 4', link: '/Bing12b4' },
+      { id: 5, name: 'Past Continuous Tense', description:'Aktivitas berlangsung di masa lampau.',image: 'https://i.pinimg.com/236x/eb/ec/31/ebec311c1857e21451467c7716d359d7.jpg', category: 'Bab 5', link: '/Bing12b5' },
+      { id: 6, name: 'Present Perfect Tense', description:'Aktivitas selesai, berdampak saat ini.',image: 'https://i.pinimg.com/236x/7c/9f/91/7c9f91d13cc66599dab6a472d86e8d33.jpg', category: 'Bab 6', link: '/Bing12b6' },
+      { id: 7, name: 'Present Perfect Continuous Tense',description:'Aktivitas berlangsung, dimulai sebelumnya.', image:'https://i.pinimg.com/236x/9d/25/97/9d25978609f5ad8fd93d118259fa9388.jpg', category: 'Bab 7', link: '/Bing12b7' },
+      { id: 8, name: 'Past Perfect Continuous Tense',description:'Aktivitas berlangsung sebelum masa lampau.', image : 'https://i.pinimg.com/236x/72/25/b2/7225b27bb96ea336a23a619d512166f6.jpg', category: 'Bab 8', link: '/Bing12b8' },
+      { id: 9, name: 'Past Perfect Tense',description:'Aktivitas selesai sebelum masa lampau.', image: 'https://i.pinimg.com/236x/92/64/03/9264030cbb2bf4d9197c780cebd5b376.jpg', category: 'Bab 9', link: '/Bing12b9' },
+      { id: 10, name: 'Simple Future Tense', description:'Aktivitas akan terjadi di masa depan.',image:'https://i.pinimg.com/236x/35/62/b7/3562b7313a84e954f91d3e7fdefa3bf9.jpg', category: 'Bab 10', link: '/Bing12b10' },
+      { id:11, name: 'Simple Present Tense',description:'Fakta atau kebiasaan rutin saat ini.', image:'https://i.pinimg.com/236x/a1/15/81/a1158196cf7c9ba06c74b0e56958f690.jpg', category: 'Bab 11', link: '/Bing12b11' },
+      { id: 12, name: 'Simple Past Tense',description:'Aktivitas terjadi di masa lampau.', image : 'https://i.pinimg.com/236x/5b/99/92/5b999217c9fd3b8f337ce3b68e2ebd4c.jpg', category: 'Bab 12', link: '/Bing12b12' },
     ];
 
     setBiologies(mockBiologies);
