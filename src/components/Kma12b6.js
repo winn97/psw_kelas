@@ -91,7 +91,16 @@ const Bab6 = () => {
           karbohidrat, protein, dan lemak dalam sampel.
         </p>
       </section>
-      
+      <div className="bottom-container">
+        <h2>"Yuk, uji pemahamanmu dengan latihan soal! <br/>
+        Siap mulai?"</h2>
+        <button 
+          className="btn-latihan"
+          onClick={() => window.location.href = "/SlKma12b6"}
+        >
+          Mulai Latihan Soal
+        </button>
+      </div>
       <div className="navigation-container">
         <button 
           className="btn-navigate"

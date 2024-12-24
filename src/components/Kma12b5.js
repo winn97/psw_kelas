@@ -192,7 +192,16 @@ const Bab5 = () => {
           bila digunakan secara sembarangan dan tidak bertanggung jawab karena senyawa ini mudah meledak.
         </p>
       </section>
-
+      <div className="bottom-container">
+        <h2>"Yuk, uji pemahamanmu dengan latihan soal! <br/>
+        Siap mulai?"</h2>
+        <button 
+          className="btn-latihan"
+          onClick={() => window.location.href = "/SlKma12b5"}
+        >
+          Mulai Latihan Soal
+        </button>
+      </div>
       <div className="navigation-container">
         <button 
           className="btn-navigate"

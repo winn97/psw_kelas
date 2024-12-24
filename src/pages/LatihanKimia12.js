@@ -8,7 +8,7 @@ const Materi = () => {
 
   useEffect(() => {
     const mockBiologies = [
-      { id: 1, name: 'Sifat Koligatif Larutan',description:'Sifat Koligatif Larutan: Bergantung jumlah, bukan jenis partikel',image: 'https://i.pinimg.com/474x/db/df/33/dbdf33b95d2f93f9dcef7f998e364be9.jpg', category: 'Bab 1', link: '/SlKma12b1' },
+      { id: 1, name: 'Sifat Koligatif Larutan',description:'Sifat Koligatif Larutan: Bergantung jumlah, bukan jenis partikel',image: 'https://i.pinimg.com/474x/db/df/33/dbdf33b95d2f93f9dcef7f998e364be9.jpg', category: 'Bab 1', link: 'SlKma12b1' },
       { id: 2, name: ' Reaksi Redoks dan Elektrokimia', description:'Reaksi Redoks dan Elektrokimia: Transfer elektron, listrik dari reaksi.',image: 'https://i.pinimg.com/736x/6f/b4/ff/6fb4ff274b6afc4d0140c6a4ab0990a9.jpg', category: 'Bab 2', link: '/SlKma12b2' },
       { id: 3, name: ' Kimia Unsur',description:'Kimia Unsur: Sifat dan reaksi berbagai unsur.', image: 'https://i.pinimg.com/474x/a7/8f/95/a78f95d06a7b0c9d8289db16737ee31b.jpg', category: 'Bab 3', link: '/SlKma12b3' },
       { id: 4, name: ' Senyawa Karbon', description:'Senyawa Karbon: Molekul berbasis rantai karbon-hidrogen.',image: 'https://i.pinimg.com/474x/d3/04/58/d3045889f86dc64a0e7d1212d9e6a3f6.jpg', category: 'Bab 4', link: '/SlKma12b4' },
