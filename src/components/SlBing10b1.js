@@ -5,20 +5,20 @@ import "../css/QuestionPage.css";
 const Tryout = () => {
   const navigate = useNavigate();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const alertShown = useRef(false);  
+  const alertShown = useRef(false);
 
   useEffect(() => {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
     if (isLoggedIn) {
       setIsAuthenticated(true);
     } else {
-      if (!alertShown.current) {  
+      if (!alertShown.current) {
         alert("Anda harus login terlebih dahulu!");
-        alertShown.current = true;  
+        alertShown.current = true;
       }
       navigate("/login");
     }
-  }, [navigate]); 
+  }, [navigate]);
 
   const questions = [
     { question: "1. What is the purpose of an exposition text?", options: ["To describe objects in detail", "To explain how to do something", "To persuade or argue for an idea", "To narrate a sequence of events"], answer: "To persuade or argue for an idea" },
@@ -44,10 +44,6 @@ const Tryout = () => {
     }
   };
 
-  const handleTimeUp = () => {
-    setShowResult(true);
-  };
-
   const handleLogout = () => {
     localStorage.removeItem("isLoggedIn");
     navigate("/login");
@@ -66,14 +62,20 @@ const Tryout = () => {
           <p>Terima kasih telah mengikuti tryout!</p>
         </div>
       ) : (
-        <>
-          <Timer duration={600} onTimeUp={handleTimeUp} />
-          <Question 
-            question={questions[currentQuestion].question} 
-            options={questions[currentQuestion].options} 
-            handleAnswer={handleAnswer} 
-          />
-        </>
+        <div className="question-container">
+          <h2>{questions[currentQuestion].question}</h2>
+          <div className="options">
+            {questions[currentQuestion].options.map((option, index) => (
+              <button 
+                key={index} 
+                onClick={() => handleAnswer(option)} 
+                className="option-button"
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+        </div>
       )}
       <button onClick={handleLogout} className="logout-button">Logout</button>
     </div>

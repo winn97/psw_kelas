@@ -145,13 +145,13 @@ const Bab1 = () => {
    <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/materi")}
+          onClick={() => navigate("/materi/biologi/kelas-11")}
         >
           Kembali ke Halaman Sebelumnya
         </button>
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab2")}
+          onClick={() => navigate("/Bgl11b2")}
         >
           Lanjut ke Bab Selanjutnya
         </button>

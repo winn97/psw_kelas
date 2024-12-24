@@ -67,12 +67,11 @@ const Tryout = () => {
         </div>
       ) : (
         <>
-          <Timer duration={600} onTimeUp={handleTimeUp} />
+          {/* <Timer duration={600} onTimeUp={handleTimeUp} />
           <Question 
             question={questions[currentQuestion].question} 
             options={questions[currentQuestion].options} 
-            handleAnswer={handleAnswer} 
-          />
+            handleAnswer={handleAnswer}  */}
         </>
       )}
       <button onClick={handleLogout} className="logout-button">Logout</button>

@@ -2,23 +2,23 @@ import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/TryOut.css";
 
-const kuis_reaksiredoks_kelas10 = () => {
+const KuisReaksiRedoksKelas10 = () => {
   const navigate = useNavigate();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const alertShown = useRef(false);  
+  const alertShown = useRef(false);
 
   useEffect(() => {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
     if (isLoggedIn) {
       setIsAuthenticated(true);
     } else {
-      if (!alertShown.current) {  
+      if (!alertShown.current) {
         alert("Anda harus login terlebih dahulu!");
-        alertShown.current = true;  
+        alertShown.current = true;
       }
       navigate("/login");
     }
-  }, [navigate]); 
+  }, [navigate]);
 
   const questions = [
     { question: "1.Pernyataan berikut yang benar tentang reaksi redoks adalah", options: ["Oksidasi adalah pelepasan elektron dan reduksi adalah penyerapan elektron", " Oksidasi adalah proses di mana bilangan oksidasi suatu unsur berkurang", "Reduksi adalah proses di mana bilangan oksidasi suatu unsur bertambah", "Dalam reaksi redoks, hanya terjadi perubahan bilangan oksidasi tanpa perpindahan elektron"], answer: "Oksidasi adalah pelepasan elektron dan reduksi adalah penyerapan elektron0" },
@@ -59,10 +59,6 @@ const kuis_reaksiredoks_kelas10 = () => {
     }
   };
 
-  const handleTimeUp = () => {
-    setShowResult(true);
-  };
-
   const handleLogout = () => {
     localStorage.removeItem("isLoggedIn");
     navigate("/login");
@@ -81,18 +77,20 @@ const kuis_reaksiredoks_kelas10 = () => {
           <p>Terima kasih telah mengikuti tryout!</p>
         </div>
       ) : (
-        <>
-          <Timer duration={600} onTimeUp={handleTimeUp} />
-          <Question 
-            question={questions[currentQuestion].question} 
-            options={questions[currentQuestion].options} 
-            handleAnswer={handleAnswer} 
-          />
-        </>
+        <div className="question-section">
+          <h2>{questions[currentQuestion].question}</h2>
+          <div className="options">
+            {questions[currentQuestion].options.map((option, index) => (
+              <button key={index} onClick={() => handleAnswer(option)}>
+                {option}
+              </button>
+            ))}
+          </div>
+        </div>
       )}
       <button onClick={handleLogout} className="logout-button">Logout</button>
     </div>
   );
 };
 
-export default kuis_reaksiredoks_kelas10;
+export default KuisReaksiRedoksKelas10;
