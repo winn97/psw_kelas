@@ -193,6 +193,66 @@ import Mtk12b6 from './components/Mtk12b6';
 import Mtk12b7 from './components/Mtk12b7';
 import Mtk12b8 from './components/Mtk12b8';
 
+import QzBgl11b1 from './components/QzBgl11b1';
+import QzBgl11b2 from './components/QzBgl11b2';
+import QzBgl11b3 from './components/QzBgl11b3';
+import QzBgl11b4 from './components/QzBgl11b4';
+import QzBgl11b5 from './components/QzBgl11b5';
+import QzBgl11b6 from './components/QzBgl11b6';
+import QzBgl11b7 from './components/QzBgl11b7';
+import QzBgl11b8 from './components/QzBgl11b8';
+import QzBing10b1 from './components/QzBing10b1';
+import QzBing10b2 from './components/QzBing10b2';
+import QzBing10b3 from './components/QzBing10b3';
+import QzBing10b4 from './components/QzBing10b4';
+import QzBing10b5 from './components/QzBing10b5';
+import QzBing10b6 from './components/QzBing10b6';
+import QzBing10b7 from './components/QzBing10b7';
+import QzBing10b8 from './components/QzBing10b8';
+import QzBing10b9 from './components/QzBing10b9';
+import QzBgl12b1 from './components/QzBing12Future';
+import QzBgl12b2 from './components/QzBing12Past';
+import QzBgl12b3 from './components/QzBing12Present';
+import QzFisika11b1 from './components/QzFsk11b1';
+import QzFisika11b2 from './components/QzFsk11b2';
+import QzFisika11b3 from './components/QzFsk11b3';
+import QzFisika11b4 from './components/QzFsk11b4';
+import QzFisika11b5 from './components/QzFsk11b5';
+import QzFisika11b6 from './components/QzFsk11b6';
+import QzFisika11b7 from './components/QzFsk11b7';
+import QzFisika11b8 from './components/QzFsk11b8';
+import QzFisika11b9 from './components/QzFsk11b9';
+import QzFisika12b1 from './components/QzFsk12b1';
+import QzFisika12b2 from './components/QzFsk12b2';
+import QzFisika12b3 from './components/QzFsk12b3';
+import QzFisika12b4 from './components/QzFsk12b4';
+import QzFisika12b5 from './components/QzFsk12b5';
+import QzFisika12b6 from './components/QzFsk12b6';
+import QzFisika12b7 from './components/QzFsk12b7';
+import QzFisika12b8 from './components/QzFsk12b8';
+import QzKma10b1 from './components/QzKma10b1';
+import QzKma10b2 from './components/QzKma10b2';
+import QzKma10b3 from './components/QzKma10b3';
+import QzKma10b4 from './components/QzKma10b4';
+import QzKma10b5 from './components/QzKma10b5';
+import QzKma11b1 from './components/QzKma11b1';
+import QzKma11b2 from './components/QzKma11b2';
+import QzKma11b3 from './components/QzKma11b3';
+import QzKma11b4 from './components/QzKma11b4';
+import QzKma11b5 from './components/QzKma11b5';
+import QzKma11b6 from './components/QzKma11b6';
+import QzKma11b7 from './components/QzKma11b7';
+import QzKma11b8 from './components/QzKma11b8';
+import QzKma11b9 from './components/QzKma11b9';
+import QzMtk12b1 from './components/QzMtk12b1';
+import QzMtk12b2 from './components/QzMtk12b2';
+import QzMtk12b3 from './components/QzMtk12b3';
+import QzMtk12b4 from './components/QzMtk12b4';
+import QzMtk12b5 from './components/QzMtk12b5';
+import QzMtk12b6 from './components/QzMtk12b6';
+import QzMtk12b7 from './components/QzMtk12b7';
+import QzMtk12b8 from './components/QzMtk12b8';
+
 import SlFisika10b1 from './components/SlFsk10b1';
 import SlFisika10b2 from './components/SlFsk10b2';
 import SlFisika10b3 from './components/SlFsk10b3';
@@ -248,14 +308,14 @@ import SlEko11b9 from './components/SlEko11b9';
 import SlEko11b10 from './components/SlEko11b10';
 import SlEko11b11 from './components/SlEko11b11';
 import SlEko11b12 from './components/SlEko11b12';
-// import SlBing10b1 from './components/SlBing10b1';
-// import SlBing10b2 from './components/SlBing10b2';
-// import SlBing10b3 from './components/SlBing10b3';
-// import SlBing10b4 from './components/SlBing10b4';
-// import SlBing10b5 from './components/SlBing10b5';
-// import SlBing10b6 from './components/SlSlBing10b6';
-// import SlBing10b7 from './components/SlBing10b7';
-// import SlBing10b8 from './components/SlBing10b8';
+import SlBing10b1 from './components/SlBing10b1';
+import SlBing10b2 from './components/SlBing10b2';
+import SlBing10b3 from './components/SlBing10b3';
+import SlBing10b4 from './components/SlBing10b4';
+import SlBing10b5 from './components/SlBing10b5';
+import SlBing10b6 from './components/SlBing10b6';
+import SlBing10b7 from './components/SlBing10b7';
+import SlBing10b8 from './components/SlBing10b8';
 import SlBing11b1 from './components/SlBing11b1';
 import SlBing11b2 from './components/SlBing11b2';
 import SlBing11b3 from './components/SlBing11b3';
@@ -264,18 +324,18 @@ import SlBing11b5 from './components/SlBing11b5';
 import SlBing11b6 from './components/Bing11b6';
 import SlBing11b7 from './components/SlBing11b7';
 import SlBing11b8 from './components/SlBing11b8';
-// import SlBing12b1 from './components/SlBing12FC';
-// import SlBing12b2 from './components/SlBing12FP';
-// import SlBing12b3 from './components/SlBing12FPC';
-// import SlBing12b4 from './components/SlBing12PC';
-// import SlBing12b5 from './components/SlBing12PCT';
-// import SlBing12b6 from './components/SlBing12PP';
-// import SlBing12b7 from './components/SlBing12PPC';
-// import SlBing12b8 from './components/SlBing12PPCT';
-// import SlBing12b9 from './components/SlBing12PPT';
-// import SlBing12b10 from './components/SlBing12SF';
-// import SlBing12b11 from './components/SlBing12SP';
-// import SlBing12b12 from './components/SlBing12SPT';
+import SlBing12b1 from './components/SlBing12FC';
+import SlBing12b2 from './components/SlBing12FP';
+import SlBing12b3 from './components/SlBing12FPC';
+import SlBing12b4 from './components/SlBing12PC';
+import SlBing12b5 from './components/SlBing12PCT';
+import SlBing12b6 from './components/SlBing12PP';
+import SlBing12b7 from './components/SlBing12PPC';
+import SlBing12b8 from './components/SlBing12PPCT';
+import SlBing12b9 from './components/SlBing12PPT';
+import SlBing12b10 from './components/SlBing12SF';
+import SlBing12b11 from './components/SlBing12SP';
+import SlBing12b12 from './components/SlBing12SPT';
 import SlKma10b1 from './components/SlKma10b1';
 import SlKma10b2 from './components/SlKma10b2';
 import SlKma10b3 from './components/SlKma10b3';
@@ -544,7 +604,15 @@ function App() {
         <Route path="/Mtk12b6" element={<Mtk12b6 />} />
         <Route path="/Mtk12b7" element={<Mtk12b7 />} />
         <Route path="/Mtk12b8" element={<Mtk12b8 />} />
-
+        {/* Rute untuk Materi Inggris 11 */}
+        <Route path="/SlBing10b1" element={<SlBing10b1 />} />
+        <Route path="/SlBing10b2" element={<SlBing10b2 />} />
+        <Route path="/SlBing10b3" element={<SlBing10b3 />} />
+        <Route path="/SlBing10b4" element={<SlBing10b4 />} />
+        <Route path="/SlBing10b5" element={<SlBing10b5 />} />
+        <Route path="/SlBing10b6" element={<SlBing10b6 />} />
+        <Route path="/SlBing10b7" element={<SlBing10b7 />} />
+        <Route path="/SlBing10b8" element={<SlBing10b8 />} />
         {/* Rute untuk Materi Inggris 11 */}
         <Route path="/SlBing11b1" element={<SlBing11b1 />} />
         <Route path="/SlBing11b2" element={<SlBing11b2 />} />
@@ -554,6 +622,19 @@ function App() {
         <Route path="/SlBing11b6" element={<SlBing11b6 />} />
         <Route path="/SlBing11b7" element={<SlBing11b7 />} />
         <Route path="/SlBing11b8" element={<SlBing11b8 />} />
+        {/* Rute untuk Materi Inggris 11 */}
+        <Route path="/SlBing12b1" element={<SlBing12b1 />} />
+        <Route path="/SlBing12b2" element={<SlBing12b2 />} />
+        <Route path="/SlBing12b3" element={<SlBing12b3 />} />
+        <Route path="/SlBing12b4" element={<SlBing12b4 />} />
+        <Route path="/SlBing12b5" element={<SlBing12b5 />} />
+        <Route path="/SlBing12b6" element={<SlBing12b6 />} />
+        <Route path="/SlBing12b7" element={<SlBing12b7 />} />
+        <Route path="/SlBing12b8" element={<SlBing12b8 />} />
+        <Route path="/SlBing12b9" element={<SlBing12b9 />} />
+        <Route path="/SlBing12b10" element={<SlBing12b10 />} />
+        <Route path="/SlBing12b11" element={<SlBing12b11 />} />
+        <Route path="/SlBing12b12" element={<SlBing12b12 />} />
         {/* Rute untuk Materi Biologi 11 */}
         <Route path="/SlBgl12b1" element={<SlBgl12b1 />} />
         <Route path="/SlBgl12b2" element={<SlBgl12b2 />} />
@@ -657,6 +738,140 @@ function App() {
         <Route path="/SlMTK12b6" element={<SlMtk12b6 />} />
         <Route path="/SlMTK12b7" element={<SlMtk12b7 />} />
         <Route path="/SlMTK12b8" element={<SlMtk12b8 />} />
+                {/* Rute untuk Materi Inggris 11 */}
+                <Route path="/SlBing10b1" element={<QzBing10b1 />} />
+        <Route path="/QzBing10b2" element={<QzBing10b2 />} />
+        <Route path="/QzBing10b3" element={<QzBing10b3 />} />
+        <Route path="/QzBing10b4" element={<QzBing10b4 />} />
+        <Route path="/QzBing10b5" element={<QzBing10b5 />} />
+        <Route path="/QzBing10b6" element={<QzBing10b6 />} />
+        <Route path="/QzBing10b7" element={<QzBing10b7 />} />
+        <Route path="/QzBing10b8" element={<QzBing10b8 />} />
+        {/* Rute untuk Materi Inggris 11
+        <Route path="/QzBing11b1" element={<QzBing11b1 />} />
+        <Route path="/QzBing11b2" element={<QzBing11b2 />} />
+        <Route path="/QzBing11b3" element={<QzBing11b3 />} />
+        <Route path="/QzBing11b4" element={<QzBing11b4 />} />
+        <Route path="/QzBing11b5" element={<QzBing11b5 />} />
+        <Route path="/QzBing11b6" element={<QzBing11b6 />} />
+        <Route path="/QzBing11b7" element={<QzBing11b7 />} />
+        <Route path="/QzBing11b8" element={<QzBing11b8 />} />
+        {/* Rute untuk Materi Inggris 11 */}
+        {/* <Route path="/QzBing12b1" element={<QzBing12b1 />} />
+        <Route path="/QzBing12b2" element={<QzBing12b2 />} />
+        <Route path="/QzBing12b3" element={<QzBing12b3 />} />
+        <Route path="/QzBing12b4" element={<QzBing12b4 />} />
+        <Route path="/QzBing12b5" element={<QzBing12b5 />} />
+        <Route path="/QzBing12b6" element={<QzBing12b6 />} />
+        <Route path="/QzBing12b7" element={<QzBing12b7 />} />
+        <Route path="/QzBing12b8" element={<QzBing12b8 />} />
+        <Route path="/QzBing12b9" element={<QzBing12b9 />} />
+        <Route path="/QzBing12b10" element={<QzBing12b10 />} />
+        <Route path="/QzBing12b11" element={<QzBing12b11 />} />
+        <Route path="/QzBing12b12" element={<QzBing12b12 />} /> */}
+        {/* Rute untuk Materi Biologi 11 */}
+        {/* <Route path="/QzBgl12b1" element={<QzBgl12b1 />} />
+        <Route path="/QzBgl12b2" element={<QzBgl12b2 />} />
+        <Route path="/QzBgl12b3" element={<QzBgl12b3 />} />
+        <Route path="/QzBgl12b4" element={<QzBgl12b4 />} />
+        <Route path="/QzBgl12b5" element={<QzBgl12b5 />} />
+        <Route path="/QzBgl12b6" element={<QzBgl12b6 />} />
+        <Route path="/QzBgl12b7" element={<QzBgl12b7 />} />
+        <Route path="/QzBgl12b8" element={<QzBgl12b8 />} />
+        <Route path="/QzBgl12b8" element={<QzBgl12b8 />} /> */} */}
+        {/* Rute untuk Materi Biologi 11 */}
+        <Route path="/QzBgl11b1" element={<QzBgl11b1 />} />
+        <Route path="/QzBgl11b2" element={<QzBgl11b2 />} />
+        <Route path="/QzBgl11b3" element={<QzBgl11b3 />} />
+        <Route path="/QzBgl11b4" element={<QzBgl11b4 />} />
+        <Route path="/QzBgl11b5" element={<QzBgl11b5 />} />
+        <Route path="/QzBgl11b6" element={<QzBgl11b6 />} />
+        <Route path="/QzBgl11b7" element={<QzBgl11b7 />} />
+        <Route path="/QzBgl11b8" element={<QzBgl11b8 />} />
+        {/* Rute untuk Materi Ekonomi 11 */}
+        {/* <Route path="/QzEko11b1" element={<QzEko11b1 />} />
+        <Route path="/QzEko11b2" element={<QzEko11b2 />} />
+        <Route path="/QzEko11b3" element={<QzEko11b3 />} />
+        <Route path="/QzEko11b4" element={<QzEko11b4 />} />
+        <Route path="/QzEko11b5" element={<QzEko11b5 />} />
+        <Route path="/QzEko11b6" element={<QzEko11b6 />} />
+        <Route path="/QzEko11b7" element={<QzEko11b7 />} />
+        <Route path="/QzEko11b8" element={<QzEko11b8 />} />
+        <Route path="/QzEko11b9" element={<QzEko11b9 />} />
+        <Route path="/QzEko11b10" element={<QzEko11b10 />} />
+        <Route path="/QzEko11b11" element={<QzEko11b11 />} />
+        <Route path="/QzEko11b12" element={<QzEko11b12 />} /> */}
+        {/* Rute untuk Materi Fisika 10 */}
+        {/* <Route path="/QzFsk10b1" element={<QzFisika10b1 />} />
+        <Route path="/QzFsk10b2" element={<QzFisika10b2 />} />
+        <Route path="/QzFsk10b3" element={<QzFisika10b3 />} />
+        <Route path="/QzFsk10b4" element={<QzFisika10b4 />} />
+        <Route path="/QzFsk10b5" element={<QzFisika10b5 />} />
+        <Route path="/QzFsk10b6" element={<QzFisika10b6 />} />
+        <Route path="/QzFsk10b7" element={<QzFisika10b7 />} /> */}
+        {/* Rute untuk Materi Fisika 11 */}
+        <Route path="/QzFsk11b1" element={<QzFisika11b1 />} />
+        <Route path="/QzFsk11b2" element={<QzFisika11b2 />} />
+        <Route path="/QzFsk11b3" element={<QzFisika11b3 />} />
+        <Route path="/QzFsk11b4" element={<QzFisika11b4 />} />
+        <Route path="/QzFsk11b5" element={<QzFisika11b5 />} />
+        <Route path="/QzFsk11b6" element={<QzFisika11b6 />} />
+        {/* Rute untuk Materi Fisika 12 */}
+        <Route path="/QzFsk12b1" element={<QzFisika12b1 />} />
+        <Route path="/QzFsk12b2" element={<QzFisika12b2 />} />
+        <Route path="/QzFsk12b3" element={<QzFisika12b3 />} />
+        <Route path="/QzFsk12b4" element={<QzFisika12b4 />} />
+        <Route path="/QzFsk12b5" element={<QzFisika12b5 />} />
+        <Route path="/QzFsk12b6" element={<QzFisika12b6 />} />
+        <Route path="/QzFsk12b7" element={<QzFisika12b7 />} />
+        <Route path="/QzFsk12b8" element={<QzFisika12b8 />} />
+        {/* Rute untuk Materi Kimia 10 */}
+        <Route path="/QzKma10b1" element={<QzKma10b1 />} />
+        <Route path="/QzKma10b2" element={<QzKma10b2 />} />
+        <Route path="/QzKma10b3" element={<QzKma10b3 />} />
+        <Route path="/QzKma10b4" element={<QzKma10b4 />} />
+        <Route path="/QzKma10b5" element={<QzKma10b5 />} />
+        {/* Rute untuk Materi Kimia 11 */}
+        <Route path="/QzKma11b1" element={<QzKma11b1 />} />
+        <Route path="/QzKma11b2" element={<QzKma11b2 />} />
+        <Route path="/QzKma11b3" element={<QzKma11b3 />} />
+        <Route path="/QzKma11b4" element={<QzKma11b4 />} />
+        <Route path="/QzKma11b5" element={<QzKma11b5 />} />
+        <Route path="/QzKma11b6" element={<QzKma11b6 />} />
+        <Route path="/QzKma11b7" element={<QzKma11b7 />} />
+        <Route path="/QzKma11b8" element={<QzBgl11b8 />} />
+        <Route path="/QzKma11b9" element={<QzKma11b5 />} />
+        {/* Rute untuk Materi Kimia 12 */}
+        {/* <Route path="/QzKma12b1" element={<QzKma12b1 />} />
+        <Route path="/QzKma12b2" element={<QzKma12b2 />} />
+        <Route path="/QzKma12b3" element={<QzKma12b3 />} />
+        <Route path="/QzKma12b4" element={<QzKma12b4 />} />
+        <Route path="/QzKma12b5" element={<QzKma12b5 />} /> */}
+        {/* Rute untuk Materi Matematika 10 */}
+        {/* <Route path="/QzMtk10b1" element={<QzMtk10b1 />} />
+        <Route path="/QzMtk10b2" element={<QzMtk10b2 />} />
+        <Route path="/QzMtk10b3" element={<QzMtk10b3 />} />
+        <Route path="/QzMtk10b4" element={<QzMtk10b4 />} />
+        <Route path="/QzMtk10b5" element={<QzMtk10b5 />} />
+        <Route path="/QzMtk10b6" element={<QzMtk10b6 />} />
+        <Route path="/QzMtk10b7" element={<QzMtk10b7 />} />
+        <Route path="/QzMtk10b8" element={<QzMtk10b8 />} /> */}
+        {/* Rute untuk Materi Matematika 11 */}
+        {/* <Route path="/QzMtk11b1" element={<QzMtk11b1 />} />
+        <Route path="/QzMtk11b2" element={<QzMtk11b2 />} />
+        <Route path="/QzMtk11b3" element={<QzMtk11b3 />} />
+        <Route path="/QzMtk11b4" element={<QzMtk11b4 />} />
+        <Route path="/QzMtk11b5" element={<QzMtk11b5 />} />
+        <Route path="/QzMtk11b6" element={<QzMtk11b6 />} /> */}
+        {/* Rute untuk Materi Matematika 10 */}
+        <Route path="/QzMTK12b1" element={<QzMtk12b1 />} />
+        <Route path="/QzMTK12b2" element={<QzMtk12b2 />} />
+        <Route path="/QzMTK12b3" element={<QzMtk12b3 />} />
+        <Route path="/QzMTK12b4" element={<QzMtk12b4 />} />
+        <Route path="/QzMTK12b5" element={<QzMtk12b5 />} />
+        <Route path="/QzMTK12b6" element={<QzMtk12b6 />} />
+        <Route path="/QzMTK12b7" element={<QzMtk12b7 />} />
+        <Route path="/QzMTK12b8" element={<QzMtk12b8 />} />
       </Routes>
       <Footer />
     </BrowserRouter>
