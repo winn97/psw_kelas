@@ -55,7 +55,7 @@ function Home() {
       <footer className="mt-4 mb-5">
         <button
           className="btn btn-primary btn-lg px-5 py-2 shadow"
-          onClick={() => (window.location.href = "/materi")}
+          onClick={() => (window.location.href = "/navbar")}
         >
           Mulai Belajar
         </button>
