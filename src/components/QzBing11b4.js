@@ -1,24 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/TryOut.css";
 
 const Tryout = () => {
   const navigate = useNavigate();
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const alertShown = useRef(false); 
-
-  useEffect(() => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-    if (isLoggedIn) {
-      setIsAuthenticated(true);
-    } else {
-      if (!alertShown.current) { 
-        alert("Anda harus login terlebih dahulu!");
-        alertShown.current = true;  
-      }
-      navigate("/login");
-    }
-  }, [navigate]); 
 
   const questions = [
     { question: "1. Analyze the sentence: 'Despite the heavy rain, the outdoor event continued successfully; moreover, attendance exceeded expectations.' Which sentence connector best demonstrates the progression of ideas?", options: ["Moreover - showing addition", "However - showing contrast", "Therefore - showing result", "Meanwhile - showing time"], answer: "Moreover - showing addition" },
@@ -40,7 +25,9 @@ const Tryout = () => {
     { question: "17. 'The research revealed important findings. _____, it raised new questions. _____, additional studies were proposed.' Which connector combination best shows logical progression?", options: ["Moreover... Subsequently", "However... Similarly", "Meanwhile... Therefore", "Thus... Furthermore"], answer: "Moreover... Subsequently" },
     { question: "18. In formal writing, which connector best joins these ideas? 'The project exceeded its timeline. _____, it stayed within budget constraints.'", options: ["Nevertheless", "Similarly", "Meanwhile", "Likewise"], answer: "Nevertheless" },
     { question: "19. 'The implementation had initial challenges. _____, the team adapted quickly. _____, the project succeeded.' Which connector pair best shows progression and result?", options: ["However... Ultimately", "Similarly... Therefore", "Meanwhile... Thus", "Furthermore... Moreover"], answer: "However... Ultimately" },
-    { question: "20. Analyze: 'The study's methodology was robust. _____, its findings significantly contributed to the field. _____, new research directions emerged.' Which logical sequence best fits?", options: ["Consequently... Furthermore", "However... Moreover", "Meanwhile... Therefore", "Similarly... Thus"], answer: "Consequently... Furthermore" }];
+    { question: "20. Analyze: 'The study's methodology was robust. _____, its findings significantly contributed to the field. _____, new research directions emerged.' Which logical sequence best fits?", options: ["Consequently... Furthermore", "However... Moreover", "Meanwhile... Therefore", "Similarly... Thus"], answer: "Consequently... Furthermore" }
+  ];
+
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
@@ -57,36 +44,33 @@ const Tryout = () => {
     }
   };
 
-  const handleTimeUp = () => {
-    setShowResult(true);
-  };
-
   const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn");
-    navigate("/login");
+    navigate("/kuis/bahasa-inggris/kelas-11");
   };
-
-  if (!isAuthenticated) {
-    return null;
-  }
 
   return (
     <div className="app">
-      <h1>Tryout Bahasa Inggris Kelas XI</h1>
+      <h1>Kuis B.Inggris Kelas XI</h1>
       {showResult ? (
         <div className="result">
           <h2>Skor Anda: {score} / {questions.length}</h2>
           <p>Terima kasih telah mengikuti tryout!</p>
         </div>
       ) : (
-        <>
-          {/* <Timer duration={600} onTimeUp={handleTimeUp} />
-          <Question 
-            question={questions[currentQuestion].question} 
-            options={questions[currentQuestion].options} 
-            handleAnswer={handleAnswer} 
-          /> */}
-        </>
+        <div className="question-container">
+          <h2>{questions[currentQuestion].question}</h2>
+          <div className="options">
+            {questions[currentQuestion].options.map((option, index) => (
+              <button
+                key={index}
+                onClick={() => handleAnswer(option)}
+                className="option-button"
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+        </div>
       )}
       <button onClick={handleLogout} className="logout-button">Logout</button>
     </div>

@@ -1,24 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/TryOut.css";
 
 const Tryout = () => {
   const navigate = useNavigate();
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const alertShown = useRef(false); 
-
-  useEffect(() => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-    if (isLoggedIn) {
-      setIsAuthenticated(true);
-    } else {
-      if (!alertShown.current) { 
-        alert("Anda harus login terlebih dahulu!");
-        alertShown.current = true;  
-      }
-      navigate("/login");
-    }
-  }, [navigate]); 
 
   const questions = [
     { question: "1. Analyze the following sentence: 'While the students were preparing for their final exams in the library, a sudden power outage occurred, causing everyone to panic.' What type of sentence is this?", options: ["Complex sentence", "Compound-complex sentence", "Simple sentence", "Compound sentence"], answer: "Complex sentence" },
@@ -40,7 +25,9 @@ const Tryout = () => {
     { question: "17. Analyze: 'The research team collected data, analyzed the results, and published their findings.' What type of sentence is this?", options: ["Compound sentence", "Complex sentence", "Simple sentence", "Compound-complex sentence"], answer: "Compound sentence" },
     { question: "18. What type of sentence structure is used in: 'Because the internet connection was unstable, the virtual meeting had to be rescheduled.'?", options: ["Complex sentence", "Simple sentence", "Compound sentence", "Compound-complex sentence"], answer: "Complex sentence" },
     { question: "19. In the sentence 'The art exhibition showcased local talent, attracted international attention, and promoted cultural exchange.' What classification best describes this structure?", options: ["Compound sentence", "Complex sentence", "Simple sentence", "Compound-complex sentence"], answer: "Compound sentence" },
-    { question: "20. Examine: 'While the city council debated the proposal, citizens voiced their concerns, but the final decision was postponed.' What type of sentence is this?", options: ["Compound-complex sentence", "Simple sentence", "Complex sentence", "Compound sentence"], answer: "Compound-complex sentence" }];
+    { question: "20. Examine: 'While the city council debated the proposal, citizens voiced their concerns, but the final decision was postponed.' What type of sentence is this?", options: ["Compound-complex sentence", "Simple sentence", "Complex sentence", "Compound sentence"], answer: "Compound-complex sentence" }
+  ];
+
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
@@ -57,36 +44,33 @@ const Tryout = () => {
     }
   };
 
-  const handleTimeUp = () => {
-    setShowResult(true);
-  };
-
   const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn");
-    navigate("/login");
+    navigate("/kuis/bahasa-inggris/kelas-11");
   };
-
-  if (!isAuthenticated) {
-    return null;
-  }
 
   return (
     <div className="app">
-      <h1>Tryout Bahasa Inggris Kelas XI</h1>
+      <h1>Kuis B.Inggris Kelas XI</h1>
       {showResult ? (
         <div className="result">
           <h2>Skor Anda: {score} / {questions.length}</h2>
           <p>Terima kasih telah mengikuti tryout!</p>
         </div>
       ) : (
-        <>
-          {/* <Timer duration={600} onTimeUp={handleTimeUp} />
-          <Question 
-            question={questions[currentQuestion].question} 
-            options={questions[currentQuestion].options} 
-            handleAnswer={handleAnswer} 
-          /> */}
-        </>
+        <div className="question-container">
+          <h2>{questions[currentQuestion].question}</h2>
+          <div className="options">
+            {questions[currentQuestion].options.map((option, index) => (
+              <button
+                key={index}
+                onClick={() => handleAnswer(option)}
+                className="option-button"
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+        </div>
       )}
       <button onClick={handleLogout} className="logout-button">Logout</button>
     </div>

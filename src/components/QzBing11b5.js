@@ -1,24 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/TryOut.css";
 
 const Tryout = () => {
   const navigate = useNavigate();
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const alertShown = useRef(false); 
-
-  useEffect(() => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-    if (isLoggedIn) {
-      setIsAuthenticated(true);
-    } else {
-      if (!alertShown.current) { 
-        alert("Anda harus login terlebih dahulu!");
-        alertShown.current = true;  
-      }
-      navigate("/login");
-    }
-  }, [navigate]); 
 
   const questions = [
     { question: "1. Analyze the sentence structure: 'Although renewable energy sources are becoming more affordable, many countries still rely heavily on fossil fuels.' What type of complex sentence pattern is demonstrated here?", options: ["Compound sentence with coordinating conjunction", "Complex sentence with concessive clause", "Simple sentence with compound predicate", "Compound-complex sentence with multiple clauses"], answer: "Complex sentence with concessive clause" },
@@ -40,7 +25,9 @@ const Tryout = () => {
     { question: "17. Analyze: 'No sooner had the company launched its new product than competitors began developing similar solutions.' What sophisticated pattern is illustrated?", options: ["Correlative temporal structure", "Simple past perfect tense", "Basic time sequence", "Compound sentence form"], answer: "Correlative temporal structure" },
     { question: "18. What advanced structure is used in: 'Only by understanding the underlying principles can researchers develop effective solutions.'?", options: ["Conditional inversion with only", "Basic conditional form", "Simple present tense", "Compound sentence structure"], answer: "Conditional inversion with only" },
     { question: "19. In the sentence 'So complex were the market dynamics that even experienced analysts struggled to predict trends,' what sophisticated pattern is demonstrated?", options: ["Intensifier inversion structure", "Basic cause-effect pattern", "Simple past tense form", "Compound sentence with so"], answer: "Intensifier inversion structure" },
-    { question: "20. Examine: 'Little did the team realize that their innovation would revolutionize the entire industry.' What advanced structural pattern is shown here?", options: ["Negative adverbial inversion", "Simple past tense pattern", "Basic negative structure", "Compound sentence form"], answer: "Negative adverbial inversion" }];
+    { question: "20. Examine: 'Little did the team realize that their innovation would revolutionize the entire industry.' What advanced structural pattern is shown here?", options: ["Negative adverbial inversion", "Simple past tense pattern", "Basic negative structure", "Compound sentence form"], answer: "Negative adverbial inversion" }
+  ];
+
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
@@ -57,36 +44,33 @@ const Tryout = () => {
     }
   };
 
-  const handleTimeUp = () => {
-    setShowResult(true);
-  };
-
   const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn");
-    navigate("/login");
+    navigate("/kuis/bahasa-inggris/kelas-11");
   };
-
-  if (!isAuthenticated) {
-    return null;
-  }
 
   return (
     <div className="app">
-      <h1>Tryout Bahasa Inggris Kelas XI</h1>
+      <h1>Kuis B.Inggris Kelas XI</h1>
       {showResult ? (
         <div className="result">
           <h2>Skor Anda: {score} / {questions.length}</h2>
           <p>Terima kasih telah mengikuti tryout!</p>
         </div>
       ) : (
-        <>
-          {/* <Timer duration={600} onTimeUp={handleTimeUp} />
-          <Question 
-            question={questions[currentQuestion].question} 
-            options={questions[currentQuestion].options} 
-            handleAnswer={handleAnswer} 
-          /> */}
-        </>
+        <div className="question-container">
+          <h2>{questions[currentQuestion].question}</h2>
+          <div className="options">
+            {questions[currentQuestion].options.map((option, index) => (
+              <button
+                key={index}
+                onClick={() => handleAnswer(option)}
+                className="option-button"
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+        </div>
       )}
       <button onClick={handleLogout} className="logout-button">Logout</button>
     </div>

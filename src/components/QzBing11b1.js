@@ -1,24 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/TryOut.css";
 
 const Tryout = () => {
   const navigate = useNavigate();
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const alertShown = useRef(false);  
-
-  useEffect(() => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-    if (isLoggedIn) {
-      setIsAuthenticated(true);
-    } else {
-      if (!alertShown.current) {  
-        alert("Anda harus login terlebih dahulu!");
-        alertShown.current = true;  
-      }
-      navigate("/login");
-    }
-  }, [navigate]); 
 
   const questions = [
     { question: "1. Analyze the sentence: 'The athlete gracefully executed the complex routine while simultaneously maintaining perfect balance.' How does the adverb modify multiple actions in this context?", options: ["Modifies both execution and balance", "Only modifies execution", "Only modifies balance", "Doesn't modify any action"], answer: "Modifies both execution and balance" },
@@ -41,7 +26,7 @@ const Tryout = () => {
     { question: "18. How do the adverbs function in: 'Environmentally consciously produced goods economically benefit communities'?", options: ["Links sustainability and economics", "Only shows environmental impact", "Only shows economic impact", "Shows no connection"], answer: "Links sustainability and economics" },
     { question: "19. In 'The solution elegantly yet affordably addresses the problem,' what relationship do the adverbs establish?", options: ["Combines quality and practicality", "Shows only elegance", "Shows only cost", "Creates confusion"], answer: "Combines quality and practicality" },
     { question: "20. Examine: 'Traditionally digitally enhanced artwork.' Why is this combination of adverbs significant in modern context?", options: ["Blends old and new approaches", "Only shows tradition", "Only shows technology", "Creates contradiction"], answer: "Blends old and new approaches" }
-  ];  
+  ];
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
@@ -59,35 +44,33 @@ const Tryout = () => {
     }
   };
 
-  const handleTimeUp = () => {
-    setShowResult(true);
-  };
-
   const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn");
-    navigate("/login");
+    navigate("/kuis/bahasa-inggris/kelas-11");
   };
-
-  if (!isAuthenticated) {
-    return null;
-  }
 
   return (
     <div className="app">
-      <h1>Tryout Bahasa Inggris Kelas X</h1>
+      <h1>Kuis B.Inggris Kelas XI</h1>
       {showResult ? (
         <div className="result">
           <h2>Skor Anda: {score} / {questions.length}</h2>
           <p>Terima kasih telah mengikuti tryout!</p>
         </div>
       ) : (
-        <>
-          {/* <Timer duration={600} onTimeUp={handleTimeUp} />
-          <Question 
-            question={questions[currentQuestion].question} 
-            options={questions[currentQuestion].options} 
-            handleAnswer={handleAnswer}  */}
-        </>
+        <div className="question-container">
+          <h2>{questions[currentQuestion].question}</h2>
+          <div className="options">
+            {questions[currentQuestion].options.map((option, index) => (
+              <button
+                key={index}
+                onClick={() => handleAnswer(option)}
+                className="option-button"
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+        </div>
       )}
       <button onClick={handleLogout} className="logout-button">Logout</button>
     </div>

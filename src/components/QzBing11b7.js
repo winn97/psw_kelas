@@ -1,24 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/TryOut.css";
 
 const Tryout = () => {
   const navigate = useNavigate();
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const alertShown = useRef(false); 
-
-  useEffect(() => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-    if (isLoggedIn) {
-      setIsAuthenticated(true);
-    } else {
-      if (!alertShown.current) { 
-        alert("Anda harus login terlebih dahulu!");
-        alertShown.current = true;  
-      }
-      navigate("/login");
-    }
-  }, [navigate]); 
 
   const questions = [
     { question: "1. Analyze the following sentence: 'The book that I borrowed from the library yesterday contains valuable information which helps me understand quantum physics.' Identify the types of dependent clauses in this sentence.", options: ["Two adjective clauses", "One noun clause and one adjective clause", "Two noun clauses", "One adverb clause and one adjective clause"], answer: "Two adjective clauses" },
@@ -40,7 +25,10 @@ const Tryout = () => {
     { question: "17. Analyze: 'The reason why climate change accelerates faster than predicted is that human activities, which increase greenhouse gases, continue unabated.' What combination of clauses is used?", options: ["Adjective clause, noun clause, and adjective clause", "Three adjective clauses", "Two noun clauses and one adjective clause", "One noun clause and two adjective clauses"], answer: "Adjective clause, noun clause, and adjective clause" },
     { question: "18. In 'Since artificial intelligence systems learn from data that humans generate, understanding how bias affects machine learning is crucial.' Identify the clause pattern.", options: ["Adverb clause with embedded adjective clause, and noun clause", "Two adverb clauses and one noun clause", "Two adjective clauses and one noun clause", "One adverb clause and two noun clauses"], answer: "Adverb clause with embedded adjective clause, and noun clause" },
     { question: "19. Examine: 'What scientists discover about genetic modifications that affect food production influences how society views biotechnology.' What types of clauses are present?", options: ["Noun clause with embedded adjective clause, and noun clause", "Two adjective clauses and one noun clause", "Three noun clauses", "One noun clause and two adjective clauses"], answer: "Noun clause with embedded adjective clause, and noun clause" },
-    { question: "20. In the sentence 'Whoever develops solutions for problems that threaten global security must consider how their innovations affect humanity.' Identify the clause pattern.", options: ["Noun clause with embedded adjective clause, and noun clause", "Three noun clauses", "Two adjective clauses and one noun clause", "One noun clause and two adjective clauses"], answer: "Noun clause with embedded adjective clause, and noun clause" }];  const [currentQuestion, setCurrentQuestion] = useState(0);
+    { question: "20. In the sentence 'Whoever develops solutions for problems that threaten global security must consider how their innovations affect humanity.' Identify the clause pattern.", options: ["Noun clause with embedded adjective clause, and noun clause", "Three noun clauses", "Two adjective clauses and one noun clause", "One noun clause and two adjective clauses"], answer: "Noun clause with embedded adjective clause, and noun clause" }
+  ];
+
+  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
 
@@ -56,36 +44,33 @@ const Tryout = () => {
     }
   };
 
-  const handleTimeUp = () => {
-    setShowResult(true);
-  };
-
   const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn");
-    navigate("/login");
+    navigate("/kuis/bahasa-inggris/kelas-11");
   };
-
-  if (!isAuthenticated) {
-    return null;
-  }
 
   return (
     <div className="app">
-      <h1>Tryout Bahasa Inggris Kelas XI</h1>
+      <h1>Kuis B.Inggris Kelas XI</h1>
       {showResult ? (
         <div className="result">
           <h2>Skor Anda: {score} / {questions.length}</h2>
           <p>Terima kasih telah mengikuti tryout!</p>
         </div>
       ) : (
-        <>
-          {/* <Timer duration={600} onTimeUp={handleTimeUp} />
-          <Question 
-            question={questions[currentQuestion].question} 
-            options={questions[currentQuestion].options} 
-            handleAnswer={handleAnswer} 
-          /> */}
-        </>
+        <div className="question-container">
+          <h2>{questions[currentQuestion].question}</h2>
+          <div className="options">
+            {questions[currentQuestion].options.map((option, index) => (
+              <button
+                key={index}
+                onClick={() => handleAnswer(option)}
+                className="option-button"
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+        </div>
       )}
       <button onClick={handleLogout} className="logout-button">Logout</button>
     </div>

@@ -1,24 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/TryOut.css";
 
 const Tryout = () => {
   const navigate = useNavigate();
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const alertShown = useRef(false); 
-
-  useEffect(() => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-    if (isLoggedIn) {
-      setIsAuthenticated(true);
-    } else {
-      if (!alertShown.current) { 
-        alert("Anda harus login terlebih dahulu!");
-        alertShown.current = true;  
-      }
-      navigate("/login");
-    }
-  }, [navigate]); 
 
   const questions = [
     { question: "1. Read this narrative: 'When Sarah arrived at the party, she discovered that all her friends had already left.' Which tense combination correctly explains the sequence of events?", options: ["Past Perfect and Simple Past", "Present Perfect and Past Continuous", "Past Continuous and Simple Past", "Simple Past and Present Perfect"], answer: "Past Perfect and Simple Past" },
@@ -40,7 +25,10 @@ const Tryout = () => {
     { question: "17. Analyze: 'The company will have invested millions in research before the new product is launched next year.' What type of future planning is expressed?", options: ["Completed future action before another future event", "Present investment", "Past research", "Ongoing future action"], answer: "Completed future action before another future event" },
     { question: "18. In the context: 'She has been training for the marathon since January, and by race day, she will have completed over 500 miles of preparation.' Which time perspective is shown?", options: ["Present Perfect Continuous leading to Future Perfect", "Simple Present to Future", "Past to Present", "All future events"], answer: "Present Perfect Continuous leading to Future Perfect" },
     { question: "19. Consider: 'The artist had been painting the mural for months before she realized she would have to modify her original design.' What does the tense combination indicate?", options: ["Past Perfect Continuous leading to past realization about future necessity", "Present situation", "Future plans", "Regular activity"], answer: "Past Perfect Continuous leading to past realization about future necessity" },
-    { question: "20. Examine: 'By the time this technology becomes mainstream, developers will have been perfecting it for over a decade.' What aspect of technological development is emphasized?", options: ["Duration of development up to a future point", "Current development", "Past innovation", "Regular updates"], answer: "Duration of development up to a future point" }];  const [currentQuestion, setCurrentQuestion] = useState(0);
+    { question: "20. Examine: 'By the time this technology becomes mainstream, developers will have been perfecting it for over a decade.' What aspect of technological development is emphasized?", options: ["Duration of development up to a future point", "Current development", "Past innovation", "Regular updates"], answer: "Duration of development up to a future point" }
+  ]; 
+
+  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
 
@@ -56,36 +44,33 @@ const Tryout = () => {
     }
   };
 
-  const handleTimeUp = () => {
-    setShowResult(true);
-  };
-
   const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn");
-    navigate("/login");
+    navigate("/kuis/bahasa-inggris/kelas-11");
   };
-
-  if (!isAuthenticated) {
-    return null;
-  }
 
   return (
     <div className="app">
-      <h1>Tryout Bahasa Inggris Kelas XI</h1>
+      <h1>Kuis B.Inggris Kelas XI</h1>
       {showResult ? (
         <div className="result">
           <h2>Skor Anda: {score} / {questions.length}</h2>
           <p>Terima kasih telah mengikuti tryout!</p>
         </div>
       ) : (
-        <>
-          {/* <Timer duration={600} onTimeUp={handleTimeUp} />
-          <Question 
-            question={questions[currentQuestion].question} 
-            options={questions[currentQuestion].options} 
-            handleAnswer={handleAnswer} 
-          /> */}
-        </>
+        <div className="question-container">
+          <h2>{questions[currentQuestion].question}</h2>
+          <div className="options">
+            {questions[currentQuestion].options.map((option, index) => (
+              <button
+                key={index}
+                onClick={() => handleAnswer(option)}
+                className="option-button"
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+        </div>
       )}
       <button onClick={handleLogout} className="logout-button">Logout</button>
     </div>
