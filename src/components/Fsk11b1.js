@@ -195,7 +195,7 @@ I
         Siap mulai?"</h2>
         <button 
           className="btn-latihan"
-          onClick={() => window.location.href = "/latihansoal1"}
+          onClick={() => window.location.href = "/SlFsk11b1"}
         >
           Mulai Latihan Soal
         </button>
@@ -204,13 +204,13 @@ I
    <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/materi")}
+          onClick={() => navigate("materi/fisika/kelas-11")}
         >
           Kembali ke Halaman Sebelumnya
         </button>
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab2")}
+          onClick={() => navigate("/Fsk11b1")}
         >
           Lanjut ke Bab Selanjutnya
         </button>

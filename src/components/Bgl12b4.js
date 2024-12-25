@@ -141,7 +141,7 @@ Dalam mempelajari sel makhluk hidup, Grameds juga dapat melihatnya melalui pende
         Siap mulai?"</h2>
         <button 
           className="btn-latihan"
-          onClick={() => window.location.href = "/latihansoal4"}
+          onClick={() => window.location.href = "/SlBgl12b4"}
         >
           Mulai Latihan Soal
         </button>
@@ -150,13 +150,13 @@ Dalam mempelajari sel makhluk hidup, Grameds juga dapat melihatnya melalui pende
    <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab3")}
+          onClick={() => navigate("/Bgl12b3")}
         >
           Kembali ke Bab Sebelumnya
         </button>
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab5")}
+          onClick={() => navigate("/Bgl12b5")}
         >
           Lanjut ke Bab Selanjutnya
         </button>

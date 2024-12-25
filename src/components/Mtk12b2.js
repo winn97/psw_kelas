@@ -72,7 +72,7 @@ const Bab2 = () => {
           yang masing-masing memiliki dua kemungkinan hasil. (misalnya sukses atau
             gagal){" "}
         </p>
-        <img src="Binomial1.png" alt="Rumus dan Penjelasan" className="section-image" />
+        <img src="../Image/Binomial1.png" alt="Rumus dan Penjelasan" className="section-image" />
       </section>
 
       <section>
@@ -83,7 +83,7 @@ const Bab2 = () => {
           Hal ini berguna untuk memprediksi berbagai kejadian, seperti hasil tes atau keberhasilan produk di pasar, hasil tes, atau eksperimen dengan dua
           kemungkinan hasil (misalnya sukses atau gagal, hidup atau mati).
         </p>
-        <img src="Binomial2.png" alt="Fungsi Distribusi Binomial" className="section-image" />
+        <img src="../Image/Binomial2.png" alt="Fungsi Distribusi Binomial" className="section-image" />
       </section>
 
       <section>
@@ -96,7 +96,7 @@ const Bab2 = () => {
             berbagai kondisi, baik individu, kumulatif, maupun mendekati
             distribusi Poisson.
         </p>
-        <img src="Binomial3.png" alt="Peluang Distribusi Binomial" className="section-image" />
+        <img src="../Image/Binomial3.png" alt="Peluang Distribusi Binomial" className="section-image" />
       </section>
 
       <section>
@@ -105,7 +105,7 @@ const Bab2 = () => {
           Rumus distribusi binomial digunakan untuk menghitung peluang suatu peristiwa terjadi 
           𝑋 kali dalam 𝑁 percobaan independen, dengan dua kemungkinan hasil (sukses atau gagal).
         </p>
-        <img src="Binomial4.png" alt="Peluang Distribusi Binomial" className="section-image" />
+        <img src="../Image/Binomial4.png" alt="Peluang Distribusi Binomial" className="section-image" />
       </section>
 
       <section>
@@ -116,7 +116,7 @@ const Bab2 = () => {
             bidang, seperti statistika, ilmu komputer, dan bahkan dalam
             kehidupan sehari-hari.
         </p>
-        <img src="Binomial5.png" alt="Peluang Distribusi Binomial" className="section-image" />
+        <img src="../Image/Binomial5.png" alt="Peluang Distribusi Binomial" className="section-image" />
       </section>
 
       <section>
@@ -127,7 +127,7 @@ const Bab2 = () => {
             identik dan independen, dan setiap percobaan hanya memiliki dua
             kemungkinan hasil: sukses atau gagal.
         </p>
-        <img src="Binomial6.png" alt="Peluang Distribusi Binomial" className="section-image" />
+        <img src="../Image/Binomial6.png" alt="Peluang Distribusi Binomial" className="section-image" />
       </section>
 
       <div className="bottom-container">
@@ -144,13 +144,13 @@ const Bab2 = () => {
       <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab1")}
+          onClick={() => navigate("/Mtk12b1")}
         >
           Kembali ke Bab Sebelumnya
         </button>
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab3")}
+          onClick={() => navigate("/Mtk12b2")}
         >
           Lanjut ke Bab Selanjutnya
         </button>

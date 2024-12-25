@@ -64,7 +64,7 @@ const Bab1 = () => {
           Faktorial adalah operasi matematika yang digunakan untuk menghitung banyak kemungkinan susunan atau kombinasi dari beberapa objek yang tidak boleh diulang atau tidak boleh dipilih kembali. 
           Faktorial dituliskan dengan tanda seru (!). Contoh: 4! = 4 × 3 × 2 × 1 = 24.
         </p>
-        <img src="ap1.png" alt="Membran Sel" className="section-image" />
+        <img src="../Image/ap1.png" alt="Membran Sel" className="section-image" />
       </section>
 
       <section>
@@ -73,7 +73,7 @@ const Bab1 = () => {
           Permutasi adalah menghitung banyaknya susunan terurut dari objek-objek yang berbeda. 
           Contoh: Jika ada 3 objek, permutasi menghitung cara untuk mengatur objek-objek tersebut dalam urutan tertentu.
         </p>
-        <img src="ap2.png" alt="Membran Sel" className="section-image" />
+        <img src="../Image/ap2.png" alt="Membran Sel" className="section-image" />
       </section>
 
       <section>
@@ -82,7 +82,7 @@ const Bab1 = () => {
           Kombinasi digunakan untuk menghitung banyaknya cara memilih objek-objek tertentu dari sekelompok objek tanpa memperhatikan urutannya. 
           Contoh: Dari 5 siswa, pilih 2 untuk menjadi ketua dan wakil ketua. Hasilnya dihitung dengan kombinasi.
         </p>
-        <img src="ap3.png" alt="Membran Sel" className="section-image" />
+        <img src="../Image/ap3.png" alt="Membran Sel" className="section-image" />
       </section>
 
       <div className="bottom-container">
@@ -99,13 +99,13 @@ const Bab1 = () => {
       <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/materi")}
+          onClick={() => navigate("/materi/matematika/kelas-12")}
         >
           Kembali ke Halaman Sebelumnya
         </button>
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab2")}
+          onClick={() => navigate("/Mtk12b2")}
         >
           Lanjut ke Bab Selanjutnya
         </button>

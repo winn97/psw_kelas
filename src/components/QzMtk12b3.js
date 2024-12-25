@@ -5,16 +5,16 @@ import "../css/TryOut.css";
 const Tryout = () => {
   const navigate = useNavigate();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const alertShown = useRef(false);  
+  const alertShown = useRef(false);
 
   useEffect(() => {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
     if (isLoggedIn) {
       setIsAuthenticated(true);
     } else {
-      if (!alertShown.current) {  
+      if (!alertShown.current) {
         alert("Anda harus login terlebih dahulu!");
-        alertShown.current = true;  
+        alertShown.current = true;
       }
       navigate("/login");
     }
@@ -121,8 +121,8 @@ const Tryout = () => {
       options: ["5 cm", "6 cm", "7 cm", "8 cm"],
       answer: "6 cm"
     }
-  ];  
-  
+  ];
+
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
@@ -139,36 +139,40 @@ const Tryout = () => {
     }
   };
 
-  const handleTimeUp = () => {
-    setShowResult(true);
-  };
-
   const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn");
-    navigate("/login");
+    if (window.confirm("Apakah Anda yakin ingin logout?")) {
+      localStorage.removeItem("isLoggedIn");
+      navigate("/login");
+    }
   };
 
   if (!isAuthenticated) {
-    return null;
+    return <p>Memuat halaman, harap tunggu...</p>;
   }
 
   return (
     <div className="app">
-      <h1>Tryout Kimia Kelas XI: Hukum Termokimia</h1>
+      <h1>Tryout Matematika: Bangun Ruang dan Geometri</h1>
       {showResult ? (
         <div className="result">
           <h2>Skor Anda: {score} / {questions.length}</h2>
           <p>Terima kasih telah mengikuti tryout!</p>
         </div>
       ) : (
-        <>
-          {/* <Timer duration={600} onTimeUp={handleTimeUp} />
-          <Question 
-            question={questions[currentQuestion].question} 
-            options={questions[currentQuestion].options} 
-            handleAnswer={handleAnswer} 
-          /> */}
-        </>
+        <div className="question-container">
+          <h2>{questions[currentQuestion].question}</h2>
+          <div className="options">
+            {questions[currentQuestion].options.map((option, index) => (
+              <button
+                key={index}
+                onClick={() => handleAnswer(option)}
+                className="option-button"
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+        </div>
       )}
       <button onClick={handleLogout} className="logout-button">Logout</button>
     </div>

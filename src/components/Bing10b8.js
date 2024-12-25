@@ -61,7 +61,7 @@ const Bab8 = () => {
         Let's start your practice!"</h2>
         <button 
           className="btn-latihan"
-          onClick={() => window.location.href = "/latihan/bahasa-inggris/kelas-10"}
+          onClick={() => window.location.href = "/SlBing10b8"}
         >
           Start Practicing Now
         </button>

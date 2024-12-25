@@ -78,7 +78,7 @@ const Bab5 = () => {
           2. Diagram pohon adalah metode yang digunakan untuk memvisualisasikan semua kemungkinan hasil dari suatu percobaan,
           sehingga mempermudah menentukan ruang sampel dan titik sampel.
         </p>
-        <img src="peluang1.png" alt="Pembentukan Urin" className="section-image" />
+        <img src="../Image/peluang1.png" alt="Pembentukan Urin" className="section-image" />
       </section>
 
       <section>
@@ -90,7 +90,7 @@ const Bab5 = () => {
           Dengan tabel, kita bisa lebih mudah melihat seluruh kemungkinan kombinasi hasil dari kedua koin
           Baik menggunakan diagram pohon maupun tabel, jumlah titik sampel tetap sama, yaitu 4, dan ruang sampelnya adalah S=(A,A),(A,G),(G,A),(G,G) S= (A,A),(A,G),(G,A),(G,G).
         </p>
-        <img src="peluang2.png" alt="Pembentukan Urin" className="section-image" />
+        <img src="../Image/peluang2.png" alt="Pembentukan Urin" className="section-image" />
       </section>
 
       <section>
@@ -102,7 +102,7 @@ const Bab5 = () => {
           2. Pengulangan tidak dibolehkan: contohnya adalah tiga pembalap pertama yang melewati garis akhir,
           tidak mungkin satu pembalap menjadi juara 1 dan juara 2 secara bersamaan.
         </p>
-        <img src="peluang3.png" alt="Pembentukan Urin" className="section-image" />
+        <img src="../Image/peluang3.png" alt="Pembentukan Urin" className="section-image" />
       </section>
 
       <section>
@@ -115,7 +115,7 @@ const Bab5 = () => {
           2. Pengulangan tidak dibolehkan: contohnya ketika sobat pintar memilih 2 orang dari kelompok beranggotakan 5 orang.
           Tidak mungkin orang pertama dan orang kedua adalah 1 orang yang sama.
         </p>
-        <img src="peluang3.png" alt="Pembentukan Urin" className="section-image" />
+        <img src="../Image/peluang3.png" alt="Pembentukan Urin" className="section-image" />
       </section>
 
       <section>
@@ -125,7 +125,7 @@ const Bab5 = () => {
           sedangkan kombinasi tidak memperhatikan urutan elemen yang dipilih.
           Agar lebih jelas tentang perbedaan antara permutasi dan kombinasi, kamu bisa cek tabel contoh berikut.
         </p>
-        <img src="peluang4.png" alt="Pembentukan Urin" className="section-image" />
+        <img src="../Image/peluang4.png" alt="Pembentukan Urin" className="section-image" />
       </section>
 
       <div className="bottom-container">
@@ -142,13 +142,13 @@ const Bab5 = () => {
    <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab4")}
+          onClick={() => navigate("/Mtk12b4")}
         >
           Kembali ke Bab Sebelumnya
         </button>
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab6")}
+          onClick={() => navigate("/Mtk12b6")}
         >
           Lanjut ke Bab Selanjutnya
         </button>

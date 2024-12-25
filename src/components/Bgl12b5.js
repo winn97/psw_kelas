@@ -194,7 +194,7 @@ Dengan kemajuan teknologi, studi pewarisan sifat telah berkembang pesat. Beberap
         Siap mulai?"</h2>
         <button 
           className="btn-latihan"
-          onClick={() => window.location.href = "/latihansoal5"}
+          onClick={() => window.location.href = "/SlBgl12b5"}
         >
           Mulai Latihan Soal
         </button>
@@ -203,13 +203,13 @@ Dengan kemajuan teknologi, studi pewarisan sifat telah berkembang pesat. Beberap
    <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab4")}
+          onClick={() => navigate("/Bgl12b4")}
         >
           Kembali ke Bab Sebelumnya
         </button>
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab6")}
+          onClick={() => navigate("/Bgl12b6")}
         >
           Lanjut ke Bab Selanjutnya
         </button>

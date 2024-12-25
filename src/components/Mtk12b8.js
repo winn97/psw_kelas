@@ -57,13 +57,13 @@ const Bab8 = () => {
    <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab6")}
+          onClick={() => navigate("/Mtk12b7")}
         >
           Kembali ke Bab Sebelumnya
         </button>
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab8")}
+          onClick={() => navigate("/Mtk12b1")}
         >
           Lanjut ke Bab Selanjutnya
         </button>

@@ -115,7 +115,7 @@ Alex`}
         Let's practice!"</h2>
         <button 
           className="btn-practice"
-          onClick={() => window.location.href = "/latihan/bahasa-inggris/kelas-10"}
+          onClick={() => window.location.href = "/SlBing10b3"}
         >
           Start Practicing Now
         </button>

@@ -71,7 +71,7 @@ const Bab5 = () => {
         </h2>
         <button 
           className="btn-latihan"
-          onClick={() => window.location.href = "/latihan/bahasa-inggris/kelas-10"}
+          onClick={() => window.location.href = "/SlBing10b5"}
         >
           Start Practicing Now
         </button>

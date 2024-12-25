@@ -44,7 +44,6 @@
   
   .question-box {
     flex-grow: 1;
-    max-width: 800px;
     background-color: #d7ebfd;
     padding: 30px;
     border-radius: 15px;

@@ -66,12 +66,12 @@ const Bab3 = () => {
 
       <section>
         <h2>6. Contoh Soal Kongruen</h2>
-        <img src="Kongruen.png" alt="Contoh Soal Kongruen" className="section-image" />
+        <img src="../Image/Kongruen.png" alt="Contoh Soal Kongruen" className="section-image" />
       </section>
 
       <section>
         <h2>7. Contoh Soal Kesebangunan</h2>
-        <img src="Kesebangunan.png" alt="Contoh Soal Kesebangunan" className="section-image" />
+        <img src="../Image/Kesebangunan.png" alt="Contoh Soal Kesebangunan" className="section-image" />
       </section>
 
       <section>
@@ -82,10 +82,10 @@ const Bab3 = () => {
         <p>
           <strong>Kesebangunan:</strong> Dua bangun disebut sebangun jika memiliki bentuk yang sama tetapi ukuran yang berbeda. Artinya, ukuran satu bangun merupakan hasil perkalian skala dari bangun lainnya.
         </p>
-        <img src="Perbedaan.png" alt="Kesimpulan" className="section-image" />
+        <img src="../Image/Perbedaan.png" alt="Kesimpulan" className="section-image" />
       </section>
 
-      <div className="bottom-container">
+      <div className="../Image/bottom-container">
         <h2>"Yuk, uji pemahamanmu dengan latihan soal! <br/> Siap mulai?"</h2>
         <button 
           className="btn-latihan"
@@ -99,13 +99,13 @@ const Bab3 = () => {
       <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab2")}
+          onClick={() => navigate("/Mtk12b2")}
         >
           Kembali ke Bab Sebelumnya
         </button>
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab4")}
+          onClick={() => navigate("/Mtk12b4")}
         >
           Lanjut ke Bab Selanjutnya
         </button>

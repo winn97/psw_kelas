@@ -211,7 +211,7 @@ terutama kadar air dan zat sisa metabolisme.</p>
         Siap mulai?"</h2>
         <button 
           className="btn-latihan"
-          onClick={() => window.location.href = "/latihansoal4"}
+          onClick={() => window.location.href = "/SlBgl11b4"}
         >
           Mulai Latihan Soal
         </button>
@@ -220,13 +220,13 @@ terutama kadar air dan zat sisa metabolisme.</p>
    <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab3")}
+          onClick={() => navigate("/Bgl11b3")}
         >
           Kembali ke Bab Sebelumnya
         </button>
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab5")}
+          onClick={() => navigate("/Bgl11b5")}
         >
           Lanjut ke Bab Selanjutnya
         </button>
