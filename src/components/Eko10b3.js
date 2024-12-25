@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Form, Button, Card } from "react-bootstrap";
 import '../css/Eko10.css';
+import { FaCheckCircle, FaTimesCircle } from "react-icons/fa"; 
 
 function Eko10b3() {
   const [quizAnswers, setQuizAnswers] = useState({

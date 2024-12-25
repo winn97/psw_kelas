@@ -1,111 +1,111 @@
-// import React, { useState } from 'react';
-// import '../css/Bgl10b1.css';
-// import { Accordion, Card, Button, Badge } from 'react-bootstrap';
+import React, { useState } from 'react';
+import '../css/Bgl10b1.css';
+import { Accordion, Card, Button, Badge } from 'react-bootstrap';
 
 
-// function Keanekaragaman() {
-//    const [activeTab, setActiveTab] = useState('global');
+function Keanekaragaman() {
+   const [activeTab, setActiveTab] = useState('global');
 
 
-//   return (
-//     <div className="biodiversity-container">
-//        <div className="hero-section">
-//         <div className="container">
-//           <h1 className="display-4 text-white">Keanekaragaman Hayati</h1>
-//           <p className="lead text-white">Memahami Kompleksitas Kehidupan di Bumi</p>
-//           <div className="hero-badges">
-//             <Badge bg="primary" className="mx-2">100+ Spesies</Badge>
-//             <Badge bg="success" className="mx-2">34 Provinsi</Badge>
-//             <Badge bg="warning" className="mx-2">5 Ekosistem Utama</Badge>
-//           </div>
-//         </div>
-//       </div>
+return (
+     <div className="biodiversity-container">
+        <div className="hero-section">
+         <div className="container">
+           <h1 className="display-4 text-white">Keanekaragaman Hayati</h1>
+           <p className="lead text-white">Memahami Kompleksitas Kehidupan di Bumi</p>
+           <div className="hero-badges">
+             <Badge bg="primary" className="mx-2">100+ Spesies</Badge>
+             <Badge bg="success" className="mx-2">34 Provinsi</Badge>
+            <Badge bg="warning" className="mx-2">5 Ekosistem Utama</Badge>
+           </div>
+        </div>
+       </div>
 
-//       <div className="content-section detailed-material">
-//         <div className="text-content">
-//           <h2>Uraian Materi Keanekaragaman Hayati</h2>
+      <div className="content-section detailed-material">
+        <div className="text-content">
+          <h2>Uraian Materi Keanekaragaman Hayati</h2>
           
-//           <div className="material-section">
-//             <h3>Definisi Keanekaragaman Hayati</h3>
-//             <p>
-//               Keanekaragaman hayati adalah keanekaragaman pada makhluk hidup 
-//               yang menunjukkan adanya variasi bentuk, penampilan, ukuran, 
-//               serta ciri-ciri lainnya. Istilah lain yang digunakan adalah 
-//               biodiversitas (biodiversity), yang meliputi keseluruhan berbagai 
-//               variasi pada tingkat gen, jenis, dan ekosistem di suatu daerah.
-//             </p>
-//           </div>
+          <div className="material-section">
+             <h3>Definisi Keanekaragaman Hayati</h3>
+            <p>
+             Keanekaragaman hayati adalah keanekaragaman pada makhluk hidup 
+               yang menunjukkan adanya variasi bentuk, penampilan, ukuran, 
+               serta ciri-ciri lainnya. Istilah lain yang digunakan adalah 
+               biodiversitas (biodiversity), yang meliputi keseluruhan berbagai 
+               variasi pada tingkat gen, jenis, dan ekosistem di suatu daerah.
+             </p>
+           </div>
 
-//           <div className="material-section">
-//             <h3>Faktor Pembentuk Keanekaragaman</h3>
-//             <p>
-//               Keanekaragaman terjadi karena pengaruh dua faktor utama:
-//             </p>
-//             <ul>
-//               <li>
-//                 <strong>Faktor Genetik:</strong> Perbedaan susunan dan 
-//                 urutan gen pada setiap individu
-//               </li>
-//               <li>
-//                 <strong>Faktor Lingkungan:</strong> Kondisi eksternal 
-//                 yang memengaruhi ekspresi gen
-//               </li>
-//             </ul>
-//             <p>
-//               Sifat yang muncul pada setiap individu merupakan interaksi 
-//               antara gen dengan lingkungan. Dua individu dengan struktur 
-//               dan urutan gen identik belum tentu memiliki bentuk yang sama 
-//               karena pengaruh lingkungan.
-//             </p>
-//           </div>
+           <div className="material-section">
+             <h3>Faktor Pembentuk Keanekaragaman</h3>
+             <p>
+               Keanekaragaman terjadi karena pengaruh dua faktor utama:
+             </p>
+             <ul>
+               <li>
+                 <strong>Faktor Genetik:</strong> Perbedaan susunan dan 
+                 urutan gen pada setiap individu
+               </li>
+               <li>
+                 <strong>Faktor Lingkungan:</strong> Kondisi eksternal 
+                 yang memengaruhi ekspresi gen
+               </li>
+             </ul>
+             <p>
+               Sifat yang muncul pada setiap individu merupakan interaksi 
+               antara gen dengan lingkungan. Dua individu dengan struktur 
+               dan urutan gen identik belum tentu memiliki bentuk yang sama 
+               karena pengaruh lingkungan.
+             </p>
+           </div>
 
-//           <div className="material-section">
-//             <h3>Contoh Pengaruh Lingkungan</h3>
-//             <p>
-//               Perbedaan jumlah sel darah merah pada manusia di dataran 
-//               tinggi dan pantai merupakan bukti nyata pengaruh lingkungan:
-//             </p>
-//             <ul>
-//               <li>
-//                 Orang di pegunungan memiliki sel darah merah lebih banyak
-//               </li>
-//               <li>
-//                 Hal ini disebabkan oleh rendahnya kadar oksigen di pegunungan
-//               </li>
-//               <li>
-//                 Sel darah merah tambahan membantu mengangkut oksigen 
-//                 lebih efisien
-//               </li>
-//             </ul>
-//           </div>
+           <div className="material-section">
+             <h3>Contoh Pengaruh Lingkungan</h3>
+             <p>
+               Perbedaan jumlah sel darah merah pada manusia di dataran 
+               tinggi dan pantai merupakan bukti nyata pengaruh lingkungan:
+             </p>
+             <ul>
+               <li>
+                 Orang di pegunungan memiliki sel darah merah lebih banyak
+               </li>
+               <li>
+                 Hal ini disebabkan oleh rendahnya kadar oksigen di pegunungan
+               </li>
+               <li>
+                 Sel darah merah tambahan membantu mengangkut oksigen 
+                 lebih efisien
+               </li>
+             </ul>
+           </div>
 
-//           <div className="material-section">
-//             <h3>Definisi Spesies</h3>
-//             <p>
-//               Spesies diartikan sebagai individu yang memiliki:
-//             </p>
-//             <ul>
-//               <li>Persamaan morfologis</li>
-//               <li>Persamaan anatomis</li>
-//               <li>Persamaan fisiologis</li>
-//               <li>Kemampuan kawin dengan sesamanya</li>
-//               <li>Menghasilkan keturunan subur (fertile)</li>
-//             </ul>
-//           </div>
+           <div className="material-section">
+             <h3>Definisi Spesies</h3>
+             <p>
+               Spesies diartikan sebagai individu yang memiliki:
+             </p>
+             <ul>
+               <li>Persamaan morfologis</li>
+               <li>Persamaan anatomis</li>
+               <li>Persamaan fisiologis</li>
+               <li>Kemampuan kawin dengan sesamanya</li>
+               <li>Menghasilkan keturunan subur (fertile)</li>
+             </ul>
+           </div>
 
-//           <div className="material-section">
-//             <h3>Tipe-Tipe Ekosistem Perairan (Akuatik)</h3>
-//             <p>
-//               Ekosistem perairan memiliki komponen abiotik yang sebagian 
-//               besar terdiri dari air. Berikut pembagian organisme dalam 
-//               ekosistem perairan:
-//             </p>
-//             <ol>
-//               <li>
-//                 <strong>Plankton</strong>
-//                 <ul>
-//                   <li>Fitoplankton</li>
-//                   <li>Zooplankton</li>
+           <div className="material-section">
+             <h3>Tipe-Tipe Ekosistem Perairan (Akuatik)</h3>
+             <p>
+               Ekosistem perairan memiliki komponen abiotik yang sebagian 
+               besar terdiri dari air. Berikut pembagian organisme dalam 
+               ekosistem perairan:
+             </p>
+             <ol>
+               <li>
+                 <strong>Plankton</strong>
+                 <ul>
+                   <li>Fitoplankton</li>
+                  <li>Zooplankton</li>
 //                   <li>Bergerak pasif karena arus air</li>
 //                   <li>Contoh: ganggang uniseluler, protozoa</li>
 //                 </ul>
@@ -156,21 +156,21 @@
 //           <h2>Teknologi Mutakhir dalam Konservasi</h2>
 //           <div className="tech-tabs">
 //             <button 
-//               className={activeTab === 'global' ? 'active' : ''}
-//               onClick={() => setActiveTab('global')}
-//             >
+              className={activeTab === 'global' ? 'active' : ''}
+              onClick={() => setActiveTab('global')}
+            >
 //               Teknologi Global
 //             </button>
 //             <button 
-//               className={activeTab === 'lokal' ? 'active' : ''}
-//               onClick={() => setActiveTab('lokal')}
-//             >
-//               Teknologi Lokal
+              className={activeTab === 'lokal' ? 'active' : ''}
+             onClick={() => setActiveTab('lokal')}
+            >
+              Teknologi Lokal
 //             </button>
 //           </div>
 
 //           {activeTab === 'global' && (
-//             <div className="tech-content">
+           <div className="tech-content">
 //               <h3>Teknologi Konservasi Global</h3>
 //               <ul>
 //                 <li>
@@ -187,10 +187,10 @@
 //                 </li>
 //               </ul>
 //             </div>
-//           )}
+        )}
 
-//           {activeTab === 'lokal' && (
-//             <div className="tech-content">
+          {activeTab === 'lokal' && (
+             <div className="tech-content">
 //               <h3>Teknologi Konservasi Lokal Indonesia</h3>
 //               <ul>
 //                 <li>
@@ -207,7 +207,7 @@
 //                 </li>
 //               </ul>
 //             </div>
-//           )}
+          )}
 //         </div>
 //       </div>
 
@@ -250,14 +250,14 @@
 //           <Card.Body>
 //             <Card.Title>Pengantar Keanekaragaman Hayati</Card.Title>
 //             <Card.Text>
-//               Dokumen PDF berisi materi dasar tentang konsep keanekaragaman hayati
+              Dokumen PDF berisi materi dasar tentang konsep keanekaragaman hayati
 //             </Card.Text>
 //             <Button 
-//               variant="primary" 
-//               href="./materi3/materi.pdf"
-//               download
-//             >
-//               Unduh PDF
+              variant="primary" 
+              href="./materi3/materi.pdf"
+               download
+           >
+             Unduh PDF
 //             </Button>
 //           </Card.Body>
 //         </Card>
@@ -272,10 +272,10 @@
 //               Panduan komprehensif tentang ekosistem dan upaya konservasi
 //             </Card.Text>
 //             <Button 
-//               variant="success" 
-//               href="./materi3/materi.pdf" 
-//               download
-//             >
+              variant="success" 
+               href="./materi3/materi.pdf" 
+               download
+           >
 //               Unduh PDF
 //             </Button>
 //           </Card.Body>
@@ -291,10 +291,10 @@
 //               Slide presentasi lengkap untuk dipelajari atau dibagikan
 //             </Card.Text>
 //             <Button 
-//               variant="info" 
-//               href="./materi2/materi.pdf" 
-//               download
-//             >
+              variant="info" 
+               href="./materi2/materi.pdf" 
+              download
+            >
 //               Unduh Presentasi
 //             </Button>
 //           </Card.Body>
@@ -317,12 +317,12 @@
 //         </Accordion.Item>
 //       </Accordion>
 //     </div>
-//   </div>
-// </div>
+ </div>
+ </div>
 
       
-//         </div>
-//   );
-// }
+         </div>
+   );
+}
 
-// export default Keanekaragaman;
+export default Keanekaragaman;
