@@ -219,9 +219,9 @@ import QzBing11b5 from './components/QzBing11b5';
 import QzBing11b6 from './components/QzBing11b6';
 import QzBing11b7 from './components/QzBing11b7';
 import QzBing11b8 from './components/QzBing11b8';
-import QzBgl12b1 from './components/QzBing12Future';
-import QzBgl12b2 from './components/QzBing12Past';
-import QzBgl12b3 from './components/QzBing12Present';
+import QzBing12Present from './components/QzBing12Future';
+import QzBing12Past from './components/QzBing12Past';
+import QzBing12Future from './components/QzBing12Present';
 import QzFisika11b1 from './components/QzFsk11b1';
 import QzFisika11b2 from './components/QzFsk11b2';
 import QzFisika11b3 from './components/QzFsk11b3';
@@ -769,18 +769,10 @@ function App() {
         <Route path="/QzBing11b7" element={<QzBing11b7 />} />
         <Route path="/QzBing11b8" element={<QzBing11b8 />} />
 
-        {/* <Route path="/QzBing12b1" element={<QzBing12b1 />} />
-        <Route path="/QzBing12b2" element={<QzBing12b2 />} />
-        <Route path="/QzBing12b3" element={<QzBing12b3 />} />
-        <Route path="/QzBing12b4" element={<QzBing12b4 />} />
-        <Route path="/QzBing12b5" element={<QzBing12b5 />} />
-        <Route path="/QzBing12b6" element={<QzBing12b6 />} />
-        <Route path="/QzBing12b7" element={<QzBing12b7 />} />
-        <Route path="/QzBing12b8" element={<QzBing12b8 />} />
-        <Route path="/QzBing12b9" element={<QzBing12b9 />} />
-        <Route path="/QzBing12b10" element={<QzBing12b10 />} />
-        <Route path="/QzBing12b11" element={<QzBing12b11 />} />
-        <Route path="/QzBing12b12" element={<QzBing12b12 />} /> */}
+        <Route path="/qzpresenttense" element={<QzBing12Present />} />
+        <Route path="/qzpasttense" element={<QzBing12Past />} />
+        <Route path="/qzfuturetense" element={<QzBing12Future />} />
+
         {/* Rute untuk Materi Biologi 11 */}
         {/* <Route path="/QzBgl12b1" element={<QzBgl12b1 />} />
         <Route path="/QzBgl12b2" element={<QzBgl12b2 />} />
