@@ -1,261 +1,254 @@
 import React, { useState } from "react";
-import "../css/QuestionPage.css";
+import "./QuestionPage.css";
 
-const LatihanSoalredoks = () => {
-  const [answers, setAnswers] = useState([]);
-  const [isAnswered, setIsAnswered] = useState(false);
-  const [isCorrect, setIsCorrect] = useState(false);
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [score, setScore] = useState(0);
-  const [isFinished, setIsFinished] = useState(false);
+const LatihanSoalIkatanKimia = () => {
+  const [currentQuestion, setCurrentQuestion] = useState(1);
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const questions = [
+    
+{
+  question: "Ikatan yang terbentuk antara atom-atom logam dengan cara elektron-elektron valensi bergerak bebas disebut?",
+  options: [
+    { label: "A. Ikatan kovalen", value: "A" },
     {
-      question: "Reaksi manakah yang tidak dapat berlangsung dalam keadaan standar?",
-      options: [
-        { label: "A.Fe+2 + Xn -> Fe + Zn+2 ", value: "A" },
-        {
-          label: "B.Zn+2 + Pb -> Pb+2 + Z",
-          value: "B",
-          isCorrect: true,
-        },
-        { label: "C.Pb+2 + Fe -> Pb + Fe+2 ", value: "C" },
-        { label: "D.Sn+2 + Zn -> Sn + Zn+2", value: "D" },
-      ],
-      explanation:
-        "Untuk mengetahui jawabannya, buatlah urutan dari Eo kecil ke Eo besar dan reaksi yang terjadi harus searah anak panah. Urutan Zn -> Fe -> Sn -> Pb. Dari keempat reaksi tersebut, reaksi yang berlawanan arah dengan anak panah adalah reaksi keempat saja. Jadi, jawabannya adalah D.",
+      label: "B. Ikatan logam",
+      value: "B",
+      isCorrect: true,
     },
-    {
-      question: "Manakah reaksi berikut yang bukan termasuk reaksi redoks?",
-      options: [
-        { label: "A.Zn + 2 H2SO4 -> ZnSO4 + H2 ", value: "A" },
-        { label: "B.2 CrO22- + 2H+ -> Cr2O72- + H2O ", value: "B", isCorrect: true },
-        { label: "C.CU2 + Ni -> Cu + Ni2+", value: "C" },
-        { label: "D.C3H8 + 5 O2 -> 3 CO2 + 4 H2O", value: "D" },
-      ],
-      explanation:
-        "Pada pilihan A, C, dan D semuanya terdapat atomik (biloks nol) yang membentuk senyawanya. Ada biloks positif dan negatif yang menandakan adanya perubahan yang berarti reaksi redoks.Sementara pada pilihan B, biloks pada CrO42- sebesar +6 dan pada Cr2O72- sebesar +6 tidak ada perubahan biloks sehingga bukan termasuk reaksi redoks. Maka, jawabannya adalah B.",
-    },
-    {
-      question:
-        "Apa yang dimaksud dengan reaksi redoks?",
-      options: [
-        { label: "A. Reaksi yang menghasilkan gas", value: "A" },
-        { label: "B.Reaksi yang melibatkan transfer elektron ", value: "B", isCorrect: true },
-        { label: "C.Reaksi yang memerlukan katalis ", value: "C" },
-        { label: "D.Reaksi pembakaran sederhana", value: "D" },
-      ],
-      explanation:
-        "Reaksi redoks adalah reaksi yang melibatkan perpindahan elektron, di mana oksidasi dan reduksi terjadi secara bersamaan.",
-    },
-    {
-      question: "Di antara larutan-larutan berikut, larutan yang termasuk dalam larutan basa adalah",
-      options: [
-        { label: "A.C2H5OH ", value: "A" },
-        { label: "B.CH3COOH", value: "B" },
-        { label: "C.NaOH HCl", value: "C", isCorrect: true },
-        { label: "D.HCl ", value: "D" },
-      ],
-      explanation:
-        "Menurut Arrhenius basa adalah spesi yang dapat melepaskan ion OH- dalam air.Reaksi ionisasi NaOH: NaOH (aq) → Na+(aq) + OH-(aq)",
-    },
-    {
-      question:
-        "Pada reaksi 2Mg + O₂ → 2MgO, apa yang teroksidasi?",
-      options: [
-        { label: "A.O₂", value: "A" },
-        { label: "B.Mg", value: "B", isCorrect: true },
-        { label: "C.MgO ", value: "C" },
-        { label: "D. Tidak ada", value: "D" },
-      ],
-      explanation:
-        "Dalam reaksi tersebut, magnesium (Mg) kehilangan elektron sehingga mengalami oksidasi.",
-    },
-    {
-      question:
-        "Apa definisi dari reaksi redoks?",
-      options: [
-        { label: "A.Reaksi yang hanya melibatkan transfer proton.", value: "A" },
-        { label: "B.Reaksi yang melibatkan transfer elektron antara zat-zat yang bereaksi", value: "B", isCorrect: true },
-        { label: "C.Reaksi yang menghasilkan senyawa organik", value: "C" },
-        { label: "D. Reaksi yang hanya terjadi dalam larutan basa ", value: "D" },
-      ],
-      explanation:
-        "Reaksi redoks adalah reaksi kimia yang melibatkan transfer elektron antara dua zat. Dalam reaksi ini, satu zat mengalami oksidasi (kehilangan elektron), sedangkan zat lain mengalami reduksi (menerima elektron).",
-    },
-    {
-      question:
-        "Manakah pernyataan berikut yang benar tentang oksidasi?",
-      options: [
-        { label: "A.Oksidasi adalah proses pelepasan proton", value: "A" },
-        { label: "B.Oksidasi adalah proses pelepasan elektron.", value: "B", isCorrect: true },
-        { label: "C.Oksidasi adalah proses penambahan elektron", value: "C" },
-        { label: "D.Oksidasi adalah reaksi antara asam dan basa. ", value: "D" },
-      ],
-      explanation:
-        "Oksidasi didefinisikan sebagai proses di mana suatu zat kehilangan elektron. Dalam istilah bilangan oksidasi, oksidasi juga diartikan sebagai kenaikan bilangan oksidasi suatu atom.",
-    },
-    {
-      question:
-        "Dalam konteks reaksi redoks, apa yang dimaksud dengan oksidator?",
-      options: [
-        { label: "A.Zat yang kehilangan elektron", value: "A" },
-        { label: "B.Zat yang memberikan elektron.", value: "B",  },
-        { label: "C.Zat yang menerima elektron. ", value: "C", isCorrect: true},
-        { label: "D.Zat yang tidak mengalami perubahan bilangan oksidasi ", value: "D" },
-      ],
-      explanation:
-        "Oksidator adalah zat yang menyebabkan zat lain teroksidasi dengan cara menerima elektron. Oleh karena itu, oksidator sendiri mengalami reduksi dalam reaksi redoks.",
-    },
-    {
-      question:
-        "Apa yang terjadi pada bilangan oksidasi suatu unsur selama proses reduksi?",
-      options: [
-        { label: "A.Bilangan oksidasi meningka", value: "A" },
-        { label: "B.Bilangan oksidasi meningka", value: "B", isCorrect: true },
-        { label: "C.Bilangan oksidasi tetap. ", value: "C" },
-        { label: "D. Bilangan oksidasi berubah-ubah.", value: "D" },
-      ],
-      explanation:
-        "Reduksi adalah proses di mana suatu unsur menerima elektron, sehingga bilangan oksidasinya berkurang (menjadi lebih negatif).",
-    },
-    {
-      question:
-        "Apa yang dimaksud dengan reduktor dalam reaksi redoks?",
-      options: [
-        { label: "A.Zat yang menyebabkan zat lain tereduksi dengan melepaskan elektron.", value: "A", isCorrect: true },
-        { label: "B.Zat yang menerima elektron dari zat lain.", value: "B" },
-        { label: "C. Zat yang menyebabkan kenaikan bilangan oksidasi zat lain.", value: "C" },
-        { label: "D.Zat yang tidak mengalami perubahan bilangan oksidasi.", value: "D" },
-      ],
-      explanation:
-        "Reduktor adalah zat yang menyebabkan zat lain tereduksi dengan cara melepaskan elektronnya. Dalam proses tersebut, reduktor sendiri mengalami oksidasi.",
-    },
-  ];
-
-  const currentQuestion = questions[currentQuestionIndex];
-
-  const handleAnswerClick = (option) => {
-    const updatedAnswers = [...answers];
-    updatedAnswers[currentQuestionIndex] = option.value;
-    setAnswers(updatedAnswers);
-
-    if (option.isCorrect) {
-      setScore((prevScore) => prevScore + 1);
-    }
-
-    setIsCorrect(option.isCorrect || false);
-    setIsAnswered(true);
-  };
-
-  const goToNextQuestion = () => {
-    if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
-      setIsAnswered(answers[currentQuestionIndex + 1] !== undefined);
+    { label: "C. Ikatan ion", value: "C" },
+    { label: "D. Ikatan hidrogen", value: "D" },
+  ],
+  explanation:
+    "Dalam ikatan logam, elektron valensi tidak terikat pada satu atom saja, tetapi bergerak bebas di antara inti-inti atom. Hal ini menciptakan Lautan elekton yang memberikan sifat unik logam seperti konduktivitas listrik dan kelenturan.",
+},
+{
+  question: "Manakah sifat khas dari senyawa yang memiliki ikatan ionik?",
+  options: [
+    { label: "A. Mengangkut karbon dioksida", value: "A" },
+    { label: "B. Mengangkut oksigen", value: "B", isCorrect: true },
+    { label: "C. Mengatur pH darah", value: "C" },
+    { label: "D. Memproduksi sel darah merah", value: "D" },
+  ],
+  explanation:
+    "Senyawa ionik seperti NaCl terdisosiasi menjadi ion-ion bebas saat larut dalam air. Ion-ion ini dapat bergerak bebas, memungkinkan larutan menghantarkan listrik. Sebaliknya, dalam bentuk padat, ion tidak dapat bergerak sehingga tidak menghantarkan listrik.",
+},
+{
+  question:
+    "Manakah sifat khas dari senyawa yang memiliki ikatan ionik? ",
+  options: [
+    { label: "A. Titik leleh rendah", value: "A" },
+    { label: "B. Konduktor listrik dalam larutan", value: "B", isCorrect: true },
+    { label: "C. Tidak larut dalam air", value: "C" },
+    { label: "D. Tidak menghantarkan listrik dalam larutan", value: "D" },
+  ],
+  explanation:
+    "Senyawa ionik seperti NaCl terdisosiasi menjadi ion-ion bebas saat larut dalam air. Ion-ion ini dapat bergerak bebas, memungkinkan larutan menghantarkan listrik. Sebaliknya, dalam bentuk padat, ion tidak dapat bergerak sehingga tidak menghantarkan listrik.",
+},
+{
+  question: "Senyawa yang terbentuk oleh ikatan kovalen non-polar adalah...",
+  options: [
+    { label: "A. H₂O", value: "A" },
+    { label: "B. NaCl", value: "B" },
+    { label: "C. H₂", value: "C", isCorrect: true },
+    { label: "D. NH₃", value: "D" },
+  ],
+  explanation:
+    "Ikatan kovalen non-polar terbentuk ketika elektron dibagi secara merata antara dua atom dengan keelektronegatifan yang sama atau hampir sama. Pada molekul H₂, kedua atom hidrogen memiliki keelektronegatifan yang sama, sehingga elektron dibagi merata, menjadikannya ikatan kovalen non-polar.",
+},
+{
+  question:
+    "Apa yang menyebabkan senyawa ionik seperti NaCl memiliki titik leleh tinggi?",
+  options: [
+    { label: "A. Adanya elektron bebas", value: "A" },
+    { label: "B. Gaya tarik antara ion positif dan ion negatif yang kuat", value: "B", isCorrect: true },
+    { label: "C. Pasangan elektron yang digunakan bersama", value: "C" },
+    { label: "D. Polaritas molekulnya", value: "D" },
+  ],
+  explanation:
+    "Senyawa ionik seperti NaCl memiliki kisi kristal dengan gaya tarik elektrostatik yang sangat kuat antara ion Na⁺ dan Cl⁻. Dibutuhkan energi besar untuk memutuskan gaya ini, sehingga titik lelehnya tinggi.",
+},
+{
+  question: "Ikatan kovalen terbentuk melalui?",
+  options: [
+    { label: "A. Transfer elektron dari satu atom ke atom lain", value: "A" },
+    { label: "B. Penggunaan bersama pasangan elektron", value: "B", isCorrect: true },
+    { label: "C. Mobilitas elektron dalam kisi logam", value: "C" },
+    { label: "D. Interaksi antara neutron", value: "D" },
+  ],
+  explanation:
+    "Ikatan kovalen terbentuk ketika dua atom berbagi pasangan elektron untuk mencapai kestabilan, biasanya dalam senyawa molekul.",
+},
+{
+  question: "Apa sifat khas dari senyawa kovalen polar seperti H₂O?",
+  options: [
+    { label: "A. Larut dalam pelarut polar", value: "A", isCorrect: true },
+    { label: "B. Tidak larut dalam air", value: "B" },
+    { label: "C. Menghantarkan listrik dalam bentuk padat", value: "C" },
+    { label: "D. Memiliki titik leleh sangat tinggi", value: "D" },
+  ],
+  explanation:
+    "Senyawa kovalen polar seperti H₂O larut dalam pelarut polar karena adanya perbedaan elektronegativitas yang menciptakan kutub muatan dalam molekul.",
+},
+{
+  question: "Mengapa logam dapat menghantarkan listrik dengan baik?",
+  options: [
+    { label: "A. Adanya gaya tarik elektrostatik yang kuat", value: "A" },
+    { label: "B. Mobilitas elektron valensi dalam struktur logam", value: "B", isCorrect: true },
+    { label: "C. Adanya pasangan elektron yang digunakan bersama", value: "C" },
+    { label: "D. Polaritas ikatan dalam logam", value: "D" },
+  ],
+  explanation:
+    "Logam dapat menghantarkan listrik karena elektron valensinya bergerak bebas dalam 'lautan elektron', memungkinkan aliran muatan listrik.",
+},
+{
+  question: "Senyawa apa yang memiliki ikatan ionik?",
+  options: [
+    { label: "A. CO₂", value: "A" },
+    { label: "B. CH₄", value: "B" },
+    { label: "C. NaCl", value: "C", isCorrect: true },
+    { label: "D. H₂O", value: "D" },
+  ],
+  explanation:
+    "Senyawa ionik seperti NaCl terbentuk melalui transfer elektron dari ion positif (Na⁺) ke ion negatif (Cl⁻), menciptakan gaya tarik elektrostatik yang kuat.",
+},
+{
+  question: "Apa yang menyebabkan ikatan hidrogen terbentuk dalam molekul seperti H₂O?",
+  options: [
+    { label: "A. Interaksi antara neutron", value: "A" },
+    { label: "B. Adanya kutub positif dan negatif akibat perbedaan elektronegativitas", value: "B", isCorrect: true },
+    { label: "C. Mobilitas elektron bebas", value: "C" },
+    { label: "D. Transfer elektron antara atom", value: "D" },
+  ],
+  explanation:
+    "Ikatan hidrogen terbentuk karena adanya kutub positif dan negatif dalam molekul polar seperti H₂O, di mana atom hidrogen bermuatan parsial positif berinteraksi dengan atom elektronegatif seperti oksigen.",
+}
+];
+  const handleNextQuestion = () => {
+    if (currentQuestion < questions.length) {
+      setCurrentQuestion(currentQuestion + 1);
+      resetSelection();
     }
   };
 
-  const goToPreviousQuestion = () => {
-    if (currentQuestionIndex > 0) {
-      setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
-      setIsAnswered(answers[currentQuestionIndex - 1] !== undefined);
+  const handlePreviousQuestion = () => {
+    if (currentQuestion > 1) {
+      setCurrentQuestion(currentQuestion - 1);
+      resetSelection();
     }
   };
 
-  const handleFinishQuiz = () => {
-    setIsFinished(true);
+  const handleOptionSelect = (option) => {
+    setSelectedOption(option);
   };
 
-  const resetQuiz = () => {
-    setAnswers([]);
-    setIsAnswered(false);
-    setIsCorrect(false);
-    setCurrentQuestionIndex(0);
-    setScore(0);
-    setIsFinished(false);
+  const resetSelection = () => {
+    setSelectedOption(null);
   };
 
+  const handleDropdownChange = (e) => {
+    const selectedNumber = parseInt(e.target.value);
+    setCurrentQuestion(selectedNumber);
+    resetSelection();
+  };
 
-  if (isFinished) {
-    return (
-      <div className="latihan-soal1-container">
-        <div className="latihan-soal1-question-box">
-          <h1 className="latihan-soal1-title">Reaksi Redoks</h1>
-          <h2>Quiz Selesai!</h2>
-          <p>
-            Skor Anda: {score}/{questions.length}
-          </p> 
-          <button className="latihan-soal1-reset-button" onClick={resetQuiz}>
-          Ulangi Latihan
-        </button>
-        </div>
-      </div>
-    );
-  }
+  const handleConfirmationResponse = (response) => {
+    if (response === "yes") {
+      setSelectedOption(true); // Tampilkan pembahasan
+    }
+    setShowConfirmation(false); // Hilangkan pesan
+  };
 
   return (
-    <div className="latihan-soal1-container">
-      <div className="latihan-soal1-question-box">
-        <h1 className="latihan-soal1-title">Reaksi Redoks</h1>
-        <div className="latihan-soal1-question">
-          <h2>
-            Soal Nomor {currentQuestionIndex + 1}/{questions.length}
-          </h2>
-          <p>{currentQuestion.question}</p>
+    <div className="question-page">
+      <div className="question-container">
+        <button
+          className="oval-button previous-button"
+          onClick={handlePreviousQuestion}
+          disabled={currentQuestion === 1}
+        >
+          &larr; Soal Sebelumnya
+        </button>
+        <div className="question-box">
+          <h2>Soal {currentQuestion}</h2>
+          <p>{questions[currentQuestion - 1].question}</p>
         </div>
-        <div className="latihan-soal1-answers">
-          {currentQuestion.options.map((option, index) => (
+        <button
+          className="oval-button next-button"
+          onClick={handleNextQuestion}
+          disabled={currentQuestion === questions.length}
+        >
+          Soal Berikutnya &rarr;
+        </button>
+      </div>
+
+      <div className="interactive-section">
+        <div className="dropdown-container">
+          <label htmlFor="question-dropdown">Pilih Soal:</label>
+          <select
+            id="question-dropdown"
+            value={currentQuestion}
+            onChange={handleDropdownChange}
+          >
+            {questions.map((_, index) => (
+              <option key={index} value={index + 1}>
+                Soal {index + 1}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="options-container">
+          {questions[currentQuestion - 1].options.map((option, index) => (
             <button
               key={index}
-              className={`latihan-soal1-answer-button ${
-                answers[currentQuestionIndex] === option.value
-                  ? "latihan-soal1-selected-answer"
+              className={`option-button ${
+                selectedOption === option
+                  ? option === questions[currentQuestion - 1].correctOption
+                    ? "correct"
+                    : "incorrect"
                   : ""
               }`}
-              onClick={() => handleAnswerClick(option)}
-              disabled={answers[currentQuestionIndex] !== undefined}
+              onClick={() => handleOptionSelect(option)}
             >
-              {option.label}
+              {option}
             </button>
           ))}
         </div>
-        {answers[currentQuestionIndex] !== undefined && (
-          <div className="latihan-soal1-explanation-box">
-            <h2>Jawaban Anda: {answers[currentQuestionIndex]}</h2>
-            <h3>
-              {isCorrect
-                ? "Jawaban Anda Benar!"
-                : `Jawaban Benar: ${
-                    currentQuestion.options.find((opt) => opt.isCorrect)?.value
-                  }`}
-            </h3>
-            <p>{currentQuestion.explanation}</p>
+
+        {selectedOption && (
+          <div className="explanation-container">
+            <p className="explanation-text">
+              {questions[currentQuestion - 1].explanation}
+            </p>
           </div>
         )}
-        <div className="latihan-soal1-navigation-buttons">
-        <button
-  className="latihan-soal1-nav-button prev"
-  onClick={goToPreviousQuestion}
-  disabled={currentQuestionIndex === 0}
->
-  ← Soal Sebelumnya
-</button>
-<button
-  className="latihan-soal1-nav-button next"
-  onClick={
-    currentQuestionIndex === questions.length - 1
-      ? handleFinishQuiz
-      : goToNextQuestion
-  }
->
-  {currentQuestionIndex === questions.length - 1
-    ? "Selesai"
-    : "Soal Selanjutnya →"}
-</button>
-
-        </div>
       </div>
+
+      {showConfirmation && (
+        <div className="confirmation-popup">
+          <div className="popup-content">
+            <p>Yakin mau melihat pembahasan sekarang?</p>
+            <div className="popup-buttons">
+              <button
+                className="popup-button no-button"
+                onClick={() => handleConfirmationResponse("no")}
+              >
+                Tidak
+              </button>
+              <button
+                className="popup-button yes-button"
+                onClick={() => handleConfirmationResponse("yes")}
+              >
+                Iya
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
-export default LatihanSoalredoks;
+
+export default LatihanSoalIkatanKimia;

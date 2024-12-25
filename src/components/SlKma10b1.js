@@ -1,252 +1,248 @@
 import React, { useState } from "react";
-import "../css/QuestionPage.css";
+import "./QuestionPage.css";
 
-const LatihanSoal = () => {
-  const [answers, setAnswers] = useState([]);
-  const [isAnswered, setIsAnswered] = useState(false);
-  const [isCorrect, setIsCorrect] = useState(false);
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [score, setScore] = useState(0);
-  const [isFinished, setIsFinished] = useState(false);
+const LatihanSoalTeoriAtom = () => {
+  const [currentQuestion, setCurrentQuestion] = useState(1);
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const questions = [
     {
-      question: "Suatu atom dengan nomor atom 53 dan massa atom 127 mengandung…?",
+      question: "Siapa penemu teori atom modern?",
       options: [
-        { label: "A. 53 elektron, 74 proton", value: "A" },
-        {
-          label: "B. 53 proton, 74 elektron",
-          value: "B",
-          isCorrect: true,
-        },
-        { label: "C. 53 elektron, 127 proton", value: "C" },
-        { label: "D. 74 neutron, 127 proton", value: "D" },
+        { label: "A. Dalton", value: "A", isCorrect: true },
+        { label: "B. Thomson", value: "B" },
+        { label: "C. Rutherford", value: "C" },
+        { label: "D. Bohr", value: "D" },
       ],
       explanation:
-        "Atom 53X127 memiliki proton: 53, elektron: 53, dan neutron (127 - 53 = 74).",
+        "John Dalton memperkenalkan teori atom modern pada tahun 1803.",
     },
     {
-      question: "Kalau Atom X yang nomor atomnya 19 dituliskan konfigurasi elektronnya, maka atom itu memiliki ciri-ciri…?",
+      question: "Apa partikel penyusun atom?",
       options: [
-        { label: "A. Elektron valensinya adalah 1 valensinya adalah 1", value: "A" },
-        { label: "B. Elektron valensinya adalah 9 valensinya adalah 1", value: "B", isCorrect: true },
-        { label: "C. Elektron valensinya adalah 7 valensinya adalah 1", value: "C" },
-        { label: "D. Elektron valensinya adalah 7 valensinya adalah 2", value: "D" },
+        { label: "A. Elekron, Proton, Neutron", value: "A", isCorrect: true },
+        { label: "B. Elektron dan Proton saja", value: "B" },
+        { label: "C. Neutron saja", value: "C", value: "C" },
+        { label: "D. Proton saja", value: "D" },
       ],
       explanation:
-        "Konfigurasi elektron 19X: 1s2 2s2 2p6 3s2 3p6 4s1. Elektron valensinya adalah: 1, dan valensinya adalah: 1.",
+        "Atom terdiri dari elektron, proton, dan neutron.",
     },
     {
-      question:
-        "Suatu atom memiliki elektron terakhir dengan bilangan kuantum n=4, l=2, m=-1, s=1/2. Jumlah elektron yang tidak berpasangan dalam atom tersebut adalah….?",
+      question: "Apa nama model atom yang dikembangkan oleh Rutherford?",
       options: [
-        { label: "A. 1", value: "A" },
-        { label: "B. 3", value: "B", isCorrect: true },
-        { label: "C. 2", value: "C" },
-        { label: "D. 5", value: "D" },
+        { label: "A. Model Roti Kismis ", value: "A" },
+        { label: "B. Model Planetary", value: "B", isCorrect: true},
+        { label: "C. Model Gelombang", value: "C", },
+        { label: "D. Model Atom Bohr", value: "D" },
       ],
       explanation:
-        "n = 4, l = 2, m = -1, s = -1/2. Elektron terluar adalah 4d7. Setelah digambarkan dalam diagram orbital, jumlah elektron yang tidak berpasangan adalah 3.",
+        "Model Rutherford menggambarkan atom seperti tata surya (model planetary)."
     },
     {
-      question: "Bilangan kuantum elektron terakhir dari atom logam divalen M adalah n=3, l=2, m=-2, s=-1/2. Bila sebanyak 5,6 gram M tepat bereaksi dengan 0,1 mol asam sulfat, maka jumlah neutron yang terkandung dalam atom M adalah…?",
+      question: "Dalam model atom Rutherford, inti atom memiliki sifat?",
       options: [
-        { label: "A. 65", value: "A" },
-        { label: "B. 45", value: "B" },
-        { label: "C. 30", value: "C", isCorrect: true },
-        { label: "D. 35", value: "D" },
+        { label: "A. Berukuran besar dan bermuatan negatif", value: "A" },
+        { label: "B. Berukuran kecil dan bermuatan positif", value: "B", isCorrect: true},
+        { label: "C. Berukuran besar dan bermuatan positif", value: "C", },
+        { label: "D. Berukuran kecil dan netral", value: "D" },
       ],
       explanation:
-        "Reaksi: M2+ + H2SO4 → MSO4 + H2 (0,1 mol). Mol M2+ = 0,1. Ar M2+ = massa/mol = 5,6/0,1 = 56 gram/mol. Nomor massa = Ar = 56. Nomor atomnya adalah 26. Neutron: nomor massa - nomor atom = 56 - 26 = 30.",
+        "Rutherford melalui eksperimen hamburan sinar alfa menemukan bahwa inti atom berukuran sangat kecil dibandingkan atom secara keseluruhan dan bermuatan positif. Sebagian besar massa atom terkonsentrasi di inti."
     },
     {
-      question:
-        "Ion X-2 mempunyai konfigurasi elektron 2.8.8. Nomor atom unsur X adalah….?",
+      question: "Partikel subatomik yang tidak bermuatan disebut?",
       options: [
-        { label: "A. 17", value: "A" },
-        { label: "B. 16", value: "B", isCorrect: true },
-        { label: "C. 19", value: "C" },
-        { label: "D. 20", value: "D" },
+        { label: "A. Neutron", value: "A", isCorrect: true },
+        { label: "B. Elektron", value: "B" },
+        { label: "C. Proton", value: "C", value: "C" },
+        { label: "D. Nukleon", value: "D" },
       ],
       explanation:
-        "Ion X2-: 2)8)8. Atom X: 2)8)6. Maka nomor atomnya: 16.",
+        "Neutron adalah partikel subatomik yang terdapat dalam inti atom bersama proton. Neutron tidak memiliki muatan listrik, tetapi memiliki massa hampir sama dengan proton.",
     },
     {
-      question: "Bilangan kuantum magnetik menunjukkan….",
+      question: "Partikel subatomik yang tidak bermuatan disebut?",
       options: [
-        { label: "A. arah ruang orbital", value: "A", isCorrect: true },
-        { label: "B. tingkat energi kulit", value: "B" },
-        { label: "C. subtingkat energi elektron", value: "C" },
-        { label: "D. perbedaan arah rotasi elektron", value: "D" },
-        { label: "E. kebolehjadian menemukan elektron", value: "E" },
+        { label: "A. Neutron", value: "A", isCorrect: true },
+        { label: "B. Elektron", value: "B" },
+        { label: "C. Proton", value: "C" },
+        { label: "D. Nukleon", value: "D" },
       ],
       explanation:
-        "Bilangan kuantum magnetik menunjukkan orientasi orbital dalam ruang atau arah ruang orbital.",
+        "Neutron adalah partikel subatomik yang terdapat dalam inti atom bersama proton. Neutron tidak memiliki muatan listrik, tetapi memiliki massa hampir sama dengan proton.",
     },
     {
-      question:
-        "Jumlah elektron tidak berpasangan paling sedikit terdapat pada atom yang susunan elektron kulit terluarnya….",
+      question: "Siapa yang pertama kali mengusulkan bahwa materi terdiri dari partikel kecil bernama atom?",
       options: [
-        { label: "A. s2p2", value: "A" },
-        { label: "B. s2p3", value: "B" },
-        { label: "C. s2p6d5", value: "C" },
-        { label: "D. s2p5", value: "D", isCorrect: true },
-        { label: "E. s2p6d6", value: "E" },
+        { label: "A. John Dalton", value: "A", isCorrect: false },
+        { label: "B. Demokritus", value: "B", isCorrect: true },
+        { label: "C. J.J. Thomson", value: "C" },
+        { label: "D. Ernest Rutherford", value: "D" },
       ],
       explanation:
-        "Elektron tidak berpasangan: s2p2 (2), s2p3 (3), s2p6d5 (5), s2p5 (1), s2p6d6 (4).",
+        "Demokritus adalah filsuf Yunani kuno yang pertama kali mengusulkan gagasan bahwa semua materi terdiri dari partikel kecil tak terpisahkan yang disebut atom.",
     },
     {
-      question:
-        "Ion A3- memiliki konfigurasi elektron 3d104s24p6. Nomor atom unsur A adalah…..",
+      question: "Apa nama model atom yang menyatakan bahwa elektron tersebar dalam atom seperti kismis dalam roti?",
       options: [
-        { label: "A. 27", value: "A" },
-        { label: "B. 30", value: "B" },
-        { label: "C. 33", value: "C", isCorrect: true },
-        { label: "D. 36", value: "D" },
-        { label: "E. 39", value: "E" },
+        { label: "A. Model atom Bohr", value: "A" },
+        { label: "B. Model atom Rutherford", value: "B" },
+        { label: "C. Model atom Dalton", value: "C" },
+        { label: "D. Model atom Thomson", value: "D", isCorrect: true },
       ],
       explanation:
-        "Ion A3-: [Ar] 3d10 4s2 4p6. Atom A: [Ar] 3d10 4s2 4p3, nomor atomnya adalah 33.",
+        "Model atom Thomson dikenal sebagai model 'roti kismis', di mana elektron diasumsikan tersebar dalam atom seperti kismis yang tersebar dalam roti.",
     },
     {
-      question:
-        "Jumlah Orbital yang ditempati oleh elektron dalam atom mangan (nomor atom 25) adalah….",
+      question: "Dalam eksperimen hamburan sinar alfa, Rutherford menemukan bahwa?",
       options: [
-        { label: "A. 7", value: "A" },
-        { label: "B. 9", value: "B" },
-        { label: "C. 11", value: "C" },
-        { label: "D. 13", value: "D" },
-        { label: "E. 15", value: "E", isCorrect: true },
+        { label: "A. Atom berbentuk seperti roti kismis", value: "A" },
+        { label: "B. Sebagian besar massa atom terkonsentrasi di inti kecil", value: "B", isCorrect: true },
+        { label: "C. Elektron bergerak dalam lintasan berbentuk lingkaran di sekitar inti", value: "C" },
+        { label: "D. Proton dan neutron tersebar merata dalam atom", value: "D" },
       ],
       explanation:
-        "Konfigurasi elektron mangan: 1s2 2s2 2p6 3s2 3p6 4s2 3d5. Total orbital: 15.",
+        "Eksperimen hamburan sinar alfa Rutherford menunjukkan bahwa sebagian besar massa atom terkonsentrasi di inti kecil yang sangat padat, sementara sebagian besar atom adalah ruang kosong.",
     },
     {
-      question:
-        "Deret bilangan kuantum yang sesuai untuk elektron 3d adalah….",
+      question: "Model atom Bohr menggambarkan elektron bergerak dalam?",
       options: [
-        { label: "A. n=3, l=2, m=-3, s=+1/2", value: "A" },
-        { label: "B. n=3, l=3, m=+2, s=-1/2", value: "B" },
-        { label: "C. n=3, l=1, m=0, s=+1/2", value: "C" },
-        { label: "D. n=3, l=2, m=-2, s=+1/2", value: "D", isCorrect: true },
-        { label: "E. n=3, l=2, m=0, s=+1/2", value: "E" },
+        { label: "A. Orbit berbentuk lingkaran dengan energi tetap", value: "A", isCorrect: true },
+        { label: "B. Lintasan acak di sekitar inti", value: "B" },
+        { label: "C. Ruang kosong di dalam atom", value: "C" },
+        { label: "D. Orbit berbentuk elips dengan energi berubah", value: "D" },
       ],
       explanation:
-        "Pada elektron valensi 3d, bilangan kuantumnya adalah n=3, l=2, m antara -2 hingga +2, dan s=+1/2 atau -1/2.",
-    },
-  ];  
-
-  const currentQuestion = questions[currentQuestionIndex];
-
-  const handleAnswerClick = (option) => {
-    const updatedAnswers = [...answers];
-    updatedAnswers[currentQuestionIndex] = option.value;
-    setAnswers(updatedAnswers);
-
-    if (option.isCorrect) {
-      setScore((prevScore) => prevScore + 1);
+        "Model atom Bohr menjelaskan bahwa elektron bergerak dalam orbit melingkar dengan energi tetap di sekitar inti atom, dan elektron dapat berpindah lintasan dengan menyerap atau memancarkan energi.",
     }
-
-    setIsCorrect(option.isCorrect || false);
-    setIsAnswered(true);
-  };
-
-  const goToNextQuestion = () => {
-    if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
-      setIsAnswered(answers[currentQuestionIndex + 1] ? true : false);
+  ];
+    
+  const handleNextQuestion = () => {
+    if (currentQuestion < questions.length) {
+      setCurrentQuestion(currentQuestion + 1);
+      resetSelection();
     }
   };
 
-  const goToPreviousQuestion = () => {
-    if (currentQuestionIndex > 0) {
-      setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
-      setIsAnswered(answers[currentQuestionIndex - 1] ? true : false);
+  const handlePreviousQuestion = () => {
+    if (currentQuestion > 1) {
+      setCurrentQuestion(currentQuestion - 1);
+      resetSelection();
     }
   };
 
-  const handleFinishQuiz = () => {
-    setIsFinished(true);
+  const handleOptionSelect = (option) => {
+    setSelectedOption(option);
   };
 
-  const handleRestartQuiz = () => {
-    setAnswers([]);
-    setScore(0);
-    setCurrentQuestionIndex(0);
-    setIsFinished(false);
-    setIsAnswered(false);
+  const resetSelection = () => {
+    setSelectedOption(null);
   };
 
-  if (isFinished) {
-    return (
-      <div className="latihan-soal1-container">
-        <div className="latihan-soal1-question-box">
-          <h1 className="latihan-soal1-title">Mode Bionik</h1>
-          <h2>Quiz Selesai!</h2>
-          <p>Skor Anda: {score}/{questions.length}</p>
-          <button className="finish-button" onClick={handleRestartQuiz}>
-            Ulangi Latihan
-          </button>
-        </div>
-      </div>
-    );
-  }
+  const handleDropdownChange = (e) => {
+    const selectedNumber = parseInt(e.target.value);
+    setCurrentQuestion(selectedNumber);
+    resetSelection();
+  };
+
+  const handleConfirmationResponse = (response) => {
+    if (response === "yes") {
+      setSelectedOption(true); // Tampilkan pembahasan
+    }
+    setShowConfirmation(false); // Hilangkan pesan
+  };
 
   return (
-    <div className="latihan-soal1-container">
-      <div className="latihan-soal1-question-box">
-        <h1 className="latihan-soal1-title">Mode Bionik</h1>
-        <div className="latihan-soal1-question">
-          <h2>
-            Soal Nomor {currentQuestionIndex + 1}/{questions.length}
-          </h2>
-          <p>{currentQuestion.question}</p>
+    <div className="question-page">
+      <div className="question-container">
+        <button
+          className="oval-button previous-button"
+          onClick={handlePreviousQuestion}
+          disabled={currentQuestion === 1}
+        >
+          &larr; Soal Sebelumnya
+        </button>
+        <div className="question-box">
+          <h2>Soal {currentQuestion}</h2>
+          <p>{questions[currentQuestion - 1].question}</p>
         </div>
-        <div className="latihan-soal1-answers">
-          {currentQuestion.options.map((option, index) => (
+        <button
+          className="oval-button next-button"
+          onClick={handleNextQuestion}
+          disabled={currentQuestion === questions.length}
+        >
+          Soal Berikutnya &rarr;
+        </button>
+      </div>
+
+      <div className="interactive-section">
+        <div className="dropdown-container">
+          <label htmlFor="question-dropdown">Pilih Soal:</label>
+          <select
+            id="question-dropdown"
+            value={currentQuestion}
+            onChange={handleDropdownChange}
+          >
+            {questions.map((_, index) => (
+              <option key={index} value={index + 1}>
+                Soal {index + 1}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="options-container">
+          {questions[currentQuestion - 1].options.map((option, index) => (
             <button
               key={index}
-              className={`latihan-soal1-answer-button ${answers[currentQuestionIndex] === option.value ? "latihan-soal1-selected-answer" : ""}`}
-              onClick={() => handleAnswerClick(option)}
-              disabled={answers[currentQuestionIndex]}
+              className={`option-button ${
+                selectedOption === option
+                  ? option === questions[currentQuestion - 1].correctOption
+                    ? "correct"
+                    : "incorrect"
+                  : ""
+              }`}
+              onClick={() => handleOptionSelect(option)}
             >
-              {option.label}
+              {option}
             </button>
           ))}
         </div>
-        {answers[currentQuestionIndex] && (
-          <div className="latihan-soal1-explanation-box">
-            <h2>Jawaban Anda: {answers[currentQuestionIndex]}</h2>
-            <h3>
-              {isCorrect
-                ? "Jawaban Anda Benar!"
-                : `Jawaban Benar: ${currentQuestion.options.find((opt) => opt.isCorrect)?.value}`}
-            </h3>
-            <p>{currentQuestion.explanation}</p>
+
+        {selectedOption && (
+          <div className="explanation-container">
+            <p className="explanation-text">
+              {questions[currentQuestion - 1].explanation}
+            </p>
           </div>
         )}
-        <div className="latihan-soal1-navigation-buttons">
-          <button
-            className="latihan-soal1-nav-button prev"
-            onClick={goToPreviousQuestion}
-            disabled={currentQuestionIndex === 0}
-          >
-            ← Soal Sebelumnya
-          </button>
-          <button
-            className="latihan-soal1-nav-button next"
-            onClick={currentQuestionIndex === questions.length - 1 ? handleFinishQuiz : goToNextQuestion}
-          >
-            {currentQuestionIndex === questions.length - 1 ? "Selesai" : "Soal Selanjutnya →"}
-          </button>
-        </div>
       </div>
+
+      {showConfirmation && (
+        <div className="confirmation-popup">
+          <div className="popup-content">
+            <p>Yakin mau melihat pembahasan sekarang?</p>
+            <div className="popup-buttons">
+              <button
+                className="popup-button no-button"
+                onClick={() => handleConfirmationResponse("no")}
+              >
+                Tidak
+              </button>
+              <button
+                className="popup-button yes-button"
+                onClick={() => handleConfirmationResponse("yes")}
+              >
+                Iya
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
-export default LatihanSoal;
-
-
-
+export default LatihanSoalTeoriAtom;

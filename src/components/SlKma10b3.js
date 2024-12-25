@@ -1,255 +1,263 @@
 import React, { useState } from "react";
-import "../css/QuestionPage.css";
+import "./QuestionPage.css";
 
-const LatihanSoalIkatanKimia = () => {
-  const [answers, setAnswers] = useState([]);
-  const [isAnswered, setIsAnswered] = useState(false);
-  const [isCorrect, setIsCorrect] = useState(false);
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [score, setScore] = useState(0);
-  const [isFinished, setIsFinished] = useState(false);
+const LatihanSoalStoikiometri = () => {
+  const [currentQuestion, setCurrentQuestion] = useState(1);
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const questions = [
     {
-      question: "Ikatan yang terbentuk antara atom-atom logam dengan cara elektron-elektron valensi bergerak bebas disebut?",
+      question: "Suatu atom dengan nomor atom 53 dan massa atom 127 mengandung…?",
       options: [
-        { label: "A. Ikatan kovalen", value: "A" },
+        { label: "A. 53 elektron, 74 proton", value: "A" },
         {
-          label: "B. Ikatan logam",
+          label: "B. 53 proton, 74 elektron",
           value: "B",
           isCorrect: true,
         },
-        { label: "C. Ikatan ion", value: "C" },
-        { label: "D. Ikatan hidrogen", value: "D" },
+        { label: "C. 53 elektron, 127 proton", value: "C" },
+        { label: "D. 74 neutron, 127 proton", value: "D" },
       ],
       explanation:
-        "Dalam ikatan logam, elektron valensi tidak terikat pada satu atom saja, tetapi bergerak bebas di antara inti-inti atom. Hal ini menciptakan Lautan elekton yang memberikan sifat unik logam seperti konduktivitas listrik dan kelenturan.",
+        "Atom 53X127 memiliki proton: 53, elektron: 53, dan neutron (127 - 53 = 74).",
     },
     {
-      question: "Manakah sifat khas dari senyawa yang memiliki ikatan ionik?",
+      question: "Kalau Atom X yang nomor atomnya 19 dituliskan konfigurasi elektronnya, maka atom itu memiliki ciri-ciri…?",
       options: [
-        { label: "A. Mengangkut karbon dioksida", value: "A" },
-        { label: "B. Mengangkut oksigen", value: "B", isCorrect: true },
-        { label: "C. Mengatur pH darah", value: "C" },
-        { label: "D. Memproduksi sel darah merah", value: "D" },
+        { label: "A. Elektron valensinya adalah 1 valensinya adalah 1", value: "A" },
+        { label: "B. Elektron valensinya adalah 9 valensinya adalah 1", value: "B", isCorrect: true },
+        { label: "C. Elektron valensinya adalah 7 valensinya adalah 1", value: "C" },
+        { label: "D. Elektron valensinya adalah 7 valensinya adalah 2", value: "D" },
       ],
       explanation:
-        "Senyawa ionik seperti NaCl terdisosiasi menjadi ion-ion bebas saat larut dalam air. Ion-ion ini dapat bergerak bebas, memungkinkan larutan menghantarkan listrik. Sebaliknya, dalam bentuk padat, ion tidak dapat bergerak sehingga tidak menghantarkan listrik.",
-    },
-    {
-      question:
-        "Manakah sifat khas dari senyawa yang memiliki ikatan ionik? ",
-      options: [
-        { label: "A. Titik leleh rendah", value: "A" },
-        { label: "B. Konduktor listrik dalam larutan", value: "B", isCorrect: true },
-        { label: "C. Tidak larut dalam air", value: "C" },
-        { label: "D. Tidak menghantarkan listrik dalam larutan", value: "D" },
-      ],
-      explanation:
-        "Senyawa ionik seperti NaCl terdisosiasi menjadi ion-ion bebas saat larut dalam air. Ion-ion ini dapat bergerak bebas, memungkinkan larutan menghantarkan listrik. Sebaliknya, dalam bentuk padat, ion tidak dapat bergerak sehingga tidak menghantarkan listrik.",
-    },
-    {
-      question: "Senyawa yang terbentuk oleh ikatan kovalen non-polar adalah...",
-      options: [
-        { label: "A. H₂O", value: "A" },
-        { label: "B. NaCl", value: "B" },
-        { label: "C. H₂", value: "C", isCorrect: true },
-        { label: "D. NH₃", value: "D" },
-      ],
-      explanation:
-        "Ikatan kovalen non-polar terbentuk ketika elektron dibagi secara merata antara dua atom dengan keelektronegatifan yang sama atau hampir sama. Pada molekul H₂, kedua atom hidrogen memiliki keelektronegatifan yang sama, sehingga elektron dibagi merata, menjadikannya ikatan kovalen non-polar.",
+        "Konfigurasi elektron 19X: 1s2 2s2 2p6 3s2 3p6 4s1. Elektron valensinya adalah: 1, dan valensinya adalah: 1.",
     },
     {
       question:
-        "Apa yang menyebabkan senyawa ionik seperti NaCl memiliki titik leleh tinggi?",
+        "Suatu atom memiliki elektron terakhir dengan bilangan kuantum n=4, l=2, m=-1, s=1/2. Jumlah elektron yang tidak berpasangan dalam atom tersebut adalah….?",
       options: [
-        { label: "A. Adanya elektron bebas", value: "A" },
-        { label: "B. Gaya tarik antara ion positif dan ion negatif yang kuat", value: "B", isCorrect: true },
-        { label: "C. Pasangan elektron yang digunakan bersama", value: "C" },
-        { label: "D. Polaritas molekulnya", value: "D" },
+        { label: "A. 1", value: "A" },
+        { label: "B. 3", value: "B", isCorrect: true },
+        { label: "C. 2", value: "C" },
+        { label: "D. 5", value: "D" },
       ],
       explanation:
-        "Senyawa ionik seperti NaCl memiliki kisi kristal dengan gaya tarik elektrostatik yang sangat kuat antara ion Na⁺ dan Cl⁻. Dibutuhkan energi besar untuk memutuskan gaya ini, sehingga titik lelehnya tinggi.",
+        "n = 4, l = 2, m = -1, s = -1/2. Elektron terluar adalah 4d7. Setelah digambarkan dalam diagram orbital, jumlah elektron yang tidak berpasangan adalah 3.",
     },
     {
-      question: "Ikatan kovalen terbentuk melalui?",
+      question: "Bilangan kuantum elektron terakhir dari atom logam divalen M adalah n=3, l=2, m=-2, s=-1/2. Bila sebanyak 5,6 gram M tepat bereaksi dengan 0,1 mol asam sulfat, maka jumlah neutron yang terkandung dalam atom M adalah…?",
       options: [
-        { label: "A. Transfer elektron dari satu atom ke atom lain", value: "A" },
-        { label: "B. Penggunaan bersama pasangan elektron", value: "B", isCorrect: true },
-        { label: "C. Mobilitas elektron dalam kisi logam", value: "C" },
-        { label: "D. Interaksi antara neutron", value: "D" },
+        { label: "A. 65", value: "A" },
+        { label: "B. 45", value: "B" },
+        { label: "C. 30", value: "C", isCorrect: true },
+        { label: "D. 35", value: "D" },
       ],
       explanation:
-        "Ikatan kovalen terbentuk ketika dua atom berbagi pasangan elektron untuk mencapai kestabilan, biasanya dalam senyawa molekul.",
+        "Reaksi: M2+ + H2SO4 → MSO4 + H2 (0,1 mol). Mol M2+ = 0,1. Ar M2+ = massa/mol = 5,6/0,1 = 56 gram/mol. Nomor massa = Ar = 56. Nomor atomnya adalah 26. Neutron: nomor massa - nomor atom = 56 - 26 = 30.",
     },
     {
-      question: "Apa sifat khas dari senyawa kovalen polar seperti H₂O?",
+      question:
+        "Ion X-2 mempunyai konfigurasi elektron 2.8.8. Nomor atom unsur X adalah….?",
       options: [
-        { label: "A. Larut dalam pelarut polar", value: "A", isCorrect: true },
-        { label: "B. Tidak larut dalam air", value: "B" },
-        { label: "C. Menghantarkan listrik dalam bentuk padat", value: "C" },
-        { label: "D. Memiliki titik leleh sangat tinggi", value: "D" },
+        { label: "A. 17", value: "A" },
+        { label: "B. 16", value: "B", isCorrect: true },
+        { label: "C. 19", value: "C" },
+        { label: "D. 20", value: "D" },
       ],
       explanation:
-        "Senyawa kovalen polar seperti H₂O larut dalam pelarut polar karena adanya perbedaan elektronegativitas yang menciptakan kutub muatan dalam molekul.",
+        "Ion X2-: 2)8)8. Atom X: 2)8)6. Maka nomor atomnya: 16.",
     },
     {
-      question: "Mengapa logam dapat menghantarkan listrik dengan baik?",
+      question: "Bilangan kuantum magnetik menunjukkan….",
       options: [
-        { label: "A. Adanya gaya tarik elektrostatik yang kuat", value: "A" },
-        { label: "B. Mobilitas elektron valensi dalam struktur logam", value: "B", isCorrect: true },
-        { label: "C. Adanya pasangan elektron yang digunakan bersama", value: "C" },
-        { label: "D. Polaritas ikatan dalam logam", value: "D" },
+        { label: "A. arah ruang orbital", value: "A", isCorrect: true },
+        { label: "B. tingkat energi kulit", value: "B" },
+        { label: "C. subtingkat energi elektron", value: "C" },
+        { label: "D. perbedaan arah rotasi elektron", value: "D" },
+        { label: "E. kebolehjadian menemukan elektron", value: "E" },
       ],
       explanation:
-        "Logam dapat menghantarkan listrik karena elektron valensinya bergerak bebas dalam 'lautan elektron', memungkinkan aliran muatan listrik.",
+        "Bilangan kuantum magnetik menunjukkan orientasi orbital dalam ruang atau arah ruang orbital.",
     },
     {
-      question: "Senyawa apa yang memiliki ikatan ionik?",
+      question:
+        "Jumlah elektron tidak berpasangan paling sedikit terdapat pada atom yang susunan elektron kulit terluarnya….",
       options: [
-        { label: "A. CO₂", value: "A" },
-        { label: "B. CH₄", value: "B" },
-        { label: "C. NaCl", value: "C", isCorrect: true },
-        { label: "D. H₂O", value: "D" },
+        { label: "A. s2p2", value: "A" },
+        { label: "B. s2p3", value: "B" },
+        { label: "C. s2p6d5", value: "C" },
+        { label: "D. s2p5", value: "D", isCorrect: true },
+        { label: "E. s2p6d6", value: "E" },
       ],
       explanation:
-        "Senyawa ionik seperti NaCl terbentuk melalui transfer elektron dari ion positif (Na⁺) ke ion negatif (Cl⁻), menciptakan gaya tarik elektrostatik yang kuat.",
+        "Elektron tidak berpasangan: s2p2 (2), s2p3 (3), s2p6d5 (5), s2p5 (1), s2p6d6 (4).",
     },
     {
-      question: "Apa yang menyebabkan ikatan hidrogen terbentuk dalam molekul seperti H₂O?",
+      question:
+        "Ion A3- memiliki konfigurasi elektron 3d104s24p6. Nomor atom unsur A adalah…..",
       options: [
-        { label: "A. Interaksi antara neutron", value: "A" },
-        { label: "B. Adanya kutub positif dan negatif akibat perbedaan elektronegativitas", value: "B", isCorrect: true },
-        { label: "C. Mobilitas elektron bebas", value: "C" },
-        { label: "D. Transfer elektron antara atom", value: "D" },
+        { label: "A. 27", value: "A" },
+        { label: "B. 30", value: "B" },
+        { label: "C. 33", value: "C", isCorrect: true },
+        { label: "D. 36", value: "D" },
+        { label: "E. 39", value: "E" },
       ],
       explanation:
-        "Ikatan hidrogen terbentuk karena adanya kutub positif dan negatif dalam molekul polar seperti H₂O, di mana atom hidrogen bermuatan parsial positif berinteraksi dengan atom elektronegatif seperti oksigen.",
+        "Ion A3-: [Ar] 3d10 4s2 4p6. Atom A: [Ar] 3d10 4s2 4p3, nomor atomnya adalah 33.",
+    },
+    {
+      question:
+        "Jumlah Orbital yang ditempati oleh elektron dalam atom mangan (nomor atom 25) adalah….",
+      options: [
+        { label: "A. 7", value: "A" },
+        { label: "B. 9", value: "B" },
+        { label: "C. 11", value: "C" },
+        { label: "D. 13", value: "D" },
+        { label: "E. 15", value: "E", isCorrect: true },
+      ],
+      explanation:
+        "Konfigurasi elektron mangan: 1s2 2s2 2p6 3s2 3p6 4s2 3d5. Total orbital: 15.",
+    },
+    {
+      question:
+        "Deret bilangan kuantum yang sesuai untuk elektron 3d adalah….",
+      options: [
+        { label: "A. n=3, l=2, m=-3, s=+1/2", value: "A" },
+        { label: "B. n=3, l=3, m=+2, s=-1/2", value: "B" },
+        { label: "C. n=3, l=1, m=0, s=+1/2", value: "C" },
+        { label: "D. n=3, l=2, m=-2, s=+1/2", value: "D", isCorrect: true },
+        { label: "E. n=3, l=2, m=0, s=+1/2", value: "E" },
+      ],
+      explanation:
+        "Pada elektron valensi 3d, bilangan kuantumnya adalah n=3, l=2, m antara -2 hingga +2, dan s=+1/2 atau -1/2.",
+    },
+    ];
+
+  const handleNextQuestion = () => {
+    if (currentQuestion < questions.length) {
+      setCurrentQuestion(currentQuestion + 1);
+      resetSelection();
     }
-  ];
-
-  const currentQuestion = questions[currentQuestionIndex];
-
-  const handleAnswerClick = (option) => {
-    const updatedAnswers = [...answers];
-    updatedAnswers[currentQuestionIndex] = option.value;
-    setAnswers(updatedAnswers);
-
-    if (option.isCorrect) {
-      setScore((prevScore) => prevScore + 1);
-    }
-
-    setIsCorrect(option.isCorrect || false);
-    setIsAnswered(true);
   };
 
-  const goToNextQuestion = () => {
-    if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
-      setIsAnswered(answers[currentQuestionIndex + 1] !== undefined);
+  const handlePreviousQuestion = () => {
+    if (currentQuestion > 1) {
+      setCurrentQuestion(currentQuestion - 1);
+      resetSelection();
     }
   };
 
-  const goToPreviousQuestion = () => {
-    if (currentQuestionIndex > 0) {
-      setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
-      setIsAnswered(answers[currentQuestionIndex - 1] !== undefined);
+  const handleOptionSelect = (option) => {
+    setSelectedOption(option);
+  };
+
+  const resetSelection = () => {
+    setSelectedOption(null);
+  };
+
+  const handleDropdownChange = (e) => {
+    const selectedNumber = parseInt(e.target.value);
+    setCurrentQuestion(selectedNumber);
+    resetSelection();
+  };
+
+  const handleConfirmationResponse = (response) => {
+    if (response === "yes") {
+      setSelectedOption(true); // Tampilkan pembahasan
     }
+    setShowConfirmation(false); // Hilangkan pesan
   };
-
-  const handleFinishQuiz = () => {
-    setIsFinished(true);
-  };
-  const resetQuiz = () => {
-    setAnswers([]);
-    setIsAnswered(false);
-    setIsCorrect(false);
-    setCurrentQuestionIndex(0);
-    setScore(0);
-    setIsFinished(false);
-  };
-
-  if (isFinished) {
-    return (
-      <div className="latihan-soal1-container">
-        <div className="latihan-soal1-question-box">
-          <h1 className="latihan-soal1-title">Mode Bionik</h1>
-          <h2>Quiz Selesai!</h2>
-          <p>
-            Skor Anda: {score}/{questions.length}
-          </p> 
-
-          <button className="latihan-soal1-reset-button" onClick={resetQuiz}>
-          Ulangi Latihan
-        </button>
-        </div>
-      </div>
-    );
-  }
 
   return (
-    <div className="latihan-soal1-container">
-      <div className="latihan-soal1-question-box">
-        <h1 className="latihan-soal1-title">Mode Bionik</h1>
-        <div className="latihan-soal1-question">
-          <h2>
-            Soal Nomor {currentQuestionIndex + 1}/{questions.length}
-          </h2>
-          <p>{currentQuestion.question}</p>
+    <div className="question-page">
+      <div className="question-container">
+        <button
+          className="oval-button previous-button"
+          onClick={handlePreviousQuestion}
+          disabled={currentQuestion === 1}
+        >
+          &larr; Soal Sebelumnya
+        </button>
+        <div className="question-box">
+          <h2>Soal {currentQuestion}</h2>
+          <p>{questions[currentQuestion - 1].question}</p>
         </div>
-        <div className="latihan-soal1-answers">
-          {currentQuestion.options.map((option, index) => (
+        <button
+          className="oval-button next-button"
+          onClick={handleNextQuestion}
+          disabled={currentQuestion === questions.length}
+        >
+          Soal Berikutnya &rarr;
+        </button>
+      </div>
+
+      <div className="interactive-section">
+        <div className="dropdown-container">
+          <label htmlFor="question-dropdown">Pilih Soal:</label>
+          <select
+            id="question-dropdown"
+            value={currentQuestion}
+            onChange={handleDropdownChange}
+          >
+            {questions.map((_, index) => (
+              <option key={index} value={index + 1}>
+                Soal {index + 1}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="options-container">
+          {questions[currentQuestion - 1].options.map((option, index) => (
             <button
               key={index}
-              className={`latihan-soal1-answer-button ${
-                answers[currentQuestionIndex] === option.value
-                  ? "latihan-soal1-selected-answer"
+              className={`option-button ${
+                selectedOption === option
+                  ? option === questions[currentQuestion - 1].correctOption
+                    ? "correct"
+                    : "incorrect"
                   : ""
               }`}
-              onClick={() => handleAnswerClick(option)}
-              disabled={answers[currentQuestionIndex] !== undefined}
+              onClick={() => handleOptionSelect(option)}
             >
-              {option.label}
+              {option}
             </button>
           ))}
         </div>
-        {answers[currentQuestionIndex] !== undefined && (
-          <div className="latihan-soal1-explanation-box">
-            <h2>Jawaban Anda: {answers[currentQuestionIndex]}</h2>
-            <h3>
-              {isCorrect
-                ? "Jawaban Anda Benar!"
-                : `Jawaban Benar: ${
-                    currentQuestion.options.find((opt) => opt.isCorrect)?.value
-                  }`}
-            </h3>
-            <p>{currentQuestion.explanation}</p>
+
+        {selectedOption && (
+          <div className="explanation-container">
+            <p className="explanation-text">
+              {questions[currentQuestion - 1].explanation}
+            </p>
           </div>
         )}
-        <div className="latihan-soal1-navigation-buttons">
-        <button
-  className="latihan-soal1-nav-button prev"
-  onClick={goToPreviousQuestion}
-  disabled={currentQuestionIndex === 0}
->
-  ← Soal Sebelumnya
-</button>
-<button
-  className="latihan-soal1-nav-button next"
-  onClick={
-    currentQuestionIndex === questions.length - 1
-      ? handleFinishQuiz
-      : goToNextQuestion
-  }
->
-  {currentQuestionIndex === questions.length - 1
-    ? "Selesai"
-    : "Soal Selanjutnya →"}
-</button>
-
-        </div>
       </div>
+
+      {showConfirmation && (
+        <div className="confirmation-popup">
+          <div className="popup-content">
+            <p>Yakin mau melihat pembahasan sekarang?</p>
+            <div className="popup-buttons">
+              <button
+                className="popup-button no-button"
+                onClick={() => handleConfirmationResponse("no")}
+              >
+                Tidak
+              </button>
+              <button
+                className="popup-button yes-button"
+                onClick={() => handleConfirmationResponse("yes")}
+              >
+                Iya
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
-export default LatihanSoalIkatanKimia;
+
+export default LatihanSoalStoikiometri;

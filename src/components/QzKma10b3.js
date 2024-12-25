@@ -1,47 +1,33 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/TryOut.css";
 
-const Tryout = () => {
+const TryoutStoikiometri = () => {
   const navigate = useNavigate();
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const alertShown = useRef(false);  
-
-  useEffect(() => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-    if (isLoggedIn) {
-      setIsAuthenticated(true);
-    } else {
-      if (!alertShown.current) {  
-        alert("Anda harus login terlebih dahulu!");
-        alertShown.current = true;  
-      }
-      navigate("/login");
-    }
-  }, [navigate]); 
 
   const questions = [
-    { question: "1. Kalium isoelektronik dengan klor (nomor atom K=19, Cl=17)", options: ["A. Salah", "B. Benar", "C. Tidak ada jawaban", "D. D"], answer: "D" },
-    { question: "2. Konfigurasi elektron unsur X dengan nomor atom 24 adalah….", options: ["A. [Ar] 3d2 4s2", "B. [Ar] 3d5 4s1", "C. [Ar] 3d10 4s1", "D. [Ar] 3d24s24p3", "E. [Ar] 3d2 4s24p2"], answer: "B" },
-    { question: "3. Suatu unsur Y mempunyai massa=56,85 dan mempunyai massa neutron =30,85. Konfigurasi elektron Y adalah….", options: ["A. [Xe]6s2", "B. [Ar]4s23d10", "C. [Ar]3d64s2", "D. [Ar]4s23d8", "E. [Ar]4s23d10"], answer: "C" },
-    { question: "4. Elektron dengan bilangan kuantum yang tidak diizinkan ialah….", options: ["A. n=3, l=0, m=0, s=-1/2", "B. n=3, l=1, m=+1, s=+1/2", "C. n=3, l=2, m=-1, s=-1/2", "D. n=3, l=1, m=+2, s=+1/2", "E. n=3, l=2, m=+2, s=-1/2"], answer: "D" },
-    { question: "5. Jika nomor atom dalam satu golongan makin kecil, maka yang bertambah besar adalah ....", options: ["A. Jari-jari atom", "B. massa atom", "C. Jumlah elektron valensi", "D. Energi ionisasi", "E. Sifat logam"], answer: "D" },
-    { question: "6. Konfigurasi elektron untuk ion X4- adalah 1s2 2s2 2p4 maka atom X termasuk golongan/perioda ....", options: ["A. VIA/2", "B. VIIA/2", "C. IVA/2", "D. IIA/2", "E. IIIA/2"], answer: "C" },
-    { question: "7. Diketahui unsur-unsur : 17P, 20Q, 25R, 29S, 35T. Pasangan unsur yang terletak pada blok d adalah ....", options: ["A. P dan Q", "B. R dan S", "C. Q dan S", "D. P dan R", "E. R dan T"], answer: "B" },
-    { question: "8. Raksa terletak pada periode keenam golongan IIB. Elektron terakhir atom raksa memiliki bilangan kuantum ...", options: ["A. n=5, l=0, m=0, s=-1/2", "B. n=5, l=2, m=+2, s=+1/2", "C. n=6, l=0, m=0, s=-1/2", "D. n=6, l=0, m=0, s=+1/2", "E. n=6, l=2, m=+2, s=-1/2"], answer: "A" },
-    { question: "9. Unsur V,W,X,Y,Z berturut-turut mempunyai nomor atom 2,3,8,13,16. Pasangan unsur yang berada dalam satu golongan adalah ....", options: ["A. W dan Z", "B. X dan Y", "C. U dan X", "D. X dan Z", "E. V dan Y"], answer: "D" },
-    { question: "10. Unsur yang jari-jari atomnya terbesar adalah ....", options: ["A. 11 Na", "B. 13 Al", "C. 14 Si", "D. 17 Cl", "E. 12 Mg"], answer: "A" },
-    { question: "11. Unsur kalsium (Z = 20) yang mempunyai konfigurasi elektron 1s2 2s2 2p6 3s2 3p6 4s2, terletak pada ....", options: ["A. Periode 2, golongan IVA", "B. Periode 3, golongan IIA", "C. Periode 3, golongan VIA", "D. Periode 4, golongan IIA", "E. Periode 4, golongan VIA"], answer: "D" },
-    { question: "12. Keelektronegatifan unsur-unsur adalah sebagai berikut. F=4,0 ; O=3,5 ; Br=2,8 ; Cl=3,0 ; As=2,0 ; Se=2,4 ; N=3,2 ; P=2,1. Keelektronegatifan unsur belerang adalah ....", options: ["A. 2,0", "B. 2,2", "C. 2,5", "D. 3,1", "E. 3,3"], answer: "C" },
-    { question: "13. Unsur yang terletak pada periode kelima golongan IIIB mempunyai konfigurasi elektron ....", options: ["A. 5s2 5p1", "B. 5s2 4d3", "C. 5s2 4d10", "D. 5s2 5d3", "E. 5s2 4d4"], answer: "C" },
-    { question: "14. Konfigurasi suatu unsur : 1s2 2s2 2p6 3s2 3p6 4s1. Tingkat oksidasi tertinggi dari unsur di atas adalah ...", options: ["A. +2", "B. +5", "C. +7", "D. -3", "E. +6"], answer: "E" },
-    { question: "15. Unsur-unsur dibawah ini berada dalam satu golongan dan sistem periodik, kecuali ...", options: ["A. Arsen", "B. Nitrogen", "C. Selenium", "D. Fosfor", "E. Bismut"], answer: "C" },
-    { question: "16. Unsur X dengan nomor atom 52 tidak dapat membentuk senyawa atau ion ...", options: ["A. X2-", "B. H2X", "C. XH3", "D. XO2-", "E. XO2"], answer: "C" },
-    { question: "17. Unsur transisi dalam mulai dijumpai pada periode ....", options: ["A. 3", "B. 4", "C. 5", "D. 6", "E. 7"], answer: "B" },
-    { question: "18. Di antara unsur-unsur 4A, 12B, 18C dan 16D yang terletak dalam golongan yang sama pada sistem periodik adalah ...", options: ["A. A dan B", "B. A dan C", "C. B dan C", "D. B dan D", "E. A dan D"], answer: "A" },
-    { question: "19. Menurut persamaan reaksi: L(s) + H2SO4(aq) → L2SO4(aq) + H2(g). Jika atom L mengandung 14 neutron, maka atom L terletak pada golongan dan periode ...", options: ["A. IA/3", "B. IIA/3", "C. IIIA/3", "D. IIIA/4", "E. VA/4"], answer: "C" },
-    { question: "20. Unsur yang paling elektronegatif adalah …", options: ["A. 18Ar", "B. 17Cl", "C. 16S", "D. 15P", "E. 14Si"], answer: "B" },
-  ];
+    
+{ question: "1. Tentukan Mr dari urea (CO(NH2)2)! (Ar C = 12; O = 16; N = 14; H = 1)", options: ["A. 60", "B. 61", "C. 62", "D. 59"], answer: "A" },
+{ question: "2. Tentukan rumus empiris dari senyawa yang mengandung 59% natrium dan 41% belerang!", options: ["A. NaS", "B. Na2S", "C. NaS2", "D. Na3S"], answer: "B" },
+{ question: "3. Tentukan rumus empiris dari senyawa yang mengandung 66,3% klor, 26,2% nitrogen, 7,5% hidrogen!", options: ["A. NH4Cl", "B. NCl", "C. N2H4Cl", "D. NCl2"], answer: "A" },
+{ question: "4. Tentukanlah jumlah atom besi yang terdapat dalam 0,5 mol besi!", options: ["A. 3,01 x 10^23", "B. 6,02 x 10^23", "C. 1,51 x 10^23", "D. 1,00 x 10^24"], answer: "A" },
+{ question: "5. Hitunglah jumlah masing-masing atom yang terdapat di dalam 2 mol H2O.", options: ["A. 24,08 x 10^23 atom H", "B. 12,04 x 10^23 atom O", "C. Keduanya benar", "D. Keduanya salah"], answer: "C" },
+{ question: "6. Berapa mol karbon monoksida yang mengandung 6,02 x 10^21 molekul!", options: ["A. 0,01 mol", "B. 0,02 mol", "C. 0,03 mol", "D. 0,04 mol"], answer: "A" },
+{ question: "7. Berapakah massa dari 2 mol glukosa (C6H12O6)?", options: ["A. 360 gram", "B. 180 gram", "C. 720 gram", "D. 540 gram"], answer: "A" },
+{ question: "8. Hitung Ar dari X jika 0,2 mol unsur X mempunyai massa 8 gram.", options: ["A. 40", "B. 20", "C. 60", "D. 80"], answer: "A" },
+{ question: "9. Berapa volume 3 mol gas hidrogen pada STP?", options: ["A. 67,2 L", "B. 22,4 L", "C. 33,6 L", "D. 44,8 L"], answer: "A" },
+{ question: "10. Berapa mol gas CO2 yang mempunyai volume 5600 mL?", options: ["A. 0,25 mol", "B. 0,50 mol", "C. 0,75 mol", "D. 1,00 mol"], answer: "A" },
+{ question: "11. Hitung volume 5 mol gas pada tekanan 152 mmHg dan temperature 27°C!", options: ["A. 615 L", "B. 500 L", "C. 400 L", "D. 300 L"], answer: "A" },
+{ question: "12. Jika Mg yang bereaksi adalah 2 mol, hitunglah mol HCl yang bereaksi!", options: ["A. 4 mol", "B. 2 mol", "C. 6 mol", "D. 8 mol"], answer: "A" },
+{ question: "13. Jika pada reaksi dihasilkan 88 gram gas CO2, hitunglah massa C4H10 yang bereaksi!", options: ["A. 29 gram", "B. 30 gram", "C. 28 gram", "D. 27 gram"], answer: "A" },
+{ question: "14. Hitung massa masing-masing unsur dalam 20 gram Fe2(SO4)3. Ar Fe = 56, S = 32, O = 16; Mr Fe2(SO4)3 = 400.", options: ["A. 5,6 gram Fe", "B. 4,8 gram S", "C. 9,6 gram O", "D. Semua benar"], answer: "D" },
+{ question: "15. Jumlah partikel dalam 0,25 mol N2 sama dengan jumlah partikel dalam ...", options: ["A. 1,25 mol O2", "B. 1 mol P4", "C. 0,75 mol C4H10", "D. 0,5 mol Na", "E. 0,25 mol CO2"], answer: "E" },
+{ question: "16. Banyaknya atom yang terkandung dalam 9,2 gram natrium (Na = 23) adalah ...", options: ["A. 1,2 x 10^23", "B. 2,2 x 10^23", "C. 2,3 x 10^23", "D. 2,4 x 10^23", "E. 2,5 x 10^23"], answer: "D" },
+{ question: "17. Suatu senyawa dengan rumus C12H22O11 mengandung 72 gram karbon dan .... gram oksigen.", options: ["A. 1", "B. 12", "C. 66", "D. 72", "E. 88"], answer: "E" },
+{ question: "18. Senyawa berikut yang mengandung jumlah molekul paling banyak adalah ...", options: ["A. 10,0 g C2H6 (Mr = 30)", "B. 11,0 g CO2 (Mr = 44)", "C. 12,0 g NO2 (Mr = 46)", "D. 17,0 g Cl2 (Mr = 71)", "E. 20,0 g C6H6 (Mr = 78)"], answer: "A" },
+{ question: "19. Diketahui massa atom relatif Fe = 56, S = 32, dan O = 16. Massa besi yang terdapat dalam 4 gram Fe2(SO4)3 adalah ... gram", options: ["A. 4,00", "B. 1,12", "C. 0,56", "D. 0,28", "E. 0,01"], answer: "B" },
+{ question: "20. Dalam praktikum, sekelompok siswa membakar secara sempurna 46 gram senyawa karbon yang terdiri atas unsur C, H, dan O. Pembakaran tersebut menghasilkan 88 gram CO2 dan 54 gram uap air (Ar H = 1, C = 12, O = 16). Rumus empiris senyawa yang dibakar adalah …", options: ["A. CH2O", "B. CH3O", "C. C2H6O", "D. C2H6O2", "E. C3H8O"], answer: "C" },
+];
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
@@ -59,40 +45,37 @@ const Tryout = () => {
     }
   };
 
-  const handleTimeUp = () => {
-    setShowResult(true);
-  };
-
   const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn");
     navigate("/login");
   };
 
-  if (!isAuthenticated) {
-    return null;
-  }
-
   return (
     <div className="app">
-      <h1>Tryout Biologi Kelas XI</h1>
+      <h1>Kuis Matematika Kelas XII</h1>
       {showResult ? (
         <div className="result">
           <h2>Skor Anda: {score} / {questions.length}</h2>
           <p>Terima kasih telah mengikuti tryout!</p>
         </div>
       ) : (
-        <>
-          {/* <Timer duration={600} onTimeUp={handleTimeUp} />
-          <Question 
-            question={questions[currentQuestion].question} 
-            options={questions[currentQuestion].options} 
-            handleAnswer={handleAnswer} 
-          /> */}
-        </>
+        <div className="question-container">
+          <h2>{questions[currentQuestion].question}</h2>
+          <div className="options">
+            {questions[currentQuestion].options.map((option, index) => (
+              <button
+                key={index}
+                onClick={() => handleAnswer(option)}
+                className="option-button"
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+        </div>
       )}
       <button onClick={handleLogout} className="logout-button">Logout</button>
     </div>
   );
 };
 
-export default Tryout;
+export default TryoutStoikiometri;

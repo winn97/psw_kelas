@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "../css/QuestionPage.css";
+import "./QuestionPage.css";
 
-const LatihanSoal3 = () => {
+const LatihanSoalTabelPeriodik = () => {
   const [currentQuestion, setCurrentQuestion] = useState(1);
   const [selectedOption, setSelectedOption] = useState(null);
   const [showConfirmation, setShowConfirmation] = useState(false);
@@ -76,8 +76,7 @@ const LatihanSoal3 = () => {
       explanation:
         "Mr MgSiO3 = Ar Mg + Ar Si + 3Ar O\n\nMr MgSiO3 = 24 + 28 + (3 x 16) = 100\n\nMr Al2O3 = (2 x 27) + (3 x 16) = 102\n\nMr CaCO3 = 40 + 12 + (3 x 16) = 100\n\nMr CaSO3 =  40 + 32 + (3 x 16) = 120\n\nMr K2CO3 = (2 x 39) + 12 + (3 x 16) = 138\n\(2 x 39) + 12 + (3 x 16) = 138",
     },
-  ];
-
+    ];
   const handleNextQuestion = () => {
     if (currentQuestion < questions.length) {
       setCurrentQuestion(currentQuestion + 1);
@@ -204,4 +203,4 @@ const LatihanSoal3 = () => {
   );
 };
 
-export default LatihanSoal3;
+export default LatihanSoalTabelPeriodik;

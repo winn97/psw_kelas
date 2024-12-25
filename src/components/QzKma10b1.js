@@ -1,47 +1,32 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/TryOut.css";
 
-const KuisReaksiRedoksKelas10 = () => {
+const TryoutTeoriAtom = () => {
   const navigate = useNavigate();
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const alertShown = useRef(false);
-
-  useEffect(() => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-    if (isLoggedIn) {
-      setIsAuthenticated(true);
-    } else {
-      if (!alertShown.current) {
-        alert("Anda harus login terlebih dahulu!");
-        alertShown.current = true;
-      }
-      navigate("/login");
-    }
-  }, [navigate]);
 
   const questions = [
-    { question: "1.Pernyataan berikut yang benar tentang reaksi redoks adalah", options: ["Oksidasi adalah pelepasan elektron dan reduksi adalah penyerapan elektron", " Oksidasi adalah proses di mana bilangan oksidasi suatu unsur berkurang", "Reduksi adalah proses di mana bilangan oksidasi suatu unsur bertambah", "Dalam reaksi redoks, hanya terjadi perubahan bilangan oksidasi tanpa perpindahan elektron"], answer: "Oksidasi adalah pelepasan elektron dan reduksi adalah penyerapan elektron0" },
-    { question: "2.Apa peran utama bilangan oksidasi dalam analisis reaksi redoks?", options: ["Menentukan energi reaksi", "Menentukan unsur yang teroksidasi dan tereduksi", "Mengidentifikasi ikatan kovalen polar", "Menjelaskan struktur molekul"], answer: "Menentukan unsur yang teroksidasi dan tereduksi" },
-    { question: "3.Manakah dari pernyataan berikut yang benar mengenai agen pengoksidasi?", options: ["Agen pengoksidasi selalu mengalami oksidasi", "Agen pengoksidasi adalah zat yang kehilangan elektron", "Agen pengoksidasi selalu mengalami reduksi", "Agen pengoksidasi tidak terlibat dalam reaksi redoks"], answer: "Agen pengoksidasi selalu mengalami reduksi" },
-    { question: "4.Dalam proses elektrolisis, reaksi yang terjadi pada katoda selalu berupa:", options: ["Oksidasi", "Reduksi", "Pelepasan ion positif", "Pelepasan ion negatif"], answer: "Reduksi" },
-    { question: "5.Manakah yang merupakan ciri-ciri reaksi redoks?", options: ["Tidak ada perubahan bilangan oksidasi", "Tidak ada perpindahan elektron.", "Terjadi perubahan bilangan oksidasi pada satu atau lebih unsur", " Selalu menghasilkan energi dalam bentuk panas"], answer: "Terjadi perubahan bilangan oksidasi pada satu atau lebih unsur" },
-    { question: "6.Apa yang dimaksud dengan reaksi disproposionasi?", options: [" Reaksi di mana satu zat mengalami oksidasi dan zat lain mengalami reduksi", "Reaksi di mana satu zat mengalami oksidasi dan reduksi secara bersamaan.", "Reaksi di mana tidak ada perubahan bilangan oksidasi", " Reaksi antara ion positif dan ion negatif."], answer: "Reaksi di mana satu zat mengalami oksidasi dan reduksi secara bersamaan." },
-    { question: "7.Mengapa oksigen sering dianggap sebagai agen pengoksidasi yang kuat?", options: ["Karena memiliki elektronegativitas yang rendah", " Karena memiliki kecenderungan untuk menerima elektron", "Karena selalu mengalami oksidasi.", "Karena selalu memiliki bilangan oksidasi -1."], answer: " Karena memiliki kecenderungan untuk menerima elektron" },
-    { question: "8.Pernyataan berikut benar mengenai reaksi redoks adalah", options: ["Pernyataan berikut benar mengenai reaksi redoks adalah", "Semua reaksi redoks melibatkan transfer proton.", "Semua reaksi redoks melibatkan perubahan bilangan oksidasi", "Semua reaksi redoks berlangsung dalam larutan"], answer: "Semua reaksi redoks melibatkan perubahan bilangan oksidasi" },
-    { question: "9.Dalam reaksi redoks, agen pereduksi adalah:", options: [" Zat yang mengalami oksidasi.", "Zat yang mengalami reduksi.", "Zat yang tidak berubah dalam reaksi", "Zat yang mencegah terjadinya oksidasi"], answer: " Zat yang mengalami oksidasi." },
-    { question: "10.Manakah dari berikut ini yang merupakan sifat umum agen pengoksidasi??", options: ["Memberikan elektron ke zat lain.", "Mengalami reduksi selama reaksi.", "Mengalami peningkatan bilangan oksidasi.", "Selalu berupa ion negatif."], answer: " Mengalami reduksi selama reaksi" },
-    { question: "11.Dalam reaksi redoks, apa yang terjadi jika suatu unsur mengalami oksidasi? ", options: ["Bilangan oksidasinya berkurang", "Bilangan oksidasinya tetap2", "Transpor elektron", "Fermentasi"], answer: "Transpor elektron" },
-    { question: "12.Manakah dari pernyataan berikut yang benar tentang elektrokimia?", options: ["Semua reaksi elektrokimia adalah reaksi redoks", "Elektrokimia hanya melibatkan reaksi reduksi.", "Elektrokimia tidak melibatkan perpindahan elektron", "Elektrokimia tidak memerlukan larutan elektrolit."], answer: "Semua reaksi elektrokimia adalah reaksi redoks" },
-    { question: "13.Bilangan oksidasi maksimum yang dapat dicapai oleh sulfur adalah", options: ["+4", "+6", "-2", "+2"], answer: "+6" },
-    { question: "14.Apa yang terjadi pada bilangan oksidasi dalam reaksi reduksi?", options: ["Bilangan oksidasi bertambah.", "Bilangan oksidasi berkurang.", "Bilangan oksidasi tetap", "Tidak ada perubahan bilangan oksidasi."], answer: "Bilangan oksidasi berkurang." },
-    { question: "15.Manakah dari pernyataan berikut yang benar mengenai reaksi redoks?", options: ["Unsur bebas tidak pernah mengalami perubahan bilangan oksidasi", "Dalam reaksi redoks, selalu ada satu unsur yang mengalami oksidasi dan satu yang mengalami reduksi.", "Dalam reaksi redoks, selalu ada satu unsur yang mengalami oksidasi dan satu yang mengalami reduksi.", "Dalam reaksi redoks, selalu ada satu unsur yang mengalami oksidasi dan satu yang mengalami reduksi."], answer: "Dalam reaksi redoks, selalu ada satu unsur yang mengalami oksidasi dan satu yang mengalami reduksi." },
-    { question: "16.Dalam reaksi redoks, elektron berpindah dari", options: ["Agen pereduksi ke agen pengoksidasi.", "Agen pengoksidasi ke agen pereduksi.", "Unsur netral ke ion bermuatan positif.", "Unsur netral ke unsur bebas lainnya."], answer: "Agen pereduksi ke agen pengoksidasi." },
-    { question: "17.Mengapa Fe dapat bertindak sebagai agen pengoksidasi maupun agen pereduksi dalam reaksi redoks?", options: ["karena Fe memiliki elektro valensi yagng tidak terikat", "karena Fe meiliki lebih dari satu bilangan oksidasi", "karena Fe selalu dalam keadaan unsur bebas", "karena Fe memiliki energi ionisasi yang tinggi"], answer: "karena Fe memiliki lebih dari satu bilangan oksidasi" },
-    { question: "18.Mengapa logam aktif seperti natrium mudah teroksidasi dalam reaksi redoks?", options: ["Karena logam aktif memiliki bilangan oksidasi yang tinggi", "Karena logam aktif memiliki energi ionisasi yang rendah", "Karena logam aktif memiliki afinitas elektron yang tinggi", "Karena logam aktif selalu membentuk ikatan kovalen."], answer: "Karena logam aktif memiliki energi ionisasi yang rendah" },
-    { question: "19.Manakah dari pernyataan berikut yang benar mengenai bilangan oksidasi hidrogen?", options: ["Hidrogen selalu memiliki bilangan oksidasi +1", "Hidrogen memiliki bilangan oksidasi -1 dalam hidrida logam", "Hidrogen memiliki bilangan oksidasi -1 dalam hidrida logam", "Hidrogen tidak berperan dalam reaksi redoks."], answer: "Hidrogen memiliki bilangan oksidasi -1 dalam hidrida logam." },
-    { question: "20.Manakah dari berikut ini yang benar tentang reaksi autoredoks?", options: ["Reaksi autoredoks melibatkan dua zat berbeda.", "Reaksi autoredoks hanya melibatkan agen pereduksi.", "Reaksi autoredoks terjadi ketika suatu zat bertindak sebagai agen pengoksidasi dan agen pereduksi.", "Reaksi autoredoks tidak melibatkan perubahan bilangan oksidasi"],  answer: "Reaksi autoredoks terjadi ketika suatu zat bertindak sebagai agen pengoksidasi dan agen pereduksi." }
-  ];
+    { question: "1. Dalam eksperimen hamburan sinar alfa, Rutherford menemukan bahwa?", options: ["Atom berbentuk seperti roti kismis", "Sebagian besar massa atom terkonsentrasi di inti kecil", "Elektron bergerak dalam lintasan berbentuk lingkaran di sekitar inti", "Proton dan neutron tersebar merata dalam atom"], answer: "Sebagian besar massa atom terkonsentrasi di inti kecil"},
+    { question: "2. Menurut Niels Bohr, elektron dalam atom?", options: ["Berada di inti atom bersama proton", "Bergerak dalam lintasan acak di sekitar inti", "Mengorbit inti dalam jalur tertentu dengan energi tetap", "Tersebar merata dalam atom"], answer: "Mengorbit inti dalam jalur tertentu dengan energi tetap"},
+    { question: "3. Siapa yang pertama kali mengusulkan bahwa materi terdiri dari atom yang tidak dapat dibagi?", options: ["John Dalton", "Demokritus", "Ernest Rutherford", "J.J. Thomson"], answer: "Demokritus"},
+    { question: "4. Partikel subatomik yang tidak memiliki muatan adalah?", options: ["Proton", "Elektron", "Neutron", "Nukleon"], answer: "Neutron"},
+    { question: "5. Model atom Rutherford menjelaskan bahwa?", options: ["Elektron bergerak dalam orbit tertentu dengan energi tetap", "Atom terdiri dari inti padat kecil yang dikelilingi oleh elektron", "Elektron tersebar merata di dalam atom", "Atom tidak memiliki ruang kosong"], answer: "Atom terdiri dari inti padat kecil yang dikelilingi oleh elektron"},
+    { question: "6. Dalam teori atom Bohr, elektron berpindah dari orbit rendah ke orbit lebih tinggi dengan cara?", options: ["Menyerap energi", "Memancarkan energi", "Melepaskan foton", "Memindahkan neutron"], answer: "Menyerap energi"},
+    { question: "7. Model atom 'roti kismis' dikembangkan oleh?", options: ["Niels Bohr", "Ernest Rutherford", "J.J. Thomson", "John Dalton"], answer: "J.J. Thomson"},
+    { question: "8. Apa nama partikel subatomik yang ditemukan oleh J.J. Thomson?", options: ["Proton", "Elektron", "Neutron", "Nukleon"], answer: "Elektron"},
+    { question: "9. Apa sifat utama inti atom dalam model atom Rutherford?", options: ["Memiliki massa yang sangat kecil", "Mengandung semua elektron", "Kecil dan padat", "Tersebar merata dalam atom"], answer: "Kecil dan padat"},
+    { question: "10. Teori atom Dalton menyatakan bahwa?", options: ["Atom tidak dapat dibagi lebih kecil", "Elektron tersebar di dalam atom", "Atom terdiri dari inti dan elektron", "Elektron mengorbit dalam lintasan tertentu"], answer: "Atom tidak dapat dibagi lebih kecil"},
+    { question: "11. Ikatan ion terbentuk ketika?", options: ["Dua atom berbagi elektron secara merata", "Elektron berpindah dari satu atom ke atom lain", "Elektron bergerak bebas di antara inti atom", "Atom berbagi pasangan elektron tetapi tidak merata"], answer: "Elektron berpindah dari satu atom ke atom lain"},
+    { question: "12. Jenis ikatan yang terdapat dalam molekul air (H₂O) adalah?", options: ["Ikatan ionik", "Ikatan kovalen polar", "Ikatan logam", "Ikatan kovalen non-polar"], answer: "Ikatan kovalen polar"},
+    { question: "13. Apa yang menyebabkan sifat konduktivitas listrik pada logam?", options: ["Ikatan kovalen di antara atom-atom logam", "Mobilitas elektron valensi dalam struktur logam", "Keteraturan ion-ion logam dalam kisi kristal", "Ikatan ionik di antara atom-atom logam"], answer: "Mobilitas elektron valensi dalam struktur logam"},
+    { question: "14. Sifat yang tidak dimiliki oleh senyawa ionik adalah?", options: ["Titik leleh tinggi", "Larut dalam air", "Menghantarkan listrik dalam bentuk larutan", "Menghantarkan listrik dalam bentuk padat"], answer: "Menghantarkan listrik dalam bentuk padat"},
+    { question: "15. Jenis ikatan yang terdapat dalam molekul CO₂ adalah?", options: ["Ikatan ionik", "Ikatan logam", "Ikatan kovalen non-polar", "Ikatan kovalen polar"], answer: "Ikatan kovalen non-polar"},
+    { question: "16. Apa produk utama ikatan logam?", options: ["Struktur rapuh", "Lautan elektron bebas", "Titik didih rendah", "Tidak menghantarkan listrik"], answer: "Lautan elektron bebas"},
+    { question: "17. Sifat khas dari senyawa kovalen polar adalah?", options: ["Titik leleh tinggi", "Menghantarkan listrik dalam bentuk padat", "Tidak larut dalam air", "Larut dalam pelarut polar"], answer: "Larut dalam pelarut polar"},
+    { question: "18. Apa yang dimaksud dengan ikatan kovalen?", options: ["Transfer elektron dari satu atom ke atom lain", "Penggunaan bersama pasangan elektron", "Mobilitas elektron dalam kisi logam", "Transfer neutron antar atom"], answer: "Penggunaan bersama pasangan elektron"},
+    { question: "19. Contoh senyawa dengan ikatan ionik adalah?", options: ["NaCl", "H₂O", "CO₂", "CH₄"], answer: "NaCl"},
+    { question: "20. Apa yang menyebabkan terbentuknya ikatan kimia?", options: ["Pelepasan inti atom", "Interaksi antara elektron valensi", "Perpindahan neutron", "Interaksi proton dari dua atom"], answer: "Interaksi antara elektron valensi"}
+];
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
@@ -60,28 +45,27 @@ const KuisReaksiRedoksKelas10 = () => {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn");
     navigate("/login");
   };
 
-  if (!isAuthenticated) {
-    return null;
-  }
-
   return (
     <div className="app">
-      <h1>Try Out Kimia Kelas 10</h1>
+      <h1>Kuis Matematika Kelas XII</h1>
       {showResult ? (
         <div className="result">
           <h2>Skor Anda: {score} / {questions.length}</h2>
           <p>Terima kasih telah mengikuti tryout!</p>
         </div>
       ) : (
-        <div className="question-section">
+        <div className="question-container">
           <h2>{questions[currentQuestion].question}</h2>
           <div className="options">
             {questions[currentQuestion].options.map((option, index) => (
-              <button key={index} onClick={() => handleAnswer(option)}>
+              <button
+                key={index}
+                onClick={() => handleAnswer(option)}
+                className="option-button"
+              >
                 {option}
               </button>
             ))}
@@ -93,4 +77,4 @@ const KuisReaksiRedoksKelas10 = () => {
   );
 };
 
-export default KuisReaksiRedoksKelas10;
+export default TryoutTeoriAtom;
