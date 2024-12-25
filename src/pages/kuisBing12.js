@@ -8,14 +8,18 @@ const Materi = () => {
 
   useEffect(() => {
     const mockBiologies = [
-      { id: 1, name: 'Arus Searah',image: 'https://i.pinimg.com/736x/7c/2c/67/7c2c67684955d720f682d16116ce0fcd.jpg', category: 'Bab 1', link: '/QzBing12b1' },
-      { id: 2, name: 'Arus Bolak-Balik', image: 'https://i.pinimg.com/474x/0d/fd/2b/0dfd2b67c99789fbf28dcce47b7aa610.jpg', category: 'Bab 2', link: '/QzBing12b2' },
-      { id: 3, name: 'Medan Magnetik', description: 'Medan Magnetik', image: 'https://i.pinimg.com/474x/98/27/1f/98271f317b127d0a6ebb53b892287da2.jpg', category: 'Bab 3', link: '/QzBing12b3' },
-      { id: 4, name: 'Gelombang Elektromagnetik', image: 'https://i.pinimg.com/474x/38/74/aa/3874aa4fde49d4d3ed9b1659f1f358c8.jpg', category: 'Bab 4', link: '/QzBing12b4' },
-      { id: 5, name: 'Induksi Elektromagnetik', image: 'https://i.pinimg.com/474x/a4/1b/78/a41b78e761c2b0bb8fddc935c640f18a.jpg', category: 'Bab 5', link: '/QzBing12b5' },
-      { id: 6, name: 'Fisika Modern', image: 'https://i.pinimg.com/736x/89/ae/ea/89aeea116fa6a5979e5fd60dc9cb9344.jpg', category: 'Bab 6', link: '/QzBing12b6' },
-      { id: 7, name: 'Teknologi Digital', image: 'https://i.pinimg.com/474x/13/74/70/137470180a1cdd04ab71177a98eafcaa.jpg', category: 'Bab 7', link: '/QzBing12b7' },
-      { id: 8, name: 'Sumber Energi', image : 'https://i.pinimg.com/736x/1f/62/62/1f6262428ab8700cefc54a6fdf92aac2.jpg', category: 'Bab 8', link: '/QzBing12b8' },
+      { id: 1, name: 'Present Simple', image: 'https://i.pinimg.com/236x/7f/03/82/7f0382c5eb1b7bc3192ad87b78f50857.jpg', category: 'Tense 1', link: '' },
+      { id: 2, name: 'Past Simple', image: 'https://i.pinimg.com/236x/6a/e8/f2/6ae8f2da2ad726f3a42fbae4ed437f3a.jpg', category: 'Tense 2', link: '/PastSimple' },
+      { id: 3, name: 'Future Simple', image: 'https://i.pinimg.com/236x/a1/e9/c4/a1e9c48547d34726e441674bfa047798.jpg', category: 'Tense 3', link: '/FutureSimple' },
+      { id: 4, name: 'Present Continuous', image: 'https://i.pinimg.com/236x/37/b9/ee/37b9ee71b48493a5a8ba99fc63ea3194.jpg', category: 'Tense 4', link: '/PresentContinuous' },
+      { id: 5, name: 'Past Continuous', image: 'https://i.pinimg.com/236x/1e/f2/2b/1ef22b5039356ff9ce3123ab87b27cb4.jpg', category: 'Tense 5', link: '/PastContinuous' },
+      { id: 6, name: 'Future Continuous', image: 'https://i.pinimg.com/236x/cd/c3/38/cdc338f3b83d8d0e8f73fcbd9e42ac77.jpg', category: 'Tense 6', link: '/QzBing12b1' },
+      { id: 7, name: 'Present Perfect', image: 'https://i.pinimg.com/236x/06/2c/36/062c36c5a447d78d353aa0c6b292f5c7.jpg', category: 'Tense 7', link: '/PresentPerfect' },
+      { id: 8, name: 'Past Perfect', image: 'https://i.pinimg.com/236x/3c/76/6c/3c766c1b4a371ae077c03d709c8e3f96.jpg', category: 'Tense 8', link: '/PastPerfect' },
+      { id: 9, name: 'Future Perfect', image: 'https://i.pinimg.com/236x/37/b9/ee/37b9ee71b48493a5a8ba99fc63ea3194.jpg', category: 'Tense 9', link: '/FuturePerfect' },
+      { id: 10, name: 'Present Perfect Continuous', image: 'https://i.pinimg.com/236x/6a/e8/f2/6ae8f2da2ad726f3a42fbae4ed437f3a.jpg', category: 'Tense 10', link: '/PresentPerfectContinuous' },
+      { id: 11, name: 'Past Perfect Continuous', image: 'https://i.pinimg.com/236x/cd/c3/38/cdc338f3b83d8d0e8f73fcbd9e42ac77.jpg', category: 'Tense 11', link: '/PastPerfectContinuous' },
+      { id: 12, name: 'Future Perfect Continuous', image: 'https://i.pinimg.com/236x/3c/76/6c/3c766c1b4a371ae077c03d709c8e3f96.jpg', category: 'Tense 12', link: '/FuturePerfectContinuous' },
     ];
 
     setBiologies(mockBiologies);
@@ -44,7 +48,7 @@ const Materi = () => {
       <div className="biologi-biology-section">
         <div className="container">
           <div className="section-header">
-            <h2>Kuis Bahasa Inggris 12</h2>
+            <h2>Quiz Bahasa Inggris 12</h2>
           </div>
           <div className="biology-grid">
             {biologies.map((biology) => (
