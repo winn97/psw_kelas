@@ -94,27 +94,22 @@ const Bab8 = () => {
       </section>
 
       <div className="bottom-container">
-        <h2>"Yuk, uji pemahamanmu dengan latihan soal! <br/>Siap mulai?"</h2>
+        <h2>"Let's test your understanding with practice questions! <br/>
+        Ready to start?"</h2>
         <button 
           className="btn-latihan"
-          onClick={() => window.location.href = "/latihansoal8"}
+          onClick={() => window.location.href = "/SlBing11b8"}
         >
-          Mulai Latihan Soal
+          Start Practice
         </button>
       </div>
 
       <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab7")}
+          onClick={() => navigate("/Bing11b7")}
         >
-          Kembali ke Bab Sebelumnya
-        </button>
-        <button 
-          className="btn-navigate"
-          onClick={() => navigate("/bab9")}
-        >
-          Lanjut ke Bab Selanjutnya
+          Proceed to Next Chapter
         </button>
       </div>
     </div>

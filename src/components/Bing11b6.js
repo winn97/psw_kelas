@@ -97,6 +97,33 @@ const Bab6 = () => {
           <li>Contoh: They will be studying at this time tomorrow. (Mereka akan sedang belajar pada waktu ini besok.)</li>
         </ul>
       </section>
+
+      <div className="bottom-container">
+        <h2>"Let's test your understanding with practice questions! <br/>
+        Ready to start?"</h2>
+        <button 
+          className="btn-latihan"
+          onClick={() => window.location.href = "/SlBing11b6"}
+        >
+          Start Practice
+        </button>
+      </div>
+
+      {/* Page Navigation */}
+      <div className="navigation-container">
+        <button 
+          className="btn-navigate"
+          onClick={() => navigate("/Bing11b5")}
+        >
+          Back to Previous Chapter
+        </button>
+        <button 
+          className="btn-navigate"
+          onClick={() => navigate("/Bing11b7")}
+        >
+          Proceed to Next Chapter
+        </button>
+      </div>
     </div>
   );
 };

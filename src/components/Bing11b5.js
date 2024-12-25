@@ -91,6 +91,32 @@ const Bab5 = () => {
           Example: Although he studied hard, he did not pass the exam.
         </p>
       </section>
+      <div className="bottom-container">
+        <h2>"Let's test your understanding with practice questions! <br/>
+        Ready to start?"</h2>
+        <button 
+          className="btn-latihan"
+          onClick={() => window.location.href = "/SlBing11b5"}
+        >
+          Start Practice
+        </button>
+      </div>
+
+      {/* Page Navigation */}
+      <div className="navigation-container">
+        <button 
+          className="btn-navigate"
+          onClick={() => navigate("/Bing11b4")}
+        >
+          Back to Previous Chapter
+        </button>
+        <button 
+          className="btn-navigate"
+          onClick={() => navigate("/Bing11b6")}
+        >
+          Proceed to Next Chapter
+        </button>
+      </div>
     </div>
   );
 };

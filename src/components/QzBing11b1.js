@@ -1,20 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import "./tryout.css";
-import Timer from "./Timer";
-import Question from "./Question";
+import "../css/TryOut.css";
 
 const Tryout = () => {
   const navigate = useNavigate();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const alertShown = useRef(false); 
+  const alertShown = useRef(false);  
 
   useEffect(() => {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
     if (isLoggedIn) {
       setIsAuthenticated(true);
     } else {
-      if (!alertShown.current) { 
+      if (!alertShown.current) {  
         alert("Anda harus login terlebih dahulu!");
         alertShown.current = true;  
       }
@@ -42,7 +40,10 @@ const Tryout = () => {
     { question: "17. Analyze the adverbs in: 'The system consistently but flexibly maintains standards.' What paradox is presented?", options: ["Stability with adaptability", "Only consistency", "Only flexibility", "No clear meaning"], answer: "Stability with adaptability" },
     { question: "18. How do the adverbs function in: 'Environmentally consciously produced goods economically benefit communities'?", options: ["Links sustainability and economics", "Only shows environmental impact", "Only shows economic impact", "Shows no connection"], answer: "Links sustainability and economics" },
     { question: "19. In 'The solution elegantly yet affordably addresses the problem,' what relationship do the adverbs establish?", options: ["Combines quality and practicality", "Shows only elegance", "Shows only cost", "Creates confusion"], answer: "Combines quality and practicality" },
-    { question: "20. Examine: 'Traditionally digitally enhanced artwork.' Why is this combination of adverbs significant in modern context?", options: ["Blends old and new approaches", "Only shows tradition", "Only shows technology", "Creates contradiction"], answer: "Blends old and new approaches" }];  const [currentQuestion, setCurrentQuestion] = useState(0);
+    { question: "20. Examine: 'Traditionally digitally enhanced artwork.' Why is this combination of adverbs significant in modern context?", options: ["Blends old and new approaches", "Only shows tradition", "Only shows technology", "Creates contradiction"], answer: "Blends old and new approaches" }
+  ];  
+
+  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
 
@@ -73,7 +74,7 @@ const Tryout = () => {
 
   return (
     <div className="app">
-      <h1>Tryout Bahasa Inggris Kelas XI</h1>
+      <h1>Tryout Bahasa Inggris Kelas X</h1>
       {showResult ? (
         <div className="result">
           <h2>Skor Anda: {score} / {questions.length}</h2>
@@ -81,12 +82,11 @@ const Tryout = () => {
         </div>
       ) : (
         <>
-          <Timer duration={600} onTimeUp={handleTimeUp} />
+          {/* <Timer duration={600} onTimeUp={handleTimeUp} />
           <Question 
             question={questions[currentQuestion].question} 
             options={questions[currentQuestion].options} 
-            handleAnswer={handleAnswer} 
-          />
+            handleAnswer={handleAnswer}  */}
         </>
       )}
       <button onClick={handleLogout} className="logout-button">Logout</button>

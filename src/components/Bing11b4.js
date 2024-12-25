@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../css/Bing11b4.css";
 
-function Bab4() {
+const Bab4 = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="bab4-container">
       <header className="bab4-header">
@@ -9,7 +12,7 @@ function Bab4() {
         <p className="bab4-subtitle">Learn about the different types of clauses in English grammar.</p>
       </header>
 
-      <main className="bab4-content">
+      
         <section className="bab4-section">
           <h2>Main Clause</h2>
           <p>
@@ -51,12 +54,35 @@ function Bab4() {
             function as a subject, object, or complement in a sentence.
           </p>
         </section>
-      </main>
 
-      <footer className="bab4-footer">
-        <p>&copy; 2024 English Learning Website. All rights reserved.</p>
-      </footer>
+        <div className="bottom-container">
+        <h2>"Let's test your understanding with practice questions! <br/>
+        Ready to start?"</h2>
+        <button 
+          className="btn-latihan"
+          onClick={() => window.location.href = "/SlBing11b4"}
+        >
+          Start Practice
+        </button>
+      </div>
+
+      {/* Page Navigation */}
+      <div className="navigation-container">
+        <button 
+          className="btn-navigate"
+          onClick={() => navigate("/Bing11b3")}
+        >
+          Back to Previous Chapter
+        </button>
+        <button 
+          className="btn-navigate"
+          onClick={() => navigate("/Bing11b5")}
+        >
+          Proceed to Next Chapter
+        </button>
+      </div>
     </div>
+
   );
 }
 

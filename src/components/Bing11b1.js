@@ -138,7 +138,7 @@ const Bab1 = () => {
         Let's get started!"</h2>
         <button 
           className="btn-latihan"
-          onClick={() => window.location.href = "/latihansoal1"}
+          onClick={() => window.location.href = "/SlBing11b1"}
         >
           Start Practice
         </button>
@@ -147,13 +147,13 @@ const Bab1 = () => {
       <div className="navigation-container">
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/materi")}
+          onClick={() => navigate("/Bing11b1")}
         >
           Back to Previous Page
         </button>
         <button 
           className="btn-navigate"
-          onClick={() => navigate("/bab2")}
+          onClick={() => navigate("/Bing11b2")}
         >
           Proceed to Next Chapter
         </button>

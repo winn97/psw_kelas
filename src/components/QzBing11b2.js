@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import "./tryout.css";
-import Timer from "./Timer";
-import Question from "./Question";
+import "../css/TryOut.css";
 
 const Tryout = () => {
   const navigate = useNavigate();
@@ -82,12 +80,12 @@ const Tryout = () => {
         </div>
       ) : (
         <>
-          <Timer duration={600} onTimeUp={handleTimeUp} />
+          {/* <Timer duration={600} onTimeUp={handleTimeUp} />
           <Question 
             question={questions[currentQuestion].question} 
             options={questions[currentQuestion].options} 
             handleAnswer={handleAnswer} 
-          />
+          /> */}
         </>
       )}
       <button onClick={handleLogout} className="logout-button">Logout</button>
