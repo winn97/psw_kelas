@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../css/TryOut.css";
 
-const TOfuture = () => {
+const QzBing12Future = () => {
 
 
   const questions = [
@@ -55,7 +55,7 @@ const TOfuture = () => {
 
   return (
     <div className="app">
-      <h1>Tryout Biologi Kelas XI</h1>
+      <h1>Tryout B.Inggris Kelas XII</h1>
       {showResult ? (
         <div className="result">
           <h2>Skor Anda: {score} / {questions.length}</h2>
@@ -76,4 +76,4 @@ const TOfuture = () => {
   );
 };
 
-export default TOfuture;
+export default QzBing12Future;
