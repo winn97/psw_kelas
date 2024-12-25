@@ -632,6 +632,7 @@ function App() {
         <Route path="/SlBing11b7" element={<SlBing11b7 />} />
         <Route path="/SlBing11b8" element={<SlBing11b8 />} />
         {/* Rute untuk Materi Inggris 11 */}
+        {/* Rute untuk Materi Inggris 12 */}
         <Route path="/SlBing12b1" element={<SlBing12b1 />} />
         <Route path="/SlBing12b2" element={<SlBing12b2 />} />
         <Route path="/SlBing12b3" element={<SlBing12b3 />} />
